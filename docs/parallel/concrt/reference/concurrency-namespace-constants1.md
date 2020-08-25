@@ -1,5 +1,5 @@
 ---
-title: 동시성 네임스페이스 상수
+title: 동시성 네임 스페이스 상수
 ms.date: 11/04/2016
 f1_keywords:
 - concrt/concurrency::AgentEventGuid
@@ -15,25 +15,43 @@ f1_keywords:
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-ms.openlocfilehash: 8e9254e966f480538d80721bcfd86d301fac8d09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 747796ae0baf46382840afc51283158ead204b62
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372738"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839065"
 ---
-# <a name="concurrency-namespace-constants"></a>동시성 네임스페이스 상수
+# <a name="concurrency-namespace-constants"></a>동시성 네임 스페이스 상수
 
-||||
-|-|-|-|
-|[에이전트이벤트Guid](#agenteventguid)|[CONCRT_RM_VERSION_1](#concrt_rm_version_1)|[COOPERATIVE_TIMEOUT_INFINITE](#cooperative_timeout_infinite)|
-|[COOPERATIVE_WAIT_TIMEOUT](#cooperative_wait_timeout)|[안무이벤트가드](#choreeventguid)|[콘RT이벤트가드](#concrteventguid)|
-|[ConcRT_ProviderGuid](#concrt_providerguid)|[컨텍스트이벤트Guid](#contexteventguid)|[INHERIT_THREAD_PRIORITY](#inherit_thread_priority)|
-|[잠금 이벤트 Guid](#lockeventguid)|[최대 실행 가능 자원](#maxexecutionresources)|[PPL병렬이벤트가드](#pplparallelforeventguid)|
-|[PPL병렬ForeachEventGuid](#pplparallelforeacheventguid)|[PPL병렬 인보크이벤트가드](#pplparallelinvokeeventguid)|[리소스 관리자이벤트 Guid](#resourcemanagereventguid)|
-|[일정 그룹이벤트Guid](#schedulegroupeventguid)|[스케줄러이벤트가드](#schedulereventguid)|[가상 프로세서이벤트가드](#virtualprocessoreventguid)|
+:::row:::
+   :::column span="":::
+      [`AgentEventGuid`](#agenteventguid)\
+      [`CONCRT_RM_VERSION_1`](#concrt_rm_version_1)\
+      [`COOPERATIVE_TIMEOUT_INFINITE`](#cooperative_timeout_infinite)\
+      [`COOPERATIVE_WAIT_TIMEOUT`](#cooperative_wait_timeout)\
+      [`ChoreEventGuid`](#choreeventguid)\
+      [`ConcRTEventGuid`](#concrteventguid)
+   :::column-end:::
+   :::column span="":::
+      [`ConcRT_ProviderGuid`](#concrt_providerguid)\
+      [`ContextEventGuid`](#contexteventguid)\
+      [`INHERIT_THREAD_PRIORITY`](#inherit_thread_priority)\
+      [`LockEventGuid`](#lockeventguid)\
+      [`MaxExecutionResources`](#maxexecutionresources)\
+      [`PPLParallelForEventGuid`](#pplparallelforeventguid)
+   :::column-end:::
+   :::column span="":::
+      [`PPLParallelForeachEventGuid`](#pplparallelforeacheventguid)\
+      [`PPLParallelInvokeEventGuid`](#pplparallelinvokeeventguid)\
+      [`ResourceManagerEventGuid`](#resourcemanagereventguid)\
+      [`ScheduleGroupEventGuid`](#schedulegroupeventguid)\
+      [`SchedulerEventGuid`](#schedulereventguid)\
+      [`VirtualProcessorEventGuid`](#virtualprocessoreventguid)
+   :::column-end:::
+:::row-end:::
 
-## <a name="agenteventguid"></a><a name="agenteventguid"></a>에이전트이벤트Guid
+## <a name="agenteventguid"></a><a name="agenteventguid"></a> AgentEventGuid
 
 동시성 런타임의 에이전트 라이브러리에서 발생하는 ETW 이벤트를 설명하는 범주 GUID({B9B5B78C-0713-4898-A21A-C67949DCED07})입니다.
 
@@ -41,7 +59,7 @@ ms.locfileid: "81372738"
 const __declspec(selectany) GUID AgentEventGuid = {0xb9b5b78c, 0x713, 0x4898, { 0xa2, 0x1a, 0xc6, 0x79, 0x49, 0xdc, 0xed, 0x7 } };
 ```
 
-## <a name="choreeventguid"></a><a name="choreeventguid"></a>안무이벤트가드
+## <a name="choreeventguid"></a><a name="choreeventguid"></a> ChoreEventGuid
 
 작업 또는 태스크와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -52,9 +70,9 @@ const __declspec(selectany) GUID ChoreEventGuid =
 
 ### <a name="remarks"></a>설명
 
-이 이벤트 범주는 현재 동시성 런타임에 의해 발생되지 않습니다.
+이 이벤트 범주는 현재 동시성 런타임에서 발생 하지 않습니다.
 
-## <a name="concrt_providerguid"></a><a name="concrt_providerguid"></a>ConcRT_ProviderGuid
+## <a name="concrt_providerguid"></a><a name="concrt_providerguid"></a> ConcRT_ProviderGuid
 
 동시성 런타임에 대한 ETW 공급자 GUID입니다.
 
@@ -63,7 +81,7 @@ const __declspec(selectany) GUID ConcRT_ProviderGuid =
     { 0xF7B697A3, 0x4DB5, 0x4d3b, { 0xBE, 0x71, 0xC4, 0xD2, 0x84, 0xE6, 0x59, 0x2F } };
 ```
 
-## <a name="concrt_rm_version_1"></a><a name="concrt_rm_version_1"></a>CONCRT_RM_VERSION_1
+## <a name="concrt_rm_version_1"></a><a name="concrt_rm_version_1"></a> CONCRT_RM_VERSION_1
 
 Visual Studio 2010에서 정의된 리소스 관리자 인터페이스의 지원을 나타냅니다.
 
@@ -71,7 +89,7 @@ Visual Studio 2010에서 정의된 리소스 관리자 인터페이스의 지원
 const unsigned int CONCRT_RM_VERSION_1 = 0x00010000;
 ```
 
-## <a name="concrteventguid"></a><a name="concrteventguid"></a>콘RT이벤트가드
+## <a name="concrteventguid"></a><a name="concrteventguid"></a> ConcRTEventGuid
 
 다른 범주에서 보다 구체적으로 설명되지 않은, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -82,9 +100,9 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 
 ### <a name="remarks"></a>설명
 
-이 이벤트 범주는 현재 동시성 런타임에 의해 발생되지 않습니다.
+이 이벤트 범주는 현재 동시성 런타임에서 발생 하지 않습니다.
 
-## <a name="cooperative_timeout_infinite"></a><a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE
+## <a name="cooperative_timeout_infinite"></a><a name="cooperative_timeout_infinite"></a> COOPERATIVE_TIMEOUT_INFINITE
 
 대기 시간이 초과되지 않아야 함을 나타내는 값입니다.
 
@@ -92,7 +110,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 ```
 
-## <a name="cooperative_wait_timeout"></a><a name="cooperative_wait_timeout"></a>COOPERATIVE_WAIT_TIMEOUT
+## <a name="cooperative_wait_timeout"></a><a name="cooperative_wait_timeout"></a> COOPERATIVE_WAIT_TIMEOUT
 
 대기 시간이 초과되었음을 나타내는 값입니다.
 
@@ -100,7 +118,7 @@ const unsigned int COOPERATIVE_TIMEOUT_INFINITE = (unsigned int)-1;
 const size_t COOPERATIVE_WAIT_TIMEOUT = SIZE_MAX;
 ```
 
-## <a name="contexteventguid"></a><a name="contexteventguid"></a>컨텍스트이벤트Guid
+## <a name="contexteventguid"></a><a name="contexteventguid"></a> ContextEventGuid
 
 컨텍스트와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -109,7 +127,7 @@ const __declspec(selectany) GUID ContextEventGuid =
     { 0x5727A00F, 0x50BE, 0x4519, { 0x82, 0x56, 0xF7, 0x69, 0x98, 0x71, 0xFE, 0xCB } };
 ```
 
-## <a name="inherit_thread_priority"></a><a name="inherit_thread_priority"></a>INHERIT_THREAD_PRIORITY
+## <a name="inherit_thread_priority"></a><a name="inherit_thread_priority"></a> INHERIT_THREAD_PRIORITY
 
 스케줄러의 모든 컨텍스트에 대한 스레드 우선순위가 스케줄러를 만든 스레드의 우선순위와 같아야 함을 나타내는 정책 키 `ContextPriority`에 대한 특수 값입니다.
 
@@ -117,7 +135,7 @@ const __declspec(selectany) GUID ContextEventGuid =
 const unsigned int INHERIT_THREAD_PRIORITY = 0x0000F000;
 ```
 
-## <a name="lockeventguid"></a><a name="lockeventguid"></a>잠금 이벤트 Guid
+## <a name="lockeventguid"></a><a name="lockeventguid"></a> LockEventGuid
 
 잠금과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -128,9 +146,9 @@ const __declspec(selectany) GUID LockEventGuid =
 
 ### <a name="remarks"></a>설명
 
-이 이벤트 범주는 현재 동시성 런타임에 의해 발생되지 않습니다.
+이 이벤트 범주는 현재 동시성 런타임에서 발생 하지 않습니다.
 
-## <a name="maxexecutionresources"></a><a name="maxexecutionresources"></a>최대 실행 가능 자원
+## <a name="maxexecutionresources"></a><a name="maxexecutionresources"></a> MaxExecutionResources
 
 정책 키 `MinConcurrency` 및 `MaxConcurrency`에 대한 특수 값입니다. 기본값은 다른 제약 조건이 없는 경우 컴퓨터의 하드웨어 스레드 수입니다.
 
@@ -138,7 +156,7 @@ const __declspec(selectany) GUID LockEventGuid =
 const unsigned int MaxExecutionResources = 0xFFFFFFFF;
 ```
 
-## <a name="pplparallelforeventguid"></a><a name="pplparallelforeventguid"></a>PPL병렬이벤트가드
+## <a name="pplparallelforeventguid"></a><a name="pplparallelforeventguid"></a> PPLParallelForEventGuid
 
 `parallel_for` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -147,7 +165,7 @@ const __declspec(selectany) GUID PPLParallelForEventGuid =
     { 0x31c8da6b, 0x6165, 0x4042, { 0x8b, 0x92, 0x94, 0x9e, 0x31, 0x5f, 0x4d, 0x84 } };
 ```
 
-## <a name="pplparallelforeacheventguid"></a><a name="pplparallelforeacheventguid"></a>PPL병렬ForeachEventGuid
+## <a name="pplparallelforeacheventguid"></a><a name="pplparallelforeacheventguid"></a> PPLParallelForeachEventGuid
 
 `parallel_for_each` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -156,7 +174,7 @@ const __declspec(selectany) GUID PPLParallelForeachEventGuid =
     { 0x5cb7d785, 0x9d66, 0x465d, { 0xba, 0xe1, 0x46, 0x11, 0x6, 0x1b, 0x54, 0x34 } };
 ```
 
-## <a name="pplparallelinvokeeventguid"></a><a name="pplparallelinvokeeventguid"></a>PPL병렬 인보크이벤트가드
+## <a name="pplparallelinvokeeventguid"></a><a name="pplparallelinvokeeventguid"></a> PPLParallelInvokeEventGuid
 
 `parallel_invoke` 함수 사용과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -165,7 +183,7 @@ const __declspec(selectany) GUID PPLParallelInvokeEventGuid =
     { 0xd1b5b133, 0xec3d, 0x49f4, { 0x98, 0xa3, 0x46, 0x4d, 0x1a, 0x9e, 0x46, 0x82 } };
 ```
 
-## <a name="resourcemanagereventguid"></a><a name="resourcemanagereventguid"></a>리소스 관리자이벤트 Guid
+## <a name="resourcemanagereventguid"></a><a name="resourcemanagereventguid"></a> ResourceManagerEventGuid
 
 리소스 관리자와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -176,9 +194,9 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 
 ### <a name="remarks"></a>설명
 
-이 이벤트 범주는 현재 동시성 런타임에 의해 발생되지 않습니다.
+이 이벤트 범주는 현재 동시성 런타임에서 발생 하지 않습니다.
 
-## <a name="schedulegroupeventguid"></a><a name="schedulegroupeventguid"></a>일정 그룹이벤트Guid
+## <a name="schedulegroupeventguid"></a><a name="schedulegroupeventguid"></a> ScheduleGroupEventGuid
 
 일정 그룹과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -189,9 +207,9 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 
 ### <a name="remarks"></a>설명
 
-이 이벤트 범주는 현재 동시성 런타임에 의해 발생되지 않습니다.
+이 이벤트 범주는 현재 동시성 런타임에서 발생 하지 않습니다.
 
-## <a name="schedulereventguid"></a><a name="schedulereventguid"></a>스케줄러이벤트가드
+## <a name="schedulereventguid"></a><a name="schedulereventguid"></a> SchedulerEventGuid
 
 스케줄러 작업과 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -200,7 +218,7 @@ const __declspec(selectany) GUID SchedulerEventGuid =
     { 0xE2091F8A, 0x1E0A, 0x4731, { 0x84, 0xA2, 0x0D, 0xD5, 0x7C, 0x8A, 0x52, 0x61 } };
 ```
 
-## <a name="virtualprocessoreventguid"></a><a name="virtualprocessoreventguid"></a>가상 프로세서이벤트가드
+## <a name="virtualprocessoreventguid"></a><a name="virtualprocessoreventguid"></a> VirtualProcessorEventGuid
 
 가상 프로세서와 직접 관련된, 동시성 런타임에서 발생하는 ETW 이벤트를 설명하는 범주 GUID입니다.
 
@@ -211,4 +229,4 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
 
 ## <a name="see-also"></a>참고 항목
 
-[동시성 네임스페이스](concurrency-namespace.md)
+[concurrency 네임 스페이스](concurrency-namespace.md)

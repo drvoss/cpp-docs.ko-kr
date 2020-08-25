@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 634a78274a9c7a4ed75466b083f4ee4880401630
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5d7a7e2ba3c962a1ef63b14fed5d4bfb67c38b44
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230171"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845681"
 ---
 # <a name="chi_squared_distribution-class"></a>chi_squared_distribution 클래스
 
@@ -76,10 +76,8 @@ public:
 
 클래스 템플릿은 카이 제곱 분포에 따라 분포 된 경우 사용자 지정 부동 소수점 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|
-|`chi_squared_distribution::operator()`||[param_type](#param_type)|
+[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)\
+[param_type](#param_type)
 
 속성 함수 `n()`은 저장된 분포 매개 변수 `n`의 값을 반환합니다.
 
@@ -224,7 +222,7 @@ Distribution for 10 samples:
 
 **네임스페이스:** std
 
-## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a>chi_squared_distribution:: chi_squared_distribution
+## <a name="chi_squared_distributionchi_squared_distribution"></a><a name="chi_squared_distribution"></a> chi_squared_distribution:: chi_squared_distribution
 
 분포를 생성합니다.
 
@@ -249,7 +247,7 @@ explicit chi_squared_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a>chi_squared_distribution::p aram_type
+## <a name="chi_squared_distributionparam_type"></a><a name="param_type"></a> chi_squared_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

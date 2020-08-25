@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205537"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845824"
 ---
 # <a name="ltalgorithmgt"></a>&lt;알고리즘&gt;
 
@@ -46,7 +46,7 @@ C++ 표준 라이브러리 알고리즘은 해당 목적 또는 요구 사항을
 
 ### <a name="function-templates"></a>함수 템플릿
 
-|||
+|Name|설명|
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|같지 않거나 지정한 조건을 충족하는 인접 요소 두 개를 검색합니다.|
 |[all_of](algorithm-functions.md#all_of)|**`true`** 지정 된 범위의 각 요소에 조건이 있는 경우를 반환 합니다.|

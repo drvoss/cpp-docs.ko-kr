@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: a7df541049aafd191e969eaa392ab3706f171926
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13eea1101abca0f79f0d7c15405ceb3118707b67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224606"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845655"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "87224606"
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[strstreambuf 클래스](../standard-library/strstreambuf-class.md)|이 클래스는 배열 개체에 저장 된 요소의 시퀀스에서의 요소 전송을 제어 하는 스트림 버퍼를 설명 합니다 **`char`** .|
 |[istrstream 클래스](../standard-library/istrstream-class.md)|이 클래스는 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 스트림 버퍼에서 요소 및 인코드된 개체 추출을 제어하는 개체를 설명합니다.|

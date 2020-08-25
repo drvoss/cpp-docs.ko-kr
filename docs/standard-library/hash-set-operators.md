@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 1769519d3bc92f329c347f083e64ba1f35a719db
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b662ea260ca650fc51b17c804594fe25434f61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212308"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845796"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;hash_set&gt; 연산자
 
-||||
-|-|-|-|
-|[연산자! =](#op_neq)|[operator!=(hash_multiset)](#op_neq_hash_multiset)|[연산자 = =](#op_eq_eq)|
-|[operator = = (hash_multiset)](#op_eq_eq_hash_multiset)|
+[연산자! =](#op_neq)\
+[operator! = (hash_multiset)](#op_neq_hash_multiset)\
+[연산자 = =](#op_eq_eq)\
+[operator = = (hash_multiset)](#op_eq_eq_hash_multiset)
 
-## <a name="operator"></a><a name="op_neq"></a>연산자! =
+## <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -38,7 +38,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 *오른쪽*\
 `hash_set` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** hash_sets 같지 않으면이 고, 그렇지 않으면입니다. **`false`** hash_sets 같으면입니다.
 
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a> 연산자 = =
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -106,7 +106,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 *오른쪽*\
 `hash_set` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 hash_set 연산자의 우변에 있는 hash_set와 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>operator! = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a> operator! = (hash_multiset)
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -172,7 +172,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 *오른쪽*\
 `hash_multiset` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** hash_multisets 같지 않으면이 고, 그렇지 않으면입니다. **`false`** hash_multisets 같으면입니다.
 
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>operator = = (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a> operator = = (hash_multiset)
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_set 클래스](../standard-library/unordered-set-class.md)를 대신 사용하는 것이 좋습니다.
@@ -238,7 +238,7 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 *오른쪽*\
 `hash_multiset` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 hash_multiset 연산자의 우변에 있는 hash_multiset와 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 

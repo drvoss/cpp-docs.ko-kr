@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c39aa442c9d4eaf3a482e411cda762fe0cc34b3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211933"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838531"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -59,12 +59,10 @@ struct SizedValue2 {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`typedef`**|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

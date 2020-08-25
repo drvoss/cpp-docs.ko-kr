@@ -1,17 +1,17 @@
 ---
-title: retval (C++ COM 특성)
+title: retval (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f90893390bc67cb495e646f61e3d61a994e42e50
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166343"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845993"
 ---
 # <a name="retval"></a>retval
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166343"
 
 ## <a name="remarks"></a>설명
 
-**Retval** C++ 특성에는 [retval](/windows/win32/Midl/retval) MIDL 특성과 동일한 기능이 있습니다.
+**Retval** c + + 특성에는 [retval](/windows/win32/Midl/retval) MIDL 특성과 동일한 기능이 있습니다.
 
 **retval** 은 함수 선언의 마지막 인수에 표시 되어야 합니다.
 
@@ -35,12 +35,10 @@ ms.locfileid: "80166343"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 매개 변수, 인터페이스 메서드|
-|**반복 가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|**out**|
 |**잘못된 특성**|**in**|
 

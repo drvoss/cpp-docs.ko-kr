@@ -26,23 +26,28 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f4ef061e49bda027b0a8a65449c7c71cd765dcf1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228247"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845759"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 함수
 
-||||
-|-|-|-|
-|[get_money](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money](#iomanip_put_money)|
-|[put_time](#iomanip_put_time)|[작은따옴표로](#quoted)|[resetiosflags](#resetiosflags)|
-|[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
-|[setprecision](#setprecision)|[setw](#setw)|
+[get_money](#iomanip_get_money)\
+[get_time](#iomanip_get_time)\
+[put_money](#iomanip_put_money)\
+[put_time](#iomanip_put_time)\
+[작은따옴표로](#quoted)\
+[resetiosflags](#resetiosflags)\
+[setbase](#setbase)\
+[setfill](#setfill)\
+[setiosflags](#setiosflags)\
+[setprecision](#setprecision)\
+[setw](#setw)
 
-## <a name="get_money"></a><a name="iomanip_get_money"></a>get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a> get_money
 
 원하는 형식을 사용하여 스트림에서 통화 값을 추출하고 매개 변수에서 값을 반환합니다.
 
@@ -63,9 +68,9 @@ T7 get_money(Money& amount, bool use_intl);
 
 조작자는 스트림에서 추출 될 때 `str` `formatted input function` `get` `money_get` `str` *use_intl* 를 사용 하 여 국가별 형식을 나타내는에 연결 된 로캘 패싯에 대해 멤버 함수를 호출 하는 개체를 반환 합니다. 성공 하면 호출이 *추출 된 통화 값으로 저장* 됩니다. 그런 다음 조작자는 `str`을 반환합니다.
 
-`Money`는 형식 **`long double`** 이거나 `basic_string` 와 동일한 요소 및 특성 매개 변수를 사용 하는 인스턴스화 여야 합니다 `str` .
+`Money` 는 형식 **`long double`** 이거나 `basic_string` 와 동일한 요소 및 특성 매개 변수를 사용 하는 인스턴스화 여야 합니다 `str` .
 
-## <a name="get_time"></a><a name="iomanip_get_time"></a>get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a> get_time
 
 원하는 형식을 사용하여 스트림에서 시간 값을 추출합니다. 매개 변수의 값을 시간 구조로 반환합니다.
 
@@ -86,7 +91,7 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 
 조작자는 `str` 스트림에서 추출될 경우 `formatted input function`처럼 동작하는 개체를 반환합니다. 이 입력 함수는 `str`과 연결된 로캘 패싯 `time_get`에 대해 멤버 함수 `get`을 호출하며, `tptr`을 사용하여 시간 구조를 나타내고 `fmt`를 사용하여 null로 끝나는 형식 문자열의 시작을 나타냅니다. 성공하면 추출된 시간 필드와 연결된 값을 시간 구조에 저장합니다. 그런 다음 조작자는 `str`을 반환합니다.
 
-## <a name="put_money"></a><a name="iomanip_put_money"></a>put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a> put_money
 
 원하는 형식을 사용하여 스트림에 금액을 삽입합니다.
 
@@ -103,7 +108,7 @@ T8 put_money(const Money& amount, bool use_intl);
 *use_intl*\
 **`true`** 조작자가 국가별 형식을 사용 해야 하는 경우로 설정 하 고, 그렇지 않으면로 설정 **`false`** 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `str`를 반환합니다.
 
@@ -111,9 +116,9 @@ T8 put_money(const Money& amount, bool use_intl);
 
 조작자는 `str` 스트림에 삽입될 경우 서식 있는 출력 함수처럼 동작하는 개체를 반환합니다. 이 출력 함수는 `str`과 연결된 로캘 패싯 `money_put`에 대해 멤버 함수 `put`을 호출합니다. 성공 하면 `amount` *use_intl* 를 사용 하 여 국제 형식 및를 채우기 요소로 사용 하 여 적절 하 게 형식이 지정 된 호출을 삽입 합니다 `str.fill()` . 그런 다음 조작자는 `str`을 반환합니다.
 
-`Money`는 형식 **`long double`** 이거나 `basic_string` 와 동일한 요소 및 특성 매개 변수를 사용 하는 인스턴스화 여야 합니다 `str` .
+`Money` 는 형식 **`long double`** 이거나 `basic_string` 와 동일한 요소 및 특성 매개 변수를 사용 하는 인스턴스화 여야 합니다 `str` .
 
-## <a name="put_time"></a><a name="iomanip_put_time"></a>put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a> put_time
 
 지정된 형식을 사용하여 시간 구조에서 스트림으로 시간 값을 씁니다.
 
@@ -134,7 +139,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 조작자는 `str` 스트림에 삽입될 경우 `formatted output function`처럼 동작하는 개체를 반환합니다. 출력 함수는 `str`과 연결된 로캘 패킷 `time_put`에 대해 멤버 함수 `put`을 호출합니다. Output 함수는 *time_ptr* 을 사용 하 여 시간 구조를 나타내고 *time_format* null로 끝나는 형식 문자열의 시작을 표시 합니다. 성공하면 형식 문자열에서 리터럴 텍스트를 삽입하고 시간 구조에서 변환된 값을 삽입합니다. 그런 다음 조작자는 `str`을 반환합니다.
 
-## <a name="quoted"></a><a name="quoted"></a>작은따옴표로
+## <a name="quoted"></a><a name="quoted"></a> 작은따옴표로
 
 **(C++14의 새로운 기능)** >> 및 << 연산자를 사용하여 스트림에 대한 문자열의 편리한 왕복을 가능하게 하는 iostream 조작자입니다.
 
@@ -301,7 +306,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a><a name="resetiosflags"></a>resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a> resetiosflags
 
 지정된 플래그를 지웁니다.
 
@@ -314,7 +319,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 *마스크할*\
 선택을 취소할 플래그입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 조작자는 스트림에서 추출 하거나 스트림에 삽입 하는 경우 `str` `str.` [setf](../standard-library/ios-base-class.md#setf) `(ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags)를 호출 하 고를 반환 하는 개체를 반환 `, mask)` `str` 합니다.
 
@@ -322,7 +327,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 `resetiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
-## <a name="setbase"></a><a name="setbase"></a>setbase
+## <a name="setbase"></a><a name="setbase"></a> setbase
 
 정수의 밑을 설정합니다.
 
@@ -335,7 +340,7 @@ T3 setbase(int base);
 *하단*\
 숫자 밑입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 조작자는 스트림에서 추출 하거나 스트림에 삽입 하는 경우 `str` `str.setf(mask,` [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)를 호출 하 고를 반환 하는 개체를 반환 `)` `str` 합니다. 여기서 `mask` 는 다음과 같이 결정 됩니다.
 
@@ -351,7 +356,7 @@ T3 setbase(int base);
 
 `setbase` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
-## <a name="setfill"></a><a name="setfill"></a>setfill
+## <a name="setfill"></a><a name="setfill"></a> setfill
 
 오른쪽 맞춤된 디스플레이에서 공백을 채우는데 사용할 문자를 설정합니다.
 
@@ -365,7 +370,7 @@ T4 setfill(Elem Ch);
 *Ch*\
 오른쪽 맞춤된 디스플레이에서 공백을 채우는데 사용할 문자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 템플릿 조작자는 스트림에 추출 하거나 스트림에 삽입 하는 경우 `str` `str.` [fill](../standard-library/basic-ios-class.md#fill) `(Ch)` 을 호출 하 고를 반환 하는 개체를 반환 합니다 `str` . 형식은 `Elem` 스트림의 요소 형식과 동일 해야 합니다 `str` .
 
@@ -373,7 +378,7 @@ T4 setfill(Elem Ch);
 
 `setfill` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
-## <a name="setiosflags"></a><a name="setiosflags"></a>setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a> setiosflags
 
 지정된 플래그를 설정합니다.
 
@@ -386,7 +391,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 *마스크할*\
 설정할 플래그입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 조작자는 스트림에서 추출 하거나 스트림에 삽입 하는 경우 `str` `str.` [setf](../standard-library/ios-base-class.md#setf) `(mask)` 를 호출 하 고를 반환 하는 개체를 반환 합니다 `str` .
 
@@ -394,7 +399,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 `setiosflags` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
-## <a name="setprecision"></a><a name="setprecision"></a>setprecision
+## <a name="setprecision"></a><a name="setprecision"></a> setprecision
 
 부동 소수점 값의 전체 자릿수를 설정합니다.
 
@@ -407,7 +412,7 @@ T5 setprecision(streamsize Prec);
 *Prec*\
 부동 소수점 값의 전체 자릿수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 조작자는 스트림에서 추출 하거나 스트림에 삽입 하 `str` `str.` 고 [전체 자릿수](../standard-library/ios-base-class.md#precision)를 호출한 다음을 반환 하는 개체를 반환 `(Prec)` `str` 합니다.
 
@@ -415,7 +420,7 @@ T5 setprecision(streamsize Prec);
 
 `setprecision` 사용 예제는 [setw](../standard-library/iomanip-functions.md#setw)를 참조하세요.
 
-## <a name="setw"></a><a name="setw"></a>setw
+## <a name="setw"></a><a name="setw"></a> setw
 
 스트림에서 다음 요소에 대한 표시 필드의 너비를 지정합니다.
 
@@ -428,7 +433,7 @@ T6 setw(streamsize Wide);
 *전반적인*\
 표시 필드의 너비입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 조작자는 스트림에서 추출 하거나 스트림에 삽입 하는 경우 너비를 호출 하 고를 반환 하는 개체를 반환 `str` `str.` [width](../standard-library/ios-base-class.md#width) `(Wide)` `str` 합니다.
 

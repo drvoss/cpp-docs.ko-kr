@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: ae2ea172b331472e6ea28c175ad2c7a10ae621a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1edcabf526d0f3aa2ba52ba3fd0fc656c5ae6b9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220953"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838550"
 ---
 # <a name="deque-class"></a>deque 클래스
 
@@ -136,13 +136,13 @@ deque의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[deque](#deque)|`deque`를 생성합니다. `deque`비어 있는, 지정 된 개수의 빈 요소를 사용 하 여 로드, 다른 위치에서 콘텐츠 이동 또는 복사, `deque` 반복기를 사용 하 여 콘텐츠 복사 또는 이동, 한 요소를 `deque` `count` 시간으로 복사 하는 등의 여러 가지 방법으로 새의 콘텐츠를 설정 하기 위해 여러 생성자가 제공 됩니다. 일부 생성자의 경우 사용자 지정 `allocator`를 사용하여 요소를 만들 수 있습니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 개체의 `deque` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|의 요소를로 액세스 하 고 읽을 수 있는 임의 액세스 반복기를 제공 하는 형식입니다. `deque`**`const`**|
@@ -159,7 +159,7 @@ deque의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[assign](#assign)|`deque`에서 요소를 지우고 대상 `deque`에 요소의 새 시퀀스를 복사합니다.|
 |[at](#at)|`deque`의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.|
@@ -193,12 +193,12 @@ deque의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[operator&#91;&#93;](#op_at)|지정된 위치에 있는 `deque` 요소에 대한 참조를 반환합니다.|
 |[연산자 =](#op_eq)|`deque`의 요소를 다른 `deque`의 복사본으로 바꿉니다.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 deque 개체의 할당자 클래스를 나타내는 형식입니다.
 
@@ -214,7 +214,7 @@ typedef Allocator allocator_type;
 
 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
-## <a name="assign"></a><a name="assign"></a>할당
+## <a name="assign"></a><a name="assign"></a> 할당
 
 deque에서 요소를 삭제하고 대상 deque에 요소의 새 집합을 복사합니다.
 
@@ -306,7 +306,7 @@ int main()
 d1 = 5678c1 =102030c1 =5060c1 =4444444
 ```
 
-## <a name="at"></a><a name="at"></a>속도
+## <a name="at"></a><a name="at"></a> 속도
 
 deque의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.
 
@@ -321,11 +321,11 @@ const_reference at(size_type pos) const;
 *pos*\
 deque에서 참조할 요소의 아래 첨자 또는 위치 번호입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Pos* 가 deque의 크기 보다 큰 경우는 예외를 `at` throw 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `at`의 반환 값이 `const_reference`에 할당되는 경우에는 deque 개체를 수정할 수 없습니다. `at`의 반환 값이 `reference`에 할당되는 경우에는 deque 개체를 수정할 수 있습니다.
 
@@ -357,7 +357,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a><a name="back"></a>뒤로
+## <a name="back"></a><a name="back"></a> 뒤로
 
 deque의 마지막 요소에 대한 참조를 반환합니다.
 
@@ -366,7 +366,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 deque의 마지막 요소입니다. deque가 비어 있으면 반환 값이 정의 해제됩니다.
 
@@ -406,7 +406,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a>시작
+## <a name="begin"></a><a name="begin"></a> 시작
 
 deque의 첫 번째 요소 주소를 지정하는 반복기를 반환합니다.
 
@@ -415,7 +415,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 deque의 첫 번째 요소 또는 빈 deque 다음의 위치 주소를 지정하는 임의 액세스 반복기입니다.
 
@@ -458,7 +458,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 **`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
@@ -466,7 +466,7 @@ The first element of c1 is now 20
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`const`** 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()` ).
 
@@ -484,7 +484,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 **`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
@@ -492,7 +492,7 @@ auto i2 = Container.cbegin();
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 범위 끝의 바로 다음을 가리키는 임의 액세스 반복기입니다.
 
@@ -512,7 +512,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-## <a name="clear"></a><a name="clear"></a>해제
+## <a name="clear"></a><a name="clear"></a> 해제
 
 deque의 모든 요소를 지웁니다.
 
@@ -548,7 +548,7 @@ The size of the deque is initially 3
 The size of the deque after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 Deque의 요소를 액세스 하 고 읽을 수 있는 임의 액세스 반복기를 제공 하는 형식입니다 **`const`** .
 
@@ -564,7 +564,7 @@ typedef implementation-defined const_iterator;
 
 [back](#back)의 예제를 참조하세요.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 Deque의 요소에 대 한 포인터를 제공 **`const`** 합니다.
 
@@ -576,7 +576,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 `const_pointer` 형식을 사용하여 요소의 값을 수정할 수는 없습니다. [iterator](#iterator)는 deque 요소에 액세스하는 데 사용되는 경우가 더 많습니다.
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 **`const`** 작업을 읽고 수행 하기 위해 deque에 저장 된 요소에 대 한 참조를 제공 하는 형식입니다 **`const`** .
 
@@ -620,7 +620,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Deque의 모든 요소를 읽을 수 있는 임의 액세스 반복기를 제공 하는 형식입니다 **`const`** .
 
@@ -636,7 +636,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 반복기를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 역방향 deque의 첫 번째 요소에 대해 const 반복기를 반환합니다.
 
@@ -644,7 +644,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 [deque](../standard-library/deque-class.md)에서 첫 번째 요소의 주소를 지정하거나 역방향이 해제된 `deque`에서 마지막 요소의 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
@@ -685,7 +685,7 @@ The first element of deque is 1.
 The first element of the reversed deque is 2.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 역방향 deque에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 상수 반복기를 반환합니다.
 
@@ -693,7 +693,7 @@ The first element of the reversed deque is 2.
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 [deque](../standard-library/deque-class.md)에서 마지막 요소 다음의 위치(역방향이 해제된 deque의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
@@ -734,7 +734,7 @@ int main( )
 1
 ```
 
-## <a name="deque"></a><a name="deque"></a>deque
+## <a name="deque"></a><a name="deque"></a> deque
 
 특정 크기의 deque 또는 특정 값의 요소나 특정 할당자가 포함된 목록을 다른 deque 일부 또는 전체의 복사본으로 생성합니다.
 
@@ -1011,7 +1011,7 @@ int main( )
 }
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 동일한 deque 내의 요소를 참조하는 두 반복기 사이의 차이를 제공하는 형식입니다.
 
@@ -1066,7 +1066,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 내부에서 생성된 요소를 deque의 지정된 위치에 삽입합니다.
 
@@ -1084,7 +1084,7 @@ iterator emplace(
 *짧은*\
 `deque`에 삽입되는 요소의 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 함수는 새 요소를 deque에 삽입한 위치를 가리키는 반복기를 반환합니다.
 
@@ -1134,7 +1134,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 내부에서 생성된 요소를 deque의 끝에 추가합니다.
 
@@ -1183,7 +1183,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 내부에서 생성된 요소를 deque의 끝에 추가합니다.
 
@@ -1232,7 +1232,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="empty"></a><a name="empty"></a>비우려면
+## <a name="empty"></a><a name="empty"></a> 비우려면
 
 deque가 비어 있는지 여부를 테스트합니다.
 
@@ -1240,7 +1240,7 @@ deque가 비어 있는지 여부를 테스트합니다.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** deque이 비어 있으면이 고, 그렇지 않으면입니다. **`false`** deque이 비어 있지 않으면입니다.
 
@@ -1269,7 +1269,7 @@ int main( )
 The deque is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>종단
+## <a name="end"></a><a name="end"></a> 종단
 
 deque에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.
 
@@ -1279,13 +1279,13 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 deque에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 임의 액세스 반복기입니다. deque가 비어 있으면 deque::end == deque::begin입니다.
 
 ### <a name="remarks"></a>설명
 
-`end`는 반복기가 deque의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다.
+`end` 는 반복기가 deque의 끝에 도달 했는지 여부를 테스트 하는 데 사용 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -1329,7 +1329,7 @@ The new next-to-last integer of c1 is 400
 The deque is now: 10 400 30
 ```
 
-## <a name="erase"></a><a name="erase"></a>지우는
+## <a name="erase"></a><a name="erase"></a> 지우는
 
 deque의 지정된 위치에서 요소 또는 요소 범위를 제거합니다.
 
@@ -1350,7 +1350,7 @@ deque에서 제거되는 첫 번째 요소의 위치입니다.
 *최신*\
 deque에서 제거되는 마지막 요소 바로 뒤의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 임의 액세스 반복기이거나, 남아 있는 요소가 없는 경우에는 deque 끝에 대한 포인터입니다.
 
@@ -1402,7 +1402,7 @@ After erasing the first element, the deque becomes:  20 30 40 50
 After erasing all elements but the first, deque becomes: 20
 ```
 
-## <a name="front"></a><a name="front"></a>앞뒤
+## <a name="front"></a><a name="front"></a> 앞뒤
 
 deque의 첫 번째 요소에 대한 참조를 반환합니다.
 
@@ -1412,7 +1412,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 deque가 비어 있으면 반환이 정의 해제됩니다.
 
@@ -1460,7 +1460,7 @@ deque를 생성하는 데 사용되는 할당자 개체의 복사본을 반환�
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 deque에서 사용되는 할당자입니다.
 
@@ -1491,7 +1491,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>넣거나
+## <a name="insert"></a><a name="insert"></a> 넣거나
 
 요소 하나 또는 여러 개나 요소의 범위를 deque의 지정된 위치에 삽입합니다.
 
@@ -1540,7 +1540,7 @@ deque에 삽입되는 요소의 수입니다.
 *IList*\
 삽입할 요소의 initializer_list입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 처음 두 insert 함수는 새 요소가 deque에 삽입된 위치를 가리키는 반복기를 반환합니다.
 
@@ -1548,7 +1548,7 @@ deque에 삽입되는 요소의 수입니다.
 
 모든 삽입 작업에서는 많은 계산을 수행해야 할 수 있습니다.
 
-## <a name="iterator"></a><a name="iterator"></a>반복
+## <a name="iterator"></a><a name="iterator"></a> 반복
 
 deque에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.
 
@@ -1564,7 +1564,7 @@ typedef implementation-defined iterator;
 
 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 deque의 최대 길이를 반환합니다.
 
@@ -1572,7 +1572,7 @@ deque의 최대 길이를 반환합니다.
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 deque의 최대 허용 길이입니다.
 
@@ -1595,7 +1595,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>연산자 []
+## <a name="operator"></a><a name="op_at"></a> 연산자 []
 
 지정된 위치에 있는 deque 요소에 대한 참조를 반환합니다.
 
@@ -1610,7 +1610,7 @@ const_reference operator[](size_type pos) const;
 *pos*\
 참조할 deque 요소의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수에 해당 위치가 지정된 요소에 대한 참조입니다. 지정된 위치가 deque의 크기보다 클 경우 결과가 정의 해제됩니다.
 
@@ -1646,7 +1646,7 @@ The first integer of c1 is 10
 The second integer of c1 is 20
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 다른 deque의 요소를 사용하여 이 deque의 요소를 대체합니다.
 
@@ -1732,7 +1732,7 @@ typedef typename Allocator::pointer pointer;
 
 형식을 `pointer` 사용 하 여 요소의 값을 수정할 수 있습니다. [iterator](#iterator)는 deque 요소에 액세스하는 데 사용되는 경우가 더 많습니다.
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 deque의 끝에 있는 요소를 삭제합니다.
 
@@ -1774,7 +1774,7 @@ The last element is: 2
 After deleting the element at the end of the deque, the last element is: 1
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 deque의 시작 부분에 있는 요소를 삭제합니다.
 
@@ -1816,7 +1816,7 @@ The second element is: 2
 After deleting the element at the beginning of the deque, the first element is: 2
 ```
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 deque 끝에 요소를 추가합니다.
 
@@ -1835,7 +1835,7 @@ deque 끝에 추가되는 요소입니다.
 
 예외가 throw되면 deque는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 deque의 시작 부분에 요소를 추가합니다.
 
@@ -1890,7 +1890,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 역방향 deque의 첫 번째 요소에 대한 반복기를 반환합니다.
 
@@ -1900,7 +1900,7 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 deque에서 첫 번째 요소의 주소를 지정하거나 역방향이 해제된 deque에서 마지막 요소의 주소를 지정하는 역방향 임의 액세스 반복기입니다.
 
@@ -1966,7 +1966,7 @@ The reversed deque is: 30 20 10
 Last element in deque is now 40.
 ```
 
-## <a name="reference"></a><a name="reference"></a>참조일
+## <a name="reference"></a><a name="reference"></a> 참조일
 
 deque에 저장된 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -2002,7 +2002,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 역방향 deque에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.
 
@@ -2012,7 +2012,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 deque에서 마지막 요소 다음의 위치(역방향이 해제된 deque의 첫 번째 요소 앞의 위치) 주소를 지정하는 역방향 임의 액세스 반복기입니다.
 
@@ -2087,7 +2087,7 @@ The reversed deque is: 30 20 10
 The modified reversed deque is: 30 20 40
 ```
 
-## <a name="resize"></a><a name="resize"></a>조정해
+## <a name="resize"></a><a name="resize"></a> 조정해
 
 deque의 새 크기를 지정합니다.
 
@@ -2155,7 +2155,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 역방향 deque에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.
 
@@ -2171,7 +2171,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 rbegin의 예제를 참조하세요.
 
-## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> shrink_to_fit
 
 여분의 용량을 삭제합니다.
 
@@ -2212,7 +2212,7 @@ Current size of v1 = 1
 Current size of v1 = 1
 ```
 
-## <a name="size"></a><a name="size"></a>크기가
+## <a name="size"></a><a name="size"></a> 크기가
 
 deque의 요소 수를 반환합니다.
 
@@ -2220,7 +2220,7 @@ deque의 요소 수를 반환합니다.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 deque의 현재 길이입니다.
 
@@ -2253,7 +2253,7 @@ The deque length is 1.
 The deque length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 deque의 요소 수를 계산하는 형식입니다.
 
@@ -2265,7 +2265,7 @@ typedef typename Allocator::size_type size_type;
 
 [size](#size)의 예제를 참조하세요.
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 deque의 요소를 교환합니다.
 
@@ -2339,7 +2339,7 @@ After swapping with c3, deque c1 is: 100
 After swapping with c2, deque c1 is: 1 2 3
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 deque에 저장된 데이터 형식을 나타내는 형식입니다.
 

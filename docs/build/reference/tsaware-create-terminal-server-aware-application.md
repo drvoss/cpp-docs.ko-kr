@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 135d919278c8e969dc3a31381d5abbd1058c8663
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: c2ec12b0b5fbe241d75acc4bb0d87837371a293e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373894"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845733"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE(터미널 서버 인식 애플리케이션 만들기)
 
@@ -59,4 +59,4 @@ ms.locfileid: "86373894"
 [MSVC 링커 참조](linking.md)<br/>
 [MSVC 링커 옵션](linker-options.md)<br/>
 [사용자 관련 정보 저장](/windows/win32/TermServ/storing-user-specific-information)<br/>
-[터미널 서비스 환경의 레거시 응용 프로그램](https://docs.microsoft.com/previous-versions//aa382957(v=vs.85))
+[터미널 서비스 환경의 레거시 응용 프로그램](/previous-versions/aa382957(v=vs.85))

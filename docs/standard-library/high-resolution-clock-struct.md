@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 850d5e3a5434aa44e23a7f74aeb9c306ab6c0a8e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a79cb91a6b0e6ca633540fd37f7a0e1ece53b712
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203210"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845788"
 ---
 # <a name="steady_clock-struct"></a>steady_clock 구조체
 
@@ -42,7 +42,7 @@ class high_resolution_clock
 
 ## <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |`now`|현재 시간을 값으로 반환 합니다 `time_point` .|
 

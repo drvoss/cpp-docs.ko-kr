@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: 3c95f4a982e23d757b330ecadcae5cfbfd6fd531
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213075"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839129"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 클래스
 
@@ -60,7 +60,7 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|설명|
 |----------|-----------------|
 |[UnorderedMap:: UnorderedMap](#ctor)|Map 클래스의 새 인스턴스를 초기화합니다.|
 
@@ -79,10 +79,9 @@ ref class Map sealed;
 
 ### <a name="events"></a>이벤트
 
-|||
-|-|-|
-|Name|설명|
-|[Map:: MapChanged](#mapchanged) 이벤트|Map이 변경될 때 발생합니다.|
+| Name | 설명 |
+|--|--|
+| [Map:: MapChanged](#mapchanged) 이벤트 | Map이 변경될 때 발생합니다. |
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -94,7 +93,7 @@ ref class Map sealed;
 
 **네임스페이스:** Platform::Collections
 
-## <a name="unorderedmapclear-method"></a><a name="clear"></a>UnorderedMap:: Clear 메서드
+## <a name="unorderedmapclear-method"></a><a name="clear"></a> UnorderedMap:: Clear 메서드
 
 현재 UnorderedMap 개체에서 모든 키-값 쌍을 제거합니다.
 
@@ -104,7 +103,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap:: First 메서드
+## <a name="unorderedmapfirst-method"></a><a name="first"></a> UnorderedMap:: First 메서드
 
 순서가 지정 되지 않은 맵에서 첫 번째 [Windows:: Foundation:: Collections:: inputiterator<ikeyvaluepair<k \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 요소를 지정 하는 반복기를 반환 합니다.
 
@@ -122,9 +121,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>설명
 
-First ()에서 반환 된 반복기를 편리 하 게 유지 하는 방법은 형식 추론 키워드를 사용 하 여 선언 된 변수에 반환 값을 할당 하는 것입니다 **`auto`** . 예들 들어 `auto x = myUnorderedMap->First();`입니다.
+First ()에서 반환 된 반복기를 편리 하 게 유지 하는 방법은 형식 추론 키워드를 사용 하 여 선언 된 변수에 반환 값을 할당 하는 것입니다 **`auto`** . 예: `auto x = myUnorderedMap->First();`.
 
-## <a name="unorderedmapgetview-method"></a><a name="getview"></a>UnorderedMap:: GetView 메서드
+## <a name="unorderedmapgetview-method"></a><a name="getview"></a> UnorderedMap:: GetView 메서드
 
 현재 UnorderedMap의 읽기 전용 뷰를 반환 합니다. 즉, [Windows:: Foundation:: collections:: IMapView:: IMapView](/uwp/api/windows.foundation.collections.imapview-2) 인터페이스를 구현 하는 [Platform:: Collections:: UnorderedMapView 클래스](../cppcx/platform-collections-unorderedmapview-class.md) 입니다.
 
@@ -138,7 +137,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `UnorderedMapView` 개체입니다.
 
-## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>UnorderedMap:: HasKey 메서드
+## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a> UnorderedMap:: HasKey 메서드
 
 현재 UnorderedMap에 지정한 키가 들어 있는지 여부를 확인합니다.
 
@@ -155,11 +154,11 @@ bool HasKey(
 *key*<br/>
 UnorderedMap 요소를 찾는 데 사용되는 키입니다. *키* 의 형식은 형식 이름 *K*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 키가 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="unorderedmapinsert-method"></a><a name="insert"></a>UnorderedMap:: Insert 메서드
+## <a name="unorderedmapinsert-method"></a><a name="insert"></a> UnorderedMap:: Insert 메서드
 
 지정한 키-값 쌍을 현재 UnorderedMap 개체에 추가합니다.
 
@@ -180,11 +179,11 @@ virtual bool Insert(
 *value*<br/>
 키-값 쌍의 값 부분입니다. *값* 의 형식은 형식 이름 *V*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 현재 Map의 기존 요소 키가 *키* 와 일치 하 고 해당 요소의 값 부분이 *value*로 설정 되어 있으면입니다. **`false`** 현재 Map의 기존 요소가 *키* 와 일치 하지 않고 키 및 *값* 매개 *변수를 키* -값 쌍으로 만든 다음 현재 UnorderedMap에 추가 하면입니다.
 
-## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>UnorderedMap:: Lookup 메서드
+## <a name="unorderedmaplookup-method"></a><a name="lookup"></a> UnorderedMap:: Lookup 메서드
 
 K 형식의 지정된 키와 연결된 V 형식의 값을 검색합니다.
 
@@ -201,11 +200,11 @@ V Lookup(
 *key*<br/>
 UnorderedMap에서 요소를 찾는 데 사용되는 키입니다. *키* 의 형식은 형식 이름 *K*입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *키*와 쌍으로 연결 된 값입니다. 반환 값의 형식은 형식 이름 *V*입니다.
 
-## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>UnorderedMap:: MapChanged
+## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a> UnorderedMap:: MapChanged
 
 맵에서 항목이 삽입되거나 제거될 때 발생합니다.
 
@@ -223,7 +222,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 C # 또는 Visual Basic project IMap를 IDictionary로 Windows 런타임 앱을 \<K,V> \<K,V> 합니다.
 
-## <a name="unorderedmapremove-method"></a><a name="remove"></a>UnorderedMap:: Remove 메서드
+## <a name="unorderedmapremove-method"></a><a name="remove"></a> UnorderedMap:: Remove 메서드
 
 지정한 키-값 쌍을 UnorderedMap 개체에서 삭제합니다.
 
@@ -239,7 +238,7 @@ virtual void Remove(
 *key*<br/>
 키-값 쌍의 키 부분입니다. *키* 의 형식은 형식 이름 *K*입니다.
 
-## <a name="unorderedmapsize-method"></a><a name="size"></a>UnorderedMap:: Size 메서드
+## <a name="unorderedmapsize-method"></a><a name="size"></a> UnorderedMap:: Size 메서드
 
 UnorderedMap의 [Windows:: Foundation:: Collections:: inputiterator<ikeyvaluepair<k \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) 요소 수를 반환 합니다.
 
@@ -253,7 +252,7 @@ virtual property unsigned int Size;
 
 UnorderedMap의 요소 수입니다.
 
-## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>UnorderedMap:: UnorderedMap 생성자
+## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a> UnorderedMap:: UnorderedMap 생성자
 
 UnorderedMap 클래스의 새 인스턴스를 초기화합니다.
 

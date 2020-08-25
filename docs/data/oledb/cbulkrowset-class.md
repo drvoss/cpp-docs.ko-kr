@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212125"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838466"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 클래스
 
@@ -126,7 +126,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[AddRefRows](#addrefrows)|참조 횟수를 증가 시킵니다.|
 |[CBulkRowset](#cbulkrowset)|생성자입니다.|
@@ -136,16 +136,16 @@ class CBulkRowset : public CRowset<TAccessor>
 |[MovePrev](#moveprev)|이전 행으로 이동 합니다.|
 |[MoveToBookmark](#movetobookmark)|책갈피로 표시 된 행 또는 해당 책갈피의 지정 된 오프셋에 있는 행을 인출 합니다.|
 |[MoveToRatio](#movetoratio)|행 집합의 소수 위치에서 시작 하 여 행을 인출 합니다.|
-|[ReleaseRows](#releaserows)|현재 행 (`m_nCurrentRow`)을 0으로 설정 하 고 모든 행을 해제 합니다.|
+|[ReleaseRows](#releaserows)|현재 행 ( `m_nCurrentRow` )을 0으로 설정 하 고 모든 행을 해제 합니다.|
 |[SetRows](#setrows)|한 번의 호출로 검색할 행 핸들의 수를 설정 합니다.|
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 `CBulkRowset` 클래스를 사용 하는 방법을 보여 줍니다.
+다음 예제에서는 클래스를 사용 하는 방법을 보여 줍니다 `CBulkRowset` .
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>C대량 행 집합:: AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a> C대량 행 집합:: AddRefRows
 
 [IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) 를 호출 하 여 대량 행 집합에서 현재 검색 된 모든 행에 대 한 참조 횟수를 늘립니다.
 
@@ -155,13 +155,13 @@ class CBulkRowset : public CRowset<TAccessor>
 HRESULT AddRefRows() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>C대량 행 집합:: C대량 행 집합
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a> C대량 행 집합:: C대량 행 집합
 
-새 `CBulkRowset` 개체를 만들고 기본 행 수를 10으로 설정 합니다.
+새 개체를 만들고 `CBulkRowset` 기본 행 수를 10으로 설정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -169,7 +169,7 @@ HRESULT AddRefRows() throw();
 CBulkRowset();
 ```
 
-## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>C대량 행 집합:: MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a> C대량 행 집합:: MoveFirst
 
 데이터의 첫 번째 행을 검색 합니다.
 
@@ -179,11 +179,11 @@ CBulkRowset();
 HRESULT MoveFirst() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>C대량 행 집합:: MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a> C대량 행 집합:: MoveLast
 
 마지막 행으로 이동 합니다.
 
@@ -193,11 +193,11 @@ HRESULT MoveFirst() throw();
 HRESULT MoveLast() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>C대량 행 집합:: MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a> C대량 행 집합:: MoveNext
 
 데이터의 다음 행을 검색 합니다.
 
@@ -207,11 +207,11 @@ HRESULT MoveLast() throw();
 HRESULT MoveNext() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다. 행 집합의 끝에 도달 하면 DB_S_ENDOFROWSET 반환 됩니다.
 
-## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>C대량 행 집합:: MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a> C대량 행 집합:: MovePrev
 
 이전 행으로 이동 합니다.
 
@@ -221,11 +221,11 @@ HRESULT MoveNext() throw();
 HRESULT MovePrev() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>C대량 행 집합:: MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a> C대량 행 집합:: MoveToBookmark
 
 책갈피 또는 해당 책갈피에서 지정 된 오프셋 (*Lskip*)의 행으로 표시 된 행을 인출 합니다.
 
@@ -238,7 +238,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>매개 변수
 
-*책갈피*<br/>
+*bookmark*<br/>
 진행 데이터를 가져올 위치를 표시 하는 책갈피입니다.
 
 *lSkip*<br/>
@@ -248,7 +248,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 *OLE DB 프로그래머 참조*에서 [IRowset:: GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) 를 참조 하세요.
 
-## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>C대량 행 집합:: MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a> C대량 행 집합:: MoveToRatio
 
 행 집합의 소수 위치에서 시작 하 여 행을 인출 합니다.
 
@@ -271,15 +271,15 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`MoveToRatio`는 다음 수식에 따라 대략적으로 행을 인출 합니다.
+`MoveToRatio` 는 다음 수식에 따라 대략적으로 행을 인출 합니다.
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-여기서 `RowsetSize`는 행 단위로 측정 되는 행 집합의 크기입니다. 이 수식의 정확도는 특정 공급자에 따라 달라 집니다. 자세한 내용은 *OLE DB 프로그래머 참조*에서 [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 를 참조 하세요.
+여기서 `RowsetSize` 는 행 단위로 측정 되는 행 집합의 크기입니다. 이 수식의 정확도는 특정 공급자에 따라 달라 집니다. 자세한 내용은 *OLE DB 프로그래머 참조*에서 [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 를 참조 하세요.
 
-## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>C대량 행 집합:: ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a> C대량 행 집합:: ReleaseRows
 
 는 [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) 를 호출 하 여 대량 행 집합에서 현재 검색 된 모든 행에 대 한 참조 횟수를 감소 시킵니다.
 
@@ -289,11 +289,11 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 HRESULT ReleaseRows() throw();
 ```
 
-### <a name="return-value"></a>반환 값
+### <a name="return-value"></a>Return Value
 
 표준 HRESULT입니다.
 
-## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>C대량 행 집합:: SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a> C대량 행 집합:: SetRows
 
 각 호출에 의해 검색 되는 행 핸들의 수를 설정 합니다.
 
@@ -308,7 +308,7 @@ void SetRows(DBROWCOUNT nRows) throw();
 *nRows*<br/>
 진행 행 집합의 새 크기 (행 수)입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수를 호출 하는 경우 행 집합이 열리기 전에 있어야 합니다.
 

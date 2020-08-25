@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: fc313a5cb6e9ce6ebd06ed0432f99203a0f1ff4d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a61cefa7f844062fcca42711ce6515180066b919
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182917"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839103"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 클래스
 
@@ -47,7 +47,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|설명|
 |----------|-----------------|
 |[CMFCToolBarsCustomizeDialog:: CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|`CMFCToolBarsCustomizeDialog` 개체를 생성합니다.|
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|소멸자|
@@ -61,7 +61,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 |[CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands)|리소스에서 메뉴를 로드 하 고 [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) 를 호출 하 여 **명령** 페이지의 명령 목록에 해당 메뉴를 추가 합니다.|
 |[CMFCToolBarsCustomizeDialog:: AddToolBar](#addtoolbar)|리소스에서 도구 모음을 로드 합니다. 그런 다음 메뉴의 각 명령에 대해 [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) 메서드를 호출 하 여 **명령 페이지의 명령 목록** 에 있는 단추를 지정 된 범주에 삽입 합니다.|
 |[CMFCToolBarsCustomizeDialog:: Create](#create)|**사용자 지정** 대화 상자를 표시 합니다.|
-|`CMFCToolBarsCustomizeDialog::EnableTools`|다음에 사용하도록 예약됩니다.|
+|`CMFCToolBarsCustomizeDialog::EnableTools`|나중에 사용하기 위해 예약되어 있습니다.|
 |[CMFCToolBarsCustomizeDialog:: EnableUserDefinedToolbars](#enableuserdefinedtoolbars)|**사용자 지정** 대화 상자를 사용 하 여 새 도구 모음 만들기를 사용 하거나 사용 하지 않도록 설정 합니다.|
 |[CMFCToolBarsCustomizeDialog:: FillAllCommandsList](#fillallcommandslist)|제공 된 `CListBox` 개체를 **All 명령** 범주의 명령으로 채웁니다.|
 |[CMFCToolBarsCustomizeDialog:: Fill범주 Combobox](#fillcategoriescombobox)|제공 된 `CComboBox` 개체를 **사용자 지정** 대화 상자의 각 명령 범주 이름으로 채웁니다.|
@@ -116,7 +116,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 **헤더:** afxToolBarsCustomizeDialog
 
-## <a name="cmfctoolbarscustomizedialogaddbutton"></a><a name="addbutton"></a>CMFCToolBarsCustomizeDialog:: AddButton
+## <a name="cmfctoolbarscustomizedialogaddbutton"></a><a name="addbutton"></a> CMFCToolBarsCustomizeDialog:: AddButton
 
 **명령** 페이지의 명령 목록에 도구 모음 단추를 삽입 합니다.
 
@@ -162,7 +162,7 @@ void AddButton(
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
-## <a name="cmfctoolbarscustomizedialogaddmenu"></a><a name="addmenu"></a>CMFCToolBarsCustomizeDialog:: AddMenu
+## <a name="cmfctoolbarscustomizedialogaddmenu"></a><a name="addmenu"></a> CMFCToolBarsCustomizeDialog:: AddMenu
 
 리소스에서 메뉴를 로드 하 고 [CMFCToolBarsCustomizeDialog:: AddMenuCommands](#addmenucommands) 를 호출 하 여 **명령** 페이지의 명령 목록에 해당 메뉴를 추가 합니다.
 
@@ -175,7 +175,7 @@ BOOL AddMenu(UINT uiMenuResId);
 *uiMenuResId*<br/>
 진행 로드할 메뉴의 리소스 ID를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메뉴가 성공적으로 추가 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -183,7 +183,7 @@ BOOL AddMenu(UINT uiMenuResId);
 
 호출에서 `AddMenuCommands` *BPOPUP* 은 FALSE입니다. 따라서 해당 메서드는 하위 메뉴가 포함 된 메뉴 항목을 명령 목록에 추가 하지 않습니다. 이 메서드는 하위 메뉴에 있는 메뉴 항목을 명령 목록에 추가 합니다.
 
-## <a name="cmfctoolbarscustomizedialogaddmenucommands"></a><a name="addmenucommands"></a>CMFCToolBarsCustomizeDialog:: AddMenuCommands
+## <a name="cmfctoolbarscustomizedialogaddmenucommands"></a><a name="addmenucommands"></a> CMFCToolBarsCustomizeDialog:: AddMenuCommands
 
 **명령** 페이지의 명령 목록에 항목을 추가 하 여 지정 된 메뉴의 모든 항목을 표시 합니다.
 
@@ -215,7 +215,7 @@ void AddMenuCommands(
 
 *Bpopup* 이 TRUE 이면 하위 메뉴가 포함 된 각 메뉴 항목에 대해이 메서드는 [cmfc도구](../../mfc/reference/cmfctoolbarmenubutton-class.md) 메뉴 메뉴 개체를 만들어를 호출 하 여 명령 목록에 삽입 `AddButton` 합니다. 그렇지 않으면 하위 메뉴가 포함 된 메뉴 항목이 명령 목록에 표시 되지 않습니다. 두 경우 모두에서 `AddMenuCommands` 하위 메뉴가 포함 된 메뉴 항목이 발견 되 면이를 재귀적으로 호출 하 여 하위 메뉴에 대 한 포인터를 *pmenu* 매개 변수로 전달 하 고 하위 메뉴의 레이블을 *lpszMenuPath*에 추가 합니다.
 
-## <a name="cmfctoolbarscustomizedialogaddtoolbar"></a><a name="addtoolbar"></a>CMFCToolBarsCustomizeDialog:: AddToolBar
+## <a name="cmfctoolbarscustomizedialogaddtoolbar"></a><a name="addtoolbar"></a> CMFCToolBarsCustomizeDialog:: AddToolBar
 
 리소스에서 도구 모음을 로드 합니다. 그런 다음 메뉴의 각 명령에 대해 [CMFCToolBarsCustomizeDialog:: AddButton](#addbutton) 메서드를 호출 하 여 **명령 페이지의 명령 목록** 에 있는 단추를 지정 된 범주에 삽입 합니다.
 
@@ -240,7 +240,7 @@ BOOL AddToolBar(
 *lpszCategory*<br/>
 진행 도구 모음을 추가할 범주의 이름을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -254,7 +254,7 @@ BOOL AddToolBar(
 
 각 명령을 나타내는 데 사용 되는 컨트롤은 [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 개체입니다. 도구 모음을 추가한 후에는 [CMFCToolBarsCustomizeDialog:: ReplaceButton](#replacebutton)를 호출 하 여 단추를 파생 형식의 컨트롤로 바꿀 수 있습니다.
 
-## <a name="cmfctoolbarscustomizedialogchecktoolsvalidity"></a><a name="checktoolsvalidity"></a>CMFCToolBarsCustomizeDialog:: CheckToolsValidity
+## <a name="cmfctoolbarscustomizedialogchecktoolsvalidity"></a><a name="checktoolsvalidity"></a> CMFCToolBarsCustomizeDialog:: CheckToolsValidity
 
 사용자 도구 목록의 유효성을 확인 합니다.
 
@@ -267,7 +267,7 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 *lstTools*<br/>
 진행 확인할 사용자 정의 도구 목록입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 사용자 정의 도구 목록이 올바르면 TRUE를 반환 합니다. 그렇지 않으면 FALSE입니다. 기본 구현에서는 항상 TRUE를 반환 합니다.
 
@@ -275,9 +275,9 @@ virtual BOOL CheckToolsValidity(const CObList& lstTools);
 
 프레임 워크는이 메서드를 호출 하 여 [CMFCToolBarsCustomizeDialog:: CheckToolsValidity](#checktoolsvalidity)에서 반환 하는 사용자 정의 도구를 나타내는 개체의 유효성을 확인 합니다.
 
-사용자 `CheckToolsValidity` `CMFCToolBarsCustomizeDialog` 가 대화 상자를 닫기 전에 사용자 도구의 유효성을 검사 하려는 경우에서 파생 된 클래스의 메서드를 재정의 합니다. 사용자가 대화 상자의 오른쪽 위 모퉁이에 있는 **닫기** 단추를 클릭 하거나 대화 상자의 오른쪽 아래에 있는 **닫기** 단추를 클릭 하면이 메서드가 FALSE를 반환 하는 경우 대화 상자에는 닫는 대신 **도구** 탭이 표시 됩니다. 사용자가 탭을 클릭 하 여 **도구** 탭에서 다른 위치로 이동할 때이 메서드가 FALSE를 반환 하면 탐색이 수행 되지 않습니다. 유효성 검사 실패를 일으킨 문제를 사용자에 게 알리는 적절 한 메시지 상자를 표시 해야 합니다.
+사용자 `CheckToolsValidity` `CMFCToolBarsCustomizeDialog`  가 대화 상자를 닫기 전에 사용자 도구의 유효성을 검사 하려는 경우에서 파생 된 클래스의 메서드를 재정의 합니다. 사용자가 대화 상자의 오른쪽 위 모퉁이에 있는 **닫기** 단추를 클릭 하거나 대화 상자의 오른쪽 아래에 있는 **닫기** 단추를 클릭 하면이 메서드가 FALSE를 반환 하는 경우 대화 상자에는 닫는 대신 **도구** 탭이 표시 됩니다. 사용자가 탭을 클릭 하 여 **도구** 탭에서 다른 위치로 이동할 때이 메서드가 FALSE를 반환 하면 탐색이 수행 되지 않습니다. 유효성 검사 실패를 일으킨 문제를 사용자에 게 알리는 적절 한 메시지 상자를 표시 해야 합니다.
 
-## <a name="cmfctoolbarscustomizedialogcmfctoolbarscustomizedialog"></a><a name="cmfctoolbarscustomizedialog"></a>CMFCToolBarsCustomizeDialog:: CMFCToolBarsCustomizeDialog
+## <a name="cmfctoolbarscustomizedialogcmfctoolbarscustomizedialog"></a><a name="cmfctoolbarscustomizedialog"></a> CMFCToolBarsCustomizeDialog:: CMFCToolBarsCustomizeDialog
 
 `CMFCToolBarsCustomizeDialog` 개체를 생성합니다.
 
@@ -317,7 +317,7 @@ CMFCToolBarsCustomizeDialog(
 - AFX_CUSTOMIZE_NO_LARGE_ICONS
 
 *plistCustomPages*<br/>
-진행 `CRuntimeClass`추가 사용자 지정 페이지를 지정 하는 개체 목록에 대 한 포인터입니다.
+진행 `CRuntimeClass` 추가 사용자 지정 페이지를 지정 하는 개체 목록에 대 한 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -331,7 +331,7 @@ CMFCToolBarsCustomizeDialog(
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
-## <a name="cmfctoolbarscustomizedialogcreate"></a><a name="create"></a>CMFCToolBarsCustomizeDialog:: Create
+## <a name="cmfctoolbarscustomizedialogcreate"></a><a name="create"></a> CMFCToolBarsCustomizeDialog:: Create
 
 **사용자 지정** 대화 상자를 표시 합니다.
 
@@ -339,7 +339,7 @@ CMFCToolBarsCustomizeDialog(
 virtual BOOL Create();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 사용자 지정 속성 시트가 성공적으로 생성 되 면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -347,7 +347,7 @@ virtual BOOL Create();
 
 `Create`클래스를 완전히 초기화 한 후에만 메서드를 호출 합니다.
 
-## <a name="cmfctoolbarscustomizedialogenableuserdefinedtoolbars"></a><a name="enableuserdefinedtoolbars"></a>CMFCToolBarsCustomizeDialog:: EnableUserDefinedToolbars
+## <a name="cmfctoolbarscustomizedialogenableuserdefinedtoolbars"></a><a name="enableuserdefinedtoolbars"></a> CMFCToolBarsCustomizeDialog:: EnableUserDefinedToolbars
 
 **사용자 지정** 대화 상자를 사용 하 여 새 도구 모음 만들기를 사용 하거나 사용 하지 않도록 설정 합니다.
 
@@ -366,7 +366,7 @@ void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 
 기본적으로 또는 *Benable* 이 FALSE 이면 이러한 단추가 표시 되지 않고 사용자가 새 도구 모음을 정의할 수 없습니다.
 
-## <a name="cmfctoolbarscustomizedialogfillallcommandslist"></a><a name="fillallcommandslist"></a>CMFCToolBarsCustomizeDialog:: FillAllCommandsList
+## <a name="cmfctoolbarscustomizedialogfillallcommandslist"></a><a name="fillallcommandslist"></a> CMFCToolBarsCustomizeDialog:: FillAllCommandsList
 
 제공 된 `CListBox` 개체를 **All 명령** 범주의 명령으로 채웁니다.
 
@@ -387,7 +387,7 @@ virtual void FillAllCommandsList(CListBox& wndListOfCommands) const;
 
 `CMFCMousePropertyPage`클래스는이 메서드를 사용 하 여 두 번 클릭 이벤트 목록 상자를 채웁니다.
 
-## <a name="cmfctoolbarscustomizedialogfillcategoriescombobox"></a><a name="fillcategoriescombobox"></a>CMFCToolBarsCustomizeDialog:: Fill범주 Combobox
+## <a name="cmfctoolbarscustomizedialogfillcategoriescombobox"></a><a name="fillcategoriescombobox"></a> CMFCToolBarsCustomizeDialog:: Fill범주 Combobox
 
 제공 된 `CComboBox` 개체를 **사용자 지정** 대화 상자의 각 명령 범주 이름으로 채웁니다.
 
@@ -415,7 +415,7 @@ void FillCategoriesComboBox(
 
 `CMFCToolBarsKeyboardPropertyPage`및 `CMFCKeyMapDialog` 클래스는이 메서드를 사용 하 여 키보드 매핑을 분류 합니다.
 
-## <a name="cmfctoolbarscustomizedialogfillcategorieslistbox"></a><a name="fillcategorieslistbox"></a>CMFCToolBarsCustomizeDialog:: Fill범주 Listbox
+## <a name="cmfctoolbarscustomizedialogfillcategorieslistbox"></a><a name="fillcategorieslistbox"></a> CMFCToolBarsCustomizeDialog:: Fill범주 Listbox
 
 제공 된 `CListBox` 개체를 **사용자 지정** 대화 상자의 각 명령 범주 이름으로 채웁니다.
 
@@ -443,7 +443,7 @@ void FillCategoriesListBox(
 
 `CMFCToolBarsCommandsPropertyPage`클래스는이 메서드를 사용 하 여 각 명령 범주와 연결 된 명령 목록을 표시 합니다.
 
-## <a name="cmfctoolbarscustomizedialoggetcommandname"></a><a name="getcommandname"></a>CMFCToolBarsCustomizeDialog:: GetCommandName
+## <a name="cmfctoolbarscustomizedialoggetcommandname"></a><a name="getcommandname"></a> CMFCToolBarsCustomizeDialog:: GetCommandName
 
 지정 된 명령 ID와 연결 된 이름을 검색 합니다.
 
@@ -456,11 +456,11 @@ LPCTSTR GetCommandName(UINT uiCmd) const;
 *uiCmd*<br/>
 진행 검색할 명령의 ID입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 명령 ID와 연결 된 이름 이거나, 명령이 없는 경우 NULL입니다.
 
-## <a name="cmfctoolbarscustomizedialoggetcountincategory"></a><a name="getcountincategory"></a>CMFCToolBarsCustomizeDialog:: GetCountInCategory
+## <a name="cmfctoolbarscustomizedialoggetcountincategory"></a><a name="getcountincategory"></a> CMFCToolBarsCustomizeDialog:: GetCountInCategory
 
 지정 된 텍스트 레이블이 있는 제공 된 목록의 항목 수를 검색 합니다.
 
@@ -478,7 +478,7 @@ int GetCountInCategory(
 *lstCommands*<br/>
 진행 개체를 포함 하는 목록에 대 한 참조입니다 `CMFCToolBarButton` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 제공 된 목록에서 텍스트 레이블이 *lpszItemName*과 같은 항목 수입니다.
 
@@ -486,7 +486,7 @@ int GetCountInCategory(
 
 제공 된 개체 목록의 각 요소는 형식 이어야 합니다 `CMFCToolBarButton` . 이 메서드는 *lpszItemName* 을 [CMFCToolBarButton:: m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext) 데이터 멤버와 비교 합니다.
 
-## <a name="cmfctoolbarscustomizedialoggetflags"></a><a name="getflags"></a>CMFCToolBarsCustomizeDialog:: GetFlags
+## <a name="cmfctoolbarscustomizedialoggetflags"></a><a name="getflags"></a> CMFCToolBarsCustomizeDialog:: GetFlags
 
 대화 상자의 동작에 영향을 주는 플래그 집합을 검색 합니다.
 
@@ -494,7 +494,7 @@ int GetCountInCategory(
 UINT GetFlags() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 대화 상자의 동작에 영향을 주는 플래그 집합입니다.
 
@@ -502,7 +502,7 @@ UINT GetFlags() const;
 
 이 메서드는 생성자에 전달 된 *Uiflags* 매개 변수의 값을 검색 합니다. 반환 값은 다음 값 중 하나 이상이 될 수 있습니다.
 
-|||
+|Name|설명|
 |-|-|
 |AFX_CUSTOMIZE_MENU_SHADOWS|사용자가 메뉴의 그림자 모양을 지정할 수 있습니다.  |
 |AFX_CUSTOMIZE_TEXT_LABELS|사용자가 도구 모음 단추 이미지 아래에 텍스트 레이블을 표시할지 여부를 지정할 수 있습니다.  |
@@ -515,7 +515,7 @@ UINT GetFlags() const;
 
 WS_EX_CONTEXTHELP 비주얼 스타일에 대 한 자세한 내용은 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)을 참조 하세요.
 
-## <a name="cmfctoolbarscustomizedialogonafterchangetool"></a><a name="onafterchangetool"></a>CMFCToolBarsCustomizeDialog:: OnAfterChangeTool
+## <a name="cmfctoolbarscustomizedialogonafterchangetool"></a><a name="onafterchangetool"></a> CMFCToolBarsCustomizeDialog:: OnAfterChangeTool
 
 사용자 도구의 변경에 즉시 응답 합니다.
 
@@ -532,7 +532,7 @@ virtual void OnAfterChangeTool(CUserTool* pSelTool);
 
 사용자가 사용자 정의 도구의 속성을 변경할 때 프레임 워크에서이 메서드를 호출 합니다. 기본 구현은 아무 작업도 수행하지 않습니다. `CMFCToolBarsCustomizeDialog`사용자 도구를 변경한 후 처리를 수행 하려면에서 파생 된 클래스의이 메서드를 재정의 합니다.
 
-## <a name="cmfctoolbarscustomizedialogonassignkey"></a><a name="onassignkey"></a>CMFCToolBarsCustomizeDialog:: On할당 키
+## <a name="cmfctoolbarscustomizedialogonassignkey"></a><a name="onassignkey"></a> CMFCToolBarsCustomizeDialog:: On할당 키
 
 사용자가 정의 하는 바로 가기 키의 유효성을 검사 합니다.
 
@@ -545,7 +545,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 *pAccel*<br/>
 [in, out] [가속](/windows/win32/api/winuser/ns-winuser-accel) 구조체로 표현 된 제안 된 키보드 할당 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 키를 할당할 수 있으면 TRUE이 고, 키를 할당할 수 없으면 FALSE입니다. 기본 구현에서는 항상 TRUE를 반환 합니다.
 
@@ -553,7 +553,7 @@ virtual BOOL OnAssignKey(ACCEL* pAccel);
 
 사용자가 새 바로 가기 키를 할당 하거나 사용자가 정의 하는 바로 가기 키의 유효성을 검사할 때 추가 처리를 수행 하려면 파생 클래스에서이 메서드를 재정의 합니다. 바로 가기가 할당 되지 않도록 하려면 FALSE를 반환 합니다. 또한 메시지 상자를 표시 하거나 사용자에 게 바로 가기 키가 거부 된 이유를 알려 주어 야 합니다.
 
-## <a name="cmfctoolbarscustomizedialogonbeforechangetool"></a><a name="onbeforechangetool"></a>CMFCToolBarsCustomizeDialog:: OnBeforeChangeTool
+## <a name="cmfctoolbarscustomizedialogonbeforechangetool"></a><a name="onbeforechangetool"></a> CMFCToolBarsCustomizeDialog:: OnBeforeChangeTool
 
 사용자가 변경 내용을 적용 하려고 할 때 사용자 도구를 변경할 때 사용자 지정 처리를 수행 합니다.
 
@@ -570,7 +570,7 @@ virtual void OnBeforeChangeTool(CUserTool* pSelTool);
 
 이 메서드는 사용자 정의 도구의 속성이 변경 될 때 프레임 워크에서 호출 됩니다. 기본 구현은 아무 작업도 수행하지 않습니다. `OnBeforeChangeTool` `CMFCToolBarsCustomizeDialog` 사용자 도구에 대 한 변경이 발생 하기 전에 처리를 수행 하려는 경우 (예: *pseltool* 에서 사용 하는 리소스 해제)에서 파생 된 클래스의 메서드를 재정의 합니다.
 
-## <a name="cmfctoolbarscustomizedialogonedittoolbarmenuimage"></a><a name="onedittoolbarmenuimage"></a>CMFCToolBarsCustomizeDialog:: Onedit Menuimage
+## <a name="cmfctoolbarscustomizedialogonedittoolbarmenuimage"></a><a name="onedittoolbarmenuimage"></a> CMFCToolBarsCustomizeDialog:: Onedit Menuimage
 
 사용자가 도구 모음 단추 또는 메뉴 항목 아이콘을 사용자 지정할 수 있도록 이미지 편집기를 시작 합니다.
 
@@ -586,13 +586,13 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 진행 부모 창에 대 한 포인터입니다.
 
-*비트맵이*<br/>
+*bitmap*<br/>
 진행 편집할 비트맵 개체에 대 한 참조입니다.
 
 *nBitsPerPixel*<br/>
 진행 비트맵 색 해상도 (픽셀당 비트 수)입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 변경이 커밋되면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다. 기본 구현에서는 대화 상자를 표시 하 고 사용자가 **확인**을 클릭 하면 TRUE를 반환 하 고, 사용자가 **취소** 또는 **닫기** 단추를 클릭 하면 FALSE를 반환 합니다.
 
@@ -600,7 +600,7 @@ virtual BOOL OnEditToolbarMenuImage(
 
 이 메서드는 사용자가 이미지 편집기를 실행할 때 프레임 워크에서 호출 됩니다. 기본 구현에서는 [Cmfcimageeditordialog 클래스](../../mfc/reference/cmfcimageeditordialog-class.md) 대화 상자가 표시 됩니다. `OnEditToolbarMenuImage`사용자 지정 이미지 편집기를 사용 하도록 파생 클래스에서를 재정의 합니다.
 
-## <a name="cmfctoolbarscustomizedialogoninitdialog"></a><a name="oninitdialog"></a>CMFCToolBarsCustomizeDialog:: OnInitDialog
+## <a name="cmfctoolbarscustomizedialogoninitdialog"></a><a name="oninitdialog"></a> CMFCToolBarsCustomizeDialog:: OnInitDialog
 
 속성 시트 초기화를 확대 하기 위해를 재정의 합니다.
 
@@ -608,7 +608,7 @@ virtual BOOL OnEditToolbarMenuImage(
 virtual BOOL OnInitDialog();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog) 메서드를 호출한 결과입니다.
 
@@ -616,7 +616,7 @@ virtual BOOL OnInitDialog();
 
 이 메서드는 **닫기** 단추를 표시 하 고, 대화 상자가 현재 화면 크기에 맞는지 확인 하 고, **도움말** 단추를 대화 상자의 왼쪽 아래 모퉁이로 이동 하 여 기본 클래스 구현인 [CPropertySheet:: OnInitDialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog)를 확장 합니다.
 
-## <a name="cmfctoolbarscustomizedialogoninittoolspage"></a><a name="oninittoolspage"></a>CMFCToolBarsCustomizeDialog:: OnInitToolsPage
+## <a name="cmfctoolbarscustomizedialogoninittoolspage"></a><a name="oninittoolspage"></a> CMFCToolBarsCustomizeDialog:: OnInitToolsPage
 
 **도구** 페이지를 초기화 하려는 프레임 워크의 알림을 처리 합니다.
 
@@ -628,7 +628,7 @@ virtual void OnInitToolsPage();
 
 기본 구현은 아무 작업도 수행하지 않습니다. 이 알림을 처리 하려면 파생 클래스에서이 메서드를 재정의 합니다.
 
-## <a name="cmfctoolbarscustomizedialogpostncdestroy"></a><a name="postncdestroy"></a>CMFCToolBarsCustomizeDialog::P ostNcDestroy
+## <a name="cmfctoolbarscustomizedialogpostncdestroy"></a><a name="postncdestroy"></a> CMFCToolBarsCustomizeDialog::P ostNcDestroy
 
 창이 소멸 된 후 프레임 워크에서 호출 됩니다.
 
@@ -642,7 +642,7 @@ virtual void PostNcDestroy();
 
 [CMFCToolBarsCustomizeDialog:: Create](#create) 메서드는 응용 프로그램을 사용자 지정 작업으로 제한 하는 특수 모드로 전환 합니다.
 
-## <a name="cmfctoolbarscustomizedialogremovebutton"></a><a name="removebutton"></a>CMFCToolBarsCustomizeDialog:: RemoveButton
+## <a name="cmfctoolbarscustomizedialogremovebutton"></a><a name="removebutton"></a> CMFCToolBarsCustomizeDialog:: RemoveButton
 
 지정 된 범주나 모든 범주에서 지정 된 명령 ID를 가진 단추를 제거 합니다.
 
@@ -667,7 +667,7 @@ int RemoveButton(
 *lpszCategory*<br/>
 진행 단추를 제거할 범주의 이름을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 제거 된 단추의 인덱스 (0부터 시작) 이거나 지정 된 범주에 지정 된 명령 ID가 없는 경우-1입니다. *UiCategoryId* 가-1 인 경우 반환 값은 0입니다.
 
@@ -675,7 +675,7 @@ int RemoveButton(
 
 모든 범주에서 단추를 제거 하려면이 메서드의 첫 번째 오버 로드를 호출 하 고 *uiCategoryId* 를-1로 설정 합니다.
 
-## <a name="cmfctoolbarscustomizedialogrenamecategory"></a><a name="renamecategory"></a>CMFCToolBarsCustomizeDialog:: RenameCategory
+## <a name="cmfctoolbarscustomizedialogrenamecategory"></a><a name="renamecategory"></a> CMFCToolBarsCustomizeDialog:: RenameCategory
 
 **명령** 페이지의 범주 목록 상자에서 범주의 이름을 바꿉니다.
 
@@ -693,7 +693,7 @@ BOOL RenameCategory(
 *lpszCategoryNew*<br/>
 진행 새 범주 이름입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -701,7 +701,7 @@ BOOL RenameCategory(
 
 범주 이름은 고유 해야 합니다.
 
-## <a name="cmfctoolbarscustomizedialogreplacebutton"></a><a name="replacebutton"></a>CMFCToolBarsCustomizeDialog:: ReplaceButton
+## <a name="cmfctoolbarscustomizedialogreplacebutton"></a><a name="replacebutton"></a> CMFCToolBarsCustomizeDialog:: ReplaceButton
 
 **명령** 페이지의 명령 목록 상자에 있는 도구 모음 단추를 바꿉니다.
 
@@ -729,7 +729,7 @@ void ReplaceButton(
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 
-## <a name="cmfctoolbarscustomizedialogsetusercategory"></a><a name="setusercategory"></a>CMFCToolBarsCustomizeDialog:: SetUserCategory
+## <a name="cmfctoolbarscustomizedialogsetusercategory"></a><a name="setusercategory"></a> CMFCToolBarsCustomizeDialog:: SetUserCategory
 
 **명령** 페이지의 범주 목록에서 사용자 범주에 해당 하는 범주를 지정 합니다. [CMFCToolBarsCustomizeDialog:: Create](#create)를 호출 하기 전에이 함수를 호출 해야 합니다.
 
@@ -742,7 +742,7 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 *lpszCategory*<br/>
 진행 범주의 이름입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 

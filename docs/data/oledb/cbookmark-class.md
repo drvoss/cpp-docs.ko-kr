@@ -66,16 +66,16 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: d3d82ea09b7ed2c1cbaf325906b4f9b480e1eb4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359328"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838479"
 ---
 # <a name="cbookmark-class"></a>CBookmark 클래스
 
-책갈피 값을 버퍼에 보유합니다.
+는 해당 버퍼에 책갈피 값을 포함 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -90,7 +90,7 @@ class CBookmark< 0 > : public CBookmarkBase
 ### <a name="parameters"></a>매개 변수
 
 *nSize*<br/>
-책갈피 버퍼의 크기입니다. *nSize가* 0이면 책갈피 버퍼는 런타임에 동적으로 생성됩니다.
+책갈피 버퍼의 크기 (바이트)입니다. *NSize* 가 0 인 경우 책갈피 버퍼는 런타임에 동적으로 생성 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -100,24 +100,24 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
-|[C북마크](#cbookmark)|생성자|
-|[GetBuffer](#getbuffer)|버퍼에 대한 포인터를 검색합니다.|
-|[GetSize](#getsize)|버퍼 크기를 바이트로 검색합니다.|
-|[세트북마크](#setbookmark)|책갈피 값을 설정합니다.|
+|[CBookmark](#cbookmark)|생성자|
+|[GetBuffer](#getbuffer)|버퍼에 대 한 포인터를 검색 합니다.|
+|[GetSize](#getsize)|버퍼의 크기 (바이트)를 검색 합니다.|
+|[SetBookmark](#setbookmark)|책갈피 값을 설정 합니다.|
 
 ### <a name="operators"></a>연산자
 
-|||
+| Name | 설명 |
 |-|-|
-|[연산자 =](#operator)|한 `CBookmark` 클래스를 다른 클래스에 할당합니다.|
+|[연산자 =](#operator)|한 `CBookmark` 클래스를 다른 클래스에 할당 합니다.|
 
 ## <a name="remarks"></a>설명
 
-`CBookmark<0>`의 템플릿 `CBookmark`전문화입니다. 버퍼는 런타임에 동적으로 생성됩니다.
+`CBookmark<0>` 는의 템플릿 특수화 `CBookmark` 입니다. 해당 버퍼는 런타임에 동적으로 만들어집니다.
 
-## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>C북마크:::C북마크
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a> CBookmark:: CBookmark
 
 생성자입니다.
 
@@ -131,18 +131,18 @@ CBookmark(DBLENGTH nSize);
 #### <a name="parameters"></a>매개 변수
 
 *nSize*<br/>
-【인】 책갈피 버퍼의 크기(바이트)입니다.
+진행 책갈피 버퍼의 크기 (바이트)입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 함수는 버퍼를 NULL로 설정하고 버퍼 크기를 0으로 설정합니다. 두 번째 함수는 버퍼 크기를 *nSize로*설정하고 버퍼를 *nSize* 바이트의 바이트 배열로 설정합니다.
+첫 번째 함수는 버퍼를 NULL로 설정 하 고 버퍼 크기를 0으로 설정 합니다. 두 번째 함수는 버퍼 크기를 *nSize*로 설정 하 고 버퍼를 *nSize* bytes의 바이트 배열로 설정 합니다.
 
 > [!NOTE]
-> 이 함수는 에서만 `CBookmark<0>`사용할 수 있습니다.
+> 이 함수는 에서만 사용할 수 있습니다 `CBookmark<0>` .
 
-## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>C북마크::GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a> CBookmark:: GetBuffer
 
-책갈피 버퍼에 대한 포인터를 검색합니다.
+책갈피 버퍼에 대 한 포인터를 검색 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -152,11 +152,11 @@ virtual BYTE* GetBuffer() const throw();
 
 ### <a name="return-value"></a>Return Value
 
-책갈피 버퍼에 대한 포인터입니다.
+책갈피 버퍼에 대 한 포인터입니다.
 
-## <a name="cbookmarkgetsize"></a><a name="getsize"></a>C북마크::겟사이즈
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a> CBookmark:: GetSize
 
-책갈피 버퍼의 크기를 검색합니다.
+책갈피 버퍼의 크기를 검색 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -168,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 버퍼 크기(바이트)입니다.
 
-## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>C북마크:::세트북마크
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a> CBookmark:: SetBookmark
 
-*pBuffer에서* 참조하는 책갈피 값을 `CBookmark` 버퍼에 복사하고 버퍼 크기를 *nSize로*설정합니다.
+*Pbuffer* 에서 참조 하는 책갈피 값을 버퍼에 복사 하 `CBookmark` 고 버퍼 크기를 *nSize*로 설정 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -181,22 +181,22 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 #### <a name="parameters"></a>매개 변수
 
 *nSize*<br/>
-【인】 책갈피 버퍼의 크기입니다.
+진행 책갈피 버퍼의 크기입니다.
 
 *pBuffer*<br/>
-【인】 책갈피 값을 포함하는 바이트 배열에 대한 포인터입니다.
+진행 책갈피 값을 포함 하는 바이트 배열에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-표준 HRESULT.
+표준 HRESULT입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 에서만 `CBookmark<0>`사용할 수 있습니다.
+이 함수는 에서만 사용할 수 있습니다 `CBookmark<0>` .
 
-## <a name="cbookmarkoperator-"></a><a name="operator"></a>C북마크::연산자 =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a> CBookmark:: operator =
 
-개체를 `CBookmark` 다른 개체에 할당합니다.
+개체를 `CBookmark` 다른에 할당 합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -206,7 +206,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 ### <a name="remarks"></a>설명
 
-이 연산자는 `CBookmark<0>`에서만 필요합니다.
+이 연산자는 에서만 필요 `CBookmark<0>` 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

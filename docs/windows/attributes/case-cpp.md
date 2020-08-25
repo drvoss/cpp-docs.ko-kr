@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: 23330b7b220873725dc566df947f3f3596160029
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e1d3c113c42be99a8475c5a667b7ea6ed9583d92
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232809"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838908"
 ---
 # <a name="case-c"></a>case(C++)
 
@@ -65,9 +65,7 @@ struct SizedValue2 {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|또는의 멤버 **`class`****`struct`**|
 |**불가능**|아니요|

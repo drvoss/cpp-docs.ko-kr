@@ -1,17 +1,17 @@
 ---
-title: ms_union (C++ COM 특성)
+title: ms_union (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166642"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838843"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166642"
 
 ## <a name="remarks"></a>설명
 
-**Ms_union** C++ 특성에는 [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 특성과 동일한 기능이 있습니다.
+**Ms_union** c + + 특성에는 [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -56,13 +56,11 @@ __interface IFireTabCtrl {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|캡슐화 되지 않는 공용 구조체|
-|**반복 가능**|예|
-|**필수 특성**|None|
+|**불가능**|아니요|
+|**필수 특성**|없음|
 |**잘못된 특성**|`dispinterface`|
 
 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

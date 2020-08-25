@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 0a47f4f503541f9dee67dd8c6cf10297de724a19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232796"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838882"
 ---
 # <a name="coclass"></a>coclass
 
@@ -53,15 +53,15 @@ Coclass를 정의할 때 [uuid](uuid-cpp-attributes.md), [version](version-cpp.m
 
 또한 **coclass** 특성은 삽입 된 코드를 통해 또는의 경우 `GetObjectCLSID` 기본 클래스의 정적 메서드로 다음 함수를 사용할 수 있도록 합니다 `CComCoClass` .
 
-- `UpdateRegistry`대상 클래스의 클래스 팩터리를 등록 합니다.
+- `UpdateRegistry` 대상 클래스의 클래스 팩터리를 등록 합니다.
 
 - `GetObjectCLSID`등록과 관련 된를 사용 하 여 대상 클래스의 CLSID를 가져올 수도 있습니다.
 
-- `GetObjectFriendlyName`기본적으로는 "" 형식의 문자열을 반환 \<*target class name*> `Object` 합니다. 이 함수가 이미 있으면 추가 되지 않습니다. 대상 클래스에이 함수를 추가 하 여 자동으로 생성 된 것 보다 친숙 한 이름을 반환 합니다.
+- `GetObjectFriendlyName` 기본적으로는 "" 형식의 문자열을 반환 \<*target class name*> `Object` 합니다. 이 함수가 이미 있으면 추가 되지 않습니다. 대상 클래스에이 함수를 추가 하 여 자동으로 생성 된 것 보다 친숙 한 이름을 반환 합니다.
 
 - `GetProgID`등록과 관련 된는 [progid](progid.md) 특성으로 지정 된 문자열을 반환 합니다.
 
-- `GetVersionIndependentProgID`에는와 동일한 기능이 `GetProgID` 있지만 [vi_progid](vi-progid.md)로 지정 된 문자열을 반환 합니다.
+- `GetVersionIndependentProgID` 에는와 동일한 기능이 `GetProgID` 있지만 [vi_progid](vi-progid.md)로 지정 된 문자열을 반환 합니다.
 
 COM 맵과 관련 된 다음과 같은 변경 내용은 대상 클래스에 적용 됩니다.
 
@@ -127,9 +127,7 @@ public:
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`**|
 |**불가능**|아니요|

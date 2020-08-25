@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 06e9508ae09f9c7581648b45098f497fda785013
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: 39362deaa770b39eea964f1e4e58186dd5923b7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470799"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846032"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC++ 디렉터리 속성 페이지
 
@@ -74,7 +74,7 @@ Visual Studio의 *프로젝트 속성* 에 익숙하지 않은 경우 먼저 [Vi
 
 - .props 파일에서 사용자 매크로를 정의합니다. 자세한 내용은 [속성 페이지 매크로](../working-with-project-properties.md)를 참조하세요.
 
-자세한 내용은 [VC++ 디렉터리](https://docs.microsoft.com/archive/blogs/vsproject/vc-directories), [상속된 속성 및 속성 시트](https://docs.microsoft.com/cpp/build/project-property-inheritance) 및 [Visual Studio 2010 C++ 프로젝트 업그레이드 가이드](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) 블로그 게시물을 참조하세요.
+자세한 내용은 [Visual studio 프로젝트의 속성 상속](../project-property-inheritance.md)및 다음 블로그 게시물: [VC + + 디렉터리](/archive/blogs/vsproject/vc-directories), [Visual Studio 2010 c + + 프로젝트 업그레이드 가이드](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)를 참조 하세요.
 
 ## <a name="directory-types"></a>디렉터리 형식
 

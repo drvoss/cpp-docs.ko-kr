@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 73b02f0ffb9d9b98a17933cc3b17c8627121e3ac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228923"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838440"
 ---
 # <a name="ccommand-class"></a>CCommand 클래스
 
@@ -91,7 +91,7 @@ class CCommand :
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[닫기](#close)|현재 명령을 닫습니다.|
 |[GetNextResult](#getnextresult)|여러 결과 집합을 사용 하는 경우 다음 결과를 페치합니다.|
@@ -99,12 +99,12 @@ class CCommand :
 
 ### <a name="inherited-methods"></a>상속된 메서드
 
-|||
+| Name | Description |
 |-|-|
 |[만들기](#create)|지정 된 세션에 대 한 새 명령을 만든 다음 명령 텍스트를 설정 합니다.|
 |[CreateCommand](#createcommand)|새 명령을 만듭니다.|
 |[GetParameterInfo](#getparameterinfo)|명령의 매개 변수, 이름 및 형식에 대 한 목록을 가져옵니다.|
-|[준비](#prepare)|현재 명령의 유효성을 검사 하 고 최적화 합니다.|
+|[준비해](#prepare)|현재 명령의 유효성을 검사 하 고 최적화 합니다.|
 |[ReleaseCommand](#releasecommand)|필요한 경우 매개 변수 접근자를 해제 한 다음 명령을 해제 합니다.|
 |[SetParameterInfo](#setparameterinfo)|각 명령 매개 변수의 네이티브 형식을 지정 합니다.|
 |[Unprepare](#unprepare)|현재 명령 실행 계획을 삭제 합니다.|
@@ -117,7 +117,7 @@ class CCommand :
 
 저장 OLE DB 프로시저는 Jet의 경우에는 저장 프로시저를 지원 하지 않으므로 해당 공급자는 저장 프로시저를 사용할 수 없습니다. 쿼리 문자열에는 상수만 사용할 수 있습니다.
 
-## <a name="ccommandclose"></a><a name="close"></a>CCommand:: Close
+## <a name="ccommandclose"></a><a name="close"></a> CCommand:: Close
 
 명령과 연결 된 접근자 행 집합을 해제 합니다.
 
@@ -141,7 +141,7 @@ void Close();
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand:: GetNextResult
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a> CCommand:: GetNextResult
 
 사용할 수 있는 경우 다음 결과 집합을 페치합니다.
 
@@ -160,7 +160,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 *bBind*<br/>
 진행 명령을 실행 한 후 자동으로 바인딩할 지 여부를 지정 합니다. 기본값은 이며 **`true`** ,이로 인해 명령이 자동으로 바인딩됩니다. *Bbind* 를로 설정 하면 **`false`** 수동으로 바인딩할 수 있도록 명령의 자동 바인딩이 방지 됩니다. (수동 바인딩은 OLAP 사용자에 게 특히 관심이 있습니다.)
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -170,7 +170,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 
 `CCommand`템플릿 매개 변수 *tmultiple*을 설정 하 여 여러 결과를 지정한 경우에만이 함수를 호출 해야 합니다 = `CMultipleResults` .
 
-## <a name="ccommandopen"></a><a name="open"></a>CCommand:: Open
+## <a name="ccommandopen"></a><a name="open"></a> CCommand:: Open
 
 를 실행 하 고 선택적으로 명령을 바인딩합니다.
 
@@ -239,7 +239,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 *ulPropSets*<br/>
 진행 *PPropSet* 인수에 전달 된 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 구조체의 수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -258,7 +258,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 > [!NOTE]
 > `Open``Execute`는를 호출 하 여을 호출 `GetNextResult` 합니다.
 
-## <a name="ccommandcreate"></a><a name="create"></a>CCommand:: Create
+## <a name="ccommandcreate"></a><a name="create"></a> CCommand:: Create
 
 [CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md) 를 호출 하 여 지정 된 세션에 대 한 명령을 만든 다음 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 를 호출 하 여 명령 텍스트를 지정 합니다.
 
@@ -288,7 +288,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 *guidCommand*<br/>
 진행 명령 텍스트를 구문 분석 하는 데 사용할 공급자의 구문과 일반 규칙을 지정 하는 GUID입니다. 언어에 대 한 설명은 *OLE DB 프로그래머 참조*에서 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -296,7 +296,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 의 첫 번째 형태는 `Create` 유니코드 명령 문자열을 사용 합니다. 의 두 번째 형태는 `Create` ansi 명령 문자열 (기존 ansi 응용 프로그램과의 호환성을 위해 제공 됨)을 사용 합니다.
 
-## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand:: CreateCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a> CCommand:: CreateCommand
 
 새 명령을 만듭니다.
 
@@ -309,9 +309,9 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 #### <a name="parameters"></a>매개 변수
 
 *세션별*<br/>
-진행 `CSession`새 명령과 연결 될 개체입니다.
+진행 `CSession` 새 명령과 연결 될 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -319,7 +319,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 이 메서드는 지정 된 세션 개체를 사용 하 여 명령을 만듭니다.
 
-## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand:: GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a> CCommand:: GetParameterInfo
 
 명령의 매개 변수, 이름 및 형식에 대 한 목록을 가져옵니다.
 
@@ -335,11 +335,11 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 *OLE DB 프로그래머 참조*에서 [ICommandWithParameters:: GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) 를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
-## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand::P repare
+## <a name="ccommandprepare"></a><a name="prepare"></a> CCommand::P repare
 
 현재 명령의 유효성을 검사 하 고 최적화 합니다.
 
@@ -354,7 +354,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 *cExpectedRuns*<br/>
 진행 명령을 실행 해야 하는 횟수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
@@ -362,7 +362,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 
 이 메서드는 OLE DB 메서드 [ICommandPrepare::P repare](/previous-versions/windows/desktop/ms718370(v=vs.85))를 래핑합니다.
 
-## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand:: ReleaseCommand
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a> CCommand:: ReleaseCommand
 
 매개 변수 접근자를 해제 한 다음 명령 자체를 해제 합니다.
 
@@ -374,9 +374,9 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>설명
 
-`ReleaseCommand`는와 함께 사용 됩니다 `Close` . 사용법 정보는 [닫기](../../data/oledb/ccommand-close.md) 를 참조 하세요.
+`ReleaseCommand` 는와 함께 사용 됩니다 `Close` . 사용법 정보는 [닫기](../../data/oledb/ccommand-close.md) 를 참조 하세요.
 
-## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand:: SetParameterInfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand:: SetParameterInfo
 
 각 명령 매개 변수의 네이티브 형식을 지정 합니다.
 
@@ -392,11 +392,11 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 *OLE DB 프로그래머 참조*에서 [ICommandWithParameters:: SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) 를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
-## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand:: Unprepare
+## <a name="ccommandunprepare"></a><a name="unprepare"></a> CCommand:: Unprepare
 
 현재 명령 실행 계획을 삭제 합니다.
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: e17488023d8de6eb5d341c719be8f1b36c14ffcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228182"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838555"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -51,7 +51,7 @@ ms.locfileid: "87228182"
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[lock_guard 클래스](../standard-library/lock-guard-class.md)|소멸자가 `mutex`의 잠금을 해제하는 개체를 만들기 위해 인스턴스화할 수 있는 템플릿을 나타냅니다.|
 |[mutex 클래스 (c + + 표준 라이브러리)](../standard-library/mutex-class-stl.md)|뮤텍스 형식을 나타냅니다. 이 형식의 개체를 사용하면 프로그램 내에서 상호 배제를 강제로 수행할 수 있습니다.|
@@ -63,7 +63,7 @@ ms.locfileid: "87228182"
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|지정된 호출 가능 개체를 실행 중 정확하게 한 번 호출할 수 있는 메커니즘을 제공합니다.|
 |[lock](../standard-library/mutex-functions.md#lock)|교착 상태가 발생하지 않고 모든 인수를 잠그려고 시도합니다.|
@@ -72,16 +72,16 @@ ms.locfileid: "87228182"
 
 ### <a name="structs"></a>구조체
 
-|||
+|Name|설명|
 |-|-|
 |[adopt_lock_t 구조체](../standard-library/adopt-lock-t-structure.md)|`adopt_lock`을 정의하는 데 사용되는 형식을 나타냅니다.|
 |[defer_lock_t 구조체](../standard-library/defer-lock-t-structure.md)|`unique_lock`의 오버로드된 생성자 중 하나를 선택하는 데 사용되는 `defer_lock` 개체를 정의하는 형식을 나타냅니다.|
 |[once_flag 구조체](../standard-library/once-flag-structure.md)|**`struct`** `call_once` 실행 스레드가 여러 개 있는 경우에도 초기화 코드를 한 번만 호출 하도록 템플릿 함수와 함께 사용 되는를 나타냅니다.|
 |[try_to_lock_t 구조체](../standard-library/try-to-lock-t-structure.md)|**`struct`** 개체를 정의 하 `try_to_lock` 고의 오버 로드 된 생성자 중 하나를 선택 하는 데 사용 되는을 나타냅니다 `unique_lock` .|
 
-### <a name="variables"></a>variables
+### <a name="variables"></a>변수
 
-|||
+|Name|설명|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|생성자에게 전달 중인 뮤텍스 개체가 잠겨 있음을 나타내기 위해 `lock_guard` 및 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|생성자가 전달 중인 뮤텍스 개체를 잠그면 안 됨을 나타내기 위해 `unique_lock`의 생성자에 전달할 수 있는 개체를 나타냅니다.|

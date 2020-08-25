@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610909"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839142"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 클래스
 
@@ -67,17 +67,17 @@ Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 �
 
 자세한 내용은 [컬렉션](../cppcx/collections-c-cx.md)을 참조 하세요.
 
-### <a name="members"></a>구성원
+### <a name="members"></a>멤버
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[Map:: Map](#ctor)|Map 클래스의 새 인스턴스를 초기화합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[Map:: Clear](#clear)|현재 Map 개체에서 모든 키/값 쌍을 제거합니다.|
 |[Map:: First](#first)|맵의 첫 번째 요소를 지정하는 반복기를 반환합니다.|
@@ -90,10 +90,9 @@ Map은 기본적으로 [std::map](../standard-library/map-class.md)에 대한 �
 
 ### <a name="events"></a>이벤트
 
-|||
-|-|-|
-|속성|Description|
-|[Map:: MapChanged](#mapchanged) 이벤트|Map이 변경될 때 발생합니다.|
+| Name | 설명 |
+|--|--|
+| [Map:: MapChanged](#mapchanged) 이벤트 | Map이 변경될 때 발생합니다. |
 
 ## <a name="inheritance-hierarchy"></a>상속 계층 구조
 
@@ -132,7 +131,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ### <a name="remarks"></a>설명
 
-First ()에서 반환 된 반복기를 편리 하 게 유지 하는 방법은 형식 추론 키워드를 사용 하 여 선언 된 변수에 반환 값을 할당 하는 것입니다 **`auto`** . 예들 들어 `auto x = myMap->First();`입니다.
+First ()에서 반환 된 반복기를 편리 하 게 유지 하는 방법은 형식 추론 키워드를 사용 하 여 선언 된 변수에 반환 값을 할당 하는 것입니다 **`auto`** . 예: `auto x = myMap->First();`.
 
 ## <a name="mapgetview-method"></a><a name="getview"></a> Map:: GetView 메서드
 
