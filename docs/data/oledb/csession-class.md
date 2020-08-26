@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 72797411b100480a06e27b71b000264070e57e32
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211135"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841105"
 ---
 # <a name="csession-class"></a>CSession 클래스
 
@@ -65,20 +65,20 @@ class CSession
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
-|[Abort](#abort)|트랜잭션을 취소 (종료) 합니다.|
-|[닫기](#close)|세션이 닫힙니다.|
+|[중단이](#abort)|트랜잭션을 취소 (종료) 합니다.|
+|[닫기](#close)|세션을 닫습니다.|
 |[커밋](#commit)|트랜잭션을 커밋합니다.|
 |[GetTransactionInfo](#gettransactioninfo)|트랜잭션에 대 한 정보를 반환 합니다.|
 |[열기](#open)|데이터 원본 개체에 대 한 새 세션을 엽니다.|
 |[StartTransaction](#starttransaction)|이 세션에 대 한 새 트랜잭션을 시작 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-하나 이상의 세션을 각 공급자 연결 (데이터 원본)에 연결할 수 있으며,이는 [Cdatasource](../../data/oledb/cdatasource-class.md) 개체가 나타냅니다. `CDataSource`에 대 한 새 `CSession` 만들려면 [Csession:: Open](../../data/oledb/csession-open.md)을 호출 합니다. 데이터베이스 트랜잭션을 시작 하기 위해 `CSession` `StartTransaction` 메서드를 제공 합니다. 트랜잭션이 시작 되 면 `Commit` 메서드를 사용 하 여 커밋하거나 `Abort` 메서드를 사용 하 여 취소할 수 있습니다.
+하나 이상의 세션을 각 공급자 연결 (데이터 원본)에 연결할 수 있으며,이는 [Cdatasource](../../data/oledb/cdatasource-class.md) 개체가 나타냅니다. 에 대해 새을 만들려면 `CSession` `CDataSource` [Csession:: Open](../../data/oledb/csession-open.md)을 호출 합니다. 데이터베이스 트랜잭션을 시작 하려면에서 `CSession` 메서드를 제공 합니다 `StartTransaction` . 트랜잭션을 시작한 후에는 메서드를 사용 하 여 트랜잭션을 커밋하거나 `Commit` 메서드를 사용 하 여 취소할 수 있습니다 `Abort` .
 
-## <a name="csessionabort"></a><a name="abort"></a>CSession:: Abort
+## <a name="csessionabort"></a><a name="abort"></a> CSession:: Abort
 
 트랜잭션을 종료 합니다.
 
@@ -98,7 +98,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 표준 HRESULT입니다.
 
-## <a name="csessionclose"></a><a name="close"></a>CSession:: Close
+## <a name="csessionclose"></a><a name="close"></a> CSession:: Close
 
 [Csession:: Open](../../data/oledb/csession-open.md)에서 연 세션을 닫습니다.
 
@@ -108,11 +108,11 @@ HRESULT Abort(BOID* pboidReason = NULL,
 void Close() throw();
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`m_spOpenRowset` 포인터를 해제 합니다.
+포인터를 해제 `m_spOpenRowset` 합니다.
 
-## <a name="csessioncommit"></a><a name="commit"></a>CSession:: Commit
+## <a name="csessioncommit"></a><a name="commit"></a> CSession:: Commit
 
 트랜잭션을 커밋합니다.
 
@@ -132,11 +132,11 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 [ITransaction:: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))를 참조 하세요.
 
-## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a>CSession:: GetTransactionInfo
+## <a name="csessiongettransactioninfo"></a><a name="gettransactioninfo"></a> CSession:: GetTransactionInfo
 
 트랜잭션에 대 한 정보를 반환 합니다.
 
@@ -154,11 +154,11 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조*에서 [ITransaction:: gettransactioninfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 를 참조 하세요.
 
-## <a name="csessionopen"></a><a name="open"></a>CSession:: Open
+## <a name="csessionopen"></a><a name="open"></a> CSession:: Open
 
 데이터 원본 개체에 대 한 새 세션을 엽니다.
 
@@ -185,11 +185,11 @@ HRESULT Open(const CDataSource& ds,
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`CSession::Open`에 전달 하기 전에 [Cdatasource:: open](../../data/oledb/cdatasource-open.md) 을 사용 하 여 데이터 원본 개체를 열어야 합니다.
+로 전달 하기 전에 [Cdatasource:: open](../../data/oledb/cdatasource-open.md) 을 사용 하 여 데이터 원본 개체를 열어야 합니다 `CSession::Open` .
 
-## <a name="csessionstarttransaction"></a><a name="starttransaction"></a>CSession:: StartTransaction
+## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession:: StartTransaction
 
 이 세션에 대 한 새 트랜잭션을 시작 합니다.
 
@@ -210,7 +210,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조*에서 [ITransactionLocal:: starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 을 참조 하세요.
 

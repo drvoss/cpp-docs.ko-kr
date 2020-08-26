@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 9af502d65dd81efdedc6b80951f11d68f766cb31
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373712"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842626"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE(주소 공간 레이아웃을 임의로 지정)
 
@@ -46,4 +46,4 @@ Windows Vista에서 처음 사용할 수 있었던 Windows의 ASLR (주소 공�
 - [MSVC 링커 참조](linking.md)
 - [MSVC 링커 옵션](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Windows ISV 소프트웨어 보안 방어](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))
+- [Windows ISV 소프트웨어 보안 방어](/previous-versions/bb430720(v=msdn.10))

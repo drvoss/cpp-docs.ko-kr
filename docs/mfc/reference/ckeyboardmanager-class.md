@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: a2d2ae8133310f3a93b6eefc30c67045a47cd94f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561468"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841495"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 클래스
 
@@ -51,16 +51,14 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CKeyboardManager:: CKeyboardManager](#ckeyboardmanager)|`CKeyboardManager` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CKeyboardManager:: CleanUp](#cleanup)|바로 가기 키 테이블을 지웁니다.|
 |[CKeyboardManager:: FindDefaultAccelerator](#finddefaultaccelerator)|지정 된 명령 및 창에 대 한 기본 바로 가기 키를 검색 합니다.|
 |[CKeyboardManager:: IsKeyHandled](#iskeyhandled)|액셀러레이터 키 테이블에서 키가 처리 되는지 여부를 결정 합니다.|
@@ -147,7 +145,7 @@ static BOOL FindDefaultAccelerator(
 *bIsDefaultFrame*<br/>
 진행 프레임 창이 기본 프레임 창 인지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 바로 가기가 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -181,7 +179,7 @@ static BOOL __stdcall IsKeyHandled(
 *bIsDefaultFrame*\
 진행 *PWndFrame* 가 기본 프레임 창 인지 여부를 나타내는 부울 매개 변수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 바로 가기 키가 처리 되 면 TRUE입니다. 키가 처리 되지 않거나 *pWndFrame* 가 NULL 이면 FALSE입니다.
 
@@ -202,7 +200,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 *nChar*\
 진행 이 메서드가 확인 하는 문자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자를 인쇄할 수 있으면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -218,7 +216,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 static BOOL IsShowAllAccelerators();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램이 메뉴 명령에 대 한 바로 가기 키를 모두 나열 하는 경우 0이 아닙니다. 응용 프로그램에 기본 바로 가기 키만 표시 되는 경우 0입니다.
 
@@ -244,7 +242,7 @@ BOOL LoadState(
 *pDefaultFrame*<br/>
 진행 기본 창으로 사용할 프레임 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 상태가 성공적으로 로드 되 면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -284,7 +282,7 @@ BOOL SaveState(
 *pDefaultFrame*<br/>
 진행 기본 창이 되는 프레임 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 키보드 관리자 상태가 성공적으로 저장 되 면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -331,7 +329,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 *nChar*<br/>
 진행 변환할 문자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 입력 매개 변수의 상위 레지스터가 되는 문자입니다.
 
@@ -369,7 +367,7 @@ BOOL UpdateAccelTable(
 *hAccelNew*<br/>
 진행 새 바로 가기 테이블에 대 한 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 

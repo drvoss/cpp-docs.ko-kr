@@ -1,24 +1,24 @@
 ---
-title: '&lt;optional&gt;'
+title: '&lt;선택 사항&gt;'
 ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 31a3d9aad539e45bb835331a4ef63690d0e16f49
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687253"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842678"
 ---
-# <a name="ltoptionalgt"></a>&lt;optional&gt;
+# <a name="ltoptionalgt"></a>&lt;선택 사항&gt;
 
-컨테이너 클래스 템플릿 `optional`와 여러 지원 템플릿을 정의 합니다.
+컨테이너 클래스 템플릿 `optional` 및 여러 지원 템플릿을 정의 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<optional >
+**헤더:**\<optional>
 
 **네임스페이스:** std
 
@@ -26,28 +26,28 @@ ms.locfileid: "72687253"
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
-|[연산자==](../standard-library/optional-operators.md#op_eq_eq)|개체가 다른 개체와 같은지 여부를 테스트 합니다.|
-|[operator!=](../standard-library/optional-operators.md#op_neq)|개체가 다른 개체와 같지 않은 지 테스트 합니다.|
-|[operator<](../standard-library/optional-operators.md#op_lt)|왼쪽의 개체가 오른쪽에 있는 개체 보다 작음을 테스트 합니다.|
-|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|왼쪽의 개체가 오른쪽에 있는 개체 보다 작거나 같은지 테스트 합니다.|
-|[operator>](../standard-library/optional-operators.md#op_gt)|왼쪽의 개체가 오른쪽에 있는 개체 보다 큰지 테스트 합니다.|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|왼쪽의 개체가 오른쪽에 있는 개체 보다 크거나 같은지 테스트 합니다.|
+|[연산자 = =](../standard-library/optional-operators.md#op_eq_eq)|개체가 다른 개체와 같은지 여부를 테스트 합니다.|
+|[연산자! =](../standard-library/optional-operators.md#op_neq)|개체가 다른 개체와 같지 않은 지 테스트 합니다.|
+|[연산자<](../standard-library/optional-operators.md#op_lt)|왼쪽의 개체가 오른쪽에 있는 개체 보다 작음을 테스트 합니다.|
+|[연산자<=](../standard-library/optional-operators.md#op_lt_eq)|왼쪽의 개체가 오른쪽에 있는 개체 보다 작거나 같은지 테스트 합니다.|
+|[연산자>](../standard-library/optional-operators.md#op_gt)|왼쪽의 개체가 오른쪽에 있는 개체 보다 큰지 테스트 합니다.|
+|[연산자>=](../standard-library/optional-operators.md#op_lt_eq)|왼쪽의 개체가 오른쪽에 있는 개체 보다 크거나 같은지 테스트 합니다.|
 
 > [!NOTE]
-> @No__t_0optional > 연산자는 관계형 비교 외에도 **nullopt** 및 `T` 비교를 지원 합니다.
+> 연산자는 관계형 비교 외에 \<optional> 도 **nullopt** 및와의 비교를 지원 `T` 합니다.
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|개체를 선택적으로 만듭니다.|
-|[swap](../standard-library/optional-functions.md#swap)|두 `optional` 개체의 포함 된 값을 바꿉니다.|
+|[스왑을](../standard-library/optional-functions.md#swap)|두 개체의 포함 된 값을 바꿉니다 `optional` .|
 
 ### <a name="classes-and-structs"></a>클래스 및 구조체
 
-|||
+|Name|설명|
 |-|-|
 |hash|포함 된 개체의 해시를 반환 합니다.|
 |[선택적 클래스](../standard-library/optional-class.md)|값을 포함 하거나 포함 하지 않을 수 있는 개체에 대해 설명 합니다.|
@@ -56,10 +56,10 @@ ms.locfileid: "72687253"
 
 ### <a name="objects"></a>개체
 
-|||
+|Name|설명|
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)|비교를 위한 `nullopt_t`의 인스턴스입니다.|
+|[nullopt](../standard-library/optional-functions.md#nullopt)|비교할의 인스턴스입니다 `nullopt_t` .|
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)

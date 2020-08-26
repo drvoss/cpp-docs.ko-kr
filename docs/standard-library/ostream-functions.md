@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425300"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842639"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 함수
 
-&lt;ostream&gt;에 정의 된 전역 템플릿 함수입니다. 멤버 함수는 [Basic_ostream 클래스](basic-ostream-class.md) 설명서를 참조 하세요.
+이러한 함수는 ostream에 정의 된 전역 템플릿 함수 &lt; &gt; 입니다. 멤버 함수는 [Basic_ostream 클래스](basic-ostream-class.md) 설명서를 참조 하세요.
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[endl](#endl)\
+[종료](#ends)\
+[플러시가](#flush)\
+[스왑을](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -40,13 +40,13 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>매개 변수
 
-*Elem*\
+*E*\
 요소 형식입니다.
 
 *Ostr*\
 **Basic_ostream**형식의 개체입니다.
 
-*Tr*\
+*비교한*\
 문자 특성입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -55,7 +55,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>설명
 
-조작자는 *Ostr*를 호출 합니다. [put](../standard-library/basic-ostream-class.md#put)(*ostr*.[widen](../standard-library/basic-ios-class.md#widen)(' \n '))를 확장 한 다음 *ostr*를 호출 합니다. [플러시](../standard-library/basic-ostream-class.md#flush). *Ostr*을 반환 합니다.
+조작자는 *Ostr*를 호출 합니다. [put](../standard-library/basic-ostream-class.md#put)(*ostr*.[ ](../standard-library/basic-ios-class.md#widen)(' \n '))를 확장 한 다음 *ostr*를 호출 합니다. [플러시](../standard-library/basic-ostream-class.md#flush). *Ostr*을 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -87,13 +87,13 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>매개 변수
 
-*Elem*\
+*E*\
 요소 형식입니다.
 
 *Ostr*\
 `basic_ostream` 형식의 개체입니다.
 
-*Tr*\
+*비교한*\
 문자 특성입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -136,13 +136,13 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>매개 변수
 
-*Elem*\
+*E*\
 요소 형식입니다.
 
 *Ostr*\
 `basic_ostream` 형식의 개체입니다.
 
-*Tr*\
+*비교한*\
 문자 특성입니다.
 
 ### <a name="return-value"></a>반환 값
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*Elem*\
+*E*\
 요소 형식입니다.
 
-*Tr*\
+*비교한*\
 문자 특성입니다.
 
-*left* \
+*비어*\
 `basic_ostream` 개체에 대한 lvalue 참조입니다.
 
-*right*\
+*오른쪽*\
 `basic_ostream` 개체에 대한 lvalue 참조입니다.
 
 ### <a name="remarks"></a>설명

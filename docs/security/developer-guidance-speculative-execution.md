@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: d0b9faf0bd11892c05e25e981e8cd729cb623dd4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219328"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842457"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>잘못 실행 되는 채널에 대 한 c + + 개발자 지침
 
@@ -21,7 +21,7 @@ ms.locfileid: "87219328"
 
 이 문서에서 제공 하는 지침은 다음에서 나타내는 취약성의 클래스와 관련 되어 있습니다.
 
-1. 스펙터 변형 1이 라고도 하는 CVE-2017-5753입니다. 이 하드웨어 취약성 클래스는 조건부 분기 misprediction의 결과로 발생 하는 잘못 된 실행으로 인해 발생할 수 있는 측면 채널과 관련이 있습니다. Visual Studio 2017 (버전 15.5.5부터 시작)의 Microsoft c + + 컴파일러에는 `/Qspectre` CVE-2017-5753와 관련 된 잠재적으로 취약 한 코딩 패턴의 제한 된 집합에 대 한 컴파일 시간 완화를 제공 하는 스위치에 대 한 지원이 포함 되어 있습니다. `/Qspectre`스위치는 Visual Studio 2015 업데이트 3에서 [KB 4338871](https://support.microsoft.com/help/4338871)에도 사용할 수 있습니다. [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) 플래그에 대 한 설명서는 효과 및 사용에 대 한 자세한 정보를 제공 합니다.
+1. 스펙터 변형 1이 라고도 하는 CVE-2017-5753입니다. 이 하드웨어 취약성 클래스는 조건부 분기 misprediction의 결과로 발생 하는 잘못 된 실행으로 인해 발생할 수 있는 측면 채널과 관련이 있습니다. Visual Studio 2017 (버전 15.5.5부터 시작)의 Microsoft c + + 컴파일러에는 `/Qspectre` CVE-2017-5753와 관련 된 잠재적으로 취약 한 코딩 패턴의 제한 된 집합에 대 한 컴파일 시간 완화를 제공 하는 스위치에 대 한 지원이 포함 되어 있습니다. `/Qspectre`스위치는 Visual Studio 2015 업데이트 3에서 [KB 4338871](https://support.microsoft.com/help/4338871)에도 사용할 수 있습니다. 플래그에 대 한 설명서는 [`/Qspectre`](../build/reference/qspectre.md) 효과 및 사용에 대 한 자세한 정보를 제공 합니다.
 
 2. CVE-2018-3639 [(SSB (잘못 된 저장소 바이패스)](https://aka.ms/sescsrdssb)라고도 함) 이 하드웨어 취약성 클래스는 메모리 액세스 misprediction의 결과로 종속 저장소에 대 한 잘못 된 부하의 잘못 된 실행으로 인해 발생할 수 있는 측면 채널과 관련이 있습니다.
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-이러한 두 예제에는 스택 할당 간접 분기 포인터의 잘못 된 수정이 포함 되어 있습니다. 일부 Cpu에서 전역 변수, 힙 할당 메모리 및 심지어 읽기 전용 메모리에 대해 잘못 된 수정이 발생할 수도 있습니다. 스택 할당 메모리의 경우 Microsoft c + + 컴파일러는 스택 할당 간접 분기 대상을 speculatively 수정 하기가 더 어려워집니다. 예를 들어, 버퍼가 보안 쿠키에 인접 하 여 [/gs](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check) 컴파일러 보안 기능의 일부로 배치 되도록 로컬 변수를 다시 정렬 하는 등의 작업을 수행 하는 것이 더 어려워집니다.
+이러한 두 예제에는 스택 할당 간접 분기 포인터의 잘못 된 수정이 포함 되어 있습니다. 일부 Cpu에서 전역 변수, 힙 할당 메모리 및 심지어 읽기 전용 메모리에 대해 잘못 된 수정이 발생할 수도 있습니다. 스택에 할당 된 메모리의 경우 Microsoft c + + 컴파일러는 해당 버퍼가 컴파일러 보안 기능의 일부로 보안 쿠키에 인접 하 게 배치 되도록 지역 변수를 다시 정렬 하는 등의 방법으로 스택 할당 간접 분기 대상을 speculatively 수정 하기가 더 어려워집니다 [`/GS`](../build/reference/gs-buffer-security-check.md) .
 
 ## <a name="speculative-type-confusion"></a>잘못 되는 형식 혼동
 
@@ -308,7 +308,7 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 개발자는 *추론 장벽을* 수동으로 삽입 하 여 비 아키텍처 경로를 따라 잘못 실행 되는 것을 방지할 수 있습니다. 예를 들어 개발자는 조건부 블록의 시작 부분 (조건부 분기 이후) 이나 중요 한 첫 번째 로드 전에 조건부 블록의 본문에서 위험한 코딩 패턴 앞에 추론 장벽을 삽입할 수 있습니다. 이렇게 하면 조건부 분기 misprediction 실행을 serialize 하 여 비 아키텍처 경로에서 위험한 코드를 실행할 수 없습니다. 추론 장벽 시퀀스는 다음 표에 설명 된 대로 하드웨어 아키텍처에 따라 달라 집니다.
 
-|Architecture|CVE-2017-5753에 대 한 추론 장벽 내장 함수|CVE-2018-3639에 대 한 추론 장벽 내장 함수|
+|아키텍처|CVE-2017-5753에 대 한 추론 장벽 내장 함수|CVE-2018-3639에 대 한 추론 장벽 내장 함수|
 |----------------|----------------|----------------|
 |x86/x64|_mm_lfence ()|_mm_lfence ()|
 |ARM|현재 사용할 수 없음|__dsb (0)|
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>컴파일러 시간 계측을 통해 장벽 추론
 
-Visual Studio 2017 (버전 15.5.5부터 시작)의 Microsoft c + + 컴파일러에는 `/Qspectre` CVE-2017-5753와 관련 된 잠재적으로 취약 한 코딩 패턴의 제한 된 집합에 대 한 추론 장벽을 자동으로 삽입 하는 스위치에 대 한 지원이 포함 되어 있습니다. [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre) 플래그에 대 한 설명서는 효과 및 사용에 대 한 자세한 정보를 제공 합니다. 이 플래그는 잠재적으로 취약 한 모든 코딩 패턴을 포함 하지 않으며, 개발자가이 취약점 클래스에 대 한 포괄적인 완화 수단으로이를 사용 하지 않아야 한다는 점에 유의 해야 합니다.
+Visual Studio 2017 (버전 15.5.5부터 시작)의 Microsoft c + + 컴파일러에는 `/Qspectre` CVE-2017-5753와 관련 된 잠재적으로 취약 한 코딩 패턴의 제한 된 집합에 대 한 추론 장벽을 자동으로 삽입 하는 스위치에 대 한 지원이 포함 되어 있습니다. 플래그에 대 한 설명서는 [`/Qspectre`](../build/reference/qspectre.md) 효과 및 사용에 대 한 자세한 정보를 제공 합니다. 이 플래그는 잠재적으로 취약 한 모든 코딩 패턴을 포함 하지 않으며, 개발자가이 취약점 클래스에 대 한 포괄적인 완화 수단으로이를 사용 하지 않아야 한다는 점에 유의 해야 합니다.
 
 ### <a name="masking-array-indices"></a>배열 인덱스 마스킹
 

@@ -1,19 +1,19 @@
 ---
-title: Rvalue 참조 선언 자:&amp;&amp;
+title: 'Rvalue 참조 선언 자: &amp;&amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&&'
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 65eec84447043b89ff94b77b7aed22b1b06f58e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227103"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842041"
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>Rvalue 참조 선언 자:&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>Rvalue 참조 선언 자: &amp;&amp;
 
 rvalue 식에 대한 참조를 보유합니다.
 
@@ -391,13 +391,12 @@ print_type_and_value<string&>(string& t)
 
 다음 표에는 템플릿 인수 형식 추론에 대한 참조 축소 규칙이 요약되어 있습니다.
 
-|||
-|-|-|
-|확장된 형식|축소된 형식|
-|`T& &`|`T&`|
-|`T& &&`|`T&`|
-|`T&& &`|`T&`|
-|`T&& &&`|`T&&`|
+| 확장된 형식 | 축소된 형식 |
+|--|--|
+| `T& &` | `T&` |
+| `T& &&` | `T&` |
+| `T&& &` | `T&` |
+| `T&& &&` | `T&&` |
 
 템플릿 인수 추론은 완벽한 전달을 구현하는 중요한 요소입니다. 이 항목의 앞부분에 제공된 완벽한 전달 단원에서는 완벽한 전달에 대해 자세히 설명합니다.
 

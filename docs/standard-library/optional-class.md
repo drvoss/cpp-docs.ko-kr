@@ -13,12 +13,12 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: 3b8baca48b7b7a32b88079a1668aecdd1c9aca88
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b1e77325cc485da1caec91316ce5d46cfa6357dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224697"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841937"
 ---
 # <a name="optional-class"></a>선택적 클래스
 
@@ -46,7 +46,7 @@ template<class T> optional(T) -> optional<T>;
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 | **생성자 및 소멸자** | |
 |[필드](#optional) | `optional` 형식의 개체를 생성합니다. |
@@ -66,13 +66,13 @@ template<class T> optional(T) -> optional<T>;
 | **한정자** | |
 | [reset](#reset) | 포함 된 `optional` 값을 삭제 하 여를 다시 설정 합니다. |
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 ```cpp
 constexpr bool has_value() const noexcept;
 ```
 
-## <a name="optional-constructor"></a><a name="optional"></a>선택적 생성자
+## <a name="optional-constructor"></a><a name="optional"></a> 선택적 생성자
 
 `optional` 형식의 개체를 생성합니다.
 
@@ -112,23 +112,23 @@ explicit optional(optional<U>&& rhs);
 ### <a name="remarks"></a>설명
 
 `constexpr optional() noexcept;`
-`constexpr optional(nullopt_t nullopt) noexcept;`이러한 생성자는 `optional` 값을 포함 하지 않는을 생성 합니다.
+`constexpr optional(nullopt_t nullopt) noexcept;` 이러한 생성자는 `optional` 값을 포함 하지 않는을 생성 합니다.
 
-`constexpr optional(const optional& rhs);`Copy 생성자는 인수의 포함 된 값에서 포함 된 값을 초기화 합니다. 가 true가 아니면 **삭제** 된 것으로 정의 `is_copy_constructible_v<T>` 되 고가 true 인 경우 trivial `is_trivially_copy_constructible_v<T>` 입니다.
+`constexpr optional(const optional& rhs);` Copy 생성자는 인수의 포함 된 값에서 포함 된 값을 초기화 합니다. 가 true가 아니면 **삭제** 된 것으로 정의 `is_copy_constructible_v<T>` 되 고가 true 인 경우 trivial `is_trivially_copy_constructible_v<T>` 입니다.
 
-`constexpr optional(optional&& rhs) noexcept;`이동 생성자는 인수의 포함 된 값에서 이동 하 여 포함 된 값을 초기화 합니다. 이 true 인 경우를 제외 하 고는 오버 로드 확인에 참여 하지 `is_move_constructible_v<T>` 않으며,가 true 인 경우 trivial `is_trivially_move_constructible_v<T>` 입니다.
+`constexpr optional(optional&& rhs) noexcept;` 이동 생성자는 인수의 포함 된 값에서 이동 하 여 포함 된 값을 초기화 합니다. 이 true 인 경우를 제외 하 고는 오버 로드 확인에 참여 하지 `is_move_constructible_v<T>` 않으며,가 true 인 경우 trivial `is_trivially_move_constructible_v<T>` 입니다.
 
-`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);`직접 인수를 사용 하는 경우에 포함 된 값을 초기화 합니다 `std::forward<Args>(args)` . 이 생성자는 **`constexpr`** 사용 된 생성자가 인 경우입니다 `T` **`constexpr`** . 가 true가 아닌 경우 오버 로드 확인에 참여 하지 않습니다 `is_constructible_v<T, Args...>` .
+`template <class... Args> constexpr explicit optional(in_place_t, Args&&... args);` 직접 인수를 사용 하는 경우에 포함 된 값을 초기화 합니다 `std::forward<Args>(args)` . 이 생성자는 **`constexpr`** 사용 된 생성자가 인 경우입니다 `T` **`constexpr`** . 가 true가 아닌 경우 오버 로드 확인에 참여 하지 않습니다 `is_constructible_v<T, Args...>` .
 
-`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);`직접 인수를 사용 하는 경우에 포함 된 값을 초기화 합니다 `i_list, std::forward<Args>(args)` . 이 생성자는 **`constexpr`** 사용 된 생성자가 인 경우입니다 `T` **`constexpr`** . 가 true가 아닌 경우 오버 로드 확인에 참여 하지 않습니다 `is_constructible_v<T, initializer_list<U>&, Args&&...>` .
+`template <class U, class... Args> constexpr explicit optional(in_place_t, initializer_list<U> i_list, Args&&... args);` 직접 인수를 사용 하는 경우에 포함 된 값을 초기화 합니다 `i_list, std::forward<Args>(args)` . 이 생성자는 **`constexpr`** 사용 된 생성자가 인 경우입니다 `T` **`constexpr`** . 가 true가 아닌 경우 오버 로드 확인에 참여 하지 않습니다 `is_constructible_v<T, initializer_list<U>&, Args&&...>` .
 
-`template <class U = T> explicit constexpr optional(U&& rhs);`를 사용 하는 경우에는 포함 된 값을 직접 초기화 `std::forward<U>(v)` 합니다. 이 생성자는 **`constexpr`** 사용 된 생성자가 인 경우입니다 `T` **`constexpr`** . `is_constructible_v<T, U&&>`이 true이 고 `is_same_v<remove_cvref_t<U>, in_place_t>` 및가 false가 아닌 경우 오버 로드 확인에 참여 하지 않습니다 `is_same_v<remove_cvref_t<U>, optional>` .
+`template <class U = T> explicit constexpr optional(U&& rhs);` 를 사용 하는 경우에는 포함 된 값을 직접 초기화 `std::forward<U>(v)` 합니다. 이 생성자는 **`constexpr`** 사용 된 생성자가 인 경우입니다 `T` **`constexpr`** . `is_constructible_v<T, U&&>`이 true이 고 `is_same_v<remove_cvref_t<U>, in_place_t>` 및가 false가 아닌 경우 오버 로드 확인에 참여 하지 않습니다 `is_same_v<remove_cvref_t<U>, optional>` .
 
 `template <class U> explicit optional(const optional<U>& rhs);`*Rhs* 에 값이 포함 된 경우 직접 인수의 포함 된 값에서 포함 된 값을 초기화 합니다. 가 true가 아니면,,,,,, `is_constructible_v<T, const U&>` `is_constructible_v<T, optional<U>&>` 및가 `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` `is_convertible_v<const optional<U>&&, T>` 모두 false 인 경우를 제외 하 고는 오버 로드 확인에 참여 하지 않습니다.
 
 `template <class U> explicit optional(optional<U>&& rhs);`*Rhs* 에 값이 포함 된 경우를 사용 하는 것 처럼 직접 포함 된 값을 초기화 `std::move(*rhs)` 합니다. 가 true가 아니면,,,,,, `is_constructible_v<T, U&&>` `is_constructible_v<T, optional<U>&>` 및가 `is_constructible_v<T, optional<U>&&>` `is_constructible_v<T, const optional<U>&>` `is_constructible_v<T, const optional<U>&&>` `is_convertible_v<optional<U>&, T>` `is_convertible_v<optional<U>&&, T>` `is_convertible_v<const optional<U>&, T>` `is_convertible_v<const optional<U>&&, T>` 모두 false 인 경우를 제외 하 고는 오버 로드 확인에 참여 하지 않습니다.
 
-## <a name="optional-destructor"></a><a name="optional-destructor"></a>~ 선택적 소멸자
+## <a name="optional-destructor"></a><a name="optional-destructor"></a> ~ 선택적 소멸자
 
 소멸자를 호출 하 여 일반적으로 소멸 가능한 포함 된 값 (있는 경우)을 모두 소멸 합니다.
 
@@ -140,7 +140,7 @@ explicit optional(optional<U>&& rhs);
 
 `T`가 일반적으로 소멸 가능한 이면 `optional<T>` 도 일반적으로 소멸 가능한입니다.
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 의 포함 된 값을 `optional` 복사 하거나 다른 포함 된 값에서 다른 위치로 바꿉니다 `optional` .
 
@@ -165,7 +165,7 @@ template <class U, class... Args>
 T& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="operator-"></a><a name="op_as"></a>연산자->
+## <a name="operator-"></a><a name="op_as"></a> 연산자->
 
 개체의 포함 된 값을 역참조 `optional` 합니다.
 
@@ -174,7 +174,7 @@ constexpr const T* operator->() const;
 constexpr T* operator->();
 ```
 
-## <a name="operator"></a><a name="op_mem"></a>연산자
+## <a name="operator"></a><a name="op_mem"></a> 연산자
 
 개체의 포함 된 값을 역참조 `optional` 합니다.
 
@@ -185,7 +185,7 @@ constexpr T&& operator*() &&;
 constexpr const T&& operator*() const&&;
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>연산자 bool
+## <a name="operator-bool"></a><a name="op_bool"></a> 연산자 bool
 
 개체에 포함 된 값이 있는지 여부를 보고 `optional` 합니다.
 
@@ -193,7 +193,7 @@ constexpr const T&& operator*() const&&;
 constexpr explicit operator bool() const noexcept;
 ```
 
-## <a name="reset"></a><a name="reset"></a>다시 설정
+## <a name="reset"></a><a name="reset"></a> 다시 설정
 
 효과적으로는 포함 된 개체 (있는 경우)의 소멸자를 호출 하 고이를 초기화 되지 않은 상태로 설정 합니다.
 
@@ -201,7 +201,7 @@ constexpr explicit operator bool() const noexcept;
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 ```cpp
 template<class T>
@@ -217,7 +217,7 @@ constexpr T&& value() &&;
 constexpr const T&& value() const&&;
 ```
 
-## <a name="value_or"></a><a name="value_or"></a>value_or
+## <a name="value_or"></a><a name="value_or"></a> value_or
 
 ```cpp
 template <class U>

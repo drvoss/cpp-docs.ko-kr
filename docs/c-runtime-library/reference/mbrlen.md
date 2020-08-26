@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920309"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842119"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -58,16 +58,16 @@ size_t mbrlen(
 *mbstate*<br/>
 *Str*의 초기 바이트의 현재 이동 상태에 대 한 포인터입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 다음 값 중 하나입니다.
 
-|||
-|-|-|
-0|다음 *개수* 이하의 바이트가 와이드 null 문자를 나타내는 멀티 바이트 문자를 완성 합니다.
-1- *개수*, 포함|다음 *개수* 이하의 바이트가 올바른 멀티 바이트 문자를 완성 합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다.
-(size_t)(-2)|다음 *카운트* 바이트는 불완전 하지만 잠재적으로 유효한 멀티 바이트 문자에 영향을 주지만 모든 바이트 *수가* 처리 되었습니다.
-(size_t)(-1)|인코딩 오류가 발생했습니다. 다음 *개수* 이하의 바이트는 완전 하 고 유효한 멀티 바이트 문자에 영향을 주지 않습니다. 이 경우 **errno** 는 EILSEQ로 설정 되 고 *mbstate* 의 변환 상태는 지정 되지 않습니다.
+| 값 | 설명 |
+|--|--|
+| 0 | 다음 *개수* 이하의 바이트가 와이드 null 문자를 나타내는 멀티 바이트 문자를 완성 합니다. |
+| 1- *개수*, 포함 | 다음 *개수* 이하의 바이트가 올바른 멀티 바이트 문자를 완성 합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다. |
+| (size_t)(-2) | 다음 *카운트* 바이트는 불완전 하지만 잠재적으로 유효한 멀티 바이트 문자에 영향을 주지만 모든 바이트 *수가* 처리 되었습니다. |
+| (size_t)(-1) | 인코딩 오류가 발생했습니다. 다음 *개수* 이하의 바이트는 완전 하 고 유효한 멀티 바이트 문자에 영향을 주지 않습니다. 이 경우 **errno** 는 EILSEQ로 설정 되 고 *mbstate* 의 변환 상태는 지정 되지 않습니다. |
 
 ## <a name="remarks"></a>설명
 
@@ -155,7 +155,7 @@ Code page: 932
 Character count: 25
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Locale](../../c-runtime-library/locale.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>

@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: c796f24ad37b3bae11314e2885bf25e25f85aba6
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4bb4d4ddf291cb1efc01b887c54a6573c52df8dc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561975"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842925"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 클래스
 
@@ -83,13 +83,13 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[CDataRecoveryHandler::CDataRecoveryHandler](#cdatarecoveryhandler)|`CDataRecoveryHandler` 개체를 생성합니다.|
 
 ### <a name="methods"></a>메서드
 
-|||
+|속성|설명|
 |-|-|
 |[CDataRecoveryHandler:: AutosaveAllDocumentInfo](#autosavealldocumentinfo)|클래스에 등록 된 각 파일을 자동으로 저장 `CDataRecoveryHandler` 합니다.|
 |[CDataRecoveryHandler:: AutosaveDocumentInfo](#autosavedocumentinfo)|지정 된 문서를 자동으로 저장 합니다.|
@@ -105,7 +105,7 @@ class CDataRecoveryHandler : public CObject
 |[CDataRecoveryHandler::GetRestartIdentifier](#getrestartidentifier)|응용 프로그램에 대 한 고유 다시 시작 식별자를 검색 합니다.|
 |[CDataRecoveryHandler:: GetSaveDocumentInfoOnIdle](#getsavedocumentinfoonidle)|가 `CDataRecoveryHandler` 현재 유휴 루프에서 자동 저장을 수행 하는지 여부를 나타냅니다.|
 |[CDataRecoveryHandler::GetShutdownByRestartManager](#getshutdownbyrestartmanager)|다시 시작 관리자가 응용 프로그램을 종료할지 여부를 나타냅니다.|
-|[CDataRecoveryHandler:: Initialize](#initialize)|`CDataRecoveryHandler` 을(를) 초기화합니다.|
+|[CDataRecoveryHandler:: Initialize](#initialize)|`CDataRecoveryHandler`을 초기화합니다.|
 |[CDataRecoveryHandler::QueryRestoreAutosavedDocuments](#queryrestoreautosaveddocuments)|자동으로 저장 된 각 문서에 대 한 대화 상자를 사용자에 게 표시 합니다 `CDataRecoveryHandler` . 이 대화 상자에는 사용자가 자동으로 저장 된 문서를 복원할지 여부를 결정 합니다.|
 |[CDataRecoveryHandler:: ReadOpenDocumentList](#readopendocumentlist)|레지스트리에서 열린 문서 목록을 로드 합니다.|
 |[CDataRecoveryHandler:: RemoveDocumentInfo](#removedocumentinfo)|열린 문서 목록에서 제공 된 문서를 제거 합니다.|
@@ -121,7 +121,7 @@ class CDataRecoveryHandler : public CObject
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+|Name|설명|
 |-|-|
 |m_bRestoringPreviousOpenDocs|데이터 복구 핸들러가 이전에 열린 문서를 다시 열 지 여부를 나타냅니다.|
 |m_bSaveDocumentInfoOnIdle|데이터 복구 처리기가 다음 유휴 루프에서 문서를 자동으로 저장할지 여부를 나타냅니다.|
@@ -160,7 +160,7 @@ class CDataRecoveryHandler : public CObject
 virtual BOOL AutosaveAllDocumentInfo();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 에서 `CDataRecoveryHandler` 모든 문서를 저장 했으면 TRUE입니다. 문서를 저장 하지 않은 경우 FALSE입니다.
 
@@ -188,7 +188,7 @@ virtual BOOL AutosaveDocumentInfo(
 *bResetModifiedFlag*\
 진행 TRUE 이면에서 `CDataRecoveryHandler` *pdocument* 를 수정 하도록 고려 합니다. FALSE는 프레임 워크에서 *Pdocument* 가 수정 되지 않은 것으로 간주 함을 나타냅니다. 이 플래그의 효과에 대 한 자세한 내용은 설명 부분을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 적절 한 플래그가 설정 되 고 *Pdocument* 가 유효한 개체 이면 TRUE `CDocument` 입니다.
 
@@ -238,7 +238,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 *pDocument*\
 진행 에 대 한 포인터 `CDocument` 입니다. 이 메서드는이에 대 한 문서 정보를 만듭니다 `CDocument` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 기본 구현에서는 TRUE를 반환 합니다.
 
@@ -256,7 +256,7 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 virtual BOOL DeleteAllAutosavedFiles();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 기본 구현에서는 항상 TRUE를 반환 합니다.
 
@@ -273,7 +273,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 *strAutosavedFile*\
 진행 자동 저장 된 파일 이름을 포함 하는 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 기본 구현에서는 항상 TRUE를 반환 합니다.
 
@@ -294,7 +294,7 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 *strDocumentName*<br/>
 진행 문서 이름을 포함 하는 문자열입니다. `GenerateAutosaveFileName` 에서는이 문서 이름을 사용 하 여 해당 하는 자동 저장 파일 이름을 생성 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *StrDocumentName*에서 생성 된 자동 저장 파일 이름입니다.
 
@@ -310,7 +310,7 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 virtual int GetAutosaveInterval() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 자동 저장 시도 사이의 시간 (밀리초)입니다.
 
@@ -322,7 +322,7 @@ virtual int GetAutosaveInterval() const;
 virtual CString GetAutosavePath() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 자동 저장 된 문서를 저장 하는 위치입니다.
 
@@ -339,7 +339,7 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 *pDocument*\
 진행 에 대 한 포인터 `CDocument` 입니다. `GetDocumentListName` 이에서 문서 이름을 검색 `CDocument` 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Pdocument*의 문서 이름입니다.
 
@@ -360,7 +360,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 *pDocument*\
 진행 에 대 한 포인터 `CDocument` 입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 문서의 일반 제목입니다.
 
@@ -381,7 +381,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 *strDocumentTitle*<br/>
 진행 문서의 일반 제목입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 복구 된 문서 제목입니다.
 
@@ -397,7 +397,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 virtual CString GetRestartIdentifier() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 고유한 다시 시작 식별자입니다.
 
@@ -415,7 +415,7 @@ Restart 식별자는 응용 프로그램의 각 실행에 대해 고유 합니�
 virtual BOOL GetSaveDocumentInfoOnIdle() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 TRUE는 `CDataRecoveryHandler` 현재 유휴 루프의 자동으로 저장을 나타냅니다. FALSE는 그렇지 않음을 나타냅니다.
 
@@ -427,19 +427,19 @@ TRUE는 `CDataRecoveryHandler` 현재 유휴 루프의 자동으로 저장을 �
 virtual BOOL GetShutdownByRestartManager() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 TRUE로 설정 하면 다시 시작 관리자가 응용 프로그램을 종료 했음을 나타냅니다. FALSE는 그렇지 않음을 나타냅니다.
 
 ## <a name="cdatarecoveryhandlerinitialize"></a><a name="initialize"></a> CDataRecoveryHandler:: Initialize
 
-`CDataRecoveryHandler` 을(를) 초기화합니다.
+`CDataRecoveryHandler`을 초기화합니다.
 
 ```
 virtual BOOL Initialize();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 초기화에 성공 하면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -473,7 +473,7 @@ virtual void QueryRestoreAutosavedDocuments();
 virtual BOOL ReadOpenDocumentList();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 TRUE 이면 `ReadOpenDocumentList` 레지스트리에서 하나 이상의 문서에 대 한 정보를 로드 했음을 나타냅니다. FALSE는 문서 정보를 로드 하지 않았음을 나타냅니다.
 
@@ -496,7 +496,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 *pDocument*\
 진행 제거할 문서에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Pdocument* 가 목록에서 제거 되 면 TRUE이 고, 오류가 발생 한 경우 FALSE입니다.
 
@@ -516,7 +516,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 virtual BOOL ReopenPreviousDocuments();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 하나 이상의 문서가 열려 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -536,7 +536,7 @@ virtual BOOL ReopenPreviousDocuments();
 virtual BOOL RestoreAutosavedDocuments();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 메서드가 문서를 성공적으로 복원 하면 TRUE입니다.
 
@@ -554,7 +554,7 @@ virtual BOOL RestoreAutosavedDocuments();
 virtual BOOL SaveOpenDocumentList();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 저장할 열린 문서가 없거나 성공적으로 저장 된 경우 TRUE입니다. 레지스트리에 저장할 문서가 있지만 오류가 발생 하 여 저장 되지 않은 경우 FALSE입니다.
 
@@ -654,7 +654,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 *pDocument*\
 진행 저장 된 문서에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 메서드가 자동으로 저장 된 문서를 삭제 하 고 문서 정보를 업데이트 한 경우 TRUE입니다. 오류가 발생 한 경우 FALSE입니다.
 

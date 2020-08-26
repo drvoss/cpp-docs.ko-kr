@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 23567ff2c4ff431ba3dccdb600e5d7b3e848c852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5340f2e56a367734293d661d9d89eb0db522fd2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229014"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842054"
 ---
 # <a name="constructors-c"></a>생성자 (C++)
 
@@ -66,7 +66,7 @@ int main()
 - 생성자는, 또는로 선언 된 개체를 초기화할 수 **`const`** 있습니다 **`volatile`** **`const volatile`** . **`const`** 생성자가 완료 된 후 개체가 됩니다.
 - 구현 파일에서 생성자를 정의 하려면 다른 멤버 함수와 마찬가지로 정규화 된 이름을 지정 `Box::Box(){...}` 합니다.
 
-## <a name="member-initializer-lists"></a><a name="member_init_list"></a>멤버 이니셜라이저 목록
+## <a name="member-initializer-lists"></a><a name="member_init_list"></a> 멤버 이니셜라이저 목록
 
 생성자는 필요에 따라 생성자 본문을 실행 하기 전에 클래스 멤버를 초기화 하는 멤버 이니셜라이저 목록을 포함할 수 있습니다. 멤버 이니셜라이저 목록은 [std:: initializer_list \<T> ](../standard-library/initializer-list-class.md)형식의 *이니셜라이저 목록과* 동일 하지 않습니다.
 
@@ -84,7 +84,7 @@ int main()
 
 파생 생성자를 실행 하기 전에 기본 클래스가 완전히 초기화 되도록 하려면 매개 변수가 있는 기본 클래스 생성자를 호출 해야 합니다.
 
-## <a name="default-constructors"></a><a name="default_constructors"></a>기본 생성자
+## <a name="default-constructors"></a><a name="default_constructors"></a> 기본 생성자
 
 *기본 생성자* 에는 일반적으로 매개 변수가 없지만 기본값을 포함 하는 매개 변수를 사용할 수 있습니다.
 
@@ -178,7 +178,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
 자세한 내용은 [이니셜라이저](initializers.md)를 참조 하십시오.
 
-## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a>복사 생성자
+## <a name="copy-constructors"></a><a name="copy_and_move_constructors"></a> 복사 생성자
 
 *복사 생성자* 는 동일한 형식의 개체에서 멤버 값을 복사 하 여 개체를 초기화 합니다. 클래스 멤버가 스칼라 값과 같은 모든 단순 형식인 경우에는 컴파일러에서 생성 된 복사 생성자로 충분 하며 사용자가 직접 정의 하지 않아도 됩니다. 클래스에 더 복잡 한 초기화가 필요한 경우 사용자 지정 복사 생성자를 구현 해야 합니다. 예를 들어 클래스 멤버가 포인터인 경우 새 메모리를 할당 하 고 다른의 가리킨 개체에서 값을 복사 하려면 복사 생성자를 정의 해야 합니다. 컴파일러에서 생성 된 복사 생성자는 새 포인터가 다른의 메모리 위치를 계속 가리키도록 포인터를 복사 하기만 합니다.
 
@@ -204,7 +204,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
 개체를 복사 하려고 하면 오류 *C2280: 삭제 된 함수를 참조*하려고 합니다.
 
-## <a name="move-constructors"></a><a name="move_constructors"></a>이동 생성자
+## <a name="move-constructors"></a><a name="move_constructors"></a> 이동 생성자
 
 *이동 생성자* 는 원래 데이터를 복사 하지 않고 기존 개체의 데이터 소유권을 새 변수로 이동 하는 특수 멤버 함수입니다. 첫 번째 매개 변수로 rvalue 참조를 사용 하 고 추가 매개 변수에는 기본값이 있어야 합니다. 이동 생성자는 큰 개체를 전달할 때 프로그램의 효율성을 크게 향상 시킬 수 있습니다.
 
@@ -285,7 +285,7 @@ int main()
 
 Trivial 이동 생성자를 작성 하는 방법에 대 한 자세한 내용은 [이동 생성자 및 이동 할당 연산자 (c + +)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)를 참조 하세요.
 
-## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a>명시적으로 기본 설정 및 삭제 된 생성자
+## <a name="explicitly-defaulted-and-deleted-constructors"></a><a name="explicitly_defaulted_and_deleted_constructors"></a> 명시적으로 기본 설정 및 삭제 된 생성자
 
 복사 생성자, 기본 생성자, 이동 생성자, 복사 할당 연산자, 이동 할당 연산자 및 소멸자를 명시적으로 *기본* 설정할 수 있습니다. 모든 특수 멤버 함수를 명시적으로 *삭제할* 수 있습니다.
 
@@ -304,7 +304,7 @@ public:
 
 자세한 내용은 [명시적으로 기본값으로 설정 및 삭제 된 함수](../cpp/explicitly-defaulted-and-deleted-functions.md)를 참조 하세요.
 
-## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a>constexpr 생성자
+## <a name="constexpr-constructors"></a><a name="constexpr_constructors"></a> constexpr 생성자
 
 생성자는 다음의 경우 [constexpr](constexpr-cpp.md) 로 선언할 수 있습니다.
 
@@ -316,7 +316,7 @@ public:
 - 클래스가 (a) 멤버를 포함 하는 공용 구조체 또는 (b)에 익명 공용 구조체가 있으면 union 멤버 중 하나만 초기화 됩니다.
 - 클래스 형식의 모든 비정적 데이터 멤버와 모든 기본 클래스 하위 개체에는 constexpr 생성자가 있습니다.
 
-## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a>이니셜라이저 목록 생성자
+## <a name="initializer-list-constructors"></a><a name="init_list_constructors"></a> 이니셜라이저 목록 생성자
 
 생성자가 [std:: initializer_list \<T\> ](../standard-library/initializer-list-class.md) 를 매개 변수로 사용 하 고 다른 모든 매개 변수에 기본 인수가 있는 경우 직접 초기화를 통해 클래스를 인스턴스화할 때 오버 로드 확인에서 해당 생성자가 선택 됩니다. Initializer_list를 사용 하 여이를 수락할 수 있는 모든 멤버를 초기화할 수 있습니다. 예를 들어 Box 클래스 (이전에 표시 됨)에 멤버가 있다고 가정 합니다 `std::vector<string>` `m_contents` . 다음과 같이 생성자를 제공할 수 있습니다.
 
@@ -333,7 +333,7 @@ public:
     Box b2(initializer_list<string> { "bread", "cheese", "wine" }, 2, 4, 6);
 ```
 
-## <a name="explicit-constructors"></a><a name="explicit_constructors"></a>명시적 생성자
+## <a name="explicit-constructors"></a><a name="explicit_constructors"></a> 명시적 생성자
 
 클래스에 단일 매개 변수를 사용하는 생성자가 있거나 하나를 제외한 모든 매개 변수에서 기본값을 사용하는 경우 이 매개 변수 형식은 클래스 형식으로 암시적으로 변환할 수 있습니다. 예를 들어 `Box` 클래스에 다음과 같은 생성자가 있는 경우입니다.
 
@@ -371,7 +371,7 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 
 생성자가 명시적인 경우 `ShippingOrder so(42, 10.8);` 줄에서 컴파일 오류가 발생합니다.  자세한 내용은 [사용자 정의 형식 변환](../cpp/user-defined-type-conversions-cpp.md)을 참조 하세요.
 
-## <a name="order-of-construction"></a><a name="order_of_construction"></a>생성 순서
+## <a name="order-of-construction"></a><a name="order_of_construction"></a> 생성 순서
 
 생성자는 다음과 같은 순서로 작업을 수행합니다.
 
@@ -478,7 +478,7 @@ int main(){
 
 1. 생성자가 비대리자인 경우 제대로 생성된 기본 클래스 개체 및 멤버가 모두 소멸됩니다. 하지만 개체가 완전히 생성되지 않으므로 소멸자는 실행되지 않습니다.
 
-## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a>파생 된 생성자 및 확장 된 집계 초기화
+## <a name="derived-constructors-and-extended-aggregate-initialization"></a><a name="extended_aggregate"></a> 파생 된 생성자 및 확장 된 집계 초기화
 
 기본 클래스의 생성자가 public이 아니지만 파생 된 클래스에서 액세스할 수 있는 경우 Visual Studio 2017 이상에서 **/hd: c + + 17** 모드 아래에 있는 빈 중괄호를 사용 하 여 파생 형식의 개체를 초기화할 수 없습니다.
 
@@ -566,7 +566,7 @@ BaseClass3 ctor
 DerivedClass ctor
 ```
 
-## <a name="delegating-constructors"></a><a name="delegating_constructors"></a>생성자 위임
+## <a name="delegating-constructors"></a><a name="delegating_constructors"></a> 생성자 위임
 
 *위임 생성자* 는 동일한 클래스의 다른 생성자를 호출 하 여 초기화 작업 중 일부를 수행 합니다. 이는 모두 유사한 작업을 수행 해야 하는 여러 생성자가 있는 경우에 유용 합니다. 한 생성자에서 기본 논리를 작성 하 고 다른 생성자에서 호출할 수 있습니다. 다음 trivial 예제에서 Box (int)는 해당 작업을 Box (int, int, int)로 위임 합니다.
 
@@ -590,7 +590,7 @@ public:
 
 생성자에 의해 만들어지는 개체는 생성자가 완료되는 즉시 완전하게 초기화됩니다. 자세한 내용은 [생성자 위임](../cpp/delegating-constructors.md)을 참조 하세요.
 
-## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a>생성자 상속 (c + + 11)
+## <a name="inheriting-constructors-c11"></a><a name="inheriting_constructors"></a> 생성자 상속 (c + + 11)
 
 파생 클래스는 다음 예제와 같이 선언을 사용 하 여 직접 기본 클래스에서 생성자를 상속할 수 있습니다 **`using`** .
 
@@ -643,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 이상**: **`using`** **/std: c + + 17** 모드의 문은 파생 클래스의 생성자와 동일한 시그니처가 있는 경우를 제외 하 고 기본 클래스의 모든 생성자 범위를 가져옵니다. 일반적으로 파생 클래스에서 새 데이터 멤버나 생성자를 선언하지 않는 경우 상속 생성자를 사용하는 것이 가장 좋습니다. [Visual Studio 2017 버전 15.7의 향상 된 기능을](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)참조 하세요.
+**Visual Studio 2017 이상**: **`using`** **/std: c + + 17** 모드의 문은 파생 클래스의 생성자와 동일한 시그니처가 있는 경우를 제외 하 고 기본 클래스의 모든 생성자 범위를 가져옵니다. 일반적으로 파생 클래스에서 새 데이터 멤버나 생성자를 선언하지 않는 경우 상속 생성자를 사용하는 것이 가장 좋습니다. [Visual Studio 2017 버전 15.7의 향상 된 기능을](../overview/cpp-conformance-improvements.md?view=vs-2017#improvements_157)참조 하세요.
 
 ::: moniker-end
 
@@ -659,7 +659,7 @@ class Derived : T {
 
 파생 클래스는 다중 기본 클래스에 동일한 서명을 사용하는 생성자가 있는 경우 해당 다중 기본 클래스에서 상속할 수 없습니다.
 
-## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a>생성자 및 복합 클래스
+## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a> 생성자 및 복합 클래스
 
 클래스 형식 멤버를 포함 하는 클래스를 *복합 클래스*라고 합니다. 복합 클래스의 클래스 형식 멤버를 만들 때 생성자가 클래스의 자체 생성자보다 먼저 호출됩니다. 포함된 클래스에 기본 생성자가 없는 경우 복합 클래스의 생성자에서 초기화 목록을 사용해야 합니다. 이전 `StorageBox` 예제에서 `m_label` 멤버 변수의 형식을 새 `Label` 클래스로 변경할 경우 기본 클래스 생성자를 호출하고 `m_label` 생성자에서 `StorageBox` 변수를 초기화해야 합니다.
 

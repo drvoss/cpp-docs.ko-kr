@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 274e446aecc4d0d7096211bbae88e0f170ae44a2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9a1f576e26805c5dd84c2d83cdf3615d0661af3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213829"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842769"
 ---
 # <a name="source-c"></a>source(C++)
 
@@ -70,13 +70,11 @@ class NN : public b
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`** , **인터페이스**|
-|**불가능**|예|
-|**필수 특성**|`coclass`(클래스 또는 구조체에 적용 된 경우)|
+|**불가능**|아니요|
+|**필수 특성**|`coclass` (클래스 또는 구조체에 적용 된 경우)|
 |**잘못된 특성**|없음|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

@@ -1,17 +1,17 @@
 ---
-title: defaultvalue (C++ COM 특성)
+title: defaultvalue (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: aaa2290c871df3a2482294794461e53afe00568d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b6a50bd7156eb9d6873e5ef08f6d75508fa3e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214848"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841690"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
@@ -26,11 +26,11 @@ ms.locfileid: "80214848"
 ### <a name="parameters"></a>매개 변수
 
 *value*<br/>
-매개 변수의 기본값입니다.
+매개 변수에 대한 기본값입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Defaultvalue** C++ 특성에는 [defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 특성과 동일한 기능이 있습니다.
+**Defaultvalue** c + + 특성에는 [defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -56,12 +56,10 @@ __interface IFireTabCtrl : IDispatch {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 매개 변수|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

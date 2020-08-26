@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 63cbbb3a1a508b41c1e0632eda3eeabe4fda6696
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: cf82c4ca3ce995fa9a53dbea21293dc8515ff491
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685826"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840910"
 ---
 # <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine 클래스
 
@@ -36,33 +36,36 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>매개 변수
 
-*Uinttype* \
-부호가 없는 정수 결과 형식입니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*UIntType*\
+부호가 없는 정수 결과 형식입니다. 가능한 형식은를 참조 하십시오 [\<random>](../standard-library/random.md) .
 
-*W* \
+*W*\
 **단어 크기**. 상태 시퀀스의 각 단어 크기입니다(비트). **사전 조건**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S* \
+*삭제*\
 **짧은 지연**. 정수 값의 개수입니다. **사전 조건**: `0 < S < R`
 
-*R*\
+*&*\
 **긴 지연**. 되풀이가 연속으로 발생했는지 확인합니다.
 
 ## <a name="members"></a>멤버
 
-||||
-|-|-|-|
-|`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|
-|`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|
-|`default_seed`는 `19780503u`로 정의된 멤버 상수로, `subtract_with_carry_engine::seed` 및 단일 값 생성자의 기본 매개 변수 값으로 사용됩니다.|||
+`subtract_with_carry_engine::subtract_with_carry_engine`
+`subtract_with_carry_engine::max`\
+`subtract_with_carry_engine::min`\
+`subtract_with_carry_engine::discard`\
+`subtract_with_carry_engine::operator()`\
+`subtract_with_carry_engine::seed`
 
-엔진 구성원에 대한 자세한 내용은 [\<random>](../standard-library/random.md)을 참조하세요.
+`default_seed`는 `19780503u`로 정의된 멤버 상수로, `subtract_with_carry_engine::seed` 및 단일 값 생성자의 기본 매개 변수 값으로 사용됩니다.
 
-## <a name="remarks"></a>주의
+엔진 멤버에 대 한 자세한 내용은을 참조 하십시오 [\<random>](../standard-library/random.md) .
 
-@No__t_0 클래스 템플릿은 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)의 향상 된 기능입니다. 이러한 엔진 둘 다 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)만큼 빠르거나 품질 결과가 뛰어나지 않습니다.
+## <a name="remarks"></a>설명
 
-이 엔진은 되풀이 관계 ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`를 사용 하 여 사용자가 지정한 부호 없는 정수 형식의 값을 생성 합니다. 여기에서 `cy(i)` `x(i - S) - x(i - R) - cy(i - 1) < 0` 경우 `1` 값이 고, 그렇지 않으면 `0` `M` 값<sup>이 `2`입니다</sup>. 엔진의 상태는 운반 표시기에 *R* 값을 더한 값입니다. 이러한 값은 `operator()`가 최소한 *r* 번 호출 된 경우 반환 되는 마지막 *R* 값으로 구성 되 고, 그렇지 않으면 반환 된 `N` 값과 초기값의 마지막 `R - N` 값으로 구성 됩니다.
+`substract_with_carry_engine`클래스 템플릿은 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)에 비해 향상 된 기능입니다. 이러한 엔진 둘 다 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)만큼 빠르거나 품질 결과가 뛰어나지 않습니다.
+
+이 엔진은 되풀이 관계 ( *period*)를 사용 하 여 사용자가 지정 하는 부호 없는 정수 형식의 값을 생성 합니다. 여기서에는 값이이 고, `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 그렇지 않으면 `cy(i)` `1` `x(i - S) - x(i - R) - cy(i - 1) < 0` `0` 이며 값은 `M` `2` <sup>W</sup>입니다. 엔진의 상태는 운반 표시기에 *R* 값을 더한 값입니다. 이러한 값은가 최소 r 회 호출 된 경우 반환 되는 마지막 *R* 값으로 구성 됩니다 `operator()` . 그렇지 않으면 반환 된 *R* `N` 값과 초기값의 마지막 값으로 구성 `R - N` 됩니다.
 
 템플릿 인수 `UIntType`은 최대 `M - 1`까지 값을 보유할 수 있도록 충분히 커야 합니다.
 
@@ -78,10 +81,10 @@ subtract_with_carry_engine 알고리즘에 대한 자세한 내용은 Wikipedia 
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<random>
+**헤더:**\<random>
 
 **네임스페이스:** std
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [\<random>](../standard-library/random.md)

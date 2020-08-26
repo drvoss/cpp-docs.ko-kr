@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738723"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841144"
 ---
 # <a name="signal-constants"></a>신호 상수
 
@@ -32,11 +32,11 @@ ms.locfileid: "57738723"
 #include <signal.h>
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 `sig` 인수는 아래에 나열된 매니페스트 상수 중 하나여야 합니다(SIGNAL.H에 정의).
 
-|||
+|상수|설명|
 |-|-|
 |SIGABRT|비정상적인 종료. 기본 작업은 호출 프로그램을 종료하고 종료 코드 3을 생성합니다.  |
 |SIGABRT_COMPAT|SIGABRT와 동일. 다른 플랫폼과의 호환을 위해 필요합니다.  |
@@ -50,5 +50,5 @@ ms.locfileid: "57738723"
 ## <a name="see-also"></a>참고 항목
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
-[raise](../c-runtime-library/reference/raise.md)<br/>
+[올리려면](../c-runtime-library/reference/raise.md)<br/>
 [전역 상수](../c-runtime-library/global-constants.md)

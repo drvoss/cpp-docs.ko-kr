@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 9d7f84ac47979cf398ae1f94e4d01ba0915da299
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217534"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841482"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -52,7 +52,7 @@ ms.locfileid: "87217534"
 
 ### <a name="type-definitions"></a>형식 정의
 
-|||
+|Name|설명|
 |-|-|
 |[cmatch](../standard-library/regex-typedefs.md#cmatch)|에 대 한 형식 정의 **`char`** `match_results` 입니다.|
 |[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|에 대 한 형식 정의 **`char`** `regex_iterator` 입니다.|
@@ -84,7 +84,7 @@ ms.locfileid: "87217534"
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
 |[연산자 = =](../standard-library/regex-operators.md#op_eq_eq)|다양한 개체가 같은지 비교합니다.|
 |[연산자! =](../standard-library/regex-operators.md#op_neq)|다양한 개체가 같지 않은지 비교합니다.|
@@ -99,9 +99,9 @@ ms.locfileid: "87217534"
 [정규식 (c + +)](../standard-library/regular-expressions-cpp.md)\
 [regex_constants 클래스](../standard-library/regex-constants-class.md)\
 [regex_error 클래스](../standard-library/regex-error-class.md)\
-[\<regex>역함수](../standard-library/regex-functions.md)\
+[\<regex> 역함수](../standard-library/regex-functions.md)\
 [regex_iterator 클래스](../standard-library/regex-iterator-class.md)\
-[\<regex>작업자](../standard-library/regex-operators.md)\
+[\<regex> 작업자](../standard-library/regex-operators.md)\
 [regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)\
 [regex_traits 클래스](../standard-library/regex-traits-class.md)\
-[\<regex>정의](../standard-library/regex-typedefs.md)
+[\<regex> 정의](../standard-library/regex-typedefs.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 94178d2efd1942a7475fa7987526b021b1c6fb68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201962"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841703"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -43,22 +43,44 @@ using add_const_t = typename add_const<T>::type;
 
 다음은 멤버에 대해 제공 되는 별칭입니다 `type` .
 
-||||
-|-|-|-|
-| add_const_t | add_cv_t | add_lvalue_reference_t |
-| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
-| aligned_storage_t | aligned_union_t | common_type_t |
-| conditional_t | decay_t | enable_if_t |
-| invoke_result_t | make_signed_t | make_unsigned_t |
-| remove_all_extents_t | remove_const_t | remove_cv_t |
-| remove_extent_t | remove_pointer_t | remove_reference_t |
-| remove_volatile_t | result_of_t | underlying_type_t |
+:::row:::
+   :::column:::
+      `add_const_t`\
+      `add_cv_t`\
+      `add_lvalue_reference_t`\
+      `add_pointer_t`\
+      `add_rvalue_reference_t`\
+      `add_volatile_t`\
+      `aligned_storage_t`\
+      `aligned_union_t`\
+   :::column-end:::
+   :::column:::
+      `common_type_t`\
+      `conditional_t`\
+      `decay_t`\
+      `enable_if_t`\
+      `invoke_result_t`\
+      `make_signed_t`\
+      `make_unsigned_t`\
+      `remove_all_extents_t`\
+   :::column-end:::
+   :::column:::
+      `remove_const_t`\
+      `remove_cv_t`\
+      `remove_extent_t`\
+      `remove_pointer_t`\
+      `remove_reference_t`\
+      `remove_volatile_t`\
+      `result_of_t`\
+      `underlying_type_t`\
+   :::column-end:::
+:::row-end:::
 
 ### <a name="classes"></a>클래스
 
 도우미 클래스 및 형식 정의
 
-|||
+|Name|설명|
 |-|-|
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|형식 및 값에서 정수 계열 상수를 만듭니다.|
 |[true_type](../standard-library/type-traits-typedefs.md#true_type)|값이 true인 정수 상수를 보관합니다.|
@@ -66,7 +88,7 @@ using add_const_t = typename add_const<T>::type;
 
 기본 형식 범주
 
-|||
+|Name|설명|
 |-|-|
 |[is_void](../standard-library/is-void-class.md)|형식이 인지 여부를 테스트 **`void`** 합니다.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|형식이 `std::nullptr_t`인지 테스트합니다.|
@@ -85,7 +107,7 @@ using add_const_t = typename add_const<T>::type;
 
 복합 형식 범주
 
-|||
+|Name|설명|
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|형식이 참조인지 테스트합니다.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|형식이 산술형인지 테스트합니다.|
@@ -97,7 +119,7 @@ using add_const_t = typename add_const<T>::type;
 
 형식 속성
 
-|||
+|Name|설명|
 |-|-|
 |[is_const](../standard-library/is-const-class.md)|형식이 인지 여부를 테스트 **`const`** 합니다.|
 |[is_volatile](../standard-library/is-volatile-class.md)|형식이 인지 여부를 테스트 **`volatile`** 합니다.|
@@ -150,7 +172,7 @@ using add_const_t = typename add_const<T>::type;
 
 형식 속성 쿼리
 
-|||
+|Name|설명|
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|형식의 맞춤을 가져옵니다.|
 |[배열](../standard-library/rank-class.md)|배열 차원 수를 가져옵니다.|
@@ -158,7 +180,7 @@ using add_const_t = typename add_const<T>::type;
 
 형식 관계
 
-|||
+|Name|설명|
 |-|-|
 |[is_same](../standard-library/is-same-class.md)|두 형식이 동일한지 테스트합니다.|
 |[is_base_of](../standard-library/is-base-of-class.md)|한 형식이 다른 형식의 기본 형식인지를 테스트합니다.|
@@ -166,7 +188,7 @@ using add_const_t = typename add_const<T>::type;
 
 const-volatile 수정
 
-|||
+|Name|설명|
 |-|-|
 |[add_const](../standard-library/add-const-class.md)|**`const`** 형식에서 형식을 생성 합니다.|
 |[add_volatile](../standard-library/add-volatile-class.md)|**`volatile`** 형식에서 형식을 생성 합니다.|
@@ -177,7 +199,7 @@ const-volatile 수정
 
 참조 수정
 
-|||
+|Name|설명|
 |-|-|
 |[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|형식에서 형식에 대한 참조를 생성합니다.|
 |[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|형식에서 형식에 대한 rvalue 참조를 생성합니다.|
@@ -185,28 +207,28 @@ const-volatile 수정
 
 부호 수정
 
-|||
+|Name|설명|
 |-|-|
 |[make_signed](../standard-library/make-signed-class.md)|부호가 있는 경우 형식을 생성하거나, 형식의 크기보다 크거나 같은 부호가 있는 가장 작은 형식을 생성합니다.|
 |[make_unsigned](../standard-library/make-unsigned-class.md)|부호가 없는 경우 형식을 생성하거나, 형식의 크기보다 크거나 같은 부호가 없는 가장 작은 형식을 생성합니다.|
 
 배열 수정
 
-|||
+|Name|설명|
 |-|-|
 |[remove_all_extents](../standard-library/remove-all-extents-class.md)|배열 형식에서 배열이 아닌 형식을 생성합니다.|
 |[remove_extent](../standard-library/remove-extent-class.md)|배열 형식에서 요소 형식을 생성합니다.|
 
 포인터 수정
 
-|||
+|Name|설명|
 |-|-|
 |[add_pointer](../standard-library/add-pointer-class.md)|형식에서 형식에 대한 포인터를 생성합니다.|
 |[remove_pointer](../standard-library/remove-pointer-class.md)|입력에 대한 포인터에서 형식을 생성합니다.|
 
 기타 변환
 
-|||
+|Name|설명|
 |-|-|
 |[aligned_storage](../standard-library/aligned-storage-class.md)|정렬된 형식에 대해 초기화되지 않은 메모리를 할당합니다.|
 |[aligned_union](../standard-library/aligned-union-class.md)|특수한 생성자 또는 소멸자를 사용하여 정렬된 공용 구조체에 대해 초기화되지 않은 메모리를 할당합니다.|
@@ -220,7 +242,7 @@ const-volatile 수정
 
 논리 연산자 특성
 
-|||
+|Name|설명|
 |-|-|
 |[논리곱](../standard-library/conjunction-class.md)||
 |[논리합](../standard-library/disjunction-class.md)||

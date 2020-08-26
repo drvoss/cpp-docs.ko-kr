@@ -1,17 +1,17 @@
 ---
-title: displaybind (C++ COM 특성)
+title: displaybind (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.displaybind
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5c870aefbc73893b5bf14edec384a93fe0b057b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168254"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841664"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -23,9 +23,9 @@ ms.locfileid: "80168254"
 [displaybind]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Displaybind** C++ 특성에는 [displaybind](/windows/win32/Midl/displaybind) MIDL 특성과 동일한 기능이 있습니다.
+**Displaybind** c + + 특성에는 [displaybind](/windows/win32/Midl/displaybind) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -33,12 +33,10 @@ ms.locfileid: "80168254"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 메서드|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

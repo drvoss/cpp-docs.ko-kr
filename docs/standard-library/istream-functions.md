@@ -5,20 +5,19 @@ f1_keywords:
 - istream/std::swap
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
-ms.openlocfilehash: 3d647c7b05a3868ec0359410cc0e703306b874ba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1fede2726d3d8f5dd678b95fd7a22a301ea95a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363074"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840975"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt; 함수
 
-|||
-|-|-|
-|[스왑](#istream_swap)|[Ws](#ws)|
+[스왑을](#istream_swap)\
+[ws-trust](#ws)
 
-## <a name="swap"></a><a name="istream_swap"></a>스왑
+## <a name="swap"></a><a name="istream_swap"></a> 스왑을
 
 두 stream 개체의 요소를 교환합니다.
 
@@ -36,13 +35,13 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*왼쪽*\
+*비어*\
 스트림입니다.
 
 *오른쪽*\
 스트림입니다.
 
-## <a name="ws"></a><a name="ws"></a>Ws
+## <a name="ws"></a><a name="ws"></a> ws-trust
 
 스트림의 공백을 건너뜁니다.
 
@@ -55,15 +54,15 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 *_Istr*\
 스트림입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스트림입니다.
 
 ### <a name="remarks"></a>설명
 
-`ch` 조작자는**ctype** \< **Elem**> >(getloc)use_facet [use_facet](../standard-library/basic-filebuf-class.md#open)< 있는 모든 요소를 추출하고 [삭제합니다.](../standard-library/ios-base-class.md#getloc) **is**( **ctype**\< **Elem**>:: **space**, **ch**)가 true임)를 추출하고 삭제합니다.
+조작자는 `ch` [use_facet](../standard-library/basic-filebuf-class.md#open) <  **ctype** \< **Elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc))를 use_facet 하는 모든 요소를 추출 하 고 삭제 합니다. **is**( **ctype** \< **Elem**> :: **space**, **ch**)가 true입니다.
 
-함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. *_Istr*반환합니다.
+함수는 요소를 추출하는 동안 파일 끝에 도달하면 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**)를 호출합니다. *_Istr*를 반환 합니다.
 
 ### <a name="example"></a>예제
 
@@ -71,4 +70,4 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ## <a name="see-also"></a>참고 항목
 
-[\<아이스트림>](../standard-library/istream.md)
+[\<istream>](../standard-library/istream.md)

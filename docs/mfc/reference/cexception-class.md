@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: a24f324576c872e7fe509b742aa58d6c230ec24a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212490"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841560"
 ---
 # <a name="cexception-class"></a>CException 클래스
 
@@ -33,7 +33,7 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|Name|설명|
+|이름|설명|
 |----------|-----------------|
 |[CException:: CException](#cexception)|`CException` 개체를 생성합니다.|
 
@@ -50,7 +50,7 @@ class AFX_NOVTABLE CException : public CObject
 
 파생 클래스와 해당 설명이 아래에 나열 되어 있습니다.
 
-|||
+|Name|설명|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|리소스에 중요 한 MFC 예외의 기본 클래스입니다.|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|잘못 된 인수 예외 조건|
@@ -84,7 +84,7 @@ class AFX_NOVTABLE CException : public CObject
 
 **헤더:** afx
 
-## <a name="cexceptioncexception"></a><a name="cexception"></a>CException:: CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a> CException:: CException
 
 이 멤버 함수는 개체를 생성 `CException` 합니다.
 
@@ -101,7 +101,7 @@ explicit CException(BOOL bAutoDelete);
 
 일반적으로이 생성자는 직접 호출할 필요가 없습니다. 예외를 throw 하는 함수는 파생 클래스의 인스턴스를 만들고 `CException` 해당 생성자를 호출 하거나, [AfxThrowFileException](exception-processing.md#afxthrowfileexception)와 같은 MFC throw 함수 중 하나를 사용 하 여 미리 정의 된 형식을 throw 해야 합니다. 이 설명서는 완전성을 위해서만 제공 됩니다.
 
-## <a name="cexceptiondelete"></a><a name="delete"></a>CException::D e)
+## <a name="cexceptiondelete"></a><a name="delete"></a> CException::D e)
 
 이 함수는 힙에서 개체가 생성 되었는지 여부를 확인 하 고,이 `CException` 경우 **`delete`** 개체에 대해 연산자를 호출 합니다.
 
@@ -168,7 +168,7 @@ if (pFile != NULL)
 }
 ```
 
-## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException:: ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a> CException:: ReportError
 
 메시지 상자의 오류 텍스트를 사용자에 게 보고 하려면이 멤버 함수를 호출 합니다.
 
@@ -186,7 +186,7 @@ virtual int ReportError(
 *nMessageID*<br/>
 예외 개체에 오류 메시지가 없는 경우 표시할 메시지의 리소스 ID (문자열 테이블 항목)를 지정 합니다. 0 인 경우 "오류 메시지를 사용할 수 없습니다." 라는 메시지가 표시 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `AfxMessageBox`값입니다. 그렇지 않으면 메시지 상자를 표시 하는 데 충분 한 메모리가 없는 경우 0입니다. 가능한 반환 값은 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 를 참조 하세요.
 

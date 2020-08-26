@@ -1,17 +1,17 @@
 ---
-title: oleautomation (C++ COM 특성)
+title: oleautomation (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.oleautomation
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47842454ce52c65cf71a317f39a7649b0f9dd27d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214688"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842184"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -23,9 +23,9 @@ ms.locfileid: "80214688"
 [oleautomation]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Oleautomation** C++ 특성은 [oleautomation](/windows/win32/Midl/oleautomation) MIDL 특성과 동일한 기능을 포함 합니다.
+**Oleautomation** c + + 특성에는 [oleautomation](/windows/win32/Midl/oleautomation) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -33,12 +33,10 @@ ms.locfileid: "80214688"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**interface**|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|**dispinterface**|
 

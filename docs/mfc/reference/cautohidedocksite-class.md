@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 14db8d93ea7706b3a4daad2ba751f8410974f6cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562014"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841638"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 클래스
 
@@ -43,17 +43,17 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+| 이름 | 설명 |
 |-|-|
-|이름|Description|
+|Name|설명|
 |`CAutoHideDockSite::CAutoHideDockSite`|`CAutoHideDockSite` 개체를 생성합니다.|
 |`CAutoHideDockSite::~CAutoHideDockSite`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+| 이름 | 설명 |
 |-|-|
-|이름|Description|
+|Name|설명|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|`CAutoHideDockSite`이 창 메뉴에 표시 되는지 여부를 나타냅니다.|
 |[CAutoHideDockSite:: CanAcceptPane](#canacceptpane)|기본 창 개체가 [CMFCAutoHideBar 클래스](../../mfc/reference/cmfcautohidebar-class.md)에서 파생 되는지 여부를 확인 합니다.|
 |[CAutoHideDockSite::D ockPane](#dockpane)|이 개체에 창을 도킹 `CAuotHideDockSite` 합니다.|
@@ -65,9 +65,9 @@ class CAutoHideDockSite : public CDockSite
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+| Name | 설명 |
 |-|-|
-|속성|Description|
+|Name|설명|
 |[CAutoHideDockSite:: m_nExtraSpace](#m_nextraspace)|도구 모음과 도킹 표시줄 가장자리 사이의 간격 크기를 정의 합니다. 이 공간은 도크 공간의 맞춤에 따라 왼쪽 가장자리 또는 위쪽 가장자리에서 측정 됩니다.|
 
 ## <a name="remarks"></a>설명
@@ -111,7 +111,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 *pBar*\
 진행 프레임 워크에서 테스트 하는 기본 창입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Pbar* 가에서 파생 되 면 TRUE `CMFCAutoHideBar` 이 고, 그렇지 않으면 FALSE입니다.
 

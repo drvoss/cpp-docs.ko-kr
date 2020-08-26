@@ -2,12 +2,12 @@
 title: 2. 지시문
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: c3aadcf34e013c66dec81ca4b09dce4144294ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228403"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841976"
 ---
 # <a name="2-directives"></a>2. 지시문
 
@@ -21,7 +21,7 @@ OpenMP 지시문의 구문은 [부록 C](c-openmp-c-and-cpp-grammar.md)의 문�
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-각 지시문은로 시작 하 여 `#pragma omp` 이름이 같은 다른 (openmp 또는 공급 업체 확장이 아닌) pragma 지시문과 충돌 가능성이 줄어듭니다. 지시문의 나머지 부분은 컴파일러 지시문에 대 한 C 및 c + + 표준의 규칙을 따릅니다. 특히 공백은의 전후에 사용할 수 있으며 `#` , 경우에 따라 지시문에서 단어를 구분 하는 데 공백을 사용 해야 합니다. 뒤에 나오는 토큰 전처리 `#pragma omp` 는 매크로 대체의 영향을 받습니다.
+각 지시문은로 시작 하 여  `#pragma omp` 이름이 같은 다른 (openmp 또는 공급 업체 확장이 아닌) pragma 지시문과 충돌 가능성이 줄어듭니다. 지시문의 나머지 부분은 컴파일러 지시문에 대 한 C 및 c + + 표준의 규칙을 따릅니다. 특히 공백은의 전후에 사용할 수 있으며 `#` , 경우에 따라 지시문에서 단어를 구분 하는 데 공백을 사용 해야 합니다. 뒤에 나오는 토큰 전처리 `#pragma omp` 는 매크로 대체의 영향을 받습니다.
 
 지시문은 대/소문자를 구분 합니다. 지시문에 절이 표시 되는 순서는 중요 하지 않습니다. 지시문의 절은 필요에 따라 반복 될 수 있으며 각 절의 설명에 나열 된 제한 사항이 적용 됩니다. *변수 목록이* 절에 표시 되는 경우 변수만 지정 해야 합니다. 지시문 마다 하나의 *지시문 이름을* 지정할 수 있습니다.  예를 들어 다음 지시문은 허용 되지 않습니다.
 
@@ -191,7 +191,7 @@ OpenMP는 다음과 같은 작업 공유 구문을 정의 하며 이러한 구�
 
 표 2-1: `schedule` 절 *종류* 값
 
-|||
+|값|설명|
 |-|-|
 |static|`schedule(static,` *Chunk_size* `)` 지정 된 경우 반복은 *chunk_size*에 지정 된 크기의 청크로 분할 됩니다. 청크는 스레드 번호의 순서에 따라 라운드 로빈 방식으로 팀의 스레드에 정적으로 할당 됩니다. *Chunk_size* 지정 하지 않으면 반복 공간은 각 스레드에 할당 된 하나의 청크를 사용 하 여 크기가 거의 같은 청크로 분할 됩니다.|
 |동적|`schedule(dynamic,` *Chunk_size* `)` 지정 된 경우 반복은 각각 *chunk_size* 반복을 포함 하는 일련의 청크로 나뉩니다. 각 청크는 할당을 기다리는 스레드에 할당 됩니다. 스레드는 반복의 청크를 실행 한 후에는 청크를 할당할 수 없을 때까지 다음 할당을 기다립니다. 할당할 마지막 청크에는 더 적은 수의 반복이 있을 수 있습니다. *Chunk_size* 지정 하지 않으면 기본값은 1입니다.|
@@ -462,21 +462,21 @@ u.x -= 1.0f;
 `flush` *변수 목록이* 없는 지시어는 액세스할 수 없는 개체를 제외한 모든 공유 개체를 자동 저장 기간으로 동기화 합니다. 이는 `flush` *변수 목록을*사용 하는 것 보다 더 많은 오버 헤드가 있을 수 있습니다. `flush` *변수 목록이* 없는 지시문은 다음 지시문에 대해 암시 됩니다.
 
 - `barrier`
-- 에서 시작 하 여 종료`critical`
-- 에서 시작 하 여 종료`ordered`
-- 에서 시작 하 여 종료`parallel`
-- 종료 시`for`
-- 종료 시`sections`
-- 종료 시`single`
-- 에서 시작 하 여 종료`parallel for`
-- 에서 시작 하 여 종료`parallel sections`
+- 에서 시작 하 여 종료 `critical`
+- 에서 시작 하 여 종료 `ordered`
+- 에서 시작 하 여 종료 `parallel`
+- 종료 시 `for`
+- 종료 시 `sections`
+- 종료 시 `single`
+- 에서 시작 하 여 종료 `parallel for`
+- 에서 시작 하 여 종료 `parallel sections`
 
 절이 있는 경우에는 지시문이 포함 되지 않습니다 `nowait` . `flush`지시문은 다음에 대해 암시 되지 않습니다.
 
-- 입력 시`for`
-- 에서 시작 또는 종료`master`
-- 입력 시`sections`
-- 입력 시`single`
+- 입력 시 `for`
+- 에서 시작 또는 종료 `master`
+- 입력 시 `sections`
+- 입력 시 `single`
 
 Volatile 정규화 형식을 사용 하 여 개체의 값에 액세스 하는 참조는 `flush` 이전 시퀀스 위치에서 해당 개체를 지정 하는 지시문이 있는 것 처럼 동작 합니다. Volatile 정규화 된 형식으로 개체의 값을 수정 하는 참조는 `flush` 후속 시퀀스 위치에서 해당 개체를 지정 하는 지시문이 있는 것 처럼 동작 합니다.
 
@@ -717,13 +717,13 @@ default(shared | none)
 
 - *x* `=` *x* *op* *식*
 - *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* (빼기 제외)
+- *x* `=` *expr* *op* *x*  (빼기 제외)
 - *x*`++`
 - `++` *x*
 - *x*`--`
 - `--` *x*
 
-각 항목이 나타내는 의미는 다음과 같습니다.
+다음은 각 문자에 대한 설명입니다.
 
 *x*<br/>
 목록에 지정 된 감소 변수 중 하나입니다.
@@ -860,14 +860,14 @@ variable-list
 
 - `for``sections` `single` 동일한에 바인딩하는, 및 지시문은 서로 `parallel` 중첩 될 수 없습니다.
 
-- `critical`이름이 같은 지시문은 서로 중첩 될 수 없습니다. 이 제한은 교착 상태를 방지 하는 데 충분 하지 않습니다.
+- `critical` 이름이 같은 지시문은 서로 중첩 될 수 없습니다. 이 제한은 교착 상태를 방지 하는 데 충분 하지 않습니다.
 
 - `for``sections` `single` 지시문이 영역과 동일한에 바인딩하는 경우, 및 지시문 `critical` `ordered` 은, 및 `master` 지역의 동적 범위에서 허용 되지 않습니다 `parallel` .
 
-- `barrier`지시문이 영역과 동일한에 바인딩하는 경우에는,,,, 및 영역의 동적 범위에서 지시문을 사용할 수 `for` `ordered` `sections` `single` `master` `critical` `parallel` 없습니다.
+- `barrier` 지시문이 영역과 동일한에 바인딩하는 경우에는,,,, 및 영역의 동적 범위에서 지시문을 사용할 수 `for` `ordered` `sections` `single` `master` `critical` `parallel` 없습니다.
 
-- `master`지시문이 `for` `sections` `single` `master` `parallel` 작업 공유 지시문과 동일한에 바인딩하는 경우 지시문은, 및 지시문의 동적 범위에서 허용 되지 않습니다.
+- `master` 지시문이 `for` `sections` `single` `master` `parallel` 작업 공유 지시문과 동일한에 바인딩하는 경우 지시문은, 및 지시문의 동적 범위에서 허용 되지 않습니다.
 
-- `ordered`지시문이 영역과 동일한에 바인딩하는 경우 영역의 동적 범위에는 지시문을 사용할 수 `critical` `parallel` 없습니다.
+- `ordered` 지시문이 영역과 동일한에 바인딩하는 경우 영역의 동적 범위에는 지시문을 사용할 수 `critical` `parallel` 없습니다.
 
 - 병렬 영역 내부에서 실행 될 때 허용 되는 지시문은 병렬 영역 외부에서 실행 되는 경우에도 허용 됩니다. 사용자 지정 병렬 영역 외부에서 동적으로 실행 되는 경우에는 마스터 스레드만 구성 된 팀에서 지시문을 실행 합니다.

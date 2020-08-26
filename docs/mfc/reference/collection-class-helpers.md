@@ -8,12 +8,12 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 02bc5c5a7c1766c97d9a834c8b6b4dfb2a26ae82
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04b142cde12a9795f217559f875eef7fcec3b0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231795"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841430"
 ---
 # <a name="collection-class-helpers"></a>컬렉션 클래스 도우미
 
@@ -23,7 +23,7 @@ MFC 라이브러리는 컬렉션 클래스를 사용자 지정할 수 있도록 
 
 ### <a name="collection-class-helpers"></a>컬렉션 클래스 도우미
 
-|||
+|Name|설명|
 |-|-|
 |[CompareElements](#compareelements)|요소가 동일한 지 여부를 나타냅니다.|
 |[CopyElements](#copyelements)|한 배열에서 다른 배열로 요소를 복사 합니다.|
@@ -31,7 +31,7 @@ MFC 라이브러리는 컬렉션 클래스를 사용자 지정할 수 있도록 
 |[HashKey](#hashkey)|해시 키를 계산 합니다.|
 |[SerializeElements](#serializeelements)|보관 파일 또는 보관 파일에서 요소를 저장 하거나 검색 합니다.|
 
-## <a name="compareelements"></a><a name="compareelements"></a>CompareElements
+## <a name="compareelements"></a><a name="compareelements"></a> CompareElements
 
 [CList:: Find] (clist-class. md # clist__find not_found에서 직접 호출 되며, [cmap__lookup](cmap-class.md#lookup) 하 고 [cmap__operator &#91;&#93;](cmap-class.md#operator_at)하 여 간접적으로 호출 됩니다.
 
@@ -57,7 +57,7 @@ CompareElements(
 *pElement2*<br/>
 비교할 두 번째 요소에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *PElement1* 가 가리키는 개체가 *pElement2*가 가리키는 개체와 같으면 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -73,7 +73,7 @@ C + + 언어는 `==` 단순 형식 (,, 등)에 대 한 비교 연산자 ()를 �
 
    **헤더:** afxtempl.h
 
-## <a name="copyelements"></a><a name="copyelements"></a>CopyElements
+## <a name="copyelements"></a><a name="copyelements"></a> CopyElements
 
 이 함수는 [CArray:: Append](carray-class.md#append) 및 [CArray:: Copy](carray-class.md#copy)를 통해 직접 호출 됩니다.
 
@@ -109,7 +109,7 @@ void AFXAPI CopyElements(
 
   **헤더** afxtempl.h
 
-## <a name="dumpelements"></a><a name="dumpelements"></a>로의 요소
+## <a name="dumpelements"></a><a name="dumpelements"></a> 로의 요소
 
 재정의할 때 컬렉션의 요소에 대해 텍스트 형식으로 스트림 지향 진단 출력을 제공 합니다.
 
@@ -145,7 +145,7 @@ void  AFXAPI DumpElements(
 
   **헤더** afxtempl.h
 
-## <a name="hashkey"></a><a name="hashkey"></a>HashKey
+## <a name="hashkey"></a><a name="hashkey"></a> HashKey
 
 지정 된 키에 대 한 해시 값을 계산 합니다.
 
@@ -162,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 *key*<br/>
 해시 값을 계산할 키입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 키의 해시 값입니다.
 
@@ -187,7 +187,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 
   **헤더** afxtempl.h
 
-## <a name="serializeelements"></a><a name="serializeelements"></a>SerializeElements
+## <a name="serializeelements"></a><a name="serializeelements"></a> SerializeElements
 
 [CArray](carray-class.md), [CList](clist-class.md)및 [cmap](cmap-class.md) 은이 함수를 호출 하 여 요소를 serialize 합니다.
 

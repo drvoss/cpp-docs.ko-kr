@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193070"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840819"
 ---
 # <a name="threading-c"></a>threading(C++)
 
@@ -28,15 +28,15 @@ COM 개체의 스레딩 모델을 지정 합니다.
 *model*<br/>
 필드 다음 스레딩 모델 중 하나입니다.
 
-- `apartment`(아파트 스레딩)
+- `apartment` (아파트 스레딩)
 
-- `neutral`(사용자 인터페이스가 없는 .NET Framework 구성 요소)
+- `neutral` (사용자 인터페이스가 없는 .NET Framework 구성 요소)
 
-- `single`(단순 스레딩)
+- `single` (단순 스레딩)
 
-- `free`(자유 스레딩)
+- `free` (자유 스레딩)
 
-- `both`(아파트 및 자유 스레딩)
+- `both` (아파트 및 자유 스레딩)
 
 기본값은 `apartment`입니다.
 
@@ -54,12 +54,10 @@ ATL 프로젝트에서 [coclass](coclass.md) 특성도 있는 경우 *model* 에
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`**|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|**coclass**|
 |**잘못된 특성**|없음|
 
