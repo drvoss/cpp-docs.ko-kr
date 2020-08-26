@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
-ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
+ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865054"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833402"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>자습서: vcperf 및 Windows Performance Analyzer
 
@@ -35,7 +35,7 @@ C++ Build Insights를 지원하는 WPA 버전은 현재 Windows ADK Insider Prev
 
 참고:  Windows Performance Analyzer를 설치하려면 Windows 8 이상이 필요합니다.
 
-1. Windows ADK [다운로드 페이지](https://docs.microsoft.com/windows-hardware/get-started/adk-install)로 이동합니다.
+1. Windows ADK [다운로드 페이지](/windows-hardware/get-started/adk-install)로 이동합니다.
 
 1. 최신 버전의 Windows ADK를 다운로드하고 설치합니다.
 

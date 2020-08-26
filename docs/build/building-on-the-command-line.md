@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: f729947e4d798e5817ff8d4e5abe09eaca090e01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229898"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838804"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>명령줄에서 Microsoft C++ 도구 집합 사용
 
@@ -237,7 +237,7 @@ Visual Studio 설치 디렉터리를 반영하도록 경로를 조정합니다. 
 [NMAKE](reference/nmake-reference.md)<br/>
 기존 메이크파일을 기반으로 하여 C++ 프로젝트를 빌드하려면 Windows에서 NMAKE(nmake.exe)를 사용합니다.
 
-명령줄에서 빌드하는 경우 도움말은 F1 명령을 사용하여 즉시 얻을 수 없습니다. 대신, 검색 엔진을 사용하여 경고, 오류 및 메시지에 대한 정보를 가져올 수 있습니다. 오프라인 도움말 파일을 다운로드하여 사용할 수도 있습니다. [docs.microsoft.com](https://docs.microsoft.com/cpp/)에서 검색을 사용하려면 문서 위쪽의 검색 상자에서 쿼리를 입력합니다.
+명령줄에서 빌드하는 경우 도움말은 F1 명령을 사용하여 즉시 얻을 수 없습니다. 대신, 검색 엔진을 사용하여 경고, 오류 및 메시지에 대한 정보를 가져올 수 있습니다. 오프라인 도움말 파일을 다운로드하여 사용할 수도 있습니다. docs.microsoft.com에서 검색을 사용하려면 문서 위쪽의 검색 상자에서 쿼리를 입력합니다.
 
 ## <a name="command-line-project-management-tools"></a>명령줄 프로젝트 관리 도구
 

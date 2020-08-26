@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 158301ec3caacced1663892071b17ef2b8f8e741
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c68de0ee8e6376731254adf965fb9a81f10f2861
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328666"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838856"
 ---
 # <a name="precompiled-header-files"></a>미리 컴파일된 헤더 파일
 
@@ -91,22 +91,54 @@ PCH 파일을 만드는 동안 처리된 pragma는 나중에 PCH 파일과 함�
 
 이러한 pragma는 PCH 파일 내에 있는 코드에만 영향을 주고, 이후에 PCH 파일을 사용하는 코드에는 영향을 주지 않습니다.
 
-||||
-|-|-|-|
-|`comment`|`page`|`subtitle`|
-|`linesize`|`pagesize`|`title`|
-|`message`|`skip`||
+:::row:::
+   :::column span="":::
+      `comment`\
+      `linesize`
+   :::column-end:::
+   :::column span="":::
+      `message`\
+      `page`
+   :::column-end:::
+   :::column span="":::
+      `pagesize`\
+      `skip`
+   :::column-end:::
+   :::column span="":::
+      `subtitle`\
+      `title`
+   :::column-end:::
+:::row-end:::
 
 이러한 pragma는 미리 컴파일된 헤더의 일부로 유지되며 미리 컴파일된 헤더를 사용하는 컴파일의 나머지 부분에 영향을 줍니다.
 
-||||
-|-|-|-|
-|`alloc_text`|`include_alias`|`pack`|
-|`auto_inline`|`init_seg`|`pointers_to_members`|
-|`check_stack`|`inline_depth`|`setlocale`|
-|`code_seg`|`inline_recursion`|`vtordisp`|
-|`data_seg`|`intrinsic`|`warning`|
-|`function`|`optimize`||
+:::row:::
+   :::column span="":::
+      `alloc_text`\
+      `auto_inline`\
+      `check_stack`\
+      `code_seg`\
+      `data_seg`
+   :::column-end:::
+   :::column span="":::
+      `function`\
+      `include_alias`\
+      `init_seg`\
+      `inline_depth`
+   :::column-end:::
+   :::column span="":::
+      `inline_recursion`\
+      `intrinsic`\
+      `optimize`\
+      `pack`
+   :::column-end:::
+   :::column span="":::
+      `pointers_to_members`\
+      `setlocale`\
+      `vtordisp`\
+      `warning`
+   :::column-end:::
+:::row-end:::
 
 ## <a name="consistency-rules-for-yc-and-yu"></a>/Yc 및 /Yu에 대한 일관성 규칙
 

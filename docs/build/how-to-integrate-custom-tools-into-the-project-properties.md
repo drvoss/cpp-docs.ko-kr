@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 821fb1637306c70d850f12fc1b954860557f47f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373751"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840442"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>방법: 사용자 지정 도구를 프로젝트 속성에 통합
 
@@ -17,7 +17,7 @@ ms.locfileid: "86373751"
 
 **속성 페이지** 창의 **구성 속성** 섹션은 *규칙*이라고 하는 설정 그룹을 표시합니다. 모든 규칙에는 도구 또는 기능 그룹에 대한 설정이 포함됩니다. 예를 들어 **링커** 규칙은 링커 도구에 대한 설정을 포함합니다. 규칙의 설정은 *범주*로 세분화할 수 있습니다.
 
-이 문서에서는 Visual Studio를 시작할 때 속성이 로드되도록 사용자 지정 도구에 대한 속성을 포함하는 설정 디렉터리에 파일을 만드는 방법을 설명합니다. 파일을 수정하는 방법에 대한 자세한 내용은 Visual Studio Project Team 블로그에서 [플랫폼 확장성 2부](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2)를 참조하십시오.
+이 문서에서는 Visual Studio를 시작할 때 속성이 로드되도록 사용자 지정 도구에 대한 속성을 포함하는 설정 디렉터리에 파일을 만드는 방법을 설명합니다. 파일을 수정하는 방법에 대한 자세한 내용은 Visual Studio Project Team 블로그에서 [플랫폼 확장성 2부](/archive/blogs/vsproject/platform-extensibility-part-2)를 참조하십시오.
 
 ### <a name="to-add-or-change-project-properties"></a>프로젝트 속성을 추가하거나 변경하려면
 

@@ -3,12 +3,12 @@ title: launch.vs.json 스키마 참조(C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223956"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841989"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>launch.vs.json 스키마 참조(C++)
 
@@ -16,9 +16,8 @@ ms.locfileid: "87223956"
 
 ## <a name="default-properties"></a>기본 속성
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|**Property**|**Type**|**설명**|
 |`name`|string|디버그 대상 드롭다운에서 항목 이름을 지정합니다.|
 |`type`|string|프로젝트가 dll인지, 아니면 .exe인지 여부를 지정합니다(기본값은 .exe).|
 |`project`|string|프로젝트 파일의 상대 경로를 지정합니다.|
@@ -36,9 +35,8 @@ ms.locfileid: "87223956"
 
 ## <a name="c-linux-properties"></a>C++ Linux 속성
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|**Property**|**Type**|**설명**|
 |`program`|string|원격 컴퓨터의 프로그램 실행 파일에 대한 전체 경로입니다. CMake를 사용하는 경우 이 필드의 값으로 `${debugInfo.fullTargetPath}`라는 매크로를 사용할 수 있습니다.|
 |`processId`|integer|디버거를 연결할 선택적 프로세스 ID입니다.|
 |`sourceFileMap`|개체|디버그 엔진에 전달되는 선택적 소스 파일 매핑입니다. 형식: `{ "\<Compiler source location>": "\<Editor source location>" }` 또는 `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`. 예: `{ "/home/user/foo": "C:\\foo" }` 또는 `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. [소스 파일 맵 옵션](#source_file_map_options)을 참조하세요.|
@@ -67,9 +65,9 @@ externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다
 
 `setupCommands` 속성과 함께 사용됨:
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|`text`|string|실행할 디버거 명령입니다.|
+|`text`|문자열|실행할 디버거 명령입니다.|
 |`description`|string|명령에 대한 선택적 설명입니다.|
 |`ignoreFailures`|boolean|true이면 명령의 오류가 무시됩니다. 기본값은 **`false`** 입니다.|
 
@@ -77,7 +75,7 @@ externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다
 
 `pipeTransport` 속성과 함께 사용됨:
 
-||||
+|속성|유형|Description|
 |-|-|-|
 |`pipeCwd`|string|파이프 프로그램의 작업 디렉터리에 대한 정규화된 경로입니다.|
 |`pipeProgram`|string|실행할 정규화된 파이프 명령입니다.|
@@ -90,7 +88,7 @@ externalConsole|boolean|true이면 디버기에 대해 콘솔이 시작됩니다
 
 `sourceFileMap` 속성과 함께 사용:
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|`editorPath`|string|편집기에서 찾을 소스 코드의 위치입니다.|
+|`editorPath`|문자열|편집기에서 찾을 소스 코드의 위치입니다.|
 |`useForBreakpoints`|boolean|중단점을 설정할 때 이 소스 매핑을 사용해야 합니다. **`false`** 인 경우 중단점 설정에 파일 이름과 줄 숫자만 사용됩니다. **`true`** 인 경우 이 소스 매핑이 사용되는 경우에만 파일의 전체 경로와 줄 번호를 사용해 중단점이 설정됩니다. 아니면 중단점을 설정할 때 파일 이름과 줄 번호만 사용합니다. 기본값은 **`true`** 입니다.|

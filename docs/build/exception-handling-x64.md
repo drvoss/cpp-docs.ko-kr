@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224047"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835053"
 ---
 # <a name="x64-exception-handling"></a>x64 예외 처리
 
@@ -24,7 +24,7 @@ x64에서 구조화된 예외 처리 및 C++ 예외 처리 코딩 규칙 및 동
 
 테이블 기반 예외 처리에는 스택 공간을 할당하거나 다른 함수(예: 리프가 아닌 함수)를 호출하는 모든 함수에 대한 테이블 항목이 필요합니다. 함수 테이블 항목의 형식은 다음과 같습니다.
 
-|||
+|크기|값|
 |-|-|
 |ULONG|함수 시작 주소|
 |ULONG|함수 끝 주소|
@@ -36,7 +36,7 @@ RUNTIME_FUNCTION 구조체는 메모리에서 DWORD로 정렬되어야 합니다
 
 해제 데이터 정보 구조체는 함수에서 스택 포인터에 대한 효과를 기록하는 데 사용되며, 비휘발성 레지스터가 스택에 저장됩니다.
 
-|||
+|크기|값|
 |-|-|
 |UBYTE: 3|버전|
 |UBYTE: 5|플래그|
@@ -49,14 +49,14 @@ RUNTIME_FUNCTION 구조체는 메모리에서 DWORD로 정렬되어야 합니다
 
 (1) 예외 처리기
 
-|||
+|크기|값|
 |-|-|
 |ULONG|예외 처리기의 주소|
 |변수|언어별 처리기 데이터(선택 사항)|
 
 (2) 연결된 해제 정보
 
-|||
+|크기|값|
 |-|-|
 |ULONG|함수 시작 주소|
 |ULONG|함수 끝 주소|
@@ -114,7 +114,7 @@ UNWIND_INFO 구조체는 메모리에서 DWORD로 정렬되어야 합니다. 각
 
 해제 코드 배열은 비휘발성 레지스터 및 RSP에 영향을 주는 프롤로그의 작업 시퀀스를 기록하는 데 사용됩니다. 각 코드 항목의 형식은 다음과 같습니다.
 
-|||
+|크기|값|
 |-|-|
 |UBYTE|프롤로그의 오프셋|
 |UBYTE: 4|해제 연산 코드|
@@ -180,7 +180,7 @@ opcode `UWOP_SAVE_XMM128` 및 `UWOP_SAVE_XMM128_FAR`의 경우 모든 128비트 
 
   컴퓨터 프레임을 푸시합니다.  이 해제 코드는 하드웨어 중단 또는 예외 효과를 기록하는 데 사용됩니다. 두 가지 형태가 있습니다. 작업 정보가 0인 경우 해당 프레임 중 하나가 스택으로 푸시됩니다.
 
-  |||
+  |위치|값|
   |-|-|
   |RSP+32|SS|
   |RSP+24|이전 RSP|
@@ -190,7 +190,7 @@ opcode `UWOP_SAVE_XMM128` 및 `UWOP_SAVE_XMM128_FAR`의 경우 모든 128비트 
 
   작업 정보가 1인 경우 해당 프레임 중 하나가 푸시됩니다.
 
-  |||
+  |위치|값|
   |-|-|
   |RSP+40|SS|
   |RSP+32|이전 RSP|
@@ -221,7 +221,7 @@ opcode `UWOP_SAVE_XMM128` 및 `UWOP_SAVE_XMM128_FAR`의 경우 모든 128비트 
 
 작업 정보 비트의 의미는 연산 코드에 따라 달라집니다. 범용(정수) 레지스터를 인코딩하려면 다음 매핑이 사용됩니다.
 
-|||
+|bit|등록|
 |-|-|
 |0|RAX|
 |1|RCX|

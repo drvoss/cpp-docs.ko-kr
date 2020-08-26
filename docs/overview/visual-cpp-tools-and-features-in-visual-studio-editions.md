@@ -4,12 +4,12 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366792"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845356"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 버전의 C++ 도구 및 기능
 
@@ -315,9 +315,8 @@ Linux:
 
 ## <a name="platforms"></a>플랫폼
 
-||||||
-|-|-|-|-|-|
 |플랫폼|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Windows 바탕 화면||X|X|X|
 |범용 Windows 플랫폼(휴대폰, 태블릿, PC, Xbox, IoT 및 HoloLens)|X||X|X|
 |Linux|X|X|
@@ -457,9 +456,8 @@ Linux:
 
 ## <a name="application-lifecycle-management-tools"></a>Application Lifecycle Management 도구
 
-||||||
-|-|-|-|-|-|
 |도구|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
+|-|-|-|-|-|
 |유닛 테스트(네이티브 프레임워크)|X|X|X|X|
 |유닛 테스트(관리되는 프레임워크)||X|X|X|
 |코드 검사||||X|

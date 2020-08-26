@@ -4,18 +4,18 @@ description: GitHub의 보관된 Visual Studio C++ 샘플 리포지토리에서 
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56e9cfe72e58a12fb381c88616496820908006c8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226765"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846370"
 ---
 # <a name="visual-studio-c-samples"></a>Visual Studio C++ 샘플
 
 웹에서 Visual Studio C++에 대한 샘플을 사용할 수 있습니다. Microsoft는 여러 기술에서 다양한 기능을 보여 주는 C++ 샘플을 다수 작성했습니다. 다음은 추가 샘플을 찾을 수 있는 몇 군데 위치입니다.
 
-- [Microsoft Docs 샘플 - C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
+- [Microsoft Docs 샘플 - C++](/samples/browse/?term=c%2B%2B)
 
 - [GitHub의 Windows 샘플](https://microsoft.github.io/windows/)
 
@@ -25,7 +25,7 @@ ms.locfileid: "87226765"
 
 - [ADO 코드 샘플](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-- [Windows 하드웨어 개발 샘플](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
+- [Windows 하드웨어 개발 샘플](/samples/browse/?products=windows-wdk)
 
 ## <a name="archived-c-samples-on-github"></a>GitHub의 보관된 C++ 샘플
 

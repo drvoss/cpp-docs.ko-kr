@@ -3,12 +3,12 @@ title: CppProperties.json 참조
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224060"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837907"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json 참조
 
@@ -18,7 +18,7 @@ CMake를 사용하지 않는 폴더 열기 프로젝트는 *CppProperties.json* 
 
 구성에는 다음 속성 중 하나가 있을 수 있습니다.
 
-|||
+|이름|설명|
 |-|-|
 |`inheritEnvironments`| 이 구성에 적용되는 환경을 지정합니다.|
 |`name`|C++ 구성 드롭다운에 표시될 구성 이름|
@@ -125,7 +125,7 @@ Linux 워크로드가 설치되면 원격으로 Linux 및 WSL을 대상으로 �
 
 *CppProperties.json* 내에서 액세스할 수 있는 기본 제공 매크로는 다음과 같습니다.
 
-|||
+|매크로|설명|
 |-|-|
 |`${workspaceRoot}`| 작업 영역 폴더의 전체 경로|
 |`${projectRoot}`| *CppProperties.json*이 있는 폴더의 전체 경로|

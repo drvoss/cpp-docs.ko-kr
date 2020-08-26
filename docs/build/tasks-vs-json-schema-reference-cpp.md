@@ -4,12 +4,12 @@ ms.date: 08/20/2019
 helpviewer_keywords:
 - tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: cc6b2983d3cc3d40449357a554df5feee38c21d9
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a2aea1b64d5a6c62604c680bf1a4a26478b7b52a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556658"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844992"
 ---
 # <a name="tasksvsjson-schema-reference-c"></a>tasks.vs.json 스키마 참조(C++)
 
@@ -21,9 +21,8 @@ ms.locfileid: "75556658"
 
 기본 속성은 모든 유형의 작업에서 사용할 수 있습니다.
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|**Property**|**Type**|**설명**|
 |`taskLabel`|string| (필수) 사용자 인터페이스에 사용되는 작업 레이블을 지정합니다.|
 |`appliesTo`|string| (필수) 명령이 수행될 수 있는 파일을 지정합니다. 와일드카드 사용이 지원됩니다(예: “ *”, “* .cpp”, “/*.txt”).|
 |`contextType`|string| 허용되는 값: “custom”, “build”, “clean”, “rebuild”. 바로 가기 메뉴에서 작업이 표시되는 위치를 결정합니다. 기본값은 “custom”입니다.|
@@ -35,9 +34,8 @@ ms.locfileid: "75556658"
 
 작업 유형이 `launch`인 경우 다음 속성을 사용할 수 있습니다.
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|**Property**|**Type**|**설명**|
 |`command`|string| 시작할 프로세스나 스크립트의 전체 경로를 지정합니다.|
 |`args`|array| 명령에 전달되는 쉼표로 구분된 인수 목록을 지정합니다.|
 |`launchOption`|string| 허용되는 값은 다음과 같습니다. “None”, “ContinueOnError”,”IgnoreError”. 오류가 있는 경우 명령을 사용하여 진행하는 방법을 지정합니다.|
@@ -88,9 +86,8 @@ C++ 워크로드를 사용하여 Linux 개발을 설치하고 Visual Studio 연�
 
 작업 유형이 `remote`인 경우 다음 속성을 사용할 수 있습니다.
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|**Property**|**Type**|**설명**|
 |`remoteMachineName`|string|원격 컴퓨터의 이름입니다. **연결 관리자**의 컴퓨터 이름과 일치해야 합니다.|
 |`command`|string|원격 컴퓨터에 보낼 명령입니다. 기본적으로 명령은 원격 시스템의 $HOME 디렉터리에서 실행됩니다.|
 |`remoteWorkingDirectory`|string|원격 컴퓨터의 현재 작업 디렉터리입니다.|
@@ -129,9 +126,8 @@ C++ 워크로드를 사용하여 Linux 개발을 설치하고 Visual Studio 연�
 
 작업 유형이 `msbuild`인 경우 다음 속성을 사용할 수 있습니다.
 
-||||
+|속성|유형|Description|
 |-|-|-|
-|**Property**|**Type**|**설명**|
 |`verbosity`|string| MSBuild 프로젝트 빌드 출력 verbosityAllowed 값을 지정합니다. “Quiet”, “Minimal”, “Normal”, “Detailed”, “Diagnostic”.|
 |`toolsVersion`|string| 프로젝트를 빌드할 도구 집합 버전을 지정합니다(예: “2.0”, “3.5”, “4.0”, “Current”). 기본값은 “Current”입니다.|
 |`globalProperties`|개체|프로젝트에 전달할 전역 속성의 키-값 목록을 지정합니다(예: “Configuration”: “Release”).|

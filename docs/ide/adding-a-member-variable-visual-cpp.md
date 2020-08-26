@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216000"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845135"
 ---
 # <a name="add-a-member-variable"></a>멤버 변수 추가
 
@@ -80,13 +80,15 @@ ms.locfileid: "87216000"
 
     형식에 대한 자세한 내용은 [기본 형식](../cpp/fundamental-types-cpp.md)을 참조하세요.
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - 대화 상자 컨트롤에 멤버 변수를 추가하는 경우 이 상자는 컨트롤이나 값에 대해 반환된 개체의 형식으로 채워집니다. **컨트롤**을 선택하는 경우 **변수 형식**은 **컨트롤 ID** 상자에서 선택한 컨트롤의 기본 클래스를 지정합니다. 대화 상자 컨트롤에 값이 포함될 수 있는 경우 및 **값**을 선택한 경우 **변수 형식**은 컨트롤이 포함할 수 있는 값에 적절한 형식을 지정합니다. 자세한 내용은 [대화 상자 컨트롤 및 변수 형식](#dialog-box-controls-and-variable-types)을 참조하세요.
 
