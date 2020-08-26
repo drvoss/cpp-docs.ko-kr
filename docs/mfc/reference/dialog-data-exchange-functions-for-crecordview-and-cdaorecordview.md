@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8eef2f3dc7880f9b2a937a26db1b74687fa00f1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 06d0511317c21f6b132349d7d6cd6c2d6f20bc1b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222838"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837374"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 및 CDaoRecordView에 대한 대화 상자 데이터 교환 함수
 
@@ -36,7 +36,7 @@ ms.locfileid: "87222838"
 
 ### <a name="ddx_field-functions"></a>DDX_Field 함수
 
-|||
+|Name|설명|
 |-|-|
 |[DDX_FieldCBIndex](#ddx_fieldcbindex)|[CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)의 콤보 상자에서 레코드 집합 필드 데이터 멤버와 현재 선택 항목의 인덱스 사이에 정수 데이터를 전송 합니다.|
 |[DDX_FieldCBString](#ddx_fieldcbstring)|`CString`또는에서 콤보 상자의 편집 컨트롤 및 레코드 집합 필드 데이터 멤버 간에 데이터를 전송 `CRecordView` `CDaoRecordView` 합니다. 데이터 집합에서 컨트롤로 데이터를 이동 하는 경우이 함수는 지정 된 문자열의 문자로 시작 하는 콤보 상자에서 항목을 선택 합니다.|
@@ -50,7 +50,7 @@ ms.locfileid: "87222838"
 |[DDX_FieldSlider](#ddx_fieldslider)|레코드 뷰 및 레코드 **`int`** 집합의 필드 데이터 멤버에서 slider 컨트롤의 thumb 위치를 동기화 합니다. |
 |[DDX_FieldText](#ddx_fieldtext)|오버 로드 된 버전은 **`int`** **UINT** **`long`** `DWORD` [CString](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** **`short`** 레코드 집합 필드 데이터 멤버와 또는의 편집 상자 사이 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) [COleCurrency](../../mfc/reference/colecurrency-class.md) 에서 `CRecordView` , UINT,,, CString,,,, COleDateTime 및 COleCurrency 데이터 `CDaoRecordView` 를 전송 하는 데 사용할 수 있습니다.|
 
-## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex
+## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a> DDX_FieldCBIndex
 
 `DDX_FieldCBIndex`함수는 레코드 뷰에서 콤보 상자 컨트롤의 목록 상자 컨트롤에 있는 선택 된 항목의 인덱스와 **`int`** 레코드 뷰와 연결 된 레코드 집합의 필드 데이터 멤버를 동기화 합니다.
 
@@ -98,7 +98,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
 **헤더:** afxdao
 
-## <a name="ddx_fieldcbstring"></a><a name="ddx_fieldcbstring"></a>DDX_FieldCBString
+## <a name="ddx_fieldcbstring"></a><a name="ddx_fieldcbstring"></a> DDX_FieldCBString
 
 함수는 레코드 `DDX_FieldCBString` 뷰에서 콤보 상자 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 컨트롤의 편집 컨트롤과 `CString` 레코드 뷰와 연결 된 레코드 집합의 필드 데이터 멤버 사이에서 CString 데이터의 전송을 관리 합니다.
 
@@ -146,7 +146,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact
+## <a name="ddx_fieldcbstringexact"></a><a name="ddx_fieldcbstringexact"></a> DDX_FieldCBStringExact
 
 함수는 레코드 `DDX_FieldCBStringExact` 뷰에서 콤보 상자 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 컨트롤의 편집 컨트롤과 `CString` 레코드 뷰와 연결 된 레코드 집합의 필드 데이터 멤버 사이에서 CString 데이터의 전송을 관리 합니다.
 
@@ -194,7 +194,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldcheck"></a><a name="ddx_fieldcheck"></a>DDX_FieldCheck
+## <a name="ddx_fieldcheck"></a><a name="ddx_fieldcheck"></a> DDX_FieldCheck
 
 함수는 대화 `DDX_FieldCheck` **`int`** 상자, 폼 뷰 또는 컨트롤 뷰 개체의 확인란 컨트롤과 **`int`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -236,7 +236,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldlbindex"></a><a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex
+## <a name="ddx_fieldlbindex"></a><a name="ddx_fieldlbindex"></a> DDX_FieldLBIndex
 
 함수는 레코드 `DDX_FieldLBIndex` 뷰의 목록 상자 컨트롤에서 선택한 항목의 인덱스와 **`int`** 레코드 뷰와 연결 된 레코드 집합의 필드 데이터 멤버를 동기화 합니다.
 
@@ -284,7 +284,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldlbstring"></a><a name="ddx_fieldlbstring"></a>DDX_FieldLBString
+## <a name="ddx_fieldlbstring"></a><a name="ddx_fieldlbstring"></a> DDX_FieldLBString
 
 는 레코드 `DDX_FieldLBString` 뷰에서 현재 선택 된 목록 상자 컨트롤을 레코드 뷰와 연결 된 레코드 집합의 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 필드 데이터 멤버에 복사 합니다.
 
@@ -332,7 +332,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact
+## <a name="ddx_fieldlbstringexact"></a><a name="ddx_fieldlbstringexact"></a> DDX_FieldLBStringExact
 
 함수는 레코드 `DDX_FieldLBStringExact` 뷰에 있는 목록 상자 컨트롤의 현재 선택 영역을 레코드 뷰와 연결 된 레코드 집합의 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 필드 데이터 멤버에 복사 합니다.
 
@@ -380,7 +380,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldradio"></a><a name="ddx_fieldradio"></a>DDX_FieldRadio
+## <a name="ddx_fieldradio"></a><a name="ddx_fieldradio"></a> DDX_FieldRadio
 
 함수는 레코드 뷰의 레코드 `DDX_FieldRadio` 집합에서 0부터 시작 하는 **`int`** 멤버 변수를 레코드 뷰의 라디오 단추 그룹에 있는 현재 선택 된 라디오 단추와 연결 합니다.
 
@@ -428,7 +428,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldscroll"></a><a name="ddx_fieldscroll"></a>DDX_FieldScroll
+## <a name="ddx_fieldscroll"></a><a name="ddx_fieldscroll"></a> DDX_FieldScroll
 
 함수는 레코드 뷰 `DDX_FieldScroll` 및 레코드 **`int`** 뷰와 연결 된 레코드 집합의 필드 데이터 멤버 (또는이를 매핑하기 위해 선택한 정수 변수)의 스크롤 막대 컨트롤의 스크롤 위치를 동기화 합니다.
 
@@ -476,7 +476,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdao
 
-## <a name="ddx_fieldslider"></a><a name="ddx_fieldslider"></a>DDX_FieldSlider
+## <a name="ddx_fieldslider"></a><a name="ddx_fieldslider"></a> DDX_FieldSlider
 
 함수는 레코드 뷰 `DDX_FieldSlider` 및 레코드 **`int`** 뷰와 연결 된 레코드 집합의 필드 데이터 멤버 (또는 매핑할 정수 변수)에 있는 슬라이더 컨트롤의 thumb 위치를 동기화 합니다.
 
@@ -514,7 +514,7 @@ void AFXAPI DDX_FieldSlider(
 
 데이터 집합의 데이터를 슬라이더로 이동 하는 경우이 함수는 슬라이더의 위치를 *value*에 지정 된 값으로 설정 합니다. 레코드 집합에서 컨트롤로 전송할 때 레코드 집합 필드가 Null 이면 slider 컨트롤의 위치는 0으로 설정 됩니다. 컨트롤에서 레코드 집합으로의 전송 시 컨트롤이 비어 있으면 레코드 집합 필드의 값은 0입니다.
 
-`DDX_FieldSlider`는 범위 정보를 단순히 위치가 아닌 범위를 설정할 수 있는 슬라이더 컨트롤을 사용 하 여 교환 하지 않습니다.
+`DDX_FieldSlider` 는 범위 정보를 단순히 위치가 아닌 범위를 설정할 수 있는 슬라이더 컨트롤을 사용 하 여 교환 하지 않습니다.
 
 ODBC 기반 클래스로 작업 하는 경우 함수의 첫 번째 재정의를 사용 합니다. DAO 기반 클래스에 두 번째 재정의를 사용 합니다.
 
@@ -528,7 +528,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
 **헤더:** afxdao
 
-## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a>DDX_FieldText
+## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a> DDX_FieldText
 
 `DDX_FieldText`함수는 **`int`** **`short`** **`long`** [CString](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** 편집 상자 컨트롤과 레코드 집합의 필드 데이터 멤버 사이에서,,, DWORD, CString,,, **BOOL**또는 **BYTE** 데이터의 전송을 관리 합니다.
 

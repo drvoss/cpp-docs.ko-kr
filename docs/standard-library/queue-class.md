@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 331ca298507e0ebecac0376f660feefdafd9d99d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232939"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832609"
 ---
 # <a name="queue-class"></a>queue 클래스
 
@@ -68,13 +68,13 @@ C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 s
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[큐](#queue)|비어 있거나 기본 컨테이너 개체의 복사본인 `queue`을 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[container_type](#container_type)|`queue`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|
 |[size_type](#size_type)|`queue`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|
@@ -82,7 +82,7 @@ C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 s
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[뒤로](#back)|`queue` 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.|
 |[empty](#empty)|`queue`이 비어 있는지를 테스트합니다.|
@@ -91,7 +91,7 @@ C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 s
 |[push](#push)|`queue` 뒤에 요소를 추가합니다.다.|
 |[size](#size)|`queue`에 있는 요소 수를 반환합니다.|
 
-## <a name="back"></a><a name="back"></a>뒤로
+## <a name="back"></a><a name="back"></a> 뒤로
 
 queue 뒤에 마지막으로 가장 최근에 추가된 요소에 대한 참조를 반환합니다.
 
@@ -101,7 +101,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 queue의 마지막 요소입니다. queue가 비어 있으면 반환 값이 정의되지 않습니다.
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 조정할 기본 컨테이너를 제공하는 형식입니다.
 
@@ -155,7 +155,7 @@ typedef Container container_type;
 
 `container_type`을 선언하고 사용하는 방법에 대한 예제는 [queue](#queue)의 예제를 참조하세요.
 
-## <a name="empty"></a><a name="empty"></a>비우려면
+## <a name="empty"></a><a name="empty"></a> 비우려면
 
 queue가 비어 있는지 테스트합니다.
 
@@ -163,7 +163,7 @@ queue가 비어 있는지 테스트합니다.
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 큐가 비어 있으면이 고, 그렇지 않으면입니다. **`false`** 큐가 비어 있지 않으면입니다.
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a><a name="front"></a>앞뒤
+## <a name="front"></a><a name="front"></a> 앞뒤
 
 queue 앞의 첫 번째 요소에 대한 참조를 반환합니다.
 
@@ -211,7 +211,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 큐의 첫 번째 요소입니다. queue가 비어 있으면 반환 값이 정의되지 않습니다.
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a><a name="pop"></a>창을
+## <a name="pop"></a><a name="pop"></a> 창을
 
 queue 앞에서 요소를 제거합니다.
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>누르기
+## <a name="push"></a><a name="push"></a> 누르기
 
 queue 뒤에 요소를 추가합니다.다.
 
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a><a name="size"></a>크기가
+## <a name="size"></a><a name="size"></a> 크기가
 
 queue에 있는 요소 수를 반환합니다.
 
@@ -433,7 +433,7 @@ queue에 있는 요소 수를 반환합니다.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 queue의 현재 길이입니다.
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 queue에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.
 
@@ -482,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [queue::front](#front)의 예제를 참조하세요.
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 queue에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.
 

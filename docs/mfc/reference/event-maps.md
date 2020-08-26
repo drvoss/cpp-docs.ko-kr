@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef8ee6b87bdeb9d5da9f34d303e0c0fda89443c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222799"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837348"
 ---
 # <a name="event-maps"></a>이벤트 맵
 
@@ -29,7 +29,7 @@ MFC 라이브러리는 이벤트를 발생 시키는 데 최적화 된 프로그
 
 ### <a name="event-map-declaration-and-demarcation"></a>이벤트 맵 선언 및 경계
 
-|||
+|Name|설명|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|이벤트 맵이 이벤트를 이벤트 발생 함수에 매핑하기 위해 클래스에서 사용 됨을 선언 합니다 (클래스 선언에서 사용 되어야 함).|
 |[BEGIN_EVENT_MAP](#begin_event_map)|이벤트 맵의 정의를 시작 합니다 (클래스 구현에서 사용 되어야 함).|
@@ -37,19 +37,19 @@ MFC 라이브러리는 이벤트를 발생 시키는 데 최적화 된 프로그
 
 ### <a name="event-mapping-macros"></a>이벤트 매핑 매크로
 
-|||
+|Name|설명|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|지정 된 이벤트를 발생 시킬 이벤트 발생 함수를 나타냅니다.|
 |[EVENT_CUSTOM_ID](#event_custom_id)|지정 된 디스패치 ID를 사용 하 여 지정 된 이벤트를 발생 시킬 이벤트 발생 함수를 나타냅니다.|
 
 ### <a name="message-mapping-macros"></a>메시지 매핑 매크로
 
-|||
+|Name|설명|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|OLE 컨트롤에서 처리 하는 사용자 지정 동사를 나타냅니다.|
 |[ON_STDOLEVERB](#on_stdoleverb)|OLE 컨트롤의 표준 동사 매핑을 재정의 합니다.|
 
-## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a> DECLARE_EVENT_MAP
 
 `COleControl`프로그램의 각 파생 클래스는 이벤트 맵을 제공 하 여 컨트롤에서 발생 하는 이벤트를 지정할 수 있습니다.
 
@@ -67,7 +67,7 @@ DECLARE_EVENT_MAP()
 
 **헤더** afxctl
 
-## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a> BEGIN_EVENT_MAP
 
 이벤트 맵의 정의를 시작 합니다.
 
@@ -93,7 +93,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 **헤더** afxctl
 
-## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a> END_EVENT_MAP
 
 END_EVENT_MAP 매크로를 사용 하 여 이벤트 맵의 정의를 종료 합니다.
 
@@ -105,7 +105,7 @@ END_EVENT_MAP()
 
 **헤더** afxctl
 
-## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a> EVENT_CUSTOM
 
 사용자 지정 이벤트에 대 한 이벤트 맵 항목을 정의 합니다.
 
@@ -126,7 +126,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="remarks"></a>설명
 
-*VtsParams* 매개 변수는 상수에서 공백으로 구분 된 값 목록입니다 `VTS_` . 공백으로 구분 된 이러한 값 중 하나 이상 (쉼표 아님)은 함수의 매개 변수 목록을 지정 합니다. 예를 들면 다음과 같습니다.
+*VtsParams* 매개 변수는 상수에서 공백으로 구분 된 값 목록입니다 `VTS_` . 공백으로 구분 된 이러한 값 중 하나 이상 (쉼표 아님)은 함수의 매개 변수 목록을 지정 합니다. 예를 들어:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -134,7 +134,7 @@ RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 `IFontDisp` OLE �
 
 `VTS_`상수 및 해당 의미는 다음과 같습니다.
 
-|기호|매개 변수 유형|
+|기호|매개 변수 형식|
 |------------|--------------------|
 |VTS_I2|**`short`**|
 |VTS_I4|**`long`**|
@@ -171,7 +171,7 @@ RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 `IFontDisp` OLE �
 
 **헤더** afxctl
 
-## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
 *Dispid*로 지정 된 디스패치 ID에 속하는 사용자 지정 이벤트에 대 한 이벤트 발생 함수를 정의 합니다.
 
@@ -199,7 +199,7 @@ EVENT_CUSTOM_ID(
 
 ### <a name="remarks"></a>설명
 
-*VtsParams* 인수는 상수에서 공백으로 구분 된 값 목록입니다 `VTS_` . 공백이 아닌 공백으로 구분 된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정 합니다. 예를 들면 다음과 같습니다.
+*VtsParams* 인수는 상수에서 공백으로 구분 된 값 목록입니다 `VTS_` . 공백이 아닌 공백으로 구분 된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정 합니다. 예를 들어:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -211,7 +211,7 @@ RGB 색 값을 나타내는 32 비트 정수를 포함 하 고 `IFontDisp` OLE �
 
 **헤더** afxctl
 
-## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a> ON_OLEVERB
 
 이 매크로는 사용자 지정 동사를 컨트롤의 특정 멤버 함수에 매핑하는 메시지 맵 항목을 정의 합니다.
 
@@ -246,7 +246,7 @@ BOOL memberFxn(
 
 **헤더** afxole
 
-## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a> ON_STDOLEVERB
 
 이 매크로를 사용 하 여 표준 동사의 기본 동작을 재정의할 수 있습니다.
 

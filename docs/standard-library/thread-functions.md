@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232861"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845044"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 함수
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[스왑을](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[스왑을](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 현재 실행 스레드를 고유하게 식별합니다.
 
@@ -36,11 +37,11 @@ ms.locfileid: "87232861"
 thread::id this_thread::get_id() noexcept;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 실행 스레드를 고유하게 식별하는 [thread::id](../standard-library/thread-class.md) 형식의 개체입니다.
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 호출 스레드를 차단합니다.
 
@@ -59,7 +60,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 함수는 적어도 *Rel_time*에 지정 된 시간 동안 호출 스레드를 차단 합니다. 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 최소한 지정된 시간까지 호출 스레드를 차단합니다.
 
@@ -79,7 +80,7 @@ void sleep_until(const xtime *Abs_time);
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 `thread` 개체의 상태를 바꿉니다.
 
@@ -99,7 +100,7 @@ void swap(thread& Left, thread& Right) noexcept;
 
 함수는 `Left.swap(Right)`을 호출합니다.
 
-## <a name="yield"></a><a name="yield"></a>yield
+## <a name="yield"></a><a name="yield"></a> yield
 
 정상적인 경우라면 현재 스레드가 계속 실행되더라도 운영 체제에 다른 스레드를 실행할 것을 알립니다.
 

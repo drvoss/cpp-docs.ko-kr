@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: fe59c58659252f5d799339fdd83237e56f81a2ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232965"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832648"
 ---
 # <a name="poisson_distribution-class"></a>poisson_distribution 클래스
 
@@ -74,10 +74,8 @@ public:
 
 클래스 템플릿은 포아송 분포를 사용 하 여 사용자 지정 정수 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
-|`poisson_distribution::operator()`||[param_type](#param_type)|
+[poisson_distribution](#poisson_distribution)\
+[param_type](#param_type)
 
 속성 함수 `mean()`은 저장된 분포 매개 변수 *mean*의 값을 반환합니다.
 
@@ -196,7 +194,7 @@ Distribution for 100 samples:
 
 **네임스페이스:** std
 
-## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution::p oisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a> poisson_distribution::p oisson_distribution
 
 분포를 생성합니다.
 
@@ -221,7 +219,7 @@ explicit binomial_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution::p aram_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a> poisson_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

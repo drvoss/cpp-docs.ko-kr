@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212269"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845486"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,7 +20,7 @@ Iostreams 작업의 여러 기본 형식 및 함수를 정의합니다. 이 헤�
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더**:\<ios>
+**헤더**: \<ios>
 
 **네임스페이스:** std
 
@@ -31,7 +31,7 @@ Iostreams 작업의 여러 기본 형식 및 함수를 정의합니다. 이 헤�
 
 대부분의 함수는 조작자입니다. 에 선언 된 조작자는 \<ios> [ios_base](../standard-library/ios-base-class.md)클래스의 인수 개체에 저장 된 값을 변경 합니다. 다른 조작자는이 클래스에서 파생 된 형식의 개체에 의해 제어 되는 스트림 작업을 수행 합니다 (예: 클래스 템플릿 [basic_istream](../standard-library/basic-istream-class.md) 또는 [basic_ostream](../standard-library/basic-ostream-class.md)의 특수화). 예를 들어 [noskipws](../standard-library/ios-functions.md#noskipws)(**str**)는 `ios_base::skipws` 이러한 형식 중 하나일 수 있는 개체의 형식 플래그를 지웁니다 `str` .
 
-`ios_base`에서 파생 클래스에 대해 제공되는 특수 삽입 및 추출 작업을 통해 출력 스트림에 삽입하거나 입력 스트림에서 추출하여 조작자를 호출할 수도 있습니다. 예를 들면 다음과 같습니다.
+`ios_base`에서 파생 클래스에 대해 제공되는 특수 삽입 및 추출 작업을 통해 출력 스트림에 삽입하거나 입력 스트림에서 추출하여 조작자를 호출할 수도 있습니다. 예를 들어:
 
 ```cpp
 istr>> noskipws;
@@ -43,7 +43,7 @@ istr>> noskipws;
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[io](../standard-library/ios-typedefs.md#ios)|이전 iostream 라이브러리의 ios 클래스를 지원합니다.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|내부 작업을 지원합니다.|
@@ -54,7 +54,7 @@ istr>> noskipws;
 
 ### <a name="manipulators"></a>조작자
 
-|||
+|Name|설명|
 |-|-|
 |[boolalpha](../standard-library/ios-functions.md#boolalpha)|[Bool](../cpp/bool-cpp.md) 형식의 변수가 스트림에서 또는로 표시 되도록 지정 합니다 **`true`** **`false`** .|
 |[dec](../standard-library/ios-functions.md#dec)|정수 변수가 밑수 10 표기법으로 표시되도록 지정합니다.|
@@ -83,7 +83,7 @@ istr>> noskipws;
 
 ### <a name="error-reporting"></a>오류 보고
 
-|||
+|Name|설명|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -93,7 +93,7 @@ istr>> noskipws;
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|클래스 템플릿은 템플릿 매개 변수에 따라 달라 지는 입력 스트림 (클래스 템플릿 [basic_istream](../standard-library/basic-istream-class.md)의 경우) 및 출력 스트림 (클래스 템플릿 [basic_ostream](../standard-library/basic-ostream-class.md))에 공통 된 저장소 및 멤버 함수를 설명 합니다.|
 |[fpos](../standard-library/fpos-class.md)|클래스 템플릿은 임의의 스트림 내에서 임의 파일 위치 표시기를 복원 하는 데 필요한 모든 정보를 저장할 수 있는 개체를 설명 합니다.|

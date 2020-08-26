@@ -18,12 +18,12 @@ helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-ms.openlocfilehash: b5a7263ae5cac81508ab2450a530132879ed45b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9133c30dd1ac069145862d4bf61ba0bc0d504838
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222825"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837361"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 컨트롤에 대한 대화 상자 데이터 교환 함수
 
@@ -31,7 +31,7 @@ ms.locfileid: "87222825"
 
 ### <a name="ddx_oc-functions"></a>DDX_OC 함수
 
-|||
+|Name|설명|
 |-|-|
 |[DDX_OCBool](#ddx_ocbool)|OLE 컨트롤의 속성과 **bool** 데이터 멤버 간의 **bool** 데이터 전송을 관리 합니다.|
 |[DDX_OCBoolRO](#ddx_ocboolro)|OLE 컨트롤의 읽기 전용 속성과 **bool** 데이터 멤버 간의 **bool** 데이터 전송을 관리 합니다.|
@@ -46,7 +46,7 @@ ms.locfileid: "87222825"
 |[DDX_OCText](#ddx_octext)|OLE 컨트롤과 **cstring** 데이터 멤버의 속성 간에 **cstring** 데이터의 전송을 관리 합니다.|
 |[DDX_OCTextRO](#ddx_octextro)|OLE 컨트롤의 읽기 전용 속성과 **cstring** 데이터 멤버 간의 **cstring** 데이터 전송을 관리 합니다.|
 
-## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a>DDX_OCBool
+## <a name="ddx_ocbool"></a><a name="ddx_ocbool"></a> DDX_OCBool
 
 함수는 대화 `DDX_OCBool` 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 **bool** 데이터 멤버 사이에서 **bool** 데이터의 전송을 관리 합니다.
 
@@ -80,7 +80,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더:** afxdisp.h
 
-## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a>DDX_OCBoolRO
+## <a name="ddx_ocboolro"></a><a name="ddx_ocboolro"></a> DDX_OCBoolRO
 
 함수는 대화 `DDX_OCBoolRO` 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤에 대 한 읽기 전용 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 **bool** 데이터 멤버 사이에서 **bool** 데이터의 전송을 관리 합니다.
 
@@ -114,7 +114,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_occolor"></a><a name="ddx_occolor"></a>DDX_OCColor
+## <a name="ddx_occolor"></a><a name="ddx_occolor"></a> DDX_OCColor
 
 함수는 대화 `DDX_OCColor` 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE_COLOR 데이터 멤버 간의 OLE_COLOR 데이터 전송을 관리 합니다.
 
@@ -148,7 +148,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a>DDX_OCColorRO
+## <a name="ddx_occolorro"></a><a name="ddx_occolorro"></a> DDX_OCColorRO
 
 함수는 대화 `DDX_OCColorRO` 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤에 대 한 읽기 전용 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE_COLOR 데이터 멤버 간에 OLE_COLOR 데이터 전송을 관리 합니다.
 
@@ -182,7 +182,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a>DDX_OCFloat
+## <a name="ddx_ocfloat"></a><a name="ddx_ocfloat"></a> DDX_OCFloat
 
 함수는 대화 `DDX_OCFloat` **`float`** 상자, **`double`** 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 속성과 **`float`** **`double`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 (또는) 데이터 멤버 사이에 있는 (또는) 데이터의 전송을 관리 합니다.
 
@@ -222,7 +222,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a>DDX_OCFloatRO
+## <a name="ddx_ocfloatro"></a><a name="ddx_ocfloatro"></a> DDX_OCFloatRO
 
 함수는 대화 `DDX_OCFloatRO` **`float`** 상자, **`double`** 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤에 대 한 읽기 전용 속성과 **`float`** **`double`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 (또는) 데이터 멤버 사이에 있는 (또는) 데이터의 전송을 관리 합니다.
 
@@ -262,7 +262,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_ocint"></a><a name="ddx_ocint"></a>DDX_OCInt
+## <a name="ddx_ocint"></a><a name="ddx_ocint"></a> DDX_OCInt
 
 함수는 대화 `DDX_OCInt` **`int`** 상자, **`long`** 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 속성과 **`int`** **`long`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 (또는) 데이터 멤버 사이에 있는 (또는) 데이터의 전송을 관리 합니다.
 
@@ -302,7 +302,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a>DDX_OCIntRO
+## <a name="ddx_ocintro"></a><a name="ddx_ocintro"></a> DDX_OCIntRO
 
 함수는 대화 `DDX_OCIntRO` **`int`** 상자, **`long`** 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤에 대 한 읽기 전용 속성과 **`int`** **`long`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 (또는) 데이터 멤버 사이에 있는 (또는) 데이터의 전송을 관리 합니다.
 
@@ -342,7 +342,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a>DDX_OCShort
+## <a name="ddx_ocshort"></a><a name="ddx_ocshort"></a> DDX_OCShort
 
 함수는 대화 `DDX_OCShort` 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 short 데이터 멤버 간에 짧은 데이터의 전송을 관리 합니다.
 
@@ -376,7 +376,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a>DDX_OCShortRO
+## <a name="ddx_ocshortro"></a><a name="ddx_ocshortro"></a> DDX_OCShortRO
 
 함수는 대화 `DDX_OCShortRO` 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤에 대 한 읽기 전용 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 short 데이터 멤버 간에 짧은 데이터의 전송을 관리 합니다.
 
@@ -410,7 +410,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_octext"></a><a name="ddx_octext"></a>DDX_OCText
+## <a name="ddx_octext"></a><a name="ddx_octext"></a> DDX_OCText
 
 **DDX_OCText** 함수는 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 OLE 컨트롤 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 **cstring** 데이터 멤버 간에 **cstring** 데이터의 전송을 관리 합니다.
 
@@ -444,7 +444,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdisp.h
 
-## <a name="ddx_octextro"></a><a name="ddx_octextro"></a>DDX_OCTextRO
+## <a name="ddx_octextro"></a><a name="ddx_octextro"></a> DDX_OCTextRO
 
 `DDX_OCTextRO` 함수는 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 내 OLE 컨트롤의 읽기 전용 속성과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 `CString` 데이터 멤버 간 `CString` 데이터 전송을 관리합니다.
 

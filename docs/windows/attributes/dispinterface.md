@@ -1,17 +1,17 @@
 ---
-title: 특성 (C++ COM 특성)
+title: 특성 (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dd2a0883418ff79af53285d3cf51dba7601a363c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168241"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845395"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -23,7 +23,7 @@ ms.locfileid: "80168241"
 [dispinterface]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **dispinterface** C++ 특성이 인터페이스 앞에 오면, 생성된 .idl 파일에서 인터페이스가 라이브러리 블록 내부에 배치됩니다.
 
@@ -44,12 +44,10 @@ dispinterface helloPro
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**interface**|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
@@ -58,9 +56,9 @@ dispinterface helloPro
 ## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
-[용도별 특성](attributes-by-usage.md)<br/>
+[사용 별 특성](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[custom](custom-cpp.md)<br/>
+[재구성](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

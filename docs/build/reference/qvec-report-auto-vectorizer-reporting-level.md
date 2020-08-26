@@ -2,12 +2,12 @@
 title: /Qvec-report(자동 벡터화 도우미 보고 수준)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: 260cf89d50110f960eb6f320dccbb4a1d80f65bc
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 2007e80db0ee0aec362869315767505ec06ab109
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373816"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836870"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report(자동 벡터화 도우미 보고 수준)
 
@@ -46,4 +46,4 @@ ms.locfileid: "86373816"
 [/Q 옵션 (하위 수준 작업)](q-options-low-level-operations.md)<br/>
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)<br/>
-[Visual Studio의 네이티브 코드 벡터화](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)
+[Visual Studio의 네이티브 코드 벡터화](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

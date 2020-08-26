@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215571"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845031"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 연산자
 
-||||
-|-|-|-|
-|[연산자! =](#op_neq)|[연산자&gt;](#op_gt)|[연산자&gt;=](#op_gt_eq)|
-|[연산자&lt;](#op_lt)|[연산자&lt;&lt;](#op_lt_lt)|[연산자&lt;=](#op_lt_eq)|
-|[연산자 = =](#op_eq_eq)|
+[연산자! =](#op_neq)\
+[연산자&gt;](#op_gt)\
+[연산자&gt;=](#op_gt_eq)\
+[연산자&lt;](#op_lt)\
+[연산자&lt;&lt;](#op_lt_lt)\
+[연산자&lt;=](#op_lt_eq)\
+[연산자 = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 연산자&gt;=
 
 하나의 `thread::id` 개체가 다른 개체보다 크거나 같은지를 확인합니다.
 
@@ -51,7 +53,7 @@ bool operator>= (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `!(Left < Right)`
 
@@ -59,7 +61,7 @@ bool operator>= (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 연산자&gt;
 
 하나의 `thread::id` 개체가 다른 개체보다 큰지를 확인합니다.
 
@@ -77,7 +79,7 @@ bool operator> (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `Right < Left`
 
@@ -85,7 +87,7 @@ bool operator> (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 연산자&lt;=
 
 하나의 `thread::id` 개체가 다른 개체보다 작거나 같은지를 확인합니다.
 
@@ -103,7 +105,7 @@ bool operator<= (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `!(Right < Left)`
 
@@ -111,7 +113,7 @@ bool operator<= (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 연산자&lt;
 
 하나의 `thread::id` 개체가 다른 개체보다 작은지를 확인합니다.
 
@@ -129,7 +131,7 @@ bool operator<(
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 전체 순서에서 *왼쪽* 이 *오른쪽* 앞에 오면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -139,7 +141,7 @@ bool operator<(
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="operator"></a><a name="op_neq"></a>연산자! =
+## <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
 두 `thread::id` 개체가 다른지 비교합니다.
 
@@ -157,7 +159,7 @@ bool operator!= (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `!(Left == Right)`
 
@@ -165,7 +167,7 @@ bool operator!= (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a> 연산자 = =
 
 두 `thread::id` 개체가 같은지 비교합니다.
 
@@ -183,7 +185,7 @@ bool operator== (
 *오른쪽*\
 오른쪽 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 두 개체가 동일한 실행 스레드를 나타내면이 고, 두 개체가 모두 실행 스레드를 나타내지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -191,7 +193,7 @@ bool operator== (
 
 이 함수는 예외를 throw하지 않습니다.
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>연산자&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 연산자&lt;&lt;
 
 `thread::id` 개체의 텍스트 표현을 스트림에 삽입합니다.
 
@@ -209,7 +211,7 @@ basic_ostream<Elem, Tr>& operator<<(
 *A-id*\
 `thread::id` 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Ostr*.
 

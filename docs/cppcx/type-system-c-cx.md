@@ -2,12 +2,12 @@
 title: 형식 시스템(C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221551"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845148"
 ---
 # <a name="type-system-ccx"></a>형식 시스템(C++/CX)
 
@@ -35,12 +35,11 @@ C + +로 작성 된 유니버설 Windows 플랫폼 앱을 컴파일하는 경우
 
 메타데이터에 형식이 표시되는지, 메서드가 표시되는지는 적용된 액세스 가능성 한정자에 따라 결정됩니다. 표시하려면 네임스페이스에 public으로 형식을 선언해야 합니다. public이 아닌 ref 클래스는 코드의 내부 도우미 형식으로 허용되고, 메타데이터에 표시되지는 않습니다. public ref 클래스의 경우에도 일부 멤버만 표시하면 됩니다. 다음 표에서는 public ref 클래스의 c + + 액세스 지정자와 메타 데이터 표시 유형 간의 관계를 나열 Windows 런타임 합니다.
 
-|||
-|-|-|
-|**메타데이터에 게시됨**|**메타데이터에 게시되지 않음**|
-|공공|private|
-|protected|내부|
-|public protected|private protected|
+| 메타데이터에 게시됨 | 메타데이터에 게시되지 않음 |
+|--|--|
+| 공공 | private |
+| protected | internal |
+| public protected | private protected |
 
 **개체 브라우저** 를 사용하여 .winmd 파일의 내용을 볼 수 있습니다. Windows에 포함 된 Windows 런타임 구성 요소는 Windows winmd 파일에 있습니다. 기본 winmd 파일에는 c + +/CX에 사용 되는 기본 형식이 포함 되어 있으며, platform은 Platform 네임 스페이스의 추가 형식을 포함 합니다. 기본적으로 이러한 3 개의 winmd 파일은 유니버설 Windows 플랫폼 앱에 대 한 모든 c + + 프로젝트에 포함 되어 있습니다.
 

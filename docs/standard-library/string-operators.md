@@ -20,22 +20,26 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 0e63054365f4b29cf474a46dbf7c730f54759792
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e031eb4421906e35a96a862855a140218f233778
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217391"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832544"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 연산자
 
-||||
-|-|-|-|
-|[연산자! =](#op_neq)|[연산자&gt;](#op_gt)|[연산자&gt;&gt;](#op_gt_gt)|
-|[연산자&gt;=](#op_gt_eq)|[연산자&lt;](#op_lt)|[연산자&lt;&lt;](#op_lt_lt)|
-|[연산자&lt;=](#op_lt_eq)|[연산자 +](#op_add)|[연산자 = =](#op_eq_eq)|
+[연산자! =](#op_neq)\
+[연산자&gt;](#op_gt)\
+[연산자&gt;&gt;](#op_gt_gt)\
+[연산자&gt;=](#op_gt_eq)\
+[연산자&lt;](#op_lt)\
+[연산자&lt;&lt;](#op_lt_lt)\
+[연산자&lt;=](#op_lt_eq)\
+[연산자 +](#op_add)\
+[연산자 = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_add"></a>연산자 +
+## <a name="operator"></a><a name="op_add"></a> 연산자 +
 
 두 문자열 개체를 연결합니다.
 
@@ -109,7 +113,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 *오른쪽*\
 연결할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 입력 문자열의 연결인 문자열입니다.
 
@@ -169,7 +173,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="operator"></a><a name="op_neq"></a>연산자! =
+## <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같지 않은지 테스트합니다.
 
@@ -198,7 +202,7 @@ bool operator!=(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 문자열 개체가 우변에 있는 문자열 개체와 사전순으로 않으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -260,7 +264,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a> 연산자 = =
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체와 같은지 테스트합니다.
 
@@ -289,7 +293,7 @@ bool operator==(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 string 개체의 사전순으로가 우변에 있는 string 개체와 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -351,7 +355,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 연산자&lt;
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작은지 테스트합니다.
 
@@ -380,7 +384,7 @@ bool operator<(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 문자열 개체가 우변에 있는 문자열 개체 보다 사전순으로 면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -447,7 +451,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>연산자&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 연산자&lt;=
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 작거나 같은지 테스트합니다.
 
@@ -476,7 +480,7 @@ bool operator<=(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 문자열 개체가 우변에 있는 문자열 개체 보다 작거나 같으면이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -550,7 +554,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>연산자&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 연산자&lt;&lt;
 
 문자열을 출력 스트림에 기록하는 템플릿 함수입니다.
 
@@ -569,7 +573,7 @@ basic_ostream<CharType, Traits>& operator<<(
 *문자열*\
 출력 스트림에 입력할 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 문자열의 값을 출력 스트림에 *_Ostr*씁니다.
 
@@ -577,7 +581,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 템플릿 함수 오버 로드 **연산자를<<** 하 여 클래스 템플릿 [basic_string](../standard-library/basic-string-class.md) 의 개체 *str* 을 스트림 * \_ ostr*에 삽입할 수 있습니다. 함수는를 효과적으로 반환 `_Ostr.write( str.c_str, str.size )` 합니다.
 
-## <a name="operatorgt"></a><a name="op_gt"></a>연산자&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 연산자&gt;
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 큰지 테스트합니다.
 
@@ -606,7 +610,7 @@ bool operator>(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 문자열 개체가 우변에 있는 문자열 개체 보다 사전순으로 면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -680,7 +684,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>연산자&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 연산자&gt;=
 
 연산자의 좌변에 있는 문자열 개체가 우변에 있는 문자열 개체보다 크거나 같은지 테스트합니다.
 
@@ -709,7 +713,7 @@ bool operator>=(
 *오른쪽*\
 비교할 `basic_string` 형식의 C 스타일 문자열 또는 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 문자열 개체가 우변에 있는 문자열 개체 보다 크거나 같으면이 고, 그렇지 않으면 사전순으로입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -783,7 +787,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>연산자&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> 연산자&gt;&gt;
 
 입력 스트림에서 문자열을 읽는 템플릿 함수입니다.
 
@@ -802,7 +806,7 @@ basic_istream<CharType, Traits>& operator>>(
 *오른쪽*\
 입력 스트림에서 추출되는 문자열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *_Istr* 에서 지정 된 문자열의 값을 읽고 *오른쪽*으로 반환 합니다.
 
@@ -810,7 +814,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 `skipws` 플래그가 설정된 경우가 아니면 연산자는 선행 공백을 건너뜁니다. 그리고 다음 문자가 공백이거나 파일의 끝에 도달할 때까지 뒤에 오는 모든 문자를 읽습니다.
 
-템플릿 함수는 **>>연산자** 를 오버 로드 하 여 *right* 로 제어 되는 시퀀스를 *_Istr*스트림에서 추출 된 요소 시퀀스로 바꿉니다. 다음과 같은 경우 추출이 중지됩니다.
+템플릿 함수는 **>>연산자 ** 를 오버 로드 하 여 *right* 로 제어 되는 시퀀스를 *_Istr*스트림에서 추출 된 요소 시퀀스로 바꿉니다. 다음과 같은 경우 추출이 중지됩니다.
 
 - 파일의 끝.
 

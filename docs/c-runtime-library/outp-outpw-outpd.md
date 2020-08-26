@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404062"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837088"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outp, _outp, _outpw, _outpd
 
@@ -81,7 +81,7 @@ unsigned long _outpd(
 *data_byte, data_word*\
 출력 값입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 함수는 데이터 출력을 반환합니다. 오류가 반환 되지 않습니다.
 
@@ -91,7 +91,7 @@ unsigned long _outpd(
 
 이러한 함수는 i/o 포트에 직접 쓰기 때문에 사용자 모드 Windows 코드에서 사용할 수 없습니다.
 
-Windows 운영 체제에서 i/o 포트를 사용 하는 방법에 대 한 자세한 내용은 [직렬 통신](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))을 참조 하세요.
+Windows 운영 체제에서 i/o 포트를 사용 하는 방법에 대 한 자세한 내용은 [직렬 통신](/previous-versions/ff802693(v=msdn.10))을 참조 하세요.
 
 및 `outp` `outpw` 이름은 이전 버전의 및 함수에 사용 되지 않는 이름입니다 `_outp` `_outpw` . 자세한 내용은 [POSIX 함수 이름](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)을 참조 하세요.
 

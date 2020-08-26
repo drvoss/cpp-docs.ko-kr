@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 2e30595a549eefc6a5eecc27be98ded5221dcc16
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 409211bc59d9df8a82a9f452efeff6b6db0fde39
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201312"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837114"
 ---
 # <a name="max_is"></a>max_is
 
@@ -34,12 +34,10 @@ ms.locfileid: "87201312"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|또는의 **`struct`** 필드 **`union`** , 인터페이스 매개 변수, 인터페이스 메서드|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|**size_is**|
 

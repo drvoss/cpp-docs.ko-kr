@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 14c9298758e9d55445affaf5a65c81910a9ab151
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2bcdfb474ee852e55bd54f1b125716e7785f28be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224229"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833480"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>디버깅 및 오류 보고 매크로
 
 이러한 매크로는 유용한 디버깅 및 추적 기능을 제공 합니다.
 
-|||
+|Name|설명|
 |-|-|
 |[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|가 호출 될 때 검색 되는 인터페이스 누수를 출력 창에 씁니다 `_Module.Term` .|
 |[_ATL_DEBUG_QI](#_atl_debug_qi)|모든 호출을 `QueryInterface` 출력 창에 씁니다.|
@@ -32,7 +32,7 @@ ms.locfileid: "87224229"
 |[이 추적](#atltrace)|표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다. 이전 버전과의 호환성을 위해 포함 되었습니다.|
 |[ATLTRACE2](#atltrace2)|표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다.|
 
-## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
+## <a name="_atl_debug_interfaces"></a><a name="_atl_debug_interfaces"></a> _ATL_DEBUG_INTERFACES
 
 `AddRef` `Release` 출력 창에 대 한 구성 요소 인터페이스에 대 한 모든 및 호출을 추적 하려면 ATL 헤더 파일을 포함 하기 전에이 매크로를 정의 합니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "87224229"
 > [!NOTE]
 > _ATL_DEBUG_INTERFACES는 소매점 빌드에서 사용할 수 있습니다.
 
-## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
+## <a name="_atl_debug_qi"></a><a name="_atl_debug_qi"></a> _ATL_DEBUG_QI
 
 모든 호출을 `QueryInterface` 출력 창에 씁니다.
 
@@ -77,7 +77,7 @@ ms.locfileid: "87224229"
 
 *인터페이스 이름* - `failed`
 
-## <a name="atlassert"></a><a name="atlassert"></a>가 나 어설션
+## <a name="atlassert"></a><a name="atlassert"></a> 가 나 어설션
 
 C # ASSERT 매크로는 C 런타임 라이브러리에 있는 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 매크로와 동일한 기능을 수행 합니다.
 
@@ -98,7 +98,7 @@ ATLASSERT(booleanExpression);
 
 **헤더:**
 
-## <a name="atlensure"></a><a name="atlensure"></a>It 확인
+## <a name="atlensure"></a><a name="atlensure"></a> It 확인
 
 이 매크로는 함수에 전달 된 매개 변수의 유효성을 검사 하는 데 사용 됩니다.
 
@@ -135,7 +135,7 @@ ATLENSURE_THROW 경우에 `AtlThrow` 는 지정 된 HRESULT를 사용 하 여가
 
 **헤더:** afx
 
-## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a>ATLTRACENOTIMPL
+## <a name="atltracenotimpl"></a><a name="atltracenotimpl"></a> ATLTRACENOTIMPL
 
 ATL의 디버그 빌드에서는 덤프 장치에 " *funcname* 이 구현 되지 않았습니다" 라는 문자열을 보내고 E_NOTIMPL 반환 합니다.
 
@@ -160,7 +160,7 @@ ATLTRACENOTIMPL(funcname);
 
 **헤더:**
 
-## <a name="atltrace"></a><a name="atltrace"></a>이 추적
+## <a name="atltrace"></a><a name="atltrace"></a> 이 추적
 
 표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다. 이전 버전과의 호환성을 위해 포함 되었습니다.
 
@@ -181,7 +181,7 @@ ATLTRACE(
 *category*<br/>
 진행 보고할 이벤트 또는 메서드의 유형입니다. 범주 목록은 설명 부분을 참조 하십시오.
 
-*저수준*<br/>
+*수준*<br/>
 진행 보고할 추적 수준입니다. 자세한 내용은 설명 부분을 참조 하십시오.
 
 *lpszFormat*<br/>
@@ -191,7 +191,7 @@ ATLTRACE(
 
 정보 추적에 대 한 설명은 [ATLTRACE2](#atltrace2) 를 참조 하십시오. 가 나 추적과 ATLTRACE2는 동일한 동작을 가지 며, 이전 버전과의 호환성을 위해이 추적 기능이 포함 되어 있습니다.
 
-## <a name="atltrace2"></a><a name="atltrace2"></a>ATLTRACE2
+## <a name="atltrace2"></a><a name="atltrace2"></a> ATLTRACE2
 
 표시 된 플래그 및 수준에 따라 디버거 창과 같은 출력 장치에 대 한 경고를 보고 합니다.
 
@@ -212,7 +212,7 @@ ATLTRACE2(
 *category*<br/>
 진행 보고할 이벤트 또는 메서드의 유형입니다. 범주 목록은 설명 부분을 참조 하십시오.
 
-*저수준*<br/>
+*수준*<br/>
 진행 보고할 추적 수준입니다. 자세한 내용은 설명 부분을 참조 하십시오.
 
 *lpszFormat*<br/>

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: b235a85ccab4fd3d3377e656b53276928b425d94
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232159"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845590"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 클래스
 
@@ -85,7 +85,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[취소](#cancel)|현재 명령 실행을 취소 합니다.|
 |[CancelExecution](#cancelexecution)|현재 명령 실행을 취소 합니다.|
@@ -96,7 +96,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+| Name | 설명 |
 |-|-|
 |[m_bCancel](#bcancel)|명령을 취소할지 여부를 나타냅니다.|
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|명령을 실행할 때 취소할 것인지 여부를 나타냅니다.|
@@ -106,7 +106,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 Command 개체의 필수 인터페이스입니다.
 
-## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl:: Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a> ICommandImpl:: Cancel
 
 현재 명령 실행을 취소 합니다.
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 *OLE DB 프로그래머 참조*에서 [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 을 참조 하세요.
 
-## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl:: CancelExecution
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a> ICommandImpl:: CancelExecution
 
 현재 명령 실행을 취소 합니다.
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
 HRESULT CancelExecution();
 ```
 
-## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl:: CreateRowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl:: CreateRowset
 
 단일 행 집합을 만들기 위해 [Execute](../../data/oledb/icommandimpl-execute.md) 에 의해 호출 됩니다.
 
@@ -152,7 +152,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 사용자의 행 집합 클래스를 나타내는 템플릿 클래스 멤버입니다. 일반적으로 마법사를 통해 생성 됩니다.
 
 *pUnkOuter*<br/>
-진행 `IUnknown`행 집합이 집계의 일부로 생성 되는 경우 제어 인터페이스에 대 한 포인터이 고, 그렇지 않으면 null입니다.
+진행 `IUnknown` 행 집합이 집계의 일부로 생성 되는 경우 제어 인터페이스에 대 한 포인터이 고, 그렇지 않으면 null입니다.
 
 *riid*<br/>
 진행 의 *riid* 에 해당 `ICommand::Execute` 합니다.
@@ -169,7 +169,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pRowsetObj*<br/>
 제한이 행 집합 개체에 대 한 포인터입니다. 일반적으로이 매개 변수는 사용 되지 않지만, COM 개체로 전달 하기 전에 행 집합에서 더 많은 작업을 수행 해야 하는 경우에 사용할 수 있습니다. *PRowsetObj* 의 수명은 *ppRowset*에 의해 바인딩됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다. `ICommand::Execute`일반적인 값 목록은를 참조 하세요.
 
@@ -179,7 +179,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 *OLE DB 프로그래머 참조* 에서 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 를 참조 하세요.
 
-## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl:: Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a> ICommandImpl:: Execute
 
 명령을 실행합니다.
 
@@ -203,7 +203,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 `Execute`[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)를 호출 합니다. 기본 구현을 재정의 하 여 두 개 이상의 행 집합을 만들거나 다른 행 집합을 만들기 위한 고유한 조건을 제공 합니다.
 
-## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl:: GetDBSession
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl:: GetDBSession
 
 명령을 만든 세션에 대 한 인터페이스 포인터를 반환 합니다.
 
@@ -222,7 +222,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 세션에서 속성을 검색 하는 데 유용 합니다.
 
-## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl:: ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a> ICommandImpl:: ICommandImpl
 
 생성자입니다.
 
@@ -232,7 +232,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 ICommandImpl();
 ```
 
-## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl:: m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a> ICommandImpl:: m_bCancel
 
 명령이 취소 되었는지 여부를 나타냅니다.
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 `Execute`명령 클래스의 메서드에서이 변수를 검색 하 고 적절 하 게 취소할 수 있습니다.
 
-## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl:: m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a> ICommandImpl:: m_bCancelWhenExecuting
 
 실행할 때 명령을 취소할 수 있는지 여부를 나타냅니다.
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 기본값은 **`true`** (취소 가능)입니다.
 
-## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl:: m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a> ICommandImpl:: m_bIsExecuting
 
 명령이 현재 실행 중인지 여부를 나타냅니다.
 

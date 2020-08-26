@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 68708cce2e167c6f40b461d52861fe4ed82be867
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 119e0aa60d123324c60825a9418e0b8c93696c5f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213816"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845382"
 ---
 # <a name="string-c"></a>string(C++)
 
@@ -46,12 +46,10 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|배열 또는 배열에 대 한 포인터, 인터페이스 매개 변수, 인터페이스 메서드|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

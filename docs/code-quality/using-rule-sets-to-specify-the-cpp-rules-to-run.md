@@ -4,12 +4,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: b132400485c041b96e81736bcda04922b2cda88c
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389820"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845161"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용하여 실행할 C++ 규칙 지정
 
@@ -33,7 +33,7 @@ Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual 
 
    - 사용자 지정하려는 규칙 집합을 선택합니다.
 
-     \- 또는-
+     \- 또는 -
 
    - **\<Browse...>** 목록에 없는 기존 규칙 집합을 지정 하려면 선택 합니다.
 
@@ -50,7 +50,7 @@ Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual 
 
    - 사용자 지정하려는 규칙 집합을 선택합니다.
 
-     \- 또는-
+     \- 또는 -
 
    - **\<Browse...>** 목록에 없는 기존 규칙 집합을 지정 하려면 선택 합니다.
 
@@ -114,7 +114,7 @@ Visual Studio에서 사용자 지정 c + + 규칙 집합을 만들려면 Visual 
 
 ## <a name="ruleset-schema"></a>규칙 집합 스키마
 
-다음 규칙 집합 스키마는 규칙 집합 파일의 XML 스키마를 설명 합니다. 규칙 집합 스키마는에 저장 됩니다 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . 이를 사용 하 여 프로그래밍 방식으로 사용자 지정 규칙 집합을 작성 하거나 사용자 지정 규칙 집합의 형식이 올바른지 여부를 확인할 수 있습니다. 자세한 내용은 [방법: XSD 스키마를 기반으로 XML 문서 만들기](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019)를 참조 하세요.
+다음 규칙 집합 스키마는 규칙 집합 파일의 XML 스키마를 설명 합니다. 규칙 집합 스키마는에 저장 됩니다 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd`* . 이를 사용 하 여 프로그래밍 방식으로 사용자 지정 규칙 집합을 작성 하거나 사용자 지정 규칙 집합의 형식이 올바른지 여부를 확인할 수 있습니다. 자세한 내용은 [방법: XSD 스키마를 기반으로 XML 문서 만들기](/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema)를 참조 하세요.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

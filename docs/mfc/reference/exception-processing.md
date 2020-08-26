@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 08be9bd03b20c4bc6fc8f7b0ea63d628b34d033e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d6a1c30ca0811085124a5fb5994c5f35d412ae7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222786"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837191"
 ---
 # <a name="exception-processing"></a>예외 처리
 
@@ -36,7 +36,7 @@ MFC 라이브러리 포함 된 여러 매크로는 예외 처리기를 설정 �
 
 ### <a name="exception-macros"></a>예외 매크로
 
-|||
+|Name|설명|
 |-|-|
 |[하려고](#try)|예외 처리에 대 한 코드 블록을 지정 합니다.|
 |[TRY-CATCH](#catch)|이전 **TRY** 블록에서 예외를 catch 하는 코드 블록을 지정 합니다.|
@@ -45,12 +45,12 @@ MFC 라이브러리 포함 된 여러 매크로는 예외 처리기를 설정 �
 |[AND_CATCH_ALL](#and_catch_all)|이전 **TRY** 블록에서 throw 된 다른 모든 추가 예외 형식을 catch 하는 코드 블록을 지정 합니다.|
 |[END_CATCH](#end_catch)|마지막 **CATCH** 또는 **AND_CATCH** 코드 블록을 종료 합니다.|
 |[END_CATCH_ALL](#end_catch_all)|마지막 **CATCH_ALL** 코드 블록을 종료 합니다.|
-|[반환할](#throw)|지정 된 예외를 throw 합니다.|
+|[THROW](#throw)|지정 된 예외를 throw 합니다.|
 |[THROW_LAST](#throw_last)|현재 처리 된 예외를 다음 외부 처리기에 throw 합니다.|
 
 ### <a name="exception-throwing-functions"></a>예외 Throw 함수
 
-|||
+|Name|설명|
 |-|-|
 |[AfxThrowArchiveException](#afxthrowarchiveexception)|보관 예외를 throw 합니다.|
 |[AfxThrowFileException](#afxthrowfileexception)|파일 예외를 throw 합니다.|
@@ -64,7 +64,7 @@ MFC는 OLE 예외에 대해 다음과 같은 두 가지 예외 throw 함수를 �
 
 ### <a name="ole-exception-functions"></a>OLE 예외 함수
 
-|||
+|Name|설명|
 |-|-|
 |[AfxThrowOleDispatchException](#afxthrowoledispatchexception)|OLE 자동화 함수 내에서 예외를 throw 합니다.|
 |[AfxThrowOleException](#afxthrowoleexception)|OLE 예외를 throw 합니다.|
@@ -73,7 +73,7 @@ MFC는 OLE 예외에 대해 다음과 같은 두 가지 예외 throw 함수를 �
 
 ### <a name="dao-exception-functions"></a>DAO 예외 함수
 
-|||
+|Name|설명|
 |-|-|
 |[AfxThrowDAOException](#afxthrowdaoexception)|사용자 고유의 코드에서 [CDaoException](../../mfc/reference/cdaoexception-class.md) 를 throw 합니다.|
 |[AfxThrowDBException](#afxthrowdbexception)|사용자의 코드에서 [Cdbexception](../../mfc/reference/cdbexception-class.md) 을 throw 합니다.|
@@ -82,11 +82,11 @@ MFC는 다음과 같은 종료 함수를 제공 합니다.
 
 ### <a name="termination-functions"></a>종료 함수
 
-|||
+|Name|설명|
 |-|-|
 |[AfxAbort](#afxabort)|심각한 오류가 발생 하면 응용 프로그램을 종료 하기 위해 호출 됩니다.|
 
-## <a name="try"></a><a name="try"></a>하려고
+## <a name="try"></a><a name="try"></a> 하려고
 
 **TRY** 블록을 설정 합니다.
 
@@ -108,7 +108,7 @@ TRY
 
 헤더: afx.h
 
-## <a name="catch"></a><a name="catch"></a>TRY-CATCH
+## <a name="catch"></a><a name="catch"></a> TRY-CATCH
 
 이전 **TRY** 블록에서 throw 된 첫 번째 예외 형식을 catch 하는 코드 블록을 정의 합니다.
 
@@ -141,7 +141,7 @@ CATCH(exception_class, exception_object_pointer_name)
 
 [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]
 
-## <a name="catch_all"></a><a name="catch_all"></a>CATCH_ALL
+## <a name="catch_all"></a><a name="catch_all"></a> CATCH_ALL
 
 이전 **TRY** 블록에서 throw 된 모든 예외 형식을 catch 하는 코드 블록을 정의 합니다.
 
@@ -171,7 +171,7 @@ CATCH_ALL(exception_object_pointer_name)
 
   **헤더** afx
 
-## <a name="and_catch"></a><a name="and_catch"></a>AND_CATCH
+## <a name="and_catch"></a><a name="and_catch"></a> AND_CATCH
 
 이전 **TRY** 블록에서 throw 된 추가 예외 형식을 catch 하는 코드 블록을 정의 합니다.
 
@@ -204,7 +204,7 @@ CATCH 매크로를 사용 하 여 한 가지 예외 형식을 catch 한 다음 A
 
   **헤더** afx
 
-## <a name="and_catch_all"></a><a name="and_catch_all"></a>AND_CATCH_ALL
+## <a name="and_catch_all"></a><a name="and_catch_all"></a> AND_CATCH_ALL
 
 이전 **TRY** 블록에서 throw 된 추가 예외 형식을 catch 하는 코드 블록을 정의 합니다.
 
@@ -230,7 +230,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 
   **헤더** afx
 
-## <a name="end_catch"></a><a name="end_catch"></a>END_CATCH
+## <a name="end_catch"></a><a name="end_catch"></a> END_CATCH
 
 마지막 **CATCH** 또는 **AND_CATCH** 블록의 끝을 표시 합니다.
 
@@ -246,7 +246,7 @@ END_CATCH 매크로에 대 한 자세한 내용은 [예외](../../mfc/exception-
 
   **헤더** afx
 
-## <a name="end_catch_all"></a><a name="end_catch_all"></a>END_CATCH_ALL
+## <a name="end_catch_all"></a><a name="end_catch_all"></a> END_CATCH_ALL
 
 마지막 **CATCH_ALL88** 또는 **AND_CATCH_ALL** 블록의 끝을 표시 합니다.
 
@@ -258,7 +258,7 @@ END_CATCH_ALL
 
   **헤더** afx
 
-## <a name="throw-mfc"></a><a name="throw"></a>THROW (MFC)
+## <a name="throw-mfc"></a><a name="throw"></a> THROW (MFC)
 
 지정 된 예외를 throw 합니다.
 
@@ -281,7 +281,7 @@ THROW(exception_object_pointer)
 
   **헤더** afx
 
-## <a name="throw_last"></a><a name="throw_last"></a>THROW_LAST
+## <a name="throw_last"></a><a name="throw_last"></a> THROW_LAST
 
 예외를 다음 외부 **CATCH** 블록으로 다시 throw 합니다.
 
@@ -303,7 +303,7 @@ THROW_LAST()
 
   **헤더** afx
 
-## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a>AfxThrowArchiveException
+## <a name="afxthrowarchiveexception"></a><a name="afxthrowarchiveexception"></a> AfxThrowArchiveException
 
 보관 예외를 throw 합니다.
 
@@ -323,7 +323,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 
   **헤더** afx
 
-## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a>AfxThrowFileException
+## <a name="afxthrowfileexception"></a><a name="afxthrowfileexception"></a> AfxThrowFileException
 
 파일 예외를 throw 합니다.
 
@@ -353,7 +353,7 @@ void AfxThrowFileException(
 
   **헤더** afx
 
-## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a><a name="afxthrowinvalidargexception"></a> AfxThrowInvalidArgException
 
 잘못 된 인수 예외를 throw 합니다.
 
@@ -371,7 +371,7 @@ void AfxThrowInvalidArgException( );
 
 **헤더:** afx
 
-## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a>AfxThrowMemoryException
+## <a name="afxthrowmemoryexception"></a><a name="afxthrowmemoryexception"></a> AfxThrowMemoryException
 
 메모리 예외를 throw 합니다.
 
@@ -387,7 +387,7 @@ void AfxThrowMemoryException();
 
   **헤더** afx
 
-## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException
+## <a name="afxthrownotsupportedexception"></a><a name="afxthrownotsupportedexception"></a> AfxThrowNotSupportedException
 
 지원 되지 않는 기능 요청 결과인 예외를 throw 합니다.
 
@@ -399,7 +399,7 @@ void AfxThrowNotSupportedException();
 
   **헤더** afx
 
-## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a>AfxThrowResourceException
+## <a name="afxthrowresourceexception"></a><a name="afxthrowresourceexception"></a> AfxThrowResourceException
 
 리소스 예외를 throw 합니다.
 
@@ -415,7 +415,7 @@ void  AfxThrowResourceException();
 
   **헤더** afx
 
-## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a>AfxThrowUserException
+## <a name="afxthrowuserexception"></a><a name="afxthrowuserexception"></a> AfxThrowUserException
 
 최종 사용자 작업을 중지 하는 예외를 throw 합니다.
 
@@ -431,7 +431,7 @@ void AfxThrowUserException();
 
   **헤더** afx
 
-## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException
+## <a name="afxthrowoledispatchexception"></a><a name="afxthrowoledispatchexception"></a> AfxThrowOleDispatchException
 
 이 함수를 사용 하 여 OLE 자동화 함수 내에서 예외를 throw 합니다.
 
@@ -473,7 +473,7 @@ void AFXAPI AfxThrowOleDispatchException(
 
   **헤더** afx
 
-## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a>AfxThrowOleException
+## <a name="afxthrowoleexception"></a><a name="afxthrowoleexception"></a> AfxThrowOleException
 
 형식의 개체를 만들고 `COleException` 예외를 throw 합니다.
 
@@ -498,7 +498,7 @@ HRESULT를 인수로 사용 하는 버전은 해당 결과 코드를 해당 하�
 
   **헤더** afxdao
 
-## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a>AfxThrowDaoException
+## <a name="afxthrowdaoexception"></a><a name="afxthrowdaoexception"></a> AfxThrowDaoException
 
 사용자 코드에서 [CDaoException](../../mfc/reference/cdaoexception-class.md) 형식의 예외를 throw 하려면이 함수를 호출 합니다.
 
@@ -526,7 +526,7 @@ MFC DAO 클래스와 관련 된 예외에 대 한 자세한 내용은 `CDaoExcep
 
   **헤더** afxdb
 
-## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a>AfxThrowDBException
+## <a name="afxthrowdbexception"></a><a name="afxthrowdbexception"></a> AfxThrowDBException
 
 사용자 고유의 코드에서 형식의 예외를 throw 하려면이 함수를 호출 `CDBException` 합니다.
 
@@ -558,7 +558,7 @@ ODBC에 정의 된 RETCODE 값에 대 한 자세한 내용은 Windows SDK의 8 �
 
   **헤더** afx
 
-## <a name="afxabort"></a><a name="afxabort"></a>AfxAbort
+## <a name="afxabort"></a><a name="afxabort"></a> AfxAbort
 
 MFC에서 제공 하는 기본 종료 함수입니다.
 
@@ -568,7 +568,7 @@ void  AfxAbort();
 
 ### <a name="remarks"></a>설명
 
-`AfxAbort`는 처리할 수 없는 catch 되지 않은 예외와 같이 오류가 발생할 때 MFC 멤버 함수에서 내부적으로 호출 됩니다. `AfxAbort`드물지만 복구할 수 없는 치명적인 오류가 발생 하는 경우에는를 호출할 수 있습니다.
+`AfxAbort` 는 처리할 수 없는 catch 되지 않은 예외와 같이 오류가 발생할 때 MFC 멤버 함수에서 내부적으로 호출 됩니다. `AfxAbort`드물지만 복구할 수 없는 치명적인 오류가 발생 하는 경우에는를 호출할 수 있습니다.
 
 ### <a name="example"></a>예제
 

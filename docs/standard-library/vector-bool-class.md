@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: b91167a331423ccd43ba2158c1a9d8bfce666361
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562454"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845421"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 클래스
 
@@ -56,7 +56,7 @@ class vector<bool, Allocator>
 
 ### <a name="proxy-class"></a>프록시 클래스
 
-|||
+|Name|설명|
 |-|-|
 |[vector \<bool> Reference 클래스](#reference_class)|`bool&` 동작을 시뮬레이션하기 위해 프록시 역할을 하며, 해당 개체가 `vector<bool>` 개체 내 요소(단일 비트)에 대한 참조를 제공할 수 있는 클래스입니다.|
 
@@ -139,7 +139,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 *Pos*\
 `vector<bool>` 요소의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인덱싱된 요소의 값을 포함 하는 [vector \<bool> :: reference](#reference_class) 또는 [vector \<bool> :: const_reference](#const_reference) 개체입니다.
 
@@ -258,7 +258,7 @@ The vector with first element flipped is:
 operator bool() const;
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 Vector 개체의 요소에 대 한 부울 값입니다 \<bool> .
 

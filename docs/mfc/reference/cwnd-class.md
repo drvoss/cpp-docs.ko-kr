@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: aaeee501ef9c05fb19ac7561f7ff7567bae18793
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62298872def1a6e0e262c5339d323b83ad9bbc3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562560"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837647"
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 
@@ -839,13 +839,13 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[CWnd::CWnd](#cwnd)|`CWnd` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[CWnd::accDoDefaultAction](#accdodefaultaction)|개체의 기본 동작을 수행하기 위해 프레임워크에서 호출됩니다.|
 |[CWnd::accHitTest](#acchittest)|화면의 지정된 지점에서 자식 요소나 자식 개체를 검색하기 위해 프레임워크에서 호출됩니다.|
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Protected 메서드
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CWnd::Default](#default)|기본 창 프로시저를 호출하여 애플리케이션에서 처리하지 않는 모든 창 메시지에 대해 기본 처리를 제공합니다.|
 |[CWnd::DefWindowProc](#defwindowproc)|기본 창 프로시저를 호출하여 애플리케이션에서 처리하지 않는 모든 창 메시지에 대해 기본 처리를 제공합니다.|
@@ -1259,7 +1259,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Public 연산자
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CWnd::operator HWND](#operator_hwnd)|창에 대한 핸들을 가져오려면 호출합니다.|
 |[CWnd:: operator! =](#operator_neq)|창이 핸들을 [m_hWnd](#m_hwnd)하는 창과 다른 지 여부를 확인 합니다.|
@@ -1267,7 +1267,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-|속성|Description|
+|Name|설명|
 |----------|-----------------|
 |[CWnd::m_hWnd](#m_hwnd)|이에 연결 된 HWND를 나타냅니다 `CWnd` .|
 
@@ -1312,7 +1312,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 *varChild*<br/>
 호출 될 기본 작업이 개체의 자식 요소 중 하나 인지 여부를 지정 합니다. 이 매개 변수는 개체의 기본 작업을 수행 하는 CHILDID_SELF 또는 자식 ID (개체의 자식 요소 중 하나에 대 한 기본 작업을 수행 하는 데 사용할 수 있음) 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) 의 **반환 값** 을 참조 하세요.
 
@@ -1344,7 +1344,7 @@ virtual HRESULT accHitTest(
 *pvarChild*<br/>
 *Xleft* 및 *ytop*으로 지정 된 지점에서 개체를 식별 하는 정보를 받습니다. Windows SDK에서 *Pvarid* [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) 를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::accHitTest` 하세요.
 
@@ -1386,7 +1386,7 @@ virtual HRESULT accLocation(
 *varChild*<br/>
 검색할 위치가 개체 또는 개체의 자식 요소 중 하나 인지 여부를 지정 합니다. 이 매개 변수는 CHILDID_SELF (개체에 대 한 정보를 가져오기 위해) 또는 자식 ID (개체의 자식 요소에 대 한 정보를 가져올 수 있음) 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::accLocation` 하세요.
 
@@ -1418,7 +1418,7 @@ virtual HRESULT accNavigate(
 *pvarEndUpAt*<br/>
 대상 사용자 인터페이스 개체에 대 한 정보를 받습니다. Windows SDK에서 *Pvarend* in을 참조 `IAccessible::accNavigate` 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::accNavigate` 하세요.
 
@@ -1448,7 +1448,7 @@ virtual HRESULT accSelect(
 *varChild*<br/>
 선택할 개체를 지정 합니다. 이 매개 변수는 CHILDID_SELF (개체 자체를 선택 하기 위해) 또는 자식 ID (개체의 자식 중 하나를 선택 하는 경우) 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::accSelect` 하세요.
 
@@ -1478,7 +1478,7 @@ BOOL AnimateWindow(
 *dwFlags*<br/>
 애니메이션의 유형을 지정 합니다. 가능한 값의 전체 목록은 [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow)를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -1494,7 +1494,7 @@ BOOL AnimateWindow(
 UINT ArrangeIconicWindows();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하면 아이콘 행의 한 행 높이입니다. 그렇지 않으면 0입니다.
 
@@ -1521,7 +1521,7 @@ BOOL Attach(HWND hWndNew);
 *hWndNew*<br/>
 Windows 창에 대 한 핸들을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1556,7 +1556,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 *lpPaint*<br/>
 그리기 정보를 수신 하는 [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 에 대 한 장치 컨텍스트를 식별 `CWnd` 합니다. 포인터는 일시적일 수 있으며 [Endpaint](#endpaint)의 범위를 벗어나서 저장 해서는 안 됩니다.
 
@@ -1738,7 +1738,7 @@ BOOL ChangeClipboardChain(HWND hWndNext);
 *hWndNext*<br/>
 클립보드 뷰어 체인에서 뒤에 오는 창을 식별 `CWnd` 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1825,7 +1825,7 @@ CWnd* ChildWindowFromPoint(
 |CWP_SKIPDISABLED|사용 하지 않도록 설정 된 자식 창 건너뛰기|
 |CWP_SKIPTRANSPARENT|투명 한 자식 창 건너뛰기|
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 점이 포함 된 자식 창을 식별 합니다. 지정 된 지점이 클라이언트 영역 외부에 있는 경우 NULL입니다. 요소가 클라이언트 영역 내에 있지만 자식 창에 포함 되어 있지 않으면 `CWnd` 이 반환 됩니다.
 
@@ -1885,7 +1885,7 @@ void CloseWindow();
 virtual BOOL ContinueModal();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 모달 루프를 계속 해야 하는 경우 0이 아닙니다. [Endmodalloop](#endmodalloop) 가 호출 되 면 0입니다.
 
@@ -1931,7 +1931,7 @@ virtual BOOL Create(
 *pContext*<br/>
 진행 응용 프로그램에 대 한 문서 뷰 아키텍처를 사용자 지정 하는 데 사용 되는 [Ccreatecontext](../../mfc/reference/ccreatecontext-structure.md) 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2083,7 +2083,7 @@ Windows 스타일. 사용 가능한 스타일은 설명 아래에 나열 됩니�
 *가*<br/>
 컨트롤의 고유 클래스 ID입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2153,7 +2153,7 @@ virtual BOOL CreateEx(
 *x*<br/>
 화면 왼쪽부터 창의 초기 가로 거리 (왼쪽) 또는 부모 창입니다.
 
-*x.y*<br/>
+*y*<br/>
 화면 위쪽 또는 부모 창에서 창의 초기 세로 거리입니다.
 
 *nWidth*<br/>
@@ -2180,7 +2180,7 @@ virtual BOOL CreateEx(
 *nID*<br/>
 자식 창의 경우 창 ID 그렇지 않으면 창의 메뉴 ID입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2291,7 +2291,7 @@ CWnd();
 LRESULT Default();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 전송 된 메시지에 따라 다릅니다.
 
@@ -2325,7 +2325,7 @@ virtual LRESULT DefWindowProc(
 *lParam*<br/>
 추가 메시지 종속 정보를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 전송 된 메시지에 따라 다릅니다.
 
@@ -2357,7 +2357,7 @@ static void PASCAL DeleteTempMap();
 virtual BOOL DestroyWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창이 소멸 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -2387,7 +2387,7 @@ virtual BOOL DestroyWindow();
 HWND Detach();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 Windows 개체에 대 한 HWND입니다.
 
@@ -2439,7 +2439,7 @@ int DlgDirList(
 
 - DDL_EXCLUSIVE 배타적 비트입니다. Exclusive 비트가 설정 된 경우 지정 된 형식의 파일만 나열 됩니다. 그렇지 않으면 지정 된 형식의 일반 파일과 파일이 나열 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -2507,7 +2507,7 @@ int DlgDirListComboBox(
 
 - DDL_EXCLUSIVE 배타적 비트입니다. Exclusive 비트가 설정 된 경우 지정 된 형식의 파일만 나열 됩니다. 그렇지 않으면 지정 된 형식의 일반 파일과 파일이 나열 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수의 결과를 지정 합니다. 목록이 생성 된 경우에는 빈 목록을 포함 하 여 0이 아닙니다. 0 반환 값은 입력 문자열에 올바른 검색 경로가 포함 되지 않았음을 나타냅니다.
 
@@ -2549,7 +2549,7 @@ BOOL DlgDirSelect(
 *nIDListBox*<br/>
 대화 상자에서 목록 상자의 정수 ID를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2581,7 +2581,7 @@ BOOL DlgDirSelectComboBox(
 *nIDComboBox*<br/>
 대화 상자에서 콤보 상자의 정수 ID를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2654,7 +2654,7 @@ BOOL DragDetect(POINT pt) const;
 *pt*<br/>
 화면 좌표에서 마우스의 초기 위치입니다. 함수는이 점을 사용 하 여 끌기 사각형의 좌표를 결정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 사용자가 왼쪽 단추를 누른 채 끌기 사각형 밖으로 마우스를 이동 하면 반환 값은 0이 아닙니다.
 
@@ -2686,7 +2686,7 @@ BOOL DrawAnimatedRects(
 *lprcTo*<br/>
 복원 된 창의 위치와 크기를 지정 하는 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -2716,7 +2716,7 @@ BOOL DrawCaption(
 *uFlags*<br/>
 그리기 옵션을 지정 합니다. 값의 전체 목록은 [Drawcaption](/windows/win32/api/winuser/nf-winuser-drawcaption)을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -2819,7 +2819,7 @@ BOOL EnableScrollBar(
 
 - ESB_DISABLE_BOTH 스크롤 막대의 두 화살표를 모두 사용 하지 않도록 설정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 대로 화살표를 사용 하거나 사용 하지 않도록 설정 하는 경우 0이 아닙니다. 그렇지 않으면 0이 고 화살표가 이미 요청 된 상태에 있거나 오류가 발생 했음을 나타냅니다.
 
@@ -2858,7 +2858,7 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 도구 설명 컨트롤을 사용 하거나 사용 하지 않도록 설정할지 여부를 지정 합니다. TRUE 이면 컨트롤을 사용 합니다. FALSE 이면 컨트롤을 사용할 수 없습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 도구 설명을 사용할 수 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2894,7 +2894,7 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 *bEnable*<br/>
 추적 도구 설명을 사용할 수 있는지 여부를 지정 합니다. 이 매개 변수가 TRUE 이면 추적 도구 설명이 사용 됩니다. 이 매개 변수가 FALSE 이면 추적 도구 설명이 사용 되지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수가 호출 되기 전의 상태를 나타냅니다 `EnableWindow` . 이전에 창을 사용할 수 없는 경우 반환 값은 0이 아닙니다. 이전에 창을 사용 하도록 설정 했거나 오류가 발생 한 경우 반환 값은 0입니다.
 
@@ -2915,7 +2915,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 *bEnable*<br/>
 지정 된 창을 사용 하거나 사용 하지 않을 것인지 여부를 지정 합니다. 이 매개 변수가 TRUE 이면 창이 활성화 됩니다. 이 매개 변수가 FALSE 이면 창이 사용 하지 않도록 설정 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수가 호출 되기 전의 상태를 나타냅니다 `EnableWindow` . 이전에 창을 사용할 수 없는 경우 반환 값은 0이 아닙니다. 이전에 창을 사용 하도록 설정 했거나 오류가 발생 한 경우 반환 값은 0입니다.
 
@@ -3002,7 +3002,7 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 *L보도 Ource*<br/>
 리소스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 대화 상자 리소스가 실행 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -3047,7 +3047,7 @@ static CWnd* PASCAL FindWindow(
 *lpszWindowName*<br/>
 창 이름 (창 제목)을 지정 하는 null로 끝나는 문자열을 가리킵니다. *Lpwindowname* 이 NULL 인 경우 모든 창 이름이 일치 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 클래스 이름과 창 이름이 있는 창을 식별 합니다. 이러한 창을 찾을 수 없으면 NULL입니다.
 
@@ -3087,7 +3087,7 @@ static CWnd* FindWindowEx(
 *lpszWindow*<br/>
 창 이름 (창 제목)을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 이 매개 변수가 NULL 이면 모든 창 이름이 일치 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하면 반환 값은 지정 된 클래스와 창 이름이 있는 창 개체에 대 한 포인터입니다. 함수가 실패 하면 반환 값은 NULL입니다.
 
@@ -3108,7 +3108,7 @@ BOOL FlashWindow(BOOL bInvert);
 *bInvert*<br/>
 `CWnd`이 깜박이지 아니면 원래 상태로 반환 되는지 여부를 지정 합니다. 이 `CWnd` TRUE 인 경우는 한 상태에서 다른 상태로 *bInvert* 지정 됩니다. *Binvert* 이 FALSE 인 경우 창은 원래 상태 (활성 또는 비활성)로 반환 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수를 호출 하기 전에 창이 활성 상태 이면 0이 아닌 `FlashWindow` 값이 고, 그렇지 않으면 0입니다.
 
@@ -3148,7 +3148,7 @@ BOOL FlashWindowEx(
 *dwTimeout*<br/>
 창이 깜박이지는 속도 (밀리초)를 지정 합니다. *Dwtimeout* 이 0 인 경우 함수는 기본 커서 깜박임 율을 사용 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 반환 값은 함수를 호출 하기 전에 창의 상태를 지정 합니다 `FlashWindowEx` . 호출 전에 창 캡션이 활성화 된 상태로 그려진 경우 반환 값은 0이 아닙니다. 그렇지 않으면 반환 값은 0입니다.
 
@@ -3169,7 +3169,7 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
 *hWnd*<br/>
 Windows 창의 HWND입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창에 핸들을 지정한 경우 `CWnd` 개체에 대한 포인터를 반환합니다. `CWnd` 개체가 핸들에 연결되지 않은 경우 임시 `CWnd` 개체를 만들어 연결합니다.
 
@@ -3188,7 +3188,7 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 *hWnd*<br/>
 Windows 창의 HWND입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CWnd` 개체에 대한 포인터입니다.
 
@@ -3216,7 +3216,7 @@ virtual HRESULT get_accChild(
 *ppdispChild*<br/>
 자식 개체의 인터페이스 주소를 받습니다 `IDispatch` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) 의 **반환 값** 을 참조 하세요.
 
@@ -3241,7 +3241,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 *pcountChildren*<br/>
 자식 수를 수신 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) 의 **반환 값** 을 참조 하세요.
 
@@ -3271,7 +3271,7 @@ virtual HRESULT get_accDefaultAction(
 *pszDefaultAction*<br/>
 지정 된 개체의 기본 동작을 설명 하는 지역화 된 문자열을 받는 BSTR의 주소 이거나,이 개체에 기본 작업이 없는 경우 NULL입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) 의 **반환 값** 을 참조 하세요.
 
@@ -3301,7 +3301,7 @@ virtual HRESULT get_accDescription(
 *pszDescription*<br/>
 지정 된 개체를 설명 하는 지역화 된 문자열을 받는 BSTR의 주소 이거나,이 개체에 사용할 수 있는 설명이 없는 경우 NULL입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) 의 **반환 값** 을 참조 하세요.
 
@@ -3326,7 +3326,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 *pvarChild*<br/>
 포커스가 있는 개체에 대 한 정보를 수신 합니다. Windows SDK에서 [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 의 *pvarid* 를 참조 하십시오.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::get_accFocus` 하세요.
 
@@ -3356,7 +3356,7 @@ virtual HRESULT get_accHelp(
 *pszHelp*<br/>
 지정 된 개체에 대 한 도움말 정보를 포함 하는 지역화 된 문자열을 받는 BSTR의 주소 이거나, 사용할 수 있는 도움말 정보가 없는 경우 NULL입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) 의 **반환 값** 을 참조 하세요.
 
@@ -3390,7 +3390,7 @@ virtual HRESULT get_accHelpTopic(
 *pidTopic*<br/>
 지정 된 개체와 연결 된 도움말 파일 항목을 식별 합니다. Windows SDK *pidTopic* 에서 pidTopic [:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::get_accHelpTopic` 하세요.
 
@@ -3420,7 +3420,7 @@ virtual HRESULT get_accKeyboardShortcut(
 *pszKeyboardShortcut*<br/>
 바로 가기 키를 식별 하는 지역화 된 문자열을 받는 BSTR의 주소 이거나, 지정 된 개체와 연결 된 바로 가기 키가 없으면 NULL입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) 의 **반환 값** 을 참조 하세요.
 
@@ -3450,7 +3450,7 @@ virtual HRESULT get_accName(
 *pszName*<br/>
 지정 된 개체의 이름을 포함 하는 문자열을 받는 BSTR의 주소입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) 의 **반환 값** 을 참조 하세요.
 
@@ -3475,7 +3475,7 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 *ppdispParent*<br/>
 부모 개체의 인터페이스 주소를 수신 합니다 `IDispatch` . 부모 항목이 없거나 자식에서 부모에 액세스할 수 없는 경우 변수가 NULL로 설정 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) 의 **반환 값** 을 참조 하세요.
 
@@ -3505,7 +3505,7 @@ virtual HRESULT get_accRole(
 *pvarRole*<br/>
 역할 정보를 받습니다. Windows SDK에서 [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) 의 *pvarrole* 을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::get_accRole` 하세요.
 
@@ -3530,7 +3530,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 *pvarChildren*<br/>
 선택한 하위 항목에 대 한 정보를 받습니다. Windows SDK *pvarChildren* 에서 pvarChildren [:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::get_accSelection` 하세요.
 
@@ -3560,7 +3560,7 @@ virtual HRESULT get_accState(
 *pvarState*<br/>
 개체의 상태에 대 한 정보를 수신 합니다. Windows SDK에서 [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) 의 *pvarstate* 를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK의에서 **반환 값** 을 참조 `IAccessible::get_accState` 하세요.
 
@@ -3590,7 +3590,7 @@ virtual HRESULT get_accValue(
 *pszValue*<br/>
 개체의 현재 값을 포함 하는 지역화 된 문자열을 받는 BSTR의 주소입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 시 COM 오류 코드, 실패 시 S_OK 반환 합니다. Windows SDK에서 [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) 의 **반환 값** 을 참조 하세요.
 
@@ -3610,7 +3610,7 @@ virtual HRESULT get_accValue(
 static CWnd* PASCAL GetActiveWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 활성 창 이거나, 호출 시 활성화 된 창이 없는 경우 NULL입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
 
@@ -3631,7 +3631,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 *gaFlags*<br/>
 검색할 상위 항목을 지정 합니다. 가능한 값의 전체 목록은 [Getancestor](/windows/win32/api/winuser/nf-winuser-getancestor)를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하면 반환 값은 상위 창 개체에 대 한 포인터입니다. 함수가 실패 하면 반환 값은 NULL입니다.
 
@@ -3647,7 +3647,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 static CWnd* PASCAL GetCapture();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 마우스 캡처가 있는 창을 식별 합니다. 마우스 캡처가 있는 창이 없으면 NULL입니다.
 
@@ -3665,7 +3665,7 @@ static CWnd* PASCAL GetCapture();
 static CPoint PASCAL GetCaretPos();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 캐럿 위치의 좌표를 포함 하는 [Cpoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.
 
@@ -3691,7 +3691,7 @@ int GetCheckedRadioButton(
 *nIDLastButton*<br/>
 그룹의 마지막 라디오 단추에 대 한 정수 식별자를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 선택 된 라디오 단추의 ID 이거나, 선택 된 항목이 없는 경우 0입니다.
 
@@ -3724,7 +3724,7 @@ void GetClientRect(LPRECT lpRect) const;
 static CWnd* PASCAL GetClipboardOwner();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공한 경우 클립보드를 소유 하는 창을 식별 합니다. 그렇지 않으면 NULL입니다.
 
@@ -3742,7 +3742,7 @@ static CWnd* PASCAL GetClipboardOwner();
 static CWnd* PASCAL GetClipboardViewer();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 현재 클립보드를 표시 하는 것을 담당 하는 창을 식별 합니다. 그렇지 않으면 NULL입니다 (예: 뷰어가 없는 경우).
 
@@ -3756,7 +3756,7 @@ static CWnd* PASCAL GetClipboardViewer();
 LPUNKNOWN GetControlUnknown();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 개체가 나타내는 OLE 컨트롤의 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 인터페이스에 대 한 포인터 `CWnd` 입니다. 이 개체가 OLE 컨트롤을 나타내지 않는 경우에는 반환 값이 NULL입니다.
 
@@ -3778,7 +3778,7 @@ LPUNKNOWN GetControlUnknown();
 static const MSG* PASCAL GetCurrentMessage();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창에서 현재 처리 중인 메시지를 포함 하는 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 구조에 대 한 포인터를 반환 합니다. **On**<em>메시지</em> 처리기의 경우에만 호출 해야 합니다.
 
@@ -3794,7 +3794,7 @@ static const MSG* PASCAL GetCurrentMessage();
 CDC* GetDC();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 클라이언트 영역에 대 한 장치 컨텍스트를 식별 `CWnd` 하 고, 그렇지 않으면 반환 값이 NULL입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
 
@@ -3840,7 +3840,7 @@ CDC* GetDCEx(
 
 - DCX_WINDOW은 클라이언트 사각형이 아닌 창 사각형에 해당 하는 장치 컨텍스트를 반환 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하는 경우 지정 된 창에 대 한 장치 컨텍스트입니다. 그렇지 않으면 NULL입니다.
 
@@ -3866,7 +3866,7 @@ CDC* GetDCEx(
 CDCRenderTarget* GetDCRenderTarget();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 지정된 창에 대한 디바이스 컨텍스트 렌더링 대상이고, 그렇지 않으면 NULL입니다.
 
@@ -3890,7 +3890,7 @@ CWnd* GetDescendantWindow(
 *bOnlyPerm*<br/>
 반환 될 창이 일시적일 수 있는지 여부를 지정 합니다. TRUE 이면 영구적 창만 반환 될 수 있습니다. FALSE 이면 함수에서 임시 창을 반환할 수 있습니다. 임시 windows에 대 한 자세한 내용은 [Technical Note 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 개체에 대 한 포인터 `CWnd` 이거나, 자식 창이 없는 경우 NULL입니다.
 
@@ -3906,7 +3906,7 @@ Windows 바탕 화면 창을 반환 합니다.
 static CWnd* PASCAL GetDesktopWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 Windows 바탕 화면 창을 식별 합니다. 이 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
@@ -3922,7 +3922,7 @@ Windows 바탕 화면 창을 식별 합니다. 이 포인터는 일시적일 수
 int GetDlgCtrlID() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CWnd`함수가 성공 하면 자식 창의 숫자 식별자이 고, 그렇지 않으면 0입니다.
 
@@ -3954,7 +3954,7 @@ void GetDlgItem(
 *phWnd*<br/>
 자식 창에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 컨트롤 또는 자식 창에 대 한 포인터입니다. *NID* 매개 변수에서 제공 하는 정수 ID를 가진 컨트롤이 있으면 값은 NULL입니다.
 
@@ -3990,7 +3990,7 @@ UINT GetDlgItemInt(
 *bSigned 됨*<br/>
 검색할 값이 서명 되는지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 대화 상자 항목 텍스트의 번역 된 값을 지정 합니다. 0이 유효한 반환 값 이기 때문에 오류를 검색 하려면 *Lptrans* 을 사용 해야 합니다. 서명 된 반환 값이 필요한 경우 형식으로 캐스팅 **`int`** 합니다.
 
@@ -4035,7 +4035,7 @@ int GetDlgItemText(
 *rString*<br/>
 [CString](../../atl-mfc-shared/reference/cstringt-class.md)에 대 한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 종료 null 문자를 포함 하지 않고 버퍼에 복사 된 실제 문자 수를 지정 합니다. 텍스트를 복사 하지 않으면 값이 0입니다.
 
@@ -4051,7 +4051,7 @@ int GetDlgItemText(
 IUnknown* GetDSCCursor();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 데이터 소스 컨트롤에 의해 정의 되는 커서에 대 한 포인터입니다. MFC는 `AddRef` 포인터에 대 한 호출을 처리 합니다.
 
@@ -4071,7 +4071,7 @@ IUnknown* GetDSCCursor();
 CMFCDynamicLayout* GetDynamicLayout();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 동적 레이아웃 관리자 개체이거나 동적 레이아웃을 사용하지 않을 경우 NULL입니다.
 
@@ -4087,7 +4087,7 @@ CMFCDynamicLayout* GetDynamicLayout();
 DWORD GetExStyle() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창의 확장 스타일입니다. MFC에서 사용 되는 확장 창 스타일에 대 한 자세한 내용은 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)을 참조 하세요.
 
@@ -4099,7 +4099,7 @@ DWORD GetExStyle() const;
 static CWnd* PASCAL GetFocus();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 포커스가 있는 창에 대 한 포인터 이거나, 포커스 창이 없으면 NULL입니다.
 
@@ -4113,7 +4113,7 @@ static CWnd* PASCAL GetFocus();
 CFont* GetFont() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창의 현재 글꼴에 연결 된 [cfont](../../mfc/reference/cfont-class.md) 개체에 대 한 포인터입니다.
 
@@ -4129,7 +4129,7 @@ CFont* GetFont() const;
 static CWnd* PASCAL GetForegroundWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 전경 창에 대 한 포인터입니다. 이 개체는 임시 개체 일 수 있습니다 `CWnd` .
 
@@ -4150,7 +4150,7 @@ HICON GetIcon(BOOL bBigIcon) const;
 *bBigIcon*<br/>
 TRUE 이면 32 픽셀 x 32 픽셀 아이콘을 지정 합니다. FALSE 인 경우 16 x 16 픽셀 아이콘을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 아이콘에 대한 핸들입니다. 실패 한 경우 NULL을 반환 합니다.
 
@@ -4162,7 +4162,7 @@ TRUE 이면 32 픽셀 x 32 픽셀 아이콘을 지정 합니다. FALSE 인 경�
 CWnd* GetLastActivePopup() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 가장 최근에 활성화 된 팝업 창을 식별 합니다. 다음 조건 중 하나라도 충족 되 면 반환 값은 창 자체가 됩니다.
 
@@ -4200,7 +4200,7 @@ BOOL GetLayeredWindowAttributes(
 *pdwFlags*<br/>
 계층화 플래그를 받는 DWORD에 대 한 포인터입니다. 인수가 필요 하지 않은 경우 NULL 일 수 있습니다. 가능한 값의 전체 목록은 [GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -4216,7 +4216,7 @@ BOOL GetLayeredWindowAttributes(
 CMenu* GetMenu() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메뉴를 식별 합니다. 에 메뉴가 없는 경우 값은 NULL입니다 `CWnd` . 가 자식 창인 경우 반환 값은 정의 되지 않습니다 `CWnd` .
 
@@ -4252,7 +4252,7 @@ BOOL GetMenuBarInfo(
 *pmbi*<br/>
 정보를 받는 [Menu info](/windows/win32/api/winuser/ns-winuser-menubarinfo) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -4284,7 +4284,7 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 *pCurSiteOrWnd*<br/>
 컨트롤을 식별 `COleControlSiteOrWnd` 합니다. 에 대 한 자세한 내용은 `COleControlSiteOrWnd` **설명 부분**을 참조 하십시오.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수가 성공 하는 경우 그룹의 이전 또는 다음 컨트롤에 대 한 포인터입니다.
 
@@ -4330,7 +4330,7 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 *bPrevious*<br/>
 함수가 대화 상자를 검색 하는 방법을 지정 합니다. TRUE 이면 함수가 대화 상자에서 이전 컨트롤을 검색 합니다. FALSE 이면 다음 컨트롤을 검색 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수가 성공 하는 경우 WS_TABSTOP 스타일이 있는 이전 또는 다음 컨트롤에 대 한 포인터입니다.
 
@@ -4351,7 +4351,7 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 *nFlag*<br/>
 함수가 다음 창이 나 이전 창에 포인터를 반환 하는지 여부를 지정 합니다. 창 관리자의 목록에서 개체 뒤에 오는 창을 반환 하는 GW_HWNDNEXT `CWnd` 또는 창 관리자의 목록에서 이전 창을 반환 하는 GW_HWNDPREV 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수가 성공한 경우 창 관리자의 목록에서 다음 (또는 이전) 창을 식별 합니다.
 
@@ -4384,7 +4384,7 @@ ActiveX 컨트롤의 ID입니다.
 static CWnd* PASCAL GetOpenClipboardWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하면 현재 클립보드가 열려 있는 창의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -4396,7 +4396,7 @@ static CWnd* PASCAL GetOpenClipboardWindow();
 CWnd* GetOwner() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CWnd` 개체에 대한 포인터입니다.
 
@@ -4414,7 +4414,7 @@ CWnd* GetOwner() const;
 CWnd* GetParent() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 Windows SDK의 [Getparent](/windows/win32/api/winuser/nf-winuser-getparent) 에서 반환 값 섹션을 참조 하십시오.
 
@@ -4430,7 +4430,7 @@ Windows SDK의 [Getparent](/windows/win32/api/winuser/nf-winuser-getparent) 에�
 CFrameWnd* GetParentFrame() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 프레임 창에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -4446,7 +4446,7 @@ CFrameWnd* GetParentFrame() const;
 CWnd* GetParentOwner() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CWnd` 개체에 대한 포인터입니다. `CWnd` 개체가 핸들에 연결되지 않은 경우 임시 `CWnd` 개체를 만들어 연결합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.
 
@@ -4495,7 +4495,7 @@ ActiveX 컨트롤 컨테이너에서이 멤버 함수를 사용 하는 방법에
 CHwndRenderTarget* GetRenderTarget();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 렌더링 대상 또는 NULL에 대 한 포인터입니다.
 
@@ -4507,7 +4507,7 @@ CHwndRenderTarget* GetRenderTarget();
 HWND GetSafeHwnd() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창에 대 한 창 핸들을 반환 합니다. `CWnd`이 창에 연결 되어 있지 않거나 null 포인터와 함께 사용 되는 경우 null을 반환 합니다 `CWnd` .
 
@@ -4533,7 +4533,7 @@ static CWnd* GetSafeOwner(
 *pWndTop*<br/>
 현재 맨 위에 있는 창에 대 한 포인터입니다. NULL일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 창의 safe 소유자에 대 한 포인터입니다.
 
@@ -4561,7 +4561,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 - SB_VERT 세로 스크롤 막대의 위치를 검색 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 형제 스크롤 막대 컨트롤 이거나, 없는 경우 NULL입니다.
 
@@ -4587,7 +4587,7 @@ BOOL GetScrollBarInfo(
 *psbi*<br/>
 정보를 수신 하는 [SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -4623,7 +4623,7 @@ BOOL GetScrollInfo(
 *nMask*<br/>
 검색할 스크롤 막대 매개 변수를 지정 합니다. 기본값은 SIF_PAGE, SIF_POS, SIF_TRACKPOS 및 SIF_RANGE의 조합을 지정 합니다. `SCROLLINFO` *Nmask* 값에 대 한 자세한 내용은을 참조 하십시오.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메시지에서 값을 검색 한 경우 반환 값은 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -4652,7 +4652,7 @@ int GetScrollLimit(int nBar);
 
 - SB_VERT 세로 스크롤 막대의 스크롤 한계를 검색 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 스크롤 막대의 최대 위치를 지정 합니다. 그렇지 않으면 0입니다.
 
@@ -4673,7 +4673,7 @@ int GetScrollPos(int nBar) const;
 
 - SB_VERT 세로 스크롤 막대의 위치를 검색 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 스크롤 막대에서 스크롤 상자의 현재 위치를 지정 합니다. 그렇지 않으면 0입니다.
 
@@ -4721,7 +4721,7 @@ void GetScrollRange(
 DWORD GetStyle() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창의 스타일입니다. MFC에 사용 되는 창 스타일에 대 한 자세한 내용은 [창 스타일](styles-used-by-mfc.md#window-styles)을 참조 하세요.
 
@@ -4738,7 +4738,7 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 *bRevert*<br/>
 수행할 동작을 지정 합니다. *BRevert* 가 FALSE 인 경우 `GetSystemMenu` 현재 사용 중인 컨트롤 메뉴의 복사본에 대 한 핸들을 반환 합니다. 이 복사본은 처음에는 컨트롤 메뉴와 동일 하지만 수정할 수 있습니다. *BRevert* 가 TRUE 이면 `GetSystemMenu` 컨트롤 메뉴를 다시 기본 상태로 다시 설정 합니다. 이전의 수정 된 컨트롤 메뉴 (있는 경우)는 소멸 됩니다. 이 경우 반환 값은 정의 되지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *BRevert* 가 FALSE 인 경우 컨트롤 메뉴의 복사본을 식별 합니다. *BRevert* 가 TRUE 이면 반환 값이 정의 되지 않습니다.
 
@@ -4783,7 +4783,7 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 CFrameWnd* GetTopLevelFrame() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창의 최상위 프레임 창을 식별 합니다.
 
@@ -4801,7 +4801,7 @@ CFrameWnd* GetTopLevelFrame() const;
 CWnd* GetTopLevelOwner() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 최상위 창을 식별 합니다. 반환 된 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
@@ -4817,7 +4817,7 @@ CWnd* GetTopLevelOwner() const;
 CWnd* GetTopLevelParent() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창의 최상위 부모 창을 식별 합니다.
 
@@ -4835,7 +4835,7 @@ CWnd* GetTopLevelParent() const;
 CWnd* GetTopWindow() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 연결 된 자식 창 목록에서 최상위 자식 창을 식별 `CWnd` 합니다. 자식 창이 없는 경우 값은 NULL입니다.
 
@@ -4865,7 +4865,7 @@ BOOL GetUpdateRect(
 *bErase*<br/>
 업데이트 영역의 배경을 지울 것인지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 업데이트 영역의 상태를 지정 합니다. 업데이트 지역이 비어 있지 않은 경우 값은 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -4899,7 +4899,7 @@ int GetUpdateRgn(
 *bErase*<br/>
 배경을 지우고 자식 창의 비클라이언트 영역을 그릴지 여부를 지정 합니다. 값이 FALSE 이면 그리기가 수행 되지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 결과 영역의 유형을 나타내는 short 정수 플래그를 지정 합니다. 값은 다음 중 하나를 사용할 수 있습니다.
 
@@ -4942,7 +4942,7 @@ CWnd* GetWindow(UINT nCmd) const;
 
 - 소유자를 식별 하 GW_OWNER `CWnd` 입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 반환 된 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
@@ -4954,7 +4954,7 @@ CWnd* GetWindow(UINT nCmd) const;
 DWORD GetWindowContextHelpId() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 도움말 컨텍스트 식별자입니다. 창에이 없으면 0을 반환 합니다.
 
@@ -4966,7 +4966,7 @@ DWORD GetWindowContextHelpId() const;
 long GetWindowedChildCount();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 개체와 연결 된 자식 창의 수 `CWnd` 입니다.
 
@@ -4978,7 +4978,7 @@ long GetWindowedChildCount();
 CDC* GetWindowDC();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하는 경우 지정 된 창에 대 한 표시 컨텍스트를 식별 합니다. 그렇지 않으면 NULL입니다.
 
@@ -5021,7 +5021,7 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 long GetWindowlessChildCount();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 개체와 연결 된 창 없는 자식 창의 수입니다 `CWnd` .
 
@@ -5038,7 +5038,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 *lpwndpl*<br/>
 `WINDOWPLACEMENT`상태 표시 및 위치 정보를 받는 구조체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -5076,7 +5076,7 @@ int GetWindowRgn(HRGN hRgn)const;
 *hRgn*<br/>
 창 영역에 대 한 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 반환 값은 함수가 가져오는 영역의 유형을 지정 합니다. 다음 값 중 하나일 수 있습니다.
 
@@ -5120,7 +5120,7 @@ void GetWindowText(
 *rString*<br/>
 창 제목의 복사 된 문자열을 받을 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 종료 null 문자를 제외 하 고 복사 된 문자열의 길이 (문자 수)를 지정 합니다. `CWnd`에 캡션이 없거나 캡션이 비어 있으면 0입니다.
 
@@ -5142,7 +5142,7 @@ void GetWindowText(
 int GetWindowTextLength() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 텍스트 길이를 문자 단위로 지정 합니다 (null 종결 문자 포함 안 함). 이러한 텍스트가 없는 경우 값은 0입니다.
 
@@ -5200,7 +5200,7 @@ BOOL HiliteMenuItem(
 
 - MF_UNHILITE 항목에서 강조 표시를 제거 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메뉴 항목이 강조 표시 되었는지 여부를 지정 합니다. 항목이 강조 표시 된 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -5379,7 +5379,7 @@ BOOL IsChild(const CWnd* pWnd) const;
 *pWnd*<br/>
 테스트할 창을 식별 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수의 결과를 지정 합니다. *PWnd* 로 식별 된 창이의 자식 창인 경우 값은 0이 아니고 `CWnd` , 그렇지 않으면 0입니다.
 
@@ -5395,7 +5395,7 @@ D2D 지원을 사용할 수 있는지 여부를 확인 합니다.
 BOOL IsD2DSupportEnabled();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 기능이 사용 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -5412,7 +5412,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 *lpMsg*<br/>
 확인할 메시지가 포함 된 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 멤버 함수가 지정 된 메시지를 처리 했는지 여부를 지정 합니다. 메시지가 처리 된 경우 0이 아닙니다. 그렇지 않으면 0입니다. 반환이 0 이면 기본 클래스의 [CWnd::P retranslatemessage](#pretranslatemessage) 멤버 함수를 호출 하 여 메시지를 처리 합니다. `CWnd::PreTranslateMessage`멤버 함수 재정의에서 코드는 다음과 같습니다.
 
@@ -5437,7 +5437,7 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 *nIDButton*<br/>
 Button 컨트롤의 정수 식별자를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 컨트롤이 선택 되어 있으면 0이 아닌 값이 고, 선택 되지 않은 경우 0입니다. 라디오 단추와 확인란만 선택할 수 있습니다. 3 가지 상태 단추의 경우 단추가 결정 되지 않은 경우 반환 값은 2 일 수 있습니다. 이 멤버 함수는 누름 단추에 대해 0을 반환 합니다.
 
@@ -5453,7 +5453,7 @@ Button 컨트롤의 정수 식별자를 지정 합니다.
 BOOL IsDynamicLayoutEnabled() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 동적 레이아웃을 사용하면 TRUE이고, 그렇지 않으면 FALSE입니다.
 
@@ -5467,7 +5467,7 @@ BOOL IsDynamicLayoutEnabled() const;
 BOOL IsIconic() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 최소화 되 면 0이 아닌 `CWnd` 값이 고, 그렇지 않으면 0입니다.
 
@@ -5483,7 +5483,7 @@ BOOL IsIconic() const;
 BOOL IsTouchWindow() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CWnd`에 터치 지원이 있으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -5497,7 +5497,7 @@ BOOL IsTouchWindow() const;
 BOOL IsWindowEnabled() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 가 사용 되 면 0이 아니고 `CWnd` , 그렇지 않으면 0입니다.
 
@@ -5513,7 +5513,7 @@ BOOL IsWindowEnabled() const;
 BOOL IsWindowVisible() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 가 표시 되 면 0이 아닌 값이 `CWnd` 고, [WS_VISIBLE](styles-used-by-mfc.md#window-styles) 스타일 비트가 설정 되어 있고, 부모 창이 표시 됩니다. 반환 값은 WS_VISIBLE 스타일 비트의 상태를 반영 하기 때문에 `CWnd` 다른 창에서가 완전히 가려져 있더라도 반환 값은 0이 아닐 수 있습니다.
 
@@ -5535,7 +5535,7 @@ BOOL IsWindowVisible() const;
 BOOL IsZoomed() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 최대화 되 면 0이 아닌 `CWnd` 값이 고, 그렇지 않으면 0입니다.
 
@@ -5552,7 +5552,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 *nIDEvent*<br/>
 [Settimer](#settimer)에 전달 된 타이머 이벤트의 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수의 결과를 지정 합니다. 이벤트가 종료 된 경우 값은 0이 아닙니다. `KillTimer`멤버 함수가 지정 된 타이머 이벤트를 찾을 수 없는 경우 0입니다.
 
@@ -5577,7 +5577,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 *lpszResourceName*<br/>
 이 창에 대한 필요한 동적 레이아웃 정보가 포함된 리소스의 이름입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하는 경우 0이 아닙니다. 오류가 발생하는 경우 0입니다.
 
@@ -5593,7 +5593,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 BOOL LockWindowUpdate();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하는 경우 0이 아닙니다. 오류가 발생 하거나 `LockWindowUpdate` 함수를 사용 하 여 다른 창을 잠근 경우에는 0이 됩니다.
 
@@ -5670,7 +5670,7 @@ int MessageBox(
 *nType*<br/>
 메시지 상자의 내용과 동작을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 메서드는 Windows SDK에 정의 된 [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) 함수를 활용 합니다. 이 메서드는이 함수를 호출한 결과를 반환 합니다.
 
@@ -5680,7 +5680,7 @@ int MessageBox(
 
 다음은 메시지 상자에 사용할 수 있는 다양 한 시스템 아이콘을 보여 줍니다.
 
-|||
+|아이콘|매크로|
 |-|-|
 |![&#40;x&#41; 아이콘 중지](../../mfc/reference/media/vc364f1.gif "&#40;x&#41; 아이콘 중지")|MB_ICONHAND, MB_ICONSTOP 및 MB_ICONERROR|
 |![도움말 &#40;? &#41; 아이콘](../../mfc/reference/media/vc364f2.gif "도움말 &#40;? &#41; 아이콘")|MB_ICONQUESTION|
@@ -5713,7 +5713,7 @@ BOOL ModifyStyle(
 *nFlags*<br/>
 [Setwindowpos](#setwindowpos)에 전달할 플래그 이거나, `SetWindowPos` 호출 하지 않아야 하는 경우 0입니다. 기본값은 0입니다. 미리 설정 된 플래그 목록은 설명 섹션을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스타일이 성공적으로 수정 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -5762,7 +5762,7 @@ BOOL ModifyStyleEx(
 *nFlags*<br/>
 [Setwindowpos](#setwindowpos)에 전달할 플래그 이거나, `SetWindowPos` 호출 하지 않아야 하는 경우 0입니다. 기본값은 0입니다. 미리 설정 된 플래그 목록은 설명 섹션을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스타일이 성공적으로 수정 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -5808,7 +5808,7 @@ void MoveWindow(
 *x*<br/>
 왼쪽의 새 위치를 지정 합니다 `CWnd` .
 
-*x.y*<br/>
+*y*<br/>
 위쪽의 새 위치를 지정 합니다 `CWnd` .
 
 *nWidth*<br/>
@@ -5941,7 +5941,7 @@ virtual BOOL OnAmbientProperty(
 *pvar*<br/>
 앰비언트 속성의 값이 반환 되는 호출자가 할당 한 구조에 대 한 포인터 `VARIANT` 입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 앰비언트 속성이 지원 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -6169,7 +6169,7 @@ afx_msg int OnCharToItem(
 *nIndex*<br/>
 현재 캐럿 위치를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 프레임 워크는이 멤버 함수를 호출 하 여 응용 프로그램에서 호출에 대 한 응답으로 수행 하는 작업을 지정 합니다. 반환 값-2는 응용 프로그램이 항목 선택의 모든 측면을 처리 하 고 목록 상자에서 추가 작업을 수행 하지 않음을 나타냅니다. 반환 값-1은 목록 상자가 키 입력에 대 한 응답으로 기본 동작을 수행 해야 함을 나타냅니다. 반환 값이 0 이상인 경우 목록 상자에서 항목의 인덱스 (0부터 시작)를 지정 하 고 목록 상자에서 지정 된 항목의 키 입력에 대 한 기본 작업을 수행 해야 함을 나타냅니다.
 
@@ -6212,7 +6212,7 @@ virtual BOOL OnChildNotify(
 *pLResult*<br/>
 부모 창 프로시저에서 반환 되는 값에 대 한 포인터입니다. 반환 값이 필요 하지 않은 경우이 포인터는 NULL입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 창이 부모에 전송 된 메시지를 처리 해야 하는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -6287,7 +6287,7 @@ virtual BOOL OnCommand(
 *lParam*<br/>
 메시지가 컨트롤에 있는 경우 메시지를 보내는 컨트롤을 식별 합니다. 그렇지 않으면 *lParam* 은 0입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램은이 메시지를 처리 하는 경우 0이 아닌 값을 반환 합니다. 그렇지 않으면 0입니다.
 
@@ -6340,7 +6340,7 @@ WM_COMPAREITEM 메시지를 보낸 컨트롤의 식별자입니다.
 *lpCompareItemStruct*<br/>
 콤보 상자 또는 목록 상자의 두 항목에 대 한 식별자 및 응용 프로그램 제공 데이터를 포함 하는 [Compareitemstruct](/windows/win32/api/winuser/ns-winuser-compareitemstruct) 데이터 구조에 대 한 긴 포인터를 포함 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 두 항목의 상대 위치를 나타냅니다. 다음 값 중 하나일 수 있습니다.
 
@@ -6418,7 +6418,7 @@ afx_msg BOOL OnCopyData(
 *pCopyDataStruct*<br/>
 전송 되는 데이터를 포함 하는 [Copydatastruct](/windows/win32/api/winuser/ns-winuser-copydatastruct) 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 수신 응용 프로그램이 데이터를 성공적으로 수락 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환 합니다.
 
@@ -6448,7 +6448,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 생성 되는 개체에 대 한 정보를 포함 하는 [Createstruct](/windows/win32/api/winuser/ns-winuser-createstructw) 구조체를 가리킵니다 `CWnd` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `OnCreate` 개체를 계속 만들려면 0을 반환 해야 합니다 `CWnd` . 응용 프로그램이-1을 반환 하면 창이 소멸 됩니다.
 
@@ -6499,7 +6499,7 @@ afx_msg HBRUSH OnCtlColor(
 
 - 정적 컨트롤 CTLCOLOR_STATIC
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `OnCtlColor` 컨트롤 배경을 그리기 위해 사용할 브러시에 대 한 핸들을 반환 해야 합니다.
 
@@ -6542,7 +6542,7 @@ afx_msg void OnDeadChar(
 *nFlags*<br/>
 다음 목록에 표시 된 것 처럼 검사 코드, 키 전환 코드, 이전 키 상태 및 컨텍스트 코드를 지정 합니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |0-7|검사 코드 (OEM 종속 값)입니다. 상위 단어의 하위 바이트입니다.|
 |8|확장 된 키 (예: 숫자 키패드의 함수 키 또는 키) (확장 키 인 경우 1, 그렇지 않으면 0).|
@@ -6899,7 +6899,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 *컨트롤러가*<br/>
 장치 컨텍스트 개체를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 배경을 지우는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -6975,7 +6975,7 @@ afx_msg void OnFontChange();
 afx_msg UINT OnGetDlgCode();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램에서 처리 하는 입력 유형을 나타내는 다음 값 중 하나입니다.
 
@@ -7078,7 +7078,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 *lpHelpInfo*<br/>
 도움말이 요청 된 메뉴 항목, 컨트롤, 대화 상자 또는 창에 대 한 정보를 포함 하는 [HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창에 키보드 포커스가 있거나 메뉴가 창 내에서 활성화 된 경우 TRUE를 반환 합니다. 키보드 포커스가 있는 창이 없으면 FALSE를 반환 합니다.
 
@@ -7401,7 +7401,7 @@ afx_msg void OnKeyDown(
 *nFlags*<br/>
 다음 목록에 표시 된 것 처럼 검사 코드, 키 전환 코드, 이전 키 상태 및 컨텍스트 코드를 지정 합니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |0-7|검사 코드 (OEM 종속 값)입니다.|
 |8|확장 된 키 (예: 숫자 키패드의 함수 키 또는 키)입니다 (확장 키 인 경우 1).|
@@ -7446,7 +7446,7 @@ afx_msg void OnKeyUp(
 *nFlags*<br/>
 다음 목록에 표시 된 것 처럼 검사 코드, 키 전환 코드, 이전 키 상태 및 컨텍스트 코드를 지정 합니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |0-7|검사 코드 (OEM 종속 값)입니다. 상위 단어의 하위 바이트입니다.|
 |8|확장 된 키 (예: 숫자 키패드의 함수 키 또는 키) (확장 키 인 경우 1, 그렇지 않으면 0).|
@@ -7768,11 +7768,11 @@ afx_msg LRESULT OnMenuChar(
 *pMenu*<br/>
 선택 된에 대 한 포인터를 포함 `CMenu` 합니다. 포인터는 일시적일 수 있으므로 저장 하면 안 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 반환 값의 상위 단어는 다음 명령 코드 중 하나를 포함 해야 합니다.
 
-|값|Description|
+|값|설명|
 |-----------|-----------------|
 |0|사용자가 누른 문자를 무시 하 고 시스템 스피커에 짧은 경고음을 생성 하도록 창에 지시 합니다.|
 |1|현재 메뉴를 닫도록 창에 지시 합니다.|
@@ -7805,9 +7805,9 @@ afx_msg UINT OnMenuDrag(
 *pMenu*\
 진행 메뉴 항목을 포함 하는 [CMenu](../../mfc/reference/cmenu-class.md) 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-|Return Value|의미|
+|반환 값|의미|
 |------------------|-------------|
 |MND_CONTINUE|메뉴가 활성 상태로 유지 됩니다. 마우스를 놓으면 무시 해야 합니다.|
 |MND_ENDMENU|메뉴를 종료 해야 합니다.|
@@ -7832,9 +7832,9 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 *pMenu*\
 진행 마우스 커서가 있는 끌어서 놓기 메뉴에 대 한 정보를 포함 하는 [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
-|Return Value|의미|
+|반환 값|의미|
 |------------------|-------------|
 |MNGO_NOERROR|`pvObj` [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo) 구조체의 멤버에는 드롭 및 끌기 작업을 지 원하는 인터페이스 포인터가 반환 됩니다. 현재 [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) 인터페이스만 지원 됩니다.|
 |MNGO_NOINTERFACE|드롭 및 끌기 인터페이스가 지원 되지 않습니다.|
@@ -7940,7 +7940,7 @@ afx_msg int OnMouseActivate(
 *message*<br/>
 마우스 메시지 번호를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 를 활성화할지 여부와 마우스 이벤트를 취소할지 여부를 지정 합니다 `CWnd` . 다음 값 중 하나 여야 합니다.
 
@@ -7989,7 +7989,7 @@ afx_msg void OnMouseHover(
 
 *Nflags* 매개 변수는 다음 표에 나열 된 보조키를 조합 하 여 사용할 수 있습니다. 자세한 내용은 [마우스 입력 정보](/windows/win32/inputdev/about-mouse-input)를 참조 하세요.
 
-|한정자 키|Description|
+|한정자 키|설명|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
 |MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
@@ -8113,7 +8113,7 @@ afx_msg BOOL OnMouseWheel(
 *pt*<br/>
 커서의 x 좌표와 y 좌표를 지정 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이를 기준으로 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 마우스 휠 스크롤이 사용 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -8145,7 +8145,7 @@ afx_msg void OnMove(
 *x*<br/>
 클라이언트 영역의 왼쪽 위 모퉁이에 대 한 새 x 좌표 위치를 지정 합니다. 이 새 위치는 겹쳐진 및 팝업 창에 대 한 화면 좌표와 자식 창의 부모 클라이언트 좌표로 지정 됩니다.
 
-*x.y*<br/>
+*y*<br/>
 클라이언트 영역의 왼쪽 위 모퉁이에 대 한 새 y 좌표 위치를 지정 합니다. 이 새 위치는 겹쳐진 및 팝업 창에 대 한 화면 좌표와 자식 창의 부모 클라이언트 좌표로 지정 됩니다.
 
 ### <a name="remarks"></a>설명
@@ -8189,7 +8189,7 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 *bActive*<br/>
 활성 또는 비활성 상태를 나타내기 위해 캡션 표시줄 또는 아이콘을 변경 해야 하는 경우를 지정 합니다. 활성 캡션 또는 아이콘을 그리면 *Bactive* 매개 변수는 TRUE입니다. 비활성 캡션 또는 아이콘의 경우 FALSE입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 Windows에서 기본 처리를 계속 해야 하는 경우 0이 아님 캡션 표시줄이 나 아이콘이 비활성화 되지 않도록 하려면 0입니다.
 
@@ -8244,7 +8244,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 *lpCreateStruct*<br/>
 의 [Createstruct](/windows/win32/api/winuser/ns-winuser-createstructw) 데이터 구조를 가리킵니다 `CWnd` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 비클라이언트 영역을 만든 경우 0이 아닙니다. 오류가 발생 하는 경우 0입니다. `Create` 이 경우 함수는 **실패** 를 반환 합니다.
 
@@ -8280,7 +8280,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 *까지*<br/>
 커서의 x 좌표와 y 좌표를 포함 합니다. 이러한 좌표는 항상 화면 좌표입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 마우스 적중 테스트 열거 값 중 하나입니다. 값 목록은 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 를 참조 하세요.
 
@@ -8735,7 +8735,7 @@ virtual BOOL OnNotify(
 *pResult*<br/>
 메시지가 처리 되는 경우 결과 코드를 저장할 LRESULT 변수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램은이 메시지를 처리 하는 경우 0이 아닌 값을 반환 합니다. 그렇지 않으면 0입니다.
 
@@ -8768,7 +8768,7 @@ afx_msg UINT OnNotifyFormat(
 - `NF_QUERY` -메시지는 WM_NOTIFY 메시지에 ANSI 또는 유니코드 구조를 사용 해야 하는지 여부를 결정 하는 쿼리입니다. 이 메시지는 컨트롤을 만드는 동안 컨트롤에서 부모 창으로 보내고 `NF_REQUERY` 이 메시지의 형식에 대 한 응답으로 전송 됩니다.
 - `NF_REQUERY` -메시지는 `NF_QUERY` 이 메시지의 형식을 부모 창으로 보내기 위한 컨트롤에 대 한 요청입니다. 이 요청은 부모 창에서 전송 되며 WM_NOTIFY 메시지에서 사용할 구조 형식에 대해 부모를 다시 쿼리하려면 컨트롤에 요청 합니다. *Ncommand* 매개 변수가 이면 `NF_REQUERY` 반환 값은 requery 작업의 결과입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 |반환 값|의미|
 |------------------|-------------|
@@ -8934,7 +8934,7 @@ afx_msg UINT OnPowerBroadcast(
 *nEventData*\
 진행 이벤트 관련 데이터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이벤트가 요청인 경우 TRUE를 반환 하 여 요청을 부여 하거나 요청을 거부 하도록 BROADCAST_QUERY_DENY 합니다.
 
@@ -8955,7 +8955,7 @@ afx_msg UINT OnPowerBroadcast(
 afx_msg HCURSOR OnQueryDragIcon();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 하위 워드에서 커서 또는 아이콘 핸들을 포함 하는 더블 워드 값입니다. 커서 또는 아이콘이 디스플레이 드라이버의 해상도와 호환 되어야 합니다. 응용 프로그램에서 NULL을 반환 하면 시스템은 기본 커서를 표시 합니다. 기본 반환 값은 NULL입니다.
 
@@ -8971,7 +8971,7 @@ afx_msg HCURSOR OnQueryDragIcon();
 afx_msg BOOL OnQueryEndSession();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램을 편리 하 게 종료할 수 있는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -8987,7 +8987,7 @@ afx_msg BOOL OnQueryEndSession();
 afx_msg BOOL OnQueryNewPalette();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 가 논리 색상표를 인식 하면 0이 아니고 `CWnd` , 그렇지 않으면 0입니다.
 
@@ -8999,7 +8999,7 @@ afx_msg BOOL OnQueryNewPalette();
 afx_msg BOOL OnQueryOpen();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 아이콘을 열 수 있으면 0이 아니고 아이콘이 열리지 않도록 하려면 0입니다.
 
@@ -9015,7 +9015,7 @@ afx_msg BOOL OnQueryOpen();
 afx_msg UINT OnQueryUIState();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 포커스 표시기와 키보드 액셀러레이터 키가 표시 되는 경우 반환 값은 NULL입니다. 그렇지 않으면 반환 값은 다음 값 중 하나 이상이 될 수 있습니다.
 
@@ -9172,7 +9172,7 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 *lParam*<br/>
 포인터의 세로 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지금은 유효 하지 않습니다. 항상 0입니다.
 
@@ -9268,7 +9268,7 @@ afx_msg BOOL OnSetCursor(
 *message*<br/>
 마우스 메시지 번호를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 추가 처리를 중지 하려면 0이 아닌 값이 고, 계속 하려면 0입니다.
 
@@ -9914,7 +9914,7 @@ virtual INT_PTR OnToolHitTest(
 
 - *lpszText* = 지정 된 창에 표시 되는 문자열에 대 한 포인터 LPSTR_TEXTCALLBACK
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 Tooltip 컨트롤을 찾은 경우 창 컨트롤 ID입니다. 도구 설명 컨트롤을 찾을 수 없는 경우-1입니다.
 
@@ -9954,7 +9954,7 @@ virtual BOOL OnTouchInput(
 *pInput*<br/>
 TOUCHINPUT 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램에서 Windows touch 입력을 처리 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -9978,7 +9978,7 @@ Windows touch 입력의 총 수입니다.
 *pInputs*<br/>
 TOUCHINPUT의 배열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램이 Windows touch 입력을 처리 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.
 
@@ -10006,7 +10006,7 @@ afx_msg void OnUniChar(
 *nFlags*\
 진행 다음 표에 표시 된 것 처럼 검사 코드, 확장 키, 컨텍스트 코드, 이전 키 상태 및 전환 상태를 지정 하는 플래그입니다.
 
-| 플래그 비트 | Description |
+| 플래그 비트 | 설명 |
 |--|--|
 | **0-7** | 검사 코드를 지정 합니다. 값은 OEM (원본 장비 제조업체)에 따라 달라 집니다. |
 | **8** | 확장 된 101 또는 102 키 키보드에 표시 되는 오른쪽 ALT 및 CTRL 키와 같은 확장 된 키를 지정 합니다. 키가 확장 키인 경우 플래그는 1입니다. 그렇지 않으면 0입니다. |
@@ -10118,7 +10118,7 @@ afx_msg int OnVKeyToItem(
 *nIndex*<br/>
 현재 캐럿 위치를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 응용 프로그램에서 메시지에 대 한 응답으로 수행 하는 동작을 지정 합니다. 반환 값-2는 응용 프로그램이 항목을 선택 하는 모든 측면을 처리 하 고 목록 상자에서 추가 작업을 수행 하지 않음을 나타냅니다. 반환 값-1은 목록 상자가 키 입력에 대 한 응답으로 기본 동작을 수행 해야 함을 나타냅니다. 반환 값이 0 이상인 경우 목록 상자에서 항목의 인덱스 (0부터 시작)를 지정 하 고 목록 상자에서 지정 된 항목의 키 입력에 대 한 기본 작업을 수행 해야 함을 나타냅니다.
 
@@ -10337,7 +10337,7 @@ virtual BOOL OnWndMsg(
 *pResult*<br/>
 [WindowProc](#windowproc)의 반환 값입니다. 메시지에 따라 다릅니다. NULL 일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메시지가 처리 되 면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -10375,7 +10375,7 @@ afx_msg void OnXButtonDblClk(
 
 *Nflags* 매개 변수는 다음 표에 나열 된 보조키를 조합 하 여 사용할 수 있습니다. 자세한 내용은 [마우스 입력 정보](/windows/win32/inputdev/about-mouse-input)를 참조 하세요.
 
-|한정자 키|Description|
+|한정자 키|설명|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
 |MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
@@ -10416,7 +10416,7 @@ afx_msg void OnXButtonDown(
 
 *Nflags* 매개 변수는 다음 표에 나열 된 보조키를 조합 하 여 사용할 수 있습니다. 자세한 내용은 [마우스 입력 정보](/windows/win32/inputdev/about-mouse-input)를 참조 하세요.
 
-|한정자 키|Description|
+|한정자 키|설명|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
 |MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
@@ -10457,7 +10457,7 @@ afx_msg void OnXButtonUp(
 
 *Nflags* 매개 변수는 다음 표에 나열 된 보조키를 조합 하 여 사용할 수 있습니다. 자세한 내용은 [마우스 입력 정보](/windows/win32/inputdev/about-mouse-input)를 참조 하세요.
 
-|한정자 키|Description|
+|한정자 키|설명|
 |------------------|-----------------|
 |MK_CONTROL|CTRL 키를 눌렀습니다.|
 |MK_LBUTTON|마우스 왼쪽 단추가 눌러져 있습니다.|
@@ -10478,7 +10478,7 @@ afx_msg void OnXButtonUp(
 BOOL OpenClipboard();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 를 통해 클립보드를 연 경우 0이 아닌 값이 `CWnd` 고, 다른 응용 프로그램이 나 창에 클립보드가 열려 있는 경우 0입니다.
 
@@ -10513,7 +10513,7 @@ BOOL operator!=(const CWnd& wnd) const;
 *wnd*<br/>
 `CWnd` 개체에 대한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 같으면 0이 아닌 것입니다. 그렇지 않으면 0입니다.
 
@@ -10530,7 +10530,7 @@ BOOL operator==(const CWnd& wnd) const;
 *wnd*<br/>
 `CWnd` 개체에 대한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 같으면 0이 아닌 것입니다. 그렇지 않으면 0입니다.
 
@@ -10547,7 +10547,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 *컨트롤러가*<br/>
 창 없는 컨트롤을 그릴 장치 컨텍스트입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤 컨테이너가 있고 창 없는 컨트롤을 성공적으로 그리면 TRUE를, 그렇지 않으면 FALSE를 반환 합니다.
 
@@ -10573,7 +10573,7 @@ BOOL PostMessage(
 *lParam*<br/>
 추가 메시지 정보를 지정 합니다. 이 매개 변수의 내용은 게시 되는 메시지에 따라 다릅니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메시지가 게시 되는 경우 0이 아닙니다. 그렇지 않으면 0입니다.
 
@@ -10612,7 +10612,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 *양방향*<br/>
 [Createstruct](/windows/win32/api/winuser/ns-winuser-createstructw) 구조체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창을 만드는 작업을 계속 해야 하는 경우 0이 아닙니다. 0은 만들기 실패를 표시 합니다.
 
@@ -10660,7 +10660,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 *pMsg*<br/>
 처리할 메시지를 포함 하는 [MSG](/windows/win32/api/winuser/ns-winuser-msg) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메시지를 변환 하 여 디스패치할 수 없으면 0이 아닙니다. 메시지가 변환 되지 않고 디스패치 되어야 하는 경우 0입니다.
 
@@ -10758,7 +10758,7 @@ BOOL PrintWindow(
 *nFlags*<br/>
 그리기 옵션을 지정 합니다. 가능한 값 목록은 [Printwindow](/windows/win32/api/winuser/nf-winuser-printwindow)를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -10818,7 +10818,7 @@ BOOL RedrawWindow(
 
 - 다시 그리기 작업에서 자식 창을 제외 RDW_NOCHILDREN (있는 경우).
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창을 다시 그리면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -10852,7 +10852,7 @@ BOOL ReflectChildNotify(
 *pResult*<br/>
 부모 창에서 반환할 자식 창에 의해 생성 된 결과입니다. NULL일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메시지가 반영 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -10882,7 +10882,7 @@ static BOOL PASCAL ReflectLastMsg(
 *pResult*<br/>
 부모 창에서 반환할 자식 창에 의해 생성 된 결과입니다. NULL일 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메시지가 처리 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -10905,7 +10905,7 @@ int ReleaseDC(CDC* pDC);
 *컨트롤러가*<br/>
 해제할 장치 컨텍스트를 식별 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -10981,7 +10981,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 
 - 메시지 큐가 유휴 상태가 될 때 창을 표시 MLF_SHOWONIDLE 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 [Endmodalloop](#endmodalloop) 멤버 함수에 전달 된 *nresult* 매개 변수의 값을 지정 합니다 .이 값은 모달 루프를 종료 하는 데 사용 됩니다.
 
@@ -11093,7 +11093,7 @@ int ScrollWindowEx(
 
 - SW_SCROLLCHILDREN는 *lpRectScroll* 가 가리키는 사각형과 교차 하는 모든 자식 창을 *dx* 및 *dy*에 지정 된 픽셀 수 만큼 스크롤합니다. Windows는 이동 하지 않는 경우에도 *lpRectScroll*교차 하는 모든 자식 창에 [WM_MOVE](/windows/win32/winmsg/wm-move) 메시지를 보냅니다. 자식 창이 스크롤될 때 커서 커서가 스크롤 사각형과 교차 하면 캐럿 위치가 변경 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 반환 값은 SIMPLEREGION (사각형이 무효화 된 영역), COMPLEXREGION (사각형이 무효화 된 영역, 겹치는 사각형) 또는 NULLREGION (무효화 된 영역 없음)입니다. 함수가 성공 하면입니다. 그렇지 않으면 반환 값은 ERROR입니다.
 
@@ -11122,7 +11122,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 *pResult*<br/>
 부모 창에서 반환할 자식 창에 의해 생성 된 결과입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 자식 창에서 부모에 전송 된 메시지를 처리 한 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -11158,7 +11158,7 @@ LRESULT SendDlgItemMessage(
 *lParam*<br/>
 추가 메시지 종속 정보를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 창 프로시저에서 반환 하는 값을 지정 하거나, 컨트롤을 찾을 수 없는 경우 0을 지정 합니다.
 
@@ -11194,7 +11194,7 @@ LRESULT SendMessage(
 *lParam*<br/>
 추가 메시지 종속 정보를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메시지 처리의 결과입니다. 해당 값은 보낸 메시지에 따라 다릅니다.
 
@@ -11268,7 +11268,7 @@ BOOL SendNotifyMessage(
 *lParam*<br/>
 추가 메시지 종속 정보를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -11284,7 +11284,7 @@ BOOL SendNotifyMessage(
 CWnd* SetActiveWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전에 활성화 된 창입니다.
 
@@ -11302,7 +11302,7 @@ CWnd* SetActiveWindow();
 CWnd* SetCapture();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전에 모든 마우스 입력을 받은 창 개체에 대 한 포인터입니다. 이러한 창이 없으면 NULL입니다. 반환 된 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
@@ -11343,7 +11343,7 @@ static void PASCAL SetCaretPos(POINT point);
 HWND SetClipboardViewer();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공한 경우 클립보드 뷰어 체인의 다음 창에 대 한 핸들입니다. 응용 프로그램은이 핸들을 멤버 변수로 저장 하 고 클립보드 뷰어 체인 메시지에 응답할 때 사용할 수 있습니다.
 
@@ -11368,7 +11368,7 @@ int SetDlgCtrlID(int nID);
 *nID*<br/>
 컨트롤의 식별자에 대해 설정할 새 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 창의 이전 식별자입니다. 그렇지 않으면 0입니다.
 
@@ -11440,7 +11440,7 @@ void SetDlgItemText(
 BOOL SetForegroundWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -11460,7 +11460,7 @@ BOOL SetForegroundWindow();
 CWnd* SetFocus();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전에 입력 포커스가 있던 창 개체에 대 한 포인터입니다. 이러한 창이 없으면 NULL입니다. 반환 된 포인터는 일시적일 수 있으므로 저장 하면 안 됩니다.
 
@@ -11512,7 +11512,7 @@ HICON SetIcon(
 *bBigIcon*<br/>
 TRUE 이면 32 픽셀 x 32 픽셀 아이콘을 지정 합니다. FALSE 인 경우 16 x 16 픽셀 아이콘을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 아이콘에 대한 핸들입니다.
 
@@ -11546,7 +11546,7 @@ BOOL SetLayeredWindowAttributes(
 *dwFlags*<br/>
 수행할 작업을 지정 합니다. 이 매개 변수는 다음 값 중 하나 이상이 될 수 있습니다. 가능한 값 목록은 [SetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -11567,7 +11567,7 @@ BOOL SetMenu(CMenu* pMenu);
 *pMenu*<br/>
 새 메뉴를 식별 합니다. 이 매개 변수가 NULL 이면 현재 메뉴가 제거 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메뉴가 변경 되 면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -11615,7 +11615,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
 *pWndNewParent*<br/>
 새 부모 창을 식별 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 이전 부모 창 개체에 대 한 포인터입니다. 반환 된 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
@@ -11700,7 +11700,7 @@ BOOL SetScrollInfo(
 *bRedraw*<br/>
 새 위치를 반영 하기 위해 스크롤 막대를 다시 그릴지 여부를 지정 합니다. *BRedraw* 가 TRUE 이면 스크롤 막대가 다시 그려집니다. FALSE 이면 다시 그려지지 않습니다. 기본적으로 스크롤 막대가 다시 그려집니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 TRUE가 반환 됩니다. 그렇지 않으면 FALSE입니다.
 
@@ -11739,7 +11739,7 @@ int SetScrollPos(
 *bRedraw*<br/>
 새 스크롤 상자 위치를 반영 하기 위해 스크롤 막대를 다시 그릴지 여부를 지정 합니다. 이 매개 변수가 TRUE 이면 스크롤 막대가 다시 그려집니다. FALSE 이면 스크롤 막대가 다시 표시 되지 않습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스크롤 상자의 이전 위치입니다.
 
@@ -11812,7 +11812,7 @@ UINT_PTR SetTimer(
 *lpfnTimer*<br/>
 `TimerProc` [WM_TIMER](/windows/win32/winmsg/wm-timer) 메시지를 처리 하는 응용 프로그램 제공 콜백 함수의 주소를 지정 합니다. 이 매개 변수가 NULL 인 경우 WM_TIMER 메시지는 응용 프로그램의 메시지 큐에 배치 되 고 개체에 의해 처리 됩니다 `CWnd` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하는 경우 새 타이머의 타이머 식별자입니다. 이 값은 *nIDEvent* 매개 변수를 통해 전달 된 값과 같을 수도 있고 그렇지 않을 수도 있습니다. 응용 프로그램은 항상 반환 값을 [KillTimer](#killtimer) 멤버 함수에 전달 하 여 타이머를 중지 해야 합니다. 성공 하면 0이 아닌 값 그렇지 않으면 0입니다.
 
@@ -11849,7 +11849,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 *dwContextHelpId*<br/>
 도움말 컨텍스트 식별자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -11874,7 +11874,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 *lpwndpl*<br/>
 새 표시 상태 및 위치를 지정 하는 [Windowplacement](/windows/win32/api/winuser/ns-winuser-windowplacement) 구조체를 가리킵니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -11910,7 +11910,7 @@ BOOL SetWindowPos(
 *x*<br/>
 창 왼쪽의 새 위치를 지정 합니다.
 
-*x.y*<br/>
+*y*<br/>
 창 위쪽의 새 위치를 지정 합니다.
 
 *cx*<br/>
@@ -11948,7 +11948,7 @@ BOOL SetWindowPos(
 
 - SWP_SHOWWINDOW 창이 표시 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -12002,7 +12002,7 @@ int SetWindowRgn(
 *bRedraw*<br/>
 TRUE 이면 영역을 설정한 후 운영 체제에서 창을 다시 그립니다. 그렇지 않은 경우에는 그렇지 않습니다. 일반적으로 창이 표시 되는 경우 *bRedraw* 를 TRUE로 설정 합니다. TRUE로 설정 되 면 시스템은 WM_WINDOWPOSCHANGING를 보내고 메시지를 창에 WM_WINDOWPOSCHANGED 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공 하면 0이 아닌 값이 반환 됩니다. 함수가 실패하면 반환 값은 0입니다.
 
@@ -12135,7 +12135,7 @@ BOOL ShowWindow(int nCmdShow);
 
 - SW_SHOWNORMAL 활성화 되 고 창이 표시 됩니다. 창이 최소화 되거나 최대화 된 경우 Windows에서 원래 크기와 위치로 복원 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 창이 이전에 표시 되는 경우 0이 아닙니다. 가 `CWnd` 이전에 숨겨진 경우 0입니다.
 
@@ -12165,7 +12165,7 @@ BOOL SubclassDlgItem(
 *pParent*<br/>
 컨트롤의 부모 (일반적으로 대화 상자)입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -12192,7 +12192,7 @@ BOOL SubclassWindow(HWND hWnd);
 *hWnd*<br/>
 창에 대 한 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -12229,7 +12229,7 @@ void UnlockWindowUpdate();
 HWND UnsubclassWindow();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 서브클래싱된 창에 대 한 핸들입니다.
 
@@ -12250,7 +12250,7 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 *bSaveAndValidate*<br/>
 대화 상자를 초기화 하 고 있는지 (FALSE) 아니면 데이터를 검색할지 (TRUE)를 나타내는 플래그입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 작업이 성공 하면 0이 아닌 값입니다. 그렇지 않으면 0입니다. *Bsaveand유효성이*e 인 경우 TRUE 이면 반환 값이 0이 아니면 데이터의 유효성 검사가 성공적으로 수행 된 것입니다.
 
@@ -12330,7 +12330,7 @@ BOOL UpdateLayeredWindow(
 *dwFlags*<br/>
 수행할 작업을 지정 합니다. 이 매개 변수는 다음 값 중 하나 이상이 될 수 있습니다. 가능한 값 목록은 [Updatelayeredwindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow)를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.
 
@@ -12405,7 +12405,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 *까지*<br/>
 확인할 점을 정의 하는 [점](/windows/win32/api/windef/ns-windef-point) 데이터 구조 또는 [cpoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 점이 위치한 창 개체에 대 한 포인터입니다. 지정 된 지점에 창이 없으면 NULL입니다. 반환 된 포인터는 일시적일 수 있으며 나중에 사용할 수 있도록 저장 해서는 안 됩니다.
 
@@ -12435,7 +12435,7 @@ virtual LRESULT WindowProc(
 *lParam*<br/>
 메시지 처리에 사용 되는 추가 정보를 제공 합니다. 매개 변수 값은 메시지에 따라 다릅니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 반환 값은 메시지에 따라 다릅니다.
 
@@ -12483,7 +12483,7 @@ TRUE 이면 Windows touch 지원 등록을 나타냅니다. 그렇지 않으면 
 *ulFlags*<br/>
 선택적 수정 사항을 지정 하는 비트 플래그 집합입니다. 이 필드에는 TWF_FINETOUCH, TWF_WANTPALM 값 중 하나 또는 하나를 사용할 수 있습니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 TRUE이고, 실패하면 FALSE입니다.
 

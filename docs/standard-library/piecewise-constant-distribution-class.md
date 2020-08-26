@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 6764e37b994ed76d27f88e3bdc8ec137d5e2f600
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59911d8a61a05de9ec92f4152b2835da3cf82f7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232991"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832726"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 클래스
 
@@ -89,10 +89,8 @@ public:
 
 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|
+[piecewise_constant_distribution](#piecewise_constant_distribution)\
+[param_type](#param_type)
 
 속성 함수 `intervals()`는 저장된 분포 간격 집합과 함께 `vector<result_type>`을 반환합니다.
 
@@ -218,7 +216,7 @@ Distribution for 100 samples:
 
 **네임스페이스:** std
 
-## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution::p iecewise_constant_distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a> piecewise_constant_distribution::p iecewise_constant_distribution
 
 분포를 생성합니다.
 
@@ -318,7 +316,7 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 *parm* 를 저장 된 매개 변수 구조로 사용 하 여 분포 개체를 생성 합니다.
 
-## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution::p aram_type
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a> piecewise_constant_distribution::p aram_type
 
 분포의 모든 매개 변수를 저장합니다.
 

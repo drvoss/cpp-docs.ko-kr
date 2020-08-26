@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912385"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844979"
 ---
 # <a name="system-_wsystem"></a>system, _wsystem
 
@@ -62,14 +62,14 @@ int _wsystem(
 
 ### <a name="parameters"></a>매개 변수
 
-*명령*<br/>
+*command*<br/>
 실행할 명령입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 *Command* 가 **NULL** 이 고 명령 인터프리터가 발견 되 면 0이 아닌 값을 반환 합니다. 명령 인터프리터를 찾을 수 없는 경우는 0을 반환 하 고 **errno** 를 **enoent (** 로 설정 합니다. *Command* 가 **NULL**이 아니면 **system** 은 명령 인터프리터에서 반환 된 값을 반환 합니다. 명령 인터프리터가 값 0을 반환할 때만 값 0을 반환합니다. 반환 값-1은 오류를 나타내고 **errno** 은 다음 값 중 하나로 설정 됩니다.
 
-|||
+| 값 | 설명 |
 |-|-|
 | **E2BIG** | 인수 목록(시스템에 따라 다름)이 너무 큽니다. |
 | **ENOENT (** | 명령 인터프리터를 찾을 수 없습니다. |
@@ -80,7 +80,7 @@ int _wsystem(
 
 ## <a name="remarks"></a>설명
 
-**시스템** 함수 *는 명령을 명령 인터프리터에 전달 하며* ,이 명령은 문자열을 운영 체제 명령으로 실행 합니다. **시스템** 은 **COMSPEC** 및 **PATH** 환경 변수를 사용 하 여 명령 인터프리터 파일 cmd.exe를 찾습니다. *Command* 가 **NULL**인 경우 함수는 명령 인터프리터가 있는지만 확인 합니다.
+**시스템** 함수 *는 명령을 명령 인터프리터에 전달 하며* ,이 명령은 문자열을 운영 체제 명령으로 실행 합니다. **시스템** 은 **COMSPEC** 및 **PATH** 환경 변수를 사용 하 여 CMD.exe 명령 인터프리터 파일을 찾습니다. *Command* 가 **NULL**인 경우 함수는 명령 인터프리터가 있는지만 확인 합니다.
 
 [Fflush](fflush.md) 또는 [_flushall](flushall.md)를 사용 하 여 명시적으로 플러시 하거나 **시스템**을 호출 하기 전에 모든 스트림을 닫아야 합니다.
 
@@ -99,7 +99,7 @@ int _wsystem(
 |루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**시스템**|\<process.h> 또는 \<stdlib.h>|
-|**_wsystem**|\<process.h>, \<stdlib.h> 또는 \<wchar.h>|
+|**_wsystem**|\<process.h> 또는 \<stdlib.h> 또는 \<wchar.h>|
 
 호환성에 대한 자세한 내용은 [Compatibility](../../c-runtime-library/compatibility.md)을 참조하세요.
 

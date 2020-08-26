@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 085ab8eda0a07decf69d139382a272700bebac7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 57c6e19bc56068c98f6c85978c7af68e56cb4f2a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232978"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832687"
 ---
 # <a name="piecewise_linear_distribution-class"></a>piecewise_linear_distribution 클래스
 
@@ -89,10 +89,8 @@ public:
 
 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[piecewise_linear_distribution](#piecewise_linear_distribution)|`piecewise_linear_distribution::intervals`|`piecewise_linear_distribution::param`|
-|`piecewise_linear_distribution::operator()`|`piecewise_linear_distribution::densities`|[param_type](#param_type)|
+[piecewise_linear_distribution](#piecewise_linear_distribution)\
+[param_type](#param_type)
 
 속성 함수 `intervals()`는 저장된 분포 간격 집합과 함께 `vector<result_type>`을 반환합니다.
 
@@ -219,7 +217,7 @@ Distribution for 100 samples:
 
 **네임스페이스:** std
 
-## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a>piecewise_linear_distribution::p iecewise_linear_distribution
+## <a name="piecewise_linear_distributionpiecewise_linear_distribution"></a><a name="piecewise_linear_distribution"></a> piecewise_linear_distribution::p iecewise_linear_distribution
 
 분포를 생성합니다.
 
@@ -324,7 +322,7 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 *parm* 를 저장 된 매개 변수 구조로 사용 하 여 분포 개체를 생성 합니다.
 
-## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a>piecewise_linear_distribution::p aram_type
+## <a name="piecewise_linear_distributionparam_type"></a><a name="param_type"></a> piecewise_linear_distribution::p aram_type
 
 분포의 모든 매개 변수를 저장합니다.
 

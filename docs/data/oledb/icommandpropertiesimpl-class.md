@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210810"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845577"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 클래스
 
@@ -49,16 +49,16 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 
 ### <a name="interface-methods"></a>인터페이스 메서드
 
-|||
+| Name | 설명 |
 |-|-|
 |[GetProperties](#getproperties)|행 집합에 대해 현재 요청 된 행 집합 속성 그룹의 속성 목록을 반환 합니다.|
 |[SetProperties](#setproperties)|행 집합 속성 그룹의 속성을 설정 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 명령에 필수입니다. 구현은 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 매크로에서 정의한 정적 함수를 통해 제공 됩니다.
 
-## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>ICommandPropertiesImpl:: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl:: GetProperties
 
 명령의 속성 맵을 사용 하 여 요청 된 모든 속성 집합을 반환 합니다.
 
@@ -75,11 +75,11 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 *OLE DB 프로그래머 참조*에서 [ICommandProperties:: GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 를 참조 하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)을 참조하세요.
 
-## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>ICommandPropertiesImpl:: SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl:: SetProperties
 
 Command 개체에 대 한 속성을 설정 합니다.
 
@@ -97,4 +97,4 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 ## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 공급자 템플릿 아키텍처](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,17 +1,17 @@
 ---
-title: idl_module (C++ COM 특성)
+title: idl_module (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168046"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845226"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -44,18 +44,18 @@ function declaration
 *helpcontext*<br/>
 필드 이 형식 라이브러리에 대 한 도움말 ID입니다.
 
-*hidden*<br/>
+*은선제거*<br/>
 필드 라이브러리가 표시 되지 않도록 하는 매개 변수입니다. 자세한 내용은 [hidden](/windows/win32/Midl/hidden) MIDL 특성을 참조하세요.
 
-*restricted*<br/>
+*액세스가*<br/>
 필드 라이브러리의 멤버를 임의로 호출할 수 없습니다. 자세한 내용은 [restricted](/windows/win32/Midl/restricted) MIDL 특성을 참조하세요.
 
 *함수 선언*<br/>
 정의 하는 함수입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Idl_module** C++ 특성을 사용 하면 .dll 파일에서 진입점을 지정 하 여 .dll 파일에서 가져올 수 있습니다.
+**Idl_module** c + + 특성을 사용 하면 .dll 파일에서 진입점을 지정 하 여 .dll 파일에서 가져올 수 있습니다.
 
 **Idl_module** 특성은 [module](/windows/win32/Midl/module) MIDL 특성과 비슷한 기능을 포함 합니다.
 
@@ -78,12 +78,10 @@ void FuncName(int i);
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|원하는 위치|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
@@ -92,5 +90,5 @@ void FuncName(int i);
 ## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
-[독립 실행형 특성](stand-alone-attributes.md)<br/>
-[entry](entry.md)
+[독립형 특성](stand-alone-attributes.md)<br/>
+[엔트리의](entry.md)

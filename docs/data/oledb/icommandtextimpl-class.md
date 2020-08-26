@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210732"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845122"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 클래스
 
@@ -44,7 +44,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-`ICommandTextImpl`에서 파생 된 명령 클래스입니다.
+에서 파생 된 명령 클래스 `ICommandTextImpl` 입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -54,22 +54,22 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ### <a name="interface-methods"></a>인터페이스 메서드
 
-|||
+| Name | 설명 |
 |-|-|
 |[GetCommandText](#getcommandtext)|[Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)에 대 한 마지막 호출로 설정 된 텍스트 명령을 반환 합니다.|
 |[SetCommandText](#setcommandtext)|명령 텍스트를 설정 하 여 기존 명령 텍스트를 바꿉니다.|
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+| Name | 설명 |
 |-|-|
 |[m_strCommandText](#strcommandtext)|명령 텍스트를 저장 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 명령에 대 한 필수 인터페이스입니다.
 
-## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl:: GetCommandText
 
 [Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)에 대 한 마지막 호출로 설정 된 텍스트 명령을 반환 합니다.
 
@@ -84,7 +84,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 *OLE DB 프로그래머 참조*에서 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 를 참조 하세요. *PguidDialect* 매개 변수는 기본적으로 무시 됩니다.
 
-## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a> ICommandTextImpl:: SetCommandText
 
 명령 텍스트를 설정 하 여 기존 명령 텍스트를 바꿉니다.
 
@@ -99,7 +99,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 *OLE DB 프로그래머 참조*에서 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 를 참조 하세요.
 
-## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a> ICommandTextImpl:: m_strCommandText
 
 명령 텍스트 문자열을 저장 합니다.
 
@@ -112,4 +112,4 @@ CComBSTR m_strCommandText;
 ## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 공급자 템플릿 아키텍처](../../data/oledb/ole-db-provider-template-architecture.md)

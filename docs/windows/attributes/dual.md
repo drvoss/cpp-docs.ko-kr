@@ -1,17 +1,17 @@
 ---
-title: dual (C++ COM 특성)
+title: dual (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168215"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845408"
 ---
 # <a name="dual"></a>dual
 
@@ -23,9 +23,9 @@ ms.locfileid: "80168215"
 [dual]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**이중** C++ 특성이 인터페이스 앞에 오면 생성 된 .idl 파일의 라이브러리 블록 안에 인터페이스가 배치 됩니다.
+**이중** c + + 특성이 인터페이스 앞에 오면 생성 된 .idl 파일의 라이브러리 블록 안에 인터페이스가 배치 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -55,12 +55,10 @@ __interface IStatic : IDispatch
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**interface**|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|`dispinterface`|
 
@@ -69,8 +67,8 @@ __interface IStatic : IDispatch
 ## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
-[용도별 특성](attributes-by-usage.md)<br/>
-[custom](custom-cpp.md)<br/>
+[사용 별 특성](attributes-by-usage.md)<br/>
+[재구성](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

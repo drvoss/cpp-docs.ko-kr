@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561819"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837621"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -183,13 +183,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[CTreeCtrl:: CTreeCtrl](#ctreectrl)|`CTreeCtrl` 개체를 생성합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|Description|
+|이름|설명|
 |----------|-----------------|
 |[CTreeCtrl:: Create](#create)|Tree view 컨트롤을 만들고이를 개체에 연결 `CTreeCtrl` 합니다.|
 |[CTreeCtrl:: CreateDragImage](#createdragimage)|지정 된 트리 뷰 항목에 대 한 끌기 비트맵을 만듭니다.|
@@ -323,7 +323,7 @@ Tree view 컨트롤의 스타일을 지정 합니다. [CreateWindow](/windows/wi
 *nID*<br/>
 Tree view 컨트롤의 ID를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 초기화에 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -369,7 +369,7 @@ Tree view 컨트롤의 스타일을 지정 합니다. [CreateWindow](/windows/wi
 *nID*<br/>
 컨트롤의 자식 창 ID입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 0이 아닌 값이 고, 그렇지 않으면 0입니다.
 
@@ -390,7 +390,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 *hItem*<br/>
 끌 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 끌기 비트맵이 추가 된 이미지 목록에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -398,7 +398,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 응용 프로그램은 항목을 끌 때 이미지 목록 함수를 사용 하 여 이미지를 표시 합니다.
 
-`CImageList`개체는 영구적 이며 완료 되 면 삭제 해야 합니다. 예를 들면 다음과 같습니다.
+`CImageList`개체는 영구적 이며 완료 되 면 삭제 해야 합니다. 예를 들어:
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 
@@ -418,7 +418,7 @@ Tree view 컨트롤에서 모든 항목을 삭제 하려면이 함수를 호출 
 BOOL DeleteAllItems();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -439,7 +439,7 @@ BOOL DeleteItem(HTREEITEM hItem);
 *hItem*<br/>
 삭제할 트리 항목의 핸들입니다. *Hitem* 에 TVI_ROOT 값이 있으면 모든 항목이 tree view 컨트롤에서 삭제 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -460,7 +460,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 *hItem*<br/>
 편집할 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 항목 텍스트를 편집 하는 데 사용 되는 개체에 대 한 포인터 `CEdit` 이 고, 그렇지 않으면 NULL입니다.
 
@@ -485,7 +485,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 *fCancelWithoutSave*\
 진행 편집 작업을 종료 하기 전에 트리 뷰 항목에 대 한 변경 내용을 취소 하려면 TRUE이 고, 작업을 종료 하기 전에 트리 뷰 항목에 대 한 변경 내용을 저장 하려면 FALSE입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -506,7 +506,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
 *hItem*<br/>
 표시 되는 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 시스템에서 트리 뷰 컨트롤의 항목을 스크롤하여 지정 된 항목이 표시 되는지 확인 하면 TRUE를 반환 합니다. 그렇지 않으면 반환 값은 FALSE입니다.
 
@@ -544,7 +544,7 @@ BOOL Expand(
 
 - TVE_TOGGLE 현재 확장 된 경우 목록을 축소 하거나 현재 축소 되어 있는 경우 확장 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -560,7 +560,7 @@ BOOL Expand(
 COLORREF GetBkColor() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤의 현재 창 배경색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 시스템 창 색을 사용 합니다. 이 경우를 사용 하 여 `::GetSysColor(COLOR_WINDOW)` 컨트롤에서 사용 중인 현재 시스템 색을 가져올 수 있습니다.
 
@@ -581,7 +581,7 @@ BOOL GetCheck(HTREEITEM hItem) const;
 *hItem*<br/>
 상태 정보를 받을 대상에 대 한 HTREEITEM입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 트리 컨트롤 항목이 선택 된 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -602,7 +602,7 @@ HTREEITEM GetChildItem(HTREEITEM hItem) const;
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 자식 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -618,7 +618,7 @@ Tree view 컨트롤의 항목 수를 검색 하려면이 함수를 호출 합니
 UINT GetCount() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 Tree view 컨트롤의 항목 수입니다.
 
@@ -634,7 +634,7 @@ Tree view 컨트롤의 항목 수입니다.
 HTREEITEM GetDropHilightItem() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 삭제 된 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -650,7 +650,7 @@ HTREEITEM GetDropHilightItem() const;
 CEdit* GetEditControl() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 항목 텍스트를 편집 하는 데 사용 되는 편집 컨트롤에 대 한 포인터입니다. 그렇지 않으면 NULL입니다.
 
@@ -666,7 +666,7 @@ CEdit* GetEditControl() const;
 DWORD GetExtendedStyle() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 트리 뷰 컨트롤의 확장 스타일의 비트 조합 (또는)을 포함 하는 값입니다. 자세한 내용은 [트리 뷰 컨트롤 확장 스타일](/windows/win32/Controls/tree-view-control-window-extended-styles)을 참조 하세요.
 
@@ -682,7 +682,7 @@ DWORD GetExtendedStyle() const;
 HTREEITEM GetFirstVisibleItem() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표시 되는 첫 번째 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -707,7 +707,7 @@ CImageList* GetImageList(UINT nImageList) const;
 
 - TVSIL_STATE는 사용자 정의 상태의 트리 뷰 항목에 대 한 이미지가 포함 된 상태 이미지 목록을 검색 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 컨트롤의 이미지 목록에 대 한 포인터 그렇지 않으면 NULL입니다.
 
@@ -729,7 +729,7 @@ Tree view 컨트롤의 각 항목에는 연결 된 비트맵 이미지 쌍이 �
 UINT GetIndent() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 측정 된 들여쓰기 크기 (픽셀)입니다.
 
@@ -745,7 +745,7 @@ UINT GetIndent() const;
 COLORREF GetInsertMarkColor() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
@@ -766,7 +766,7 @@ BOOL GetItem(TVITEM* pItem) const;
 *pItem*<br/>
 Windows SDK 설명 된 [Tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -787,7 +787,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 *hItem*<br/>
 데이터를 검색할 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Hitem*으로 지정 된 항목과 연결 된 포인터 크기의 응용 프로그램 관련 값입니다.
 
@@ -808,7 +808,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 *hItem*\
 진행 트리 뷰 컨트롤 항목에 대 한 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스입니다.
 
@@ -824,7 +824,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 SHORT GetItemHeight() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 항목의 높이 (픽셀)입니다.
 
@@ -854,7 +854,7 @@ BOOL GetItemImage(
 *nSelectedImage*<br/>
 트리 뷰 컨트롤의 이미지 목록에서 항목의 선택 된 이미지의 인덱스를 받는 정수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -890,7 +890,7 @@ BOOL GetItemPartRect(
 *lpRect*\
 제한이 [RECT](/windows/win32/api/windef/ns-windef-rect) 구조체에 대 한 포인터입니다. 이 메서드가 성공적으로 수행 되 면 구조는 *Hitem* 및 *npart*로 지정 된 파트의 사각형 좌표를 수신 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -934,7 +934,7 @@ Tree view 컨트롤 항목의 핸들입니다.
 *bTextOnly*<br/>
 이 매개 변수가 0이 아니면 경계 사각형에는 항목의 텍스트만 포함 됩니다. 그렇지 않으면 항목이 tree view 컨트롤에서 차지 하는 전체 줄을 포함 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 항목이 표시 되는 경우 0이 아니며, 경계 사각형은 *lpRect*에 포함 됩니다. 그렇지 않으면 0이 *lpRect* 초기화 되지 않습니다.
 
@@ -960,7 +960,7 @@ UINT GetItemState(
 *nStateMask*<br/>
 검색할 하나 이상의 상태를 나타내는 마스크입니다. *NStateMask*의 가능한 값에 대 한 자세한 내용은 `state` 및 `stateMask` Windows SDK에서 [tvitem](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 구조의 및 멤버에 대 한 설명을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 NStateMask로 지정 된 값의 비트 OR을 보유 하는 UINT입니다. 가능한 값에 대 한 자세한 내용은 [CTreeCtrl:: GetItem](#getitem)를 참조 하세요. 특정 상태에 대 한 값을 찾으려면 다음 예제와 같이 상태 값 및 반환 값의 비트 AND 연산을 수행 합니다.
 
@@ -981,7 +981,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 *hItem*\
 진행 트리 뷰 컨트롤 항목에 대 한 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 항목의 확장 된 상태입니다. 자세한 내용은 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 멤버를 참조 하십시오.
 
@@ -1002,7 +1002,7 @@ CString GetItemText(HTREEITEM hItem) const;
 *hItem*<br/>
 텍스트를 검색할 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `CString`항목의 텍스트를 포함 하는 개체입니다.
 
@@ -1018,7 +1018,7 @@ CString GetItemText(HTREEITEM hItem) const;
 HTREEITEM GetLastVisibleItem() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메서드가 성공 하는 경우 마지막 확장 되지 않은 노드 항목에 대 한 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1046,7 +1046,7 @@ HTREEITEM GetLastVisibleItem() const;
 COLORREF GetLineColor() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 선 색입니다.
 
@@ -1094,7 +1094,7 @@ HTREEITEM GetNextItem(
 
 - TVGN_ROOT는 지정 된 항목이 속한 루트 항목의 첫 번째 자식 항목을 검색 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 다음 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1121,7 +1121,7 @@ HTREEITEM GetNextSiblingItem(HTREEITEM hItem) const;
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 다음 형제 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1142,7 +1142,7 @@ HTREEITEM GetNextVisibleItem(HTREEITEM hItem) const;
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표시 되는 다음 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1163,7 +1163,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 부모 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1188,7 +1188,7 @@ HTREEITEM GetPrevSiblingItem(HTREEITEM hItem) const;
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 형제의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1209,7 +1209,7 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표시 된 이전 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1225,7 +1225,7 @@ HTREEITEM GetPrevVisibleItem(HTREEITEM hItem) const;
 HTREEITEM GetRootItem() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 루트 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1241,7 +1241,7 @@ HTREEITEM GetRootItem() const;
 UINT GetScrollTime() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 최대 스크롤 시간 (밀리초)입니다.
 
@@ -1257,7 +1257,7 @@ UINT GetScrollTime() const;
 UINT GetSelectedCount();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 선택 된 항목의 수입니다.
 
@@ -1273,7 +1273,7 @@ UINT GetSelectedCount();
 HTREEITEM GetSelectedItem() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 선택한 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1289,7 +1289,7 @@ HTREEITEM GetSelectedItem() const;
 COLORREF GetTextColor() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 텍스트 색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 텍스트 색의 시스템 색을 사용 합니다.
 
@@ -1305,7 +1305,7 @@ COLORREF GetTextColor() const;
 CToolTipCtrl* GetToolTips() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 트리 컨트롤에서 사용할 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터입니다. [Create](#create) member 함수에서 스타일 TVS_NOTOOLTIPS를 사용 하는 경우 도구 설명을 사용 하지 않고 NULL이 반환 됩니다.
 
@@ -1325,7 +1325,7 @@ Tree view 컨트롤에서 표시 되는 항목 수를 검색 하려면이 함수
 UINT GetVisibleCount() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 Tree view 컨트롤에 표시 되는 항목의 수입니다. 그렇지 않으면-1입니다.
 
@@ -1356,7 +1356,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 *pHitTestInfo*<br/>
 적중 횟수 테스트에 대 한 위치를 포함 하 고 적중 횟수 테스트 결과에 대 한 정보를 받는 [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo) 구조체의 주소입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 지점을 차지 하는 트리 뷰 항목의 핸들 이거나, 해당 요소를 차지 하는 항목이 없는 경우 NULL입니다.
 
@@ -1364,9 +1364,8 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 이 함수가 호출 되 면 *pt* 매개 변수는 테스트할 지점의 좌표를 지정 합니다. 함수는 지정 된 지점에 있는 항목의 핸들을 반환 하거나, 해당 요소를 차지 하는 항목이 없는 경우 NULL을 반환 합니다. 또한 *Pflags* 매개 변수는 지정 된 지점의 위치를 나타내는 값을 포함 합니다. 가능한 값은 다음과 같습니다.
 
-|||
+|값|설명|
 |-|-|
-|값|의미|
 |TVHT_ABOVE|클라이언트 영역을 초과 합니다.|
 |TVHT_BELOW|클라이언트 영역 아래에 있습니다.|
 |TVHT_NOWHERE|클라이언트 영역에 있지만 마지막 항목 아래에 있습니다.|
@@ -1379,7 +1378,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 |TVHT_ONITEMSTATEICON|사용자 정의 상태의 트리 뷰 항목에 대 한 상태 아이콘|
 |TVHT_TOLEFT|클라이언트 영역의 왼쪽에 있습니다.|
 |TVHT_TORIGHT|클라이언트 영역의 오른쪽에 있습니다.|
-|||
 
 ### <a name="example"></a>예제
 
@@ -1448,7 +1446,7 @@ HTREEITEM InsertItem(
 *hInsertAfter*<br/>
 새 항목을 삽입할 때 기준이 되는 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하는 경우 새 항목의 핸들입니다. 그렇지 않으면 NULL입니다.
 
@@ -1473,7 +1471,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Hitem* 에서 지정한 트리 항목에 자식 항목이 있는 경우 0이 아닌 값입니다. 그렇지 않으면 0입니다.
 
@@ -1498,7 +1496,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 *uAccId*\
 진행 트리 뷰 항목의 요소에 대 한 액세스 가능성 식별자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `HTREEITEM` *Uaccid* 매개 변수에 해당 하는 트리 뷰 항목 ()에 대 한 핸들입니다. 자세한 내용은 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 *hitem* 멤버를 참조 하십시오.
 
@@ -1533,7 +1531,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 *hItem*\
 진행 컨트롤의 트리 뷰 항목에 대 한 핸들입니다. 자세한 내용은 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 *hitem* 멤버를 참조 하십시오.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 *Hitem* 매개 변수에 해당 하는 액세스 가능성 식별자입니다.
 
@@ -1579,7 +1577,7 @@ BOOL Select(
 
 - TVGN_FIRSTVISIBLE 지정 된 항목이 첫 번째 표시 항목이 되도록 트리 뷰를 세로로 스크롤합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1604,7 +1602,7 @@ BOOL SelectDropTarget(HTREEITEM hItem);
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1625,7 +1623,7 @@ BOOL SelectItem(HTREEITEM hItem);
 *hItem*<br/>
 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1650,7 +1648,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 *hItem*<br/>
 표시 되는 첫 번째 항목으로 설정할 트리 항목의 핸들입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1680,7 +1678,7 @@ BOOL SetAutoscrollInfo(
 *uUpdateTime*\
 진행 컨트롤 업데이트 사이의 시간 간격입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 항상 TRUE를 반환 합니다.
 
@@ -1715,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 *clr*<br/>
 새 배경색을 포함 하는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 배경색의 시스템 색을 사용 하 여로 돌아갑니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 텍스트 색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤은 텍스트 색의 시스템 색을 사용 합니다.
 
@@ -1741,7 +1739,7 @@ BOOL SetCheck(
 *fCheck*<br/>
 트리 컨트롤 항목을 선택 하거나 선택 취소 해야 하는지 여부를 나타냅니다. 기본적으로는 `SetCheck` 선택할 항목을 설정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1777,7 +1775,7 @@ DWORD SetExtendedStyle(
 *dwExStyles*\
 진행 설정 하거나 해제할 현재 트리 뷰 컨트롤의 스타일을 지정 하는 비트 마스크입니다. 스타일의 조합을 설정 하려면 [트리 뷰 컨트롤 확장 스타일](/windows/win32/Controls/tree-view-control-window-extended-styles)에 설명 된 스타일의 비트 조합 (또는)을 지정 합니다. 스타일 집합을 지우려면 0을 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 확장 컨트롤 스타일을 포함 하는 값입니다.
 
@@ -1821,7 +1819,7 @@ CImageList* SetImageList(
 
 - TVSIL_STATE는 사용자 정의 상태의 트리 뷰 항목에 대 한 이미지가 포함 된 상태 이미지 목록을 설정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 이미지 목록에 대 한 포인터입니다 (있는 경우). 그렇지 않으면 NULL입니다.
 
@@ -1864,7 +1862,7 @@ BOOL SetInsertMark(
 *fAfter*<br/>
 삽입 표시가 지정 된 항목의 앞 이나 뒤에 배치 되는지 여부를 지정 하는 부울 값입니다. 이 인수가 0이 아닌 경우 삽입 표시는 항목 뒤에 배치 됩니다. 이 인수가 0 인 경우 삽입 표시는 항목 앞에 배치 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1885,7 +1883,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 *clrNew*<br/>
 새 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 삽입 표시 색을 포함 하는 COLORREF 값입니다.
 
@@ -1940,7 +1938,7 @@ Windows SDK 설명 된 대로 새 항목 특성을 포함 하는 [Tvitem](/windo
 *lParam*<br/>
 항목과 연결 된 포인터 크기의 응용 프로그램 관련 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1972,7 +1970,7 @@ BOOL SetItemData(
 *dwData*<br/>
 *Hitem*으로 지정 된 항목과 연결 된 포인터 크기의 응용 프로그램 관련 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -1998,7 +1996,7 @@ BOOL SetItemExpandedImageIndex(
 *iExpandedImage*\
 진행 지정 된 항목이 확장 된 상태일 때 표시할 이미지의 인덱스입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2031,7 +2029,7 @@ SHORT SetItemHeight(SHORT cyHeight);
 *cyHeight*<br/>
 트리 뷰에서 모든 항목의 새 높이 (픽셀)를 지정 합니다. 이 인수가 이미지의 높이 보다 작은 경우 이미지의 높이로 설정 됩니다. 이 인수를 사용할 수 없는 경우에도 가장 가까운 값으로 반올림 됩니다. 이 인수가-1 이면 컨트롤은 기본 항목 높이를 사용 하 여로 돌아갑니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 항목의 이전 높이 (픽셀)입니다.
 
@@ -2061,7 +2059,7 @@ BOOL SetItemImage(
 *nSelectedImage*<br/>
 트리 뷰 컨트롤의 이미지 목록에서 선택한 항목 이미지의 인덱스입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2099,7 +2097,7 @@ BOOL SetItemState(
 *nStateMask*<br/>
 변경할 상태를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2129,7 +2127,7 @@ BOOL SetItemStateEx(
 *uStateEx*\
 진행 항목의 확장 된 상태입니다. 자세한 내용은 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 구조체의 멤버를 참조 하십시오.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 메서드가 성공 하면 TRUE이 고, 그렇지 않으면입니다. 그렇지 않으면 FALSE입니다.
 
@@ -2167,7 +2165,7 @@ BOOL SetItemText(
 *lpszItem*<br/>
 항목의 새 텍스트를 포함 하는 문자열의 주소입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2188,7 +2186,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 *clrNew*<br/>
 새 줄 색입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 선 색입니다.
 
@@ -2213,7 +2211,7 @@ UINT SetScrollTime(UINT uScrollTime);
 *uScrollTime*<br/>
 새 최대 스크롤 시간 (밀리초)입니다. 이 값이 100 보다 작은 경우 100으로 반올림 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 최대 스크롤 시간 (밀리초)입니다.
 
@@ -2234,7 +2232,7 @@ COLORREF SetTextColor(COLORREF clr);
 *clr*<br/>
 새 텍스트 색을 포함 하는 COLORREF 값입니다. 이 인수가-1 이면 컨트롤은 텍스트 색의 시스템 색을 사용 하 여로 돌아갑니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 텍스트 색을 나타내는 COLORREF 값입니다. 이 값이-1 이면 컨트롤에서 텍스트 색의 시스템 색을 사용 하는 것입니다.
 
@@ -2255,7 +2253,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 *pWndTip*<br/>
 트리 컨트롤에서 사용할 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 컨트롤에서 이전에 사용한 도구 설명을 포함 하는 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 개체에 대 한 포인터 이거나, 이전에 사용 된 도구 설명이 없는 경우 NULL입니다.
 
@@ -2299,7 +2297,7 @@ BOOL SortChildren(HTREEITEM hItem);
 *hItem*<br/>
 자식 항목을 정렬할 부모 항목의 핸들입니다. *Hitem* 이 NULL 인 경우 정렬은 트리의 루트에서 진행 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 
@@ -2324,7 +2322,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 *pSort*<br/>
 [Tvsortcb](/windows/win32/api/commctrl/ns-commctrl-tvsortcb) 구조체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 0이 아니고, 그렇지 않으면 0입니다.
 

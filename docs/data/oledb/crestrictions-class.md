@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220446"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844966"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 클래스
 
@@ -51,11 +51,11 @@ class CRestrictions :
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[열기](#open)|사용자가 제공한 제한에 따라 결과 집합을 반환 합니다.|
 
-## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions:: Open
+## <a name="crestrictionsopen"></a><a name="open"></a> CRestrictions:: Open
 
 사용자가 제공한 제한에 따라 결과 집합을 반환 합니다.
 
@@ -84,7 +84,7 @@ HRESULT Open(const CSession& session,
 *bBind*<br/>
 진행 열 맵을 자동으로 바인딩할 지 여부를 지정 합니다. 기본값은입니다 **`true`** . 그러면 열 맵이 자동으로 바인딩됩니다. *Bbind* 를로 설정 하면 **`false`** 수동으로 바인딩할 수 있도록 열 맵의 자동 바인딩이 방지 됩니다. (수동 바인딩은 OLAP 사용자에 게 특히 관심이 있습니다.)
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값 중 하나입니다.
 

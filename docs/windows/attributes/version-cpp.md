@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: b537f56c39c33abc52897cf53ea2cc0fb24ee458
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d21761a556455cec27087896984bdc721841d9d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213803"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832947"
 ---
 # <a name="version-c"></a>version(C++)
 
@@ -39,12 +39,10 @@ ms.locfileid: "87213803"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`**|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|**coclass**|
 |**잘못된 특성**|없음|
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 5029227078ac0af9ebdd0c74522a7b0ae8ea4d42
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0351cd0fad1d0fc838c75d3cdbd809a04b0fb393
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228520"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832297"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>CArchive &lt; &lt; 및 &gt; &gt; 연산자 사용
 
-`CArchive`는 \< and > 파일에 대 한 단순 데이터 형식과 파일의 쓰기 및 읽기를 위한 <> 연산자를 제공 `CObject` 합니다.
+`CArchive` 는 \< and > 파일에 대 한 단순 데이터 형식과 파일의 쓰기 및 읽기를 위한 <> 연산자를 제공 `CObject` 합니다.
 
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>보관 파일을 통해 개체를 파일에 저장 하려면
 
@@ -39,21 +39,40 @@ Serialize 할 수 있는 `Serialize` 파생 클래스의 함수는 `CObject` 일
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-라이브러리는 **<\<** and **>>** `CArchive` 첫 번째 피연산자로 연산자를 정의 하 고 다음 데이터 형식 및 클래스 형식을 두 번째 피연산자로 정의 합니다.
+라이브러리는 **`<<`** 및 **`>>`** 연산자를 `CArchive` 첫 번째 피연산자로 정의 하 고 다음 데이터 형식 및 클래스 형식을 두 번째 피연산자로 정의 합니다.
 
-||||
-|-|-|-|
-|`CObject*`|**크기** 및`CSize`|**`float`**|
-|**단어씩**|`CString`|**POINT** 및`CPoint`|
-|`DWORD`|**바이트만**|`RECT` 및 `CRect`|
-|**double**|**시간과**|`CTime` 및 `CTimeSpan`|
-|`Int`|**COleCurrency**|`COleVariant`|
-|`COleDateTime`|`COleDateTimeSpan`||
+:::row:::
+   :::column span="":::
+      `BYTE`\
+      `CObject*`\
+      `COleCurrency`\
+      `COleDateTime`\
+      `COleDateTimeSpan`
+   :::column-end:::
+   :::column span="":::
+      `COleVariant`\
+      `CString`\
+      `CTime` 및 `CTimeSpan`\
+      `Double`
+   :::column-end:::
+   :::column span="":::
+      `DWORD`\
+      `Float`\
+      `Int`\
+      `LONG`
+   :::column-end:::
+   :::column span="":::
+      `POINT` 및 `CPoint`\
+      `RECT` 및 `CRect`\
+      `SIZE` 및 `CSize`\
+      `WORD`
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > 보관을 통해를 저장 하 고 로드 `CObject` 하려면 추가 고려 사항이 필요 합니다. 자세한 내용은 [보관을 통해 CObjects 저장 및 로드](../mfc/storing-and-loading-cobjects-via-an-archive.md)를 참조 하세요.
 
-**CArchive <\<** and **> > ** 연산자는 항상 `CArchive` 첫 번째 피연산자 인 개체에 대 한 참조를 반환 합니다. 이렇게 하면 아래 그림과 같이 연산자를 연결할 수 있습니다.
+`CArchive` **`<<`** 및 **`>>`** 연산자는 항상 `CArchive` 첫 번째 피연산자 인 개체에 대 한 참조를 반환 합니다. 이렇게 하면 아래 그림과 같이 연산자를 연결할 수 있습니다.
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

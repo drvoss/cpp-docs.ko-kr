@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: e66b3bd9f5e8058a4724746ba9ec5abd14cdae3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: da7c8eee2653a34035f39fe272378ae63165bfc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222467"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845499"
 ---
 # <a name="ios_base-class"></a>ios_base 클래스
 
@@ -139,13 +139,13 @@ Ios_base 클래스의 개체는 다음 항목으로 구성되는 형식 지정 �
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[ios_base](#ios_base)|`ios_base` 개체를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[event_callback](#event_callback)|[register_call](#register_callback)에 전달된 함수에 대해 설명합니다.|
 |[`fmtflags`](#fmtflags)|출력의 모양을 지정하는 상수입니다.|
@@ -155,13 +155,13 @@ Ios_base 클래스의 개체는 다음 항목으로 구성되는 형식 지정 �
 
 ### <a name="enums"></a>열거형
 
-|||
+|Name|설명|
 |-|-|
 |[event](#event)|이벤트 유형을 지정합니다.|
 
 ### <a name="constants"></a>상수
 
-|||
+|Name|설명|
 |-|-|
 |[adjustfield](#fmtflags)|`internal` &#124; `left` &#124; `right`로 정의된 비트 마스크입니다.|
 |[app](#openmode)|각 삽입 전에 스트림의 끝에 검색을 지정합니다.|
@@ -197,7 +197,7 @@ Ios_base 클래스의 개체는 다음 항목으로 구성되는 형식 지정 �
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[실패로](#failure)|멤버 클래스는 클래스 템플릿 [basic_ios](../standard-library/basic-ios-class.md)에서 멤버 함수 [clear](../standard-library/basic-ios-class.md#clear) 에 의해 throw 되는 모든 예외에 대 한 기본 클래스로 사용 됩니다.|
 |[flags](#flags)|현재 플래그 설정을 설정하거나 반환합니다.|
@@ -216,7 +216,7 @@ Ios_base 클래스의 개체는 다음 항목으로 구성되는 형식 지정 �
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자 =](#op_eq)|`ios_base` 개체에 사용할 대입 연산자입니다.|
 
@@ -251,7 +251,7 @@ enum event {
 
 예제는 [register_callback](#register_callback)을 참조하세요.
 
-## <a name="event_callback"></a><a name="event_callback"></a>event_callback
+## <a name="event_callback"></a><a name="event_callback"></a> event_callback
 
 [register_call](#register_callback)에 전달된 함수에 대해 설명합니다.
 
@@ -281,7 +281,7 @@ typedef void (__cdecl *event_callback)(
 
 `event_callback`을 사용하는 예제는 [register_call](#register_callback)을 참조하세요.
 
-## <a name="failure"></a><a name="failure"></a>실패로
+## <a name="failure"></a><a name="failure"></a> 실패로
 
 `failure` 클래스는 예외로 throw된 모든 개체의 형식에 대한 기본 클래스를 `iostreams` 라이브러리의 함수별로 정의하여 스트림 버퍼 작업 중 검색된 오류를 보고합니다.
 
@@ -333,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a><a name="flags"></a>flags
+## <a name="flags"></a><a name="flags"></a> flags
 
 현재 플래그 설정을 설정하거나 반환합니다.
 
@@ -347,7 +347,7 @@ fmtflags flags(fmtflags fmtfl);
 *fmtfl*\
 새 `fmtflags` 설정입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 또는 현재 `fmtflags` 설정입니다.
 
@@ -379,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a><a name="fmtflags"></a>fmtflags
+## <a name="fmtflags"></a><a name="fmtflags"></a> fmtflags
 
 출력의 모양을 지정하는 상수입니다.
 
@@ -455,7 +455,7 @@ public:
 
 이러한 형식 플래그를 수정 하는 함수의 예는를 참조 하십시오 [\<iomanip>](../standard-library/iomanip.md) .
 
-## <a name="getloc"></a><a name="getloc"></a>getloc
+## <a name="getloc"></a><a name="getloc"></a> getloc
 
 저장된 로캘 개체를 반환합니다.
 
@@ -463,7 +463,7 @@ public:
 locale getloc() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 저장된 로캘 개체입니다.
 
@@ -485,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a><a name="imbue"></a>imbue
+## <a name="imbue"></a><a name="imbue"></a> imbue
 
 로캘을 변경합니다.
 
@@ -498,7 +498,7 @@ locale imbue(const locale& _Loc);
 *_Loc*\
 새 로캘 설정입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 로캘입니다.
 
@@ -510,7 +510,7 @@ locale imbue(const locale& _Loc);
 
 샘플은 [basic_ios:: imbue](../standard-library/basic-ios-class.md#imbue)를 참조하세요.
 
-## <a name="init"></a><a name="init"></a>Cloud-init
+## <a name="init"></a><a name="init"></a> Cloud-init
 
 `iostream`생성 될 때 표준 개체를 만듭니다.
 
@@ -522,7 +522,7 @@ class Init { };
 
 중첩 된 클래스는 `iostream` 임의 정적 개체에 대 한 생성자를 실행 하기 전에도 생성으로 표준 개체가 올바르게 생성 되도록 하는 개체를 설명 합니다.
 
-## <a name="ios_base"></a><a name="ios_base"></a>ios_base
+## <a name="ios_base"></a><a name="ios_base"></a> ios_base
 
 ios_base 개체를 생성합니다.
 
@@ -534,7 +534,7 @@ ios_base();
 
 (보호된) 생성자는 아무 작업도 수행하지 않습니다. Init를 나중에 호출 하는 경우 `basic_ios::` [init](../standard-library/basic-ios-class.md#init) 개체를 초기화 해야 안전 하 게 제거할 수 있습니다. 따라서 클래스 ios_base에 대 한 안전 사용은 클래스 템플릿 [basic_ios](../standard-library/basic-ios-class.md)의 기본 클래스로만 사용 됩니다.
 
-## <a name="iostate"></a><a name="iostate"></a>iostate
+## <a name="iostate"></a><a name="iostate"></a> iostate
 
 스트림의 상태를 설명하는 상수의 형식입니다.
 
@@ -562,7 +562,7 @@ public:
 
 또한 `goodbit` 앞에서 언급 한 비트가 설정 되지 않은 ( `goodbit` 0으로 보장 됨)에도 유용한 값이 있습니다.
 
-## <a name="iword"></a><a name="iword"></a>iword
+## <a name="iword"></a><a name="iword"></a> iword
 
 `iword`로 저장할 수 있는 값을 할당합니다.
 
@@ -587,7 +587,7 @@ long& iword(int idx);
 
 을 [`xalloc`](#xalloc) 사용 하는 방법에 대 한 샘플은를 참조 하세요 `iword` .
 
-## <a name="openmode"></a><a name="openmode"></a>openmode
+## <a name="openmode"></a><a name="openmode"></a> openmode
 
 스트림과 상호 작용하는 방법을 설명합니다.
 
@@ -637,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 ios_base 개체에 대한 대입 연산자입니다.
 
@@ -650,7 +650,7 @@ ios_base& operator=(const ios_base& right);
 *오른쪽*\
 `ios_base` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 할당 중인 개체입니다.
 
@@ -660,7 +660,7 @@ ios_base& operator=(const ios_base& right);
 
 이 연산자는 `ios_base`에서 파생된 클래스에서만 사용됩니다.
 
-## <a name="precision"></a><a name="precision"></a>소수
+## <a name="precision"></a><a name="precision"></a> 소수
 
 부동 소수점 숫자에 표시할 자릿수를 지정합니다.
 
@@ -674,7 +674,7 @@ streamsize precision(streamsize _Prec);
 *_Prec*\
 표시할 유효 자릿수 또는 고정 표기법에서 소수점 뒤의 자릿수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 멤버 함수는 저장된 [표시 자릿수](../standard-library/ios-base-class.md)를 반환합니다. 두 번째 멤버 함수는 *_Prec* 를 표시 전체 자릿수에 저장 하 고 이전에 저장 된 값을 반환 합니다.
 
@@ -706,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a><a name="pword"></a>pword
+## <a name="pword"></a><a name="pword"></a> pword
 
 `pword`로 저장할 수 있는 값을 할당합니다.
 
@@ -731,7 +731,7 @@ void *& pword(int index);
 
 `pword` 사용 예제는 [`xalloc`](#xalloc)를 참조하세요.
 
-## <a name="register_callback"></a><a name="register_callback"></a>register_callback
+## <a name="register_callback"></a><a name="register_callback"></a> register_callback
 
 콜백 함수를 지정합니다.
 
@@ -839,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a><a name="seekdir"></a>seekdir
+## <a name="seekdir"></a><a name="seekdir"></a> seekdir
 
 오프셋 작업에 대한 시작 지점을 지정합니다.
 
@@ -888,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a><a name="setf"></a>setf
+## <a name="setf"></a><a name="setf"></a> setf
 
 지정된 플래그를 설정합니다.
 
@@ -910,7 +910,7 @@ fmtflags setf(
 *_Unset*\
 해제할 플래그입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이전 형식 플래그입니다.
 
@@ -942,7 +942,7 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a><a name="sync_with_stdio"></a>sync_with_stdio
+## <a name="sync_with_stdio"></a><a name="sync_with_stdio"></a> sync_with_stdio
 
 `iostream`및 C 런타임 라이브러리 작업이 소스 코드에 표시 되는 순서 대로 발생 하는지 확인 합니다.
 
@@ -957,7 +957,7 @@ static bool sync_with_stdio(
 *_Sync*\
 모든 스트림이와 동기화 되어 있는지 여부를 나타냅니다 `stdio` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 함수에 대 한 이전 설정입니다.
 
@@ -965,7 +965,7 @@ static bool sync_with_stdio(
 
 정적 멤버 함수는 `stdio` 동기화 플래그를 초기에 저장 **`true`** 합니다. **`true`** 인 경우이 플래그는 동일한 파일에 대 [`iostreams`](../standard-library/iostreams-conventions.md) 한 작업이 함수 및 c + + 표준 라이브러리에 정의 된 함수 간에 적절 하 게 동기화 되도록 합니다. 그렇지 않으면 동기화가 보장 될 수도 있고 그렇지 않을 수도 있지만 성능이 향상 될 수도 있습니다. 함수는 *_Sync* 를 `stdio` 동기화 플래그에 저장 하 고 이전에 저장 된 값을 반환 합니다. 표준 스트림에 대 한 작업을 수행 하기 전에만이를 안전 하 게 호출할 수 있습니다.
 
-## <a name="unsetf"></a><a name="unsetf"></a>unsetf
+## <a name="unsetf"></a><a name="unsetf"></a> unsetf
 
 지정된 플래그가 해제되도록 합니다.
 
@@ -988,7 +988,7 @@ void unsetf(
 
 사용에 대 한 샘플은 [ios_base:: setf](#setf) 를 참조 하세요 `unsetf` .
 
-## <a name="width"></a><a name="width"></a>너비
+## <a name="width"></a><a name="width"></a> 너비
 
 출력 스트림의 길이를 설정합니다.
 
@@ -1004,7 +1004,7 @@ streamsize width(
 *_Wide*\
 출력 스트림의 원하는 크기입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 현재 너비 설정입니다.
 
@@ -1033,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a><a name="xalloc"></a>xalloc
+## <a name="xalloc"></a><a name="xalloc"></a> xalloc
 
 변수가 스트림의 일부가 되도록 지정 합니다.
 
@@ -1041,7 +1041,7 @@ int main( ) {
 static int xalloc( );
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 정적 멤버 함수는 각 호출에서 증가 하는 저장 된 정적 값을 반환 합니다.
 

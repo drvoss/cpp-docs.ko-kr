@@ -18,14 +18,14 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240268"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845070"
 ---
-# <a name="referencewrapper-class"></a>reference_wrapper 클래스
+# <a name="reference_wrapper-class"></a>reference_wrapper 클래스
 
 참조를 래핑합니다.
 
@@ -59,31 +59,31 @@ class reference_wrapper
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|`reference_wrapper`를 생성합니다.|
 
-### <a name="typedefs"></a>형식 정의
+### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[result_type](#result_type)|래핑된 참조의 약한 결과 형식입니다.|
 |[type](#type)|래핑된 참조 형식입니다.|
 
-### <a name="functions"></a>함수
+### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[get](#get)|래핑된 참조를 가져옵니다.|
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
-|[Ty 연산자&amp;](#op_ty_amp)|래핑된 참조에 대한 포인터를 가져옵니다.|
-|[operator()](#op_call)|래핑된 참조를 호출합니다.|
+|[연산자 Ty&amp;](#op_ty_amp)|래핑된 참조에 대한 포인터를 가져옵니다.|
+|[연산자 ()](#op_call)|래핑된 참조를 호출합니다.|
 
-## <a name="get"></a> get
+## <a name="get"></a><a name="get"></a> 가져오기
 
 래핑된 참조를 가져옵니다.
 
@@ -122,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a> Ty 연산자&amp;
+## <a name="operator-tyamp"></a><a name="op_ty_amp"></a> 연산자 Ty&amp;
 
 래핑된 참조를 가져옵니다.
 
@@ -132,7 +132,7 @@ operator Ty&() const noexcept;
 
 ### <a name="remarks"></a>설명
 
-멤버 연산자는 `*ptr`을 반환합니다.
+멤버 연산자는 `*ptr`를 반환합니다.
 
 ### <a name="example"></a>예제
 
@@ -158,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="operator"></a><a name="op_call"></a> 연산자 ()
 
 래핑된 참조를 호출합니다.
 
@@ -169,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>매개 변수
 
-*형식*\
+*종류*\
 인수 목록 유형입니다.
 
-*인수*\
+*args*\
 인수 목록입니다.
 
 ### <a name="remarks"></a>설명
@@ -204,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a> reference_wrapper
+## <a name="reference_wrapper"></a><a name="reference_wrapper"></a> reference_wrapper
 
 `reference_wrapper`를 생성합니다.
 
@@ -217,7 +217,7 @@ reference_wrapper(Ty& val) noexcept;
 *Ty*\
 래핑할 형식입니다.
 
-*val*\
+*짧은*\
 래핑할 값입니다.
 
 ### <a name="remarks"></a>설명
@@ -255,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 래핑된 참조의 약한 결과 형식입니다.
 
@@ -294,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a> 형식
+## <a name="type"></a><a name="type"></a> 형식
 
 래핑된 참조 형식입니다.
 
