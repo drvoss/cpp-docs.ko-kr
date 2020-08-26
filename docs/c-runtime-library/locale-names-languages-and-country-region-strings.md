@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 95557c824aafb1092cc7711f19708cd7782683a9
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88087009"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842952"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT 로캘 이름, 언어 및 국가/지역 문자열
 
@@ -26,7 +26,7 @@ ms.locfileid: "88087009"
 &nbsp;&nbsp;&nbsp;&nbsp;\| ""<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;\| NULL
 
-*locale-name* 형식은 짧은 IETF 표준 문자열입니다(예: 영어(미국)의 경우 `en-US` 또는 보스니아어(키릴 자모, 보스니아 헤르체고비나)의 경우 `bs-Cyrl-BA`). 이러한 형식이 선호됩니다. Windows 운영 체제 버전에서 지원 되는 로캘 이름 목록을 보려면 [부록 a:](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) MS Lcid의 제품 동작: windows Lcid (언어 코드 식별자) 참조에서 표의 **언어 태그** 열을 참조 \[ 하세요. 이 리소스는 로캘 이름의 지원되는 언어, 스크립트 및 영역 부분을 나열합니다. 비-기본 정렬 순서를 사용하는 지원되는 로캘 이름에 대한 정보는 **Sort Order Identifiers(정렬 순서 식별자)** 에서 [로캘 이름](/windows/win32/Intl/sort-order-identifiers)열을 참조하세요. Windows 10 이상에서는 유효한 [BCP-47](https://tools.ietf.org/html/bcp47) 언어 태그에 해당하는 로캘 이름을 사용할 수 있습니다. 예를 들어 `jp-US`는 유효한 BCP-47 태그이지만 로캘 기능의 경우 `US`만 유효합니다.
+*locale-name* 형식은 짧은 IETF 표준 문자열입니다(예: 영어(미국)의 경우 `en-US` 또는 보스니아어(키릴 자모, 보스니아 헤르체고비나)의 경우 `bs-Cyrl-BA`). 이러한 형식이 선호됩니다. Windows 운영 체제 버전에서 지원 되는 로캘 이름 목록을 보려면 [부록 a:](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) MS Lcid의 제품 동작: windows Lcid (언어 코드 식별자) 참조에서 표의 **언어 태그** 열을 참조 \[ 하세요. 이 리소스는 로캘 이름의 지원되는 언어, 스크립트 및 영역 부분을 나열합니다. 비-기본 정렬 순서를 사용하는 지원되는 로캘 이름에 대한 정보는 **Sort Order Identifiers(정렬 순서 식별자)** 에서 [로캘 이름](/windows/win32/Intl/sort-order-identifiers)열을 참조하세요. Windows 10 이상에서는 유효한 [BCP-47](https://tools.ietf.org/html/bcp47) 언어 태그에 해당하는 로캘 이름을 사용할 수 있습니다. 예를 들어 `jp-US`는 유효한 BCP-47 태그이지만 로캘 기능의 경우 `US`만 유효합니다.
 
 *language* \[ **\_** _국가-지역_ \[ __입니다.__ *코드 페이지*]] 양식은 언어 문자열, 언어 문자열, 국가 또는 지역 문자열이 로캘을 만드는 데 사용 되는 경우 범주에 대 한 로캘 설정에 저장 됩니다. 지원되는 언어 문자열 집합은 [언어 문자열](../c-runtime-library/language-strings.md)에 설명되어 있고, 지원되는 국가/지역 문자열은 [국가/지역 문자열](../c-runtime-library/country-region-strings.md)에 나열되어 있습니다. 지정된 언어가 국가 또는 지역과 연결되어 있지 않으면 지정된 국가 또는 지역에 대한 기본 언어가 로캘 설정에 저장됩니다. 이러한 문자열은 로캘 이름 형식보다 운영 체제 업데이트에 의해 변경될 가능성이 높기 때문에 코드에 포함되거나 스토리지로 직렬화된 로캘 문자열에는 이 양식을 사용하지 않는 것이 좋습니다.
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: '&lt;array&gt; 함수'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,22 +10,21 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3389ba769d6b61a363e8cbfcf5f6a4e9ec679469
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364933"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844706"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 함수
 
-배열 \<> 헤더에는 `get` **배열** 개체에서 작동하는 `swap`두 개의 비멤버 함수 및 및 의 가용 함수가 포함됩니다.
+헤더에는 \<array> `get` `swap` **배열** 개체에 대해 작동 하는 멤버 함수 두 개 (및)가 포함 되어 있습니다.
 
-|||
-|-|-|
-|[get](#get)|[스왑](#swap)|
+[가져오기](#get)\
+[스왑을](#swap)
 
-## <a name="get"></a><a name="get"></a>가져오기
+## <a name="get"></a><a name="get"></a> 가져오기
 
 배열의 지정된 요소에 대한 참조를 반환합니다.
 
@@ -42,16 +41,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-*인덱스*\
+*인덱싱할*\
 요소 오프셋입니다.
 
-*T*\
+*트*\
 요소의 형식입니다.
 
-*N*\
+*개의*\
 배열의 요소 수입니다.
 
-*도착*\
+*arr*\
 선택할 배열입니다.
 
 ### <a name="example"></a>예제
@@ -86,9 +85,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
-두 `std::swap` **배열** 개체를 교환하는 비멤버 템플릿 전문화.
+`std::swap`두 **배열** 개체를 교환 하는의 멤버가 아닌 템플릿 특수화입니다.
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,13 +96,13 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>매개 변수
 
-*타이*\
+*Ty*\
 요소의 형식입니다.
 
-*N*\
+*개의*\
 배열의 크기입니다.
 
-*왼쪽*\
+*비어*\
 교환할 첫 번째 배열입니다.
 
 *오른쪽*\
@@ -161,4 +160,4 @@ int main()
 
 ## <a name="see-also"></a>참고 항목
 
-[\<배열>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

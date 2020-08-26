@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: f28a850c365bc9a75d8e5b100e5e5cc0a1c5dc10
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404566"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844043"
 ---
 # <a name="ftmbase-class"></a>FtmBase 클래스
 
@@ -54,13 +54,13 @@ class FtmBase :
 
 ### <a name="public-constructors"></a>Public 생성자
 
-| Name                         | Description                                        |
+| 이름                         | 설명                                        |
 | ---------------------------- | -------------------------------------------------- |
 | [FtmBase:: FtmBase](#ftmbase) | `FtmBase` 클래스의 새 인스턴스를 초기화합니다. |
 
 ### <a name="public-methods"></a>Public 메서드
 
-| 이름                                                               | Description                                                                                                                                                          |
+| 이름                                                               | 설명                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [FtmBase:: CreateGlobalInterfaceTable](#createglobalinterfacetable) | GIT (전역 인터페이스 테이블)을 만듭니다.                                                                                                                              |
 | [FtmBase::D isconnectObject](#disconnectobject)                     | 개체에 대 한 모든 외부 연결을 강제로 해제 합니다. 개체의 서버는를 종료 하기 전에 개체의이 메서드 구현을 호출 합니다.                |
@@ -72,7 +72,7 @@ class FtmBase :
 
 ### <a name="public-data-members"></a>공용 데이터 멤버
 
-| Name                                | Description                                       |
+| Name                                | 설명                                       |
 | ----------------------------------- | ------------------------------------------------- |
 | [FtmBase:: marshaller_](#marshaller) | 자유 스레드된 마샬러에 대 한 참조를 보유 합니다. |
 
@@ -86,7 +86,7 @@ class FtmBase :
 
 **네임스페이스:** Microsoft::WRL
 
-## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a>FtmBase:: CreateGlobalInterfaceTable
+## <a name="ftmbasecreateglobalinterfacetable"></a><a name="createglobalinterfacetable"></a> FtmBase:: CreateGlobalInterfaceTable
 
 GIT (전역 인터페이스 테이블)을 만듭니다.
 
@@ -101,15 +101,15 @@ static HRESULT CreateGlobalInterfaceTable(
 *git*<br/>
 이 작업이 완료 되 면 전역 인터페이스 테이블에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
 ### <a name="remarks"></a>설명
 
-자세한 내용은 [`IGlobalInterfaceTable`](https://docs.microsoft.com/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable)를 참조하세요.
+자세한 내용은 [`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable)를 참조하세요.
 
-## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a>FtmBase::D isconnectObject
+## <a name="ftmbasedisconnectobject"></a><a name="disconnectobject"></a> FtmBase::D isconnectObject
 
 개체에 대 한 모든 외부 연결을 강제로 해제 합니다. 개체의 서버는를 종료 하기 전에 개체의이 메서드 구현을 호출 합니다.
 
@@ -124,11 +124,11 @@ STDMETHODIMP DisconnectObject(
 *dwReserved*<br/>
 나중에 사용하도록 예약되어 있습니다. 0이어야 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a>FtmBase:: FtmBase
+## <a name="ftmbaseftmbase"></a><a name="ftmbase"></a> FtmBase:: FtmBase
 
 `FtmBase` 클래스의 새 인스턴스를 초기화합니다.
 
@@ -136,7 +136,7 @@ STDMETHODIMP DisconnectObject(
 FtmBase();
 ```
 
-## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a>FtmBase:: GetMarshalSizeMax
+## <a name="ftmbasegetmarshalsizemax"></a><a name="getmarshalsizemax"></a> FtmBase:: GetMarshalSizeMax
 
 지정 된 개체에서 지정 된 인터페이스 포인터를 마샬링하는 데 필요한 바이트 수에 대 한 상한을 가져옵니다.
 
@@ -175,11 +175,11 @@ MSHCTX 열거 값을 하나 이상 지정 하십시오.
 *pSize*<br/>
 이 작업이 완료 되 면 마샬링 스트림에 쓸 데이터 양의 상한에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 S_OK 합니다. 그렇지 않으면 E_FAIL 또는 E_NOINTERFACE 합니다.
 
-## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a>FtmBase:: GetUnmarshalClass
+## <a name="ftmbasegetunmarshalclass"></a><a name="getunmarshalclass"></a> FtmBase:: GetUnmarshalClass
 
 COM이 해당 프록시에 대 한 코드를 포함 하는 DLL을 찾기 위해 사용 하는 CLSID를 가져옵니다. COM은이 DLL을 로드 하 여 프록시의 초기화 되지 않은 인스턴스를 만듭니다.
 
@@ -217,11 +217,11 @@ MSHCTX 열거 값을 하나 이상 지정 하십시오.
 
 *pCid*
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 S_OK 합니다. 그렇지 않으면 S_FALSE 합니다.
 
-## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a>FtmBase:: MarshalInterface
+## <a name="ftmbasemarshalinterface"></a><a name="marshalinterface"></a> FtmBase:: MarshalInterface
 
 일부 클라이언트 프로세스에서 프록시 개체를 초기화 하는 데 필요한 데이터를 스트림에 씁니다.
 
@@ -260,7 +260,7 @@ MSHCTX 열거 값을 하나 이상 지정 하십시오.
 *mshlflags*<br/>
 마샬링될 데이터를 클라이언트 프로세스로 다시 전송할지 (일반적인 경우), 여러 클라이언트에서 검색할 수 있는 전역 테이블에 쓸지 여부를 지정 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인터페이스 포인터가 성공적으로 마샬링되 S_OK 합니다.
 
@@ -270,7 +270,7 @@ MSHCTX 열거 값을 하나 이상 지정 하십시오.
 
 E_FAIL 작업이 실패 했습니다.
 
-## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a>FtmBase:: marshaller_
+## <a name="ftmbasemarshaller_"></a><a name="marshaller"></a> FtmBase:: marshaller_
 
 자유 스레드된 마샬러에 대 한 참조를 보유 합니다.
 
@@ -278,7 +278,7 @@ E_FAIL 작업이 실패 했습니다.
 Microsoft::WRL::ComPtr<IMarshal> marshaller_; ;
 ```
 
-## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a>FtmBase:: ReleaseMarshalData
+## <a name="ftmbasereleasemarshaldata"></a><a name="releasemarshaldata"></a> FtmBase:: ReleaseMarshalData
 
 마샬링된 데이터 패킷을 소멸 시킵니다.
 
@@ -293,11 +293,11 @@ STDMETHODIMP ReleaseMarshalData(
 *pStm*<br/>
 제거할 데이터 패킷을 포함 하는 스트림에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공하면 S_OK이고, 그렇지 않으면 오류를 나타내는 HRESULT입니다.
 
-## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a>FtmBase:: UnmarshalInterface
+## <a name="ftmbaseunmarshalinterface"></a><a name="unmarshalinterface"></a> FtmBase:: UnmarshalInterface
 
 새로 만든 프록시를 초기화 하 고 해당 프록시에 대 한 인터페이스 포인터를 반환 합니다.
 
@@ -320,6 +320,6 @@ STDMETHODIMP UnmarshalInterface(
 *ppv*<br/>
 이 작업이 완료 되 면 *riid*에서 요청 된 인터페이스 포인터를 받는 포인터 변수의 주소입니다. 이 작업이 성공적으로 수행 되 면 **ppv* 는 역마샬링 될 인터페이스의 요청 된 인터페이스 포인터를 포함 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 성공 하면 S_OK 합니다. 그렇지 않으면 E_NOINTERFACE 또는 E_FAIL 합니다.

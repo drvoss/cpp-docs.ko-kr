@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 72d18eb50f8d85fb10d5af3ffce08c5b74947531
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ff8888c26945d7f118e71002e3b3290217b463c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222097"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843042"
 ---
 # <a name="uuid-c-attributes"></a>uuid(C++ 특성)
 
@@ -44,12 +44,10 @@ ATL을 사용 하지 않는 프로젝트에서 사용 하는 경우 특성을 �
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|`class`, `struct`, `interface`, `union`, `enum`|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

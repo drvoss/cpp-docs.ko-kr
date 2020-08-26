@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: 5aee23f72c5b0fb955b4dcc76a3f8c51eca7be70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fdad5cc8417740f7736bcf34cbc941a4e66de87d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87204237"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844758"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -101,23 +101,48 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 
 C++ 03에서 C++ 표준 라이브러리 컨테이너와 함께 사용된 모든 할당자는 다음 형식 정의를 구현해야 합니다.
 
-|||
-|-|-|
-|`const_pointer`|`rebind`|
-|`const_reference`|`reference`|
-|`difference_type`|`size_type`|
-|`pointer`|`value_type`|
+:::row:::
+   :::column:::
+      `const_pointer`\
+      `const_reference`
+   :::column-end:::
+   :::column:::
+      `difference_type`\
+      `pointer`
+   :::column-end:::
+   :::column:::
+      `rebind`\
+      `reference`
+   :::column-end:::
+   :::column:::
+      `size_type`\
+      `value_type`
+   :::column-end:::
+:::row-end:::
 
 또한 C++ 표준 라이브러리 컨테이너와 함께 사용된 모든 할당자는 다음 메서드를 구현해야 합니다.
 
-|||
-|-|-|
-|생성자|`deallocate`|
-|복사 생성자|`destroy`|
-|소멸자|`max_size`|
-|`address`|`operator==`|
-|`allocate`|`operator!=`|
-|`construct`||
+:::row:::
+   :::column:::
+      생성자
+      복사 생성자 \
+      소멸자
+   :::column-end:::
+   :::column:::
+      `address`\
+      `allocate`\
+      `construct`
+   :::column-end:::
+   :::column:::
+      `deallocate`\
+      `destroy`\
+      `max_size`
+   :::column-end:::
+   :::column:::
+      `operator!=`\
+      `operator==`
+   :::column-end:::
+:::row-end:::
 
 이러한 형식 정의 및 메서드에 대한 자세한 내용은 [allocator 클래스](allocator-class.md)를 참조하세요.
 

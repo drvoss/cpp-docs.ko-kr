@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: 2511e2ec6dbd4e27c0e12e35bdc1cd671bf72eaa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 19d1858d67802a7c464a9be783e4c1fb96fe3fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213985"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844485"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>표준 대화 상자 데이터 유효성 검사 루틴
 
@@ -20,7 +20,7 @@ ms.locfileid: "87213985"
 
 ### <a name="ddv-functions"></a>DDV 함수
 
-|||
+|Name|설명|
 |-|-|
 |[DDV_MaxChars](#ddv_maxchars)|지정 된 컨트롤 값의 문자 수가 지정 된 최대값을 초과 하지 않는지 확인 합니다.|
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|지정 된 컨트롤 값이 지정 된 **바이트** 범위를 초과 하지 않는지 확인 합니다.|
@@ -38,7 +38,7 @@ ms.locfileid: "87213985"
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|지정 된 컨트롤 값이 지정 된 두 값 사이에 속하는지 확인 합니다.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|지정 된 컨트롤 값이 지정 된 **ULONGLONG** 범위를 초과 하지 않는지 확인 합니다.|
 
-## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a>DDV_MaxChars
+## <a name="ddv_maxchars"></a><a name="ddv_maxchars"></a> DDV_MaxChars
 
 `DDV_MaxChars`를 호출 하 여 *값* 과 연결 된 컨트롤의 문자 크기가 *nchars*를 초과 하지 않는지 확인 합니다.
 
@@ -68,7 +68,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a>DDV_MinMaxByte
+## <a name="ddv_minmaxbyte"></a><a name="ddv_minmaxbyte"></a> DDV_MinMaxByte
 
 `DDV_MinMaxByte`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -102,7 +102,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime
+## <a name="ddv_minmaxdatetime"></a><a name="ddv_minmaxdatetime"></a> DDV_MinMaxDateTime
 
 `DDV_MinMaxDateTime`을 호출 하 여 *refvalue* 와 연결 된 날짜 및 시간 선택 컨트롤 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md))의 시간/날짜 값이 *refMinRange* 와 *refMaxRange*사이에 있는지 확인 합니다.
 
@@ -142,7 +142,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble
+## <a name="ddv_minmaxdouble"></a><a name="ddv_minmaxdouble"></a> DDV_MinMaxDouble
 
 `DDV_MinMaxDouble`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -176,7 +176,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a>DDV_MinMaxDWord
+## <a name="ddv_minmaxdword"></a><a name="ddv_minmaxdword"></a> DDV_MinMaxDWord
 
 `DDV_MinMaxDWord`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -210,7 +210,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat
+## <a name="ddv_minmaxfloat"></a><a name="ddv_minmaxfloat"></a> DDV_MinMaxFloat
 
 `DDV_MinMaxFloat`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -244,7 +244,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a>DDV_MinMaxInt
+## <a name="ddv_minmaxint"></a><a name="ddv_minmaxint"></a> DDV_MinMaxInt
 
 `DDV_MinMaxInt`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -278,7 +278,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a>DDV_MinMaxLong
+## <a name="ddv_minmaxlong"></a><a name="ddv_minmaxlong"></a> DDV_MinMaxLong
 
 `DDV_MinMaxLong`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -312,7 +312,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong
+## <a name="ddv_minmaxlonglong"></a><a name="ddv_minmaxlonglong"></a> DDV_MinMaxLongLong
 
 `DDV_MinMaxLongLong`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -346,7 +346,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth
+## <a name="ddv_minmaxmonth"></a><a name="ddv_minmaxmonth"></a> DDV_MinMaxMonth
 
 `DDV_MinMaxMonth`을 호출 하 여 *refvalue* 와 연결 된 month Calendar 컨트롤 ( [cmonthcalctrl](../../mfc/reference/cmonthcalctrl-class.md))의 시간/날짜 값이 *refMinRange* 과 *refMaxRange*사이에 있는지 확인 합니다.
 
@@ -386,7 +386,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a>DDV_MinMaxShort
+## <a name="ddv_minmaxshort"></a><a name="ddv_minmaxshort"></a> DDV_MinMaxShort
 
 `DDV_MinMaxShort`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -420,7 +420,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a>DDV_MinMaxSlider
+## <a name="ddv_minmaxslider"></a><a name="ddv_minmaxslider"></a> DDV_MinMaxSlider
 
 `DDV_MinMaxSlider`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -454,7 +454,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a>DDV_MinMaxUInt
+## <a name="ddv_minmaxuint"></a><a name="ddv_minmaxuint"></a> DDV_MinMaxUInt
 
 `DDV_MinMaxUInt`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 
@@ -488,7 +488,7 @@ DDV에 대 한 자세한 내용은 [대화 상자 데이터 교환 및 유효성
 
   **헤더** afxdd_ .h
 
-## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong
+## <a name="ddv_minmaxulonglong"></a><a name="ddv_minmaxulonglong"></a> DDV_MinMaxULongLong
 
 `DDV_MinMaxULongLong`을 호출 하 여 *값* 과 연결 된 컨트롤의 값이 *minval* 과 *maxval*사이에 있는지 확인 합니다.
 

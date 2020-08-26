@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: d668a7bd2b5226de906ca146c7b7e882b97f4640
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 2964f250b25ad6c77c70e8f10cd92cca0c7d11da
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560987"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844563"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>CMFCColorPopupMenu 클래스
 
@@ -35,17 +35,15 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|`CMFCColorPopupMenu` 개체를 생성합니다.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|도킹 가능한 분리 색 막대를 만듭니다. [CMFCPopupMenu:: CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar)를 재정의 합니다.|
 |[CMFCColorPopupMenu:: GetMenuBar](#getmenubar)|팝업 메뉴 안에 포함 된 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) 를 반환 합니다. [CMFCPopupMenu:: GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar)를 재정의 합니다.|
 |`CMFCColorPopupMenu::GetThisClass`|프레임 워크에서이 클래스 형식과 연결 된 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 개체에 대 한 포인터를 가져오는 데 사용 됩니다.|
@@ -53,9 +51,8 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+|Name|설명|
 |-|-|
-|속성|Description|
 |`m_bEnabledInCustomizeMode`|색 막대를 표시할지 여부를 결정 하는 부울 값입니다.|
 |`m_wndColorBar`|`CMFCColorBar`색 선택 항목을 제공 하는 개체입니다.|
 
@@ -205,7 +202,7 @@ virtual CPane* CreateTearOffBar(
 *lpszName*\
 진행 분리 된 표시줄의 창 텍스트입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 새 분리 컨트롤 막대 개체에 대 한 포인터입니다.
 
@@ -221,7 +218,7 @@ virtual CPane* CreateTearOffBar(
 virtual CMFCPopupMenuBar* GetMenuBar();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 포함 된에 대 한 포인터 `CMFCPopupMenuBar` 입니다.
 

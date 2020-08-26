@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 378cbba4787df843509d856b581b6986497983ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bed60094b25bcc3b1994aa904a8c20324be2abae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213998"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844498"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>표준 대화 상자 데이터 교환 루틴
 
@@ -20,7 +20,7 @@ ms.locfileid: "87213998"
 
 ### <a name="ddx-functions"></a>DDX 함수
 
-|||
+|Name|설명|
 |-|-|
 |[DDX_CBIndex](#ddx_cbindex)|현재 선택 된 콤보 상자 컨트롤의 인덱스를 초기화 하거나 검색 합니다.|
 |[DDX_CBString](#ddx_cbstring)|콤보 상자 컨트롤의 편집 필드 현재 내용을 초기화 하거나 검색 합니다.|
@@ -39,7 +39,7 @@ ms.locfileid: "87213998"
 |[DDX_Slider](#ddx_slider)|슬라이더 컨트롤 엄지 단추의 현재 위치를 초기화 하거나 검색 합니다.|
 |[DDX_Text](#ddx_text)|편집 컨트롤의 현재 값을 초기화 하거나 검색 합니다.|
 
-## <a name="ddx_cbindex"></a><a name="ddx_cbindex"></a>DDX_CBIndex
+## <a name="ddx_cbindex"></a><a name="ddx_cbindex"></a> DDX_CBIndex
 
 함수는 대화 `DDX_CBIndex` **`int`** 상자, 폼 뷰 또는 컨트롤 뷰 개체의 콤보 상자 컨트롤과 **`int`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -71,7 +71,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_cbstring"></a><a name="ddx_cbstring"></a>DDX_CBString
+## <a name="ddx_cbstring"></a><a name="ddx_cbstring"></a> DDX_CBString
 
 함수는 대화 상자, `DDX_CBString` `CString` 폼 뷰 또는 컨트롤 뷰 개체의 콤보 상자 컨트롤의 편집 컨트롤과 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -106,7 +106,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_cbstringexact"></a><a name="ddx_cbstringexact"></a>DDX_CBStringExact
+## <a name="ddx_cbstringexact"></a><a name="ddx_cbstringexact"></a> DDX_CBStringExact
 
 함수는 대화 상자, `DDX_CBStringExact` `CString` 폼 뷰 또는 컨트롤 뷰 개체의 콤보 상자 컨트롤의 편집 컨트롤과 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -141,7 +141,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_check"></a><a name="ddx_check"></a>DDX_Check
+## <a name="ddx_check"></a><a name="ddx_check"></a> DDX_Check
 
 함수는 대화 `DDX_Check` **`int`** 상자, 폼 뷰 또는 컨트롤 뷰 개체의 확인란 컨트롤과 **`int`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -173,7 +173,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_control"></a><a name="ddx_control"></a>DDX_Control
+## <a name="ddx_control"></a><a name="ddx_control"></a> DDX_Control
 
 `DDX_Control`함수는 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 *nidc*에 의해 지정 된 컨트롤을 하위 클래스로 지정 합니다.
 
@@ -205,7 +205,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_datetimectrl"></a><a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl
+## <a name="ddx_datetimectrl"></a><a name="ddx_datetimectrl"></a> DDX_DateTimeCtrl
 
 `DDX_DateTimeCtrl`함수는 대화 상자 또는 폼 뷰 개체의 날짜 및 시간 선택 컨트롤 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md))과 대화 상자 또는 폼 뷰 개체의 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 데이터 멤버 간에 날짜 및/또는 시간 데이터의 전송을 관리 합니다.
 
@@ -249,7 +249,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_managedcontrol"></a><a name="ddx_managedcontrol"></a>DDX_ManagedControl
+## <a name="ddx_managedcontrol"></a><a name="ddx_managedcontrol"></a> DDX_ManagedControl
 
 컨트롤의 리소스 ID와 일치 하는 .NET 컨트롤을 만듭니다.
 
@@ -284,7 +284,7 @@ void DDX_ManagedControl(
 
 **헤더:** afxwinforms
 
-## <a name="ddx_ipaddress"></a><a name="ddx_ipaddress"></a>DDX_IPAddress
+## <a name="ddx_ipaddress"></a><a name="ddx_ipaddress"></a> DDX_IPAddress
 
 `DDX_IPAddress`함수는 IP 주소 컨트롤과 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -325,7 +325,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_lbindex"></a><a name="ddx_lbindex"></a>DDX_LBIndex
+## <a name="ddx_lbindex"></a><a name="ddx_lbindex"></a> DDX_LBIndex
 
 함수는 대화 `DDX_LBIndex` **`int`** 상자, 폼 뷰 또는 컨트롤 뷰 개체의 목록 상자 컨트롤과 **`int`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -357,7 +357,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_lbstring"></a><a name="ddx_lbstring"></a>DDX_LBString
+## <a name="ddx_lbstring"></a><a name="ddx_lbstring"></a> DDX_LBString
 
 함수는 대화 `DDX_LBString` `CString` 상자, 폼 뷰 또는 컨트롤 뷰 개체의 목록 상자 컨트롤과 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -394,7 +394,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_lbstringexact"></a><a name="ddx_lbstringexact"></a>DDX_LBStringExact
+## <a name="ddx_lbstringexact"></a><a name="ddx_lbstringexact"></a> DDX_LBStringExact
 
 함수는 대화 상자, `DDX_CBStringExact` `CString` 폼 뷰 또는 컨트롤 뷰 개체와 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버에 있는 목록 상자 컨트롤의 편집 컨트롤 간 데이터 전송을 관리 합니다.
 
@@ -431,7 +431,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_monthcalctrl"></a><a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl
+## <a name="ddx_monthcalctrl"></a><a name="ddx_monthcalctrl"></a> DDX_MonthCalCtrl
 
 `DDX_MonthCalCtrl`함수는 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 monthcalendar 컨트롤 ( [Cmonthcalctrl](../../mfc/reference/cmonthcalctrl-class.md))과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 데이터 멤버 간에 날짜 데이터 전송을 관리 합니다.
 
@@ -471,7 +471,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_radio"></a><a name="ddx_radio"></a>DDX_Radio
+## <a name="ddx_radio"></a><a name="ddx_radio"></a> DDX_Radio
 
 함수는 대화 `DDX_Radio` **`int`** 상자, 폼 뷰 또는 컨트롤 뷰 개체의 라디오 컨트롤 그룹과 **`int`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다. 데이터 멤버의 값은 **`int`** 선택 된 그룹 내의 라디오 단추에 따라 결정 됩니다.
 
@@ -505,7 +505,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_scroll"></a><a name="ddx_scroll"></a>DDX_Scroll
+## <a name="ddx_scroll"></a><a name="ddx_scroll"></a> DDX_Scroll
 
 `DDX_Scroll`함수는 **`int`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 스크롤 막대 컨트롤과 **`int`** 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -537,7 +537,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_slider"></a><a name="ddx_slider"></a>DDX_Slider
+## <a name="ddx_slider"></a><a name="ddx_slider"></a> DDX_Slider
 
 `DDX_Slider`함수는 **`int`** 대화 상자 또는 폼 보기의 슬라이더 컨트롤과 **`int`** 대화 상자 또는 폼 뷰 개체의 데이터 멤버 간 데이터 전송을 관리 합니다.
 
@@ -569,7 +569,7 @@ DDX에 대한 자세한 내용은 [대화 상자 데이터 교환 및 유효성 
 
   **헤더** afxdd_ .h
 
-## <a name="ddx_text"></a><a name="ddx_text"></a>DDX_Text
+## <a name="ddx_text"></a><a name="ddx_text"></a> DDX_Text
 
 함수는 대화 상자, `DDX_Text` **`int`** **UINT** **`long`** `CString` **`float`** **`double`** 폼 뷰 또는 컨트롤 뷰의 편집 컨트롤과 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 데이터 멤버 사이에서, UINT,, DWORD,, 또는 데이터의 전송을 관리 합니다.
 

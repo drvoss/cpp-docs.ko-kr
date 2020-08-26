@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9689d511760752903b83b34199fb035c0e7a8d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214050"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843588"
 ---
 # <a name="property-pages-mfc"></a>속성 페이지(MFC)
 
@@ -20,7 +20,7 @@ ms.locfileid: "87214050"
 
 ### <a name="property-page-data-transfer"></a>속성 페이지 데이터 전송
 
-|||
+|Name|설명|
 |-|-|
 |[DDP_CBIndex](#ddp_cbindex)|콤보 상자에서 선택한 문자열의 인덱스를 컨트롤의 속성과 연결 합니다.|
 |[DDP_CBString](#ddp_cbstring)|콤보 상자에서 선택한 문자열을 컨트롤의 속성과 연결 합니다. 선택한 문자열은 속성의 값과 같은 문자로 시작할 수 있지만 완전히 일치할 필요는 없습니다.|
@@ -39,13 +39,13 @@ ms.locfileid: "87214050"
 
 ### <a name="property-pages"></a>속성 페이지
 
-|||
+|Name|설명|
 |-|-|
 |[BEGIN_PROPPAGEIDS](#begin_proppageids)|속성 페이지 Id 목록을 시작 합니다.|
 |[END_PROPPAGEIDS](#end_proppageids)|속성 페이지 Id 목록을 종료 합니다.|
 |[PROPPAGEID](#proppageid)|컨트롤 클래스의 속성 페이지를 선언 합니다.|
 
-## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a>DDP_CBIndex
+## <a name="ddp_cbindex"></a><a name="ddp_cbindex"></a> DDP_CBIndex
 
 속성 페이지의 `DoDataExchange` 함수에서 이 함수를 호출하여 정수 속성의 값을 속성 페이지의 콤보 상자에 있는 현재 선택 항목의 인덱스와 동기화합니다.
 
@@ -79,7 +79,7 @@ void AFXAPI DDP_CBIndex(
 
   **헤더** afxctl
 
-## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a>DDP_CBString
+## <a name="ddp_cbstring"></a><a name="ddp_cbstring"></a> DDP_CBString
 
 속성 페이지의 함수에서이 함수 `DoDataExchange` 를 호출 하 여 문자열 속성의 값을 속성 페이지의 콤보 상자에 있는 현재 선택 항목과 동기화 합니다.
 
@@ -113,7 +113,7 @@ void AFXAPI DDP_CBString(
 
   **헤더** afxctl
 
-## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a>DDP_CBStringExact
+## <a name="ddp_cbstringexact"></a><a name="ddp_cbstringexact"></a> DDP_CBStringExact
 
 속성 페이지의 함수에서이 함수를 호출 `DoDataExchange` 하 여 속성 페이지의 콤보 상자에서 현재 선택 영역과 정확히 일치 하는 문자열 속성의 값을 동기화 합니다.
 
@@ -147,7 +147,7 @@ void AFXAPI DDP_CBStringExact(
 
   **헤더** afxctl
 
-## <a name="ddp_check"></a><a name="ddp_check"></a>DDP_Check
+## <a name="ddp_check"></a><a name="ddp_check"></a> DDP_Check
 
 속성 페이지의 함수에서이 함수 `DoDataExchange` 를 호출 하 여 속성의 값을 연결 된 속성 페이지 확인란 컨트롤과 동기화 합니다.
 
@@ -181,7 +181,7 @@ void AFXAPI DDP_Check(
 
   **헤더** afxctl
 
-## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a>DDP_LBIndex
+## <a name="ddp_lbindex"></a><a name="ddp_lbindex"></a> DDP_LBIndex
 
 속성 페이지의 함수에서이 함수를 호출 `DoDataExchange` 하 여 정수 속성의 값을 속성 페이지의 목록 상자에 있는 현재 선택 항목의 인덱스와 동기화 합니다.
 
@@ -215,7 +215,7 @@ void AFXAPI DDP_LBIndex(
 
   **헤더** afxctl
 
-## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a>DDP_LBString
+## <a name="ddp_lbstring"></a><a name="ddp_lbstring"></a> DDP_LBString
 
 속성 페이지의 함수에서이 함수 `DoDataExchange` 를 호출 하 여 문자열 속성의 값을 속성 페이지의 목록 상자에 있는 현재 선택 항목과 동기화 합니다.
 
@@ -249,7 +249,7 @@ void AFXAPI DDP_LBString(
 
   **헤더** afxctl
 
-## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a>DDP_LBStringExact
+## <a name="ddp_lbstringexact"></a><a name="ddp_lbstringexact"></a> DDP_LBStringExact
 
 속성 페이지의 함수에서이 함수를 호출 `DoDataExchange` 하 여 속성 페이지의 목록 상자에서 현재 선택 영역과 정확히 일치 하는 문자열 속성의 값을 동기화 합니다.
 
@@ -283,7 +283,7 @@ void AFXAPI DDP_LBStringExact(
 
   **헤더** afxctl
 
-## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a>DDP_PostProcessing
+## <a name="ddp_postprocessing"></a><a name="ddp_postprocessing"></a> DDP_PostProcessing
 
 속성 페이지의 함수에서이 함수를 호출 하 여 속성 `DoDataExchange` 값을 저장할 때 속성 페이지에서 컨트롤로의 속성 값 전송을 마칩니다.
 
@@ -298,7 +298,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 ### <a name="remarks"></a>설명
 
-모든 데이터 교환 함수를 완료 한 후이 함수를 호출 해야 합니다. 예를 들면 다음과 같습니다.
+모든 데이터 교환 함수를 완료 한 후이 함수를 호출 해야 합니다. 예를 들어:
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
@@ -306,7 +306,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
   **헤더** afxctl
 
-## <a name="ddp_radio"></a><a name="ddp_radio"></a>DDP_Radio
+## <a name="ddp_radio"></a><a name="ddp_radio"></a> DDP_Radio
 
 컨트롤의 함수에서이 함수를 호출 `DoPropExchange` 하 여 속성의 값을 연결 된 속성 페이지 라디오 단추 컨트롤과 동기화 합니다.
 
@@ -340,7 +340,7 @@ void AFXAPI DDP_Radio(
 
   **헤더** afxctl
 
-## <a name="ddp_text"></a><a name="ddp_text"></a>DDP_Text
+## <a name="ddp_text"></a><a name="ddp_text"></a> DDP_Text
 
 컨트롤의 함수에서이 함수를 호출 `DoDataExchange` 하 여 속성의 값을 연결 된 속성 페이지 컨트롤과 동기화 합니다.
 
@@ -416,7 +416,7 @@ void AFXAPI DDP_Text(
 
   **헤더** afxctl
 
-## <a name="begin_proppageids"></a><a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS
+## <a name="begin_proppageids"></a><a name="begin_proppageids"></a> BEGIN_PROPPAGEIDS
 
 컨트롤의 속성 페이지 Id 목록에 대 한 정의를 시작 합니다.
 
@@ -442,7 +442,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
   **헤더** afxctl
 
-## <a name="end_proppageids"></a><a name="end_proppageids"></a>END_PROPPAGEIDS
+## <a name="end_proppageids"></a><a name="end_proppageids"></a> END_PROPPAGEIDS
 
 속성 페이지 ID 목록의 정의를 종료 합니다.
 
@@ -459,7 +459,7 @@ END_PROPPAGEIDS(class_name)
 
   **헤더** afxctl
 
-## <a name="proppageid"></a><a name="proppageid"></a>PROPPAGEID
+## <a name="proppageid"></a><a name="proppageid"></a> PROPPAGEID
 
 OLE 컨트롤에서 사용할 속성 페이지를 추가 합니다.
 

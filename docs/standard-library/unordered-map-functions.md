@@ -8,20 +8,19 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e572e4ba8cb4c6cb15329342a7947c35ece7270
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373134"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844264"
 ---
 # <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 함수
 
-|||
-|-|-|
-|[swap(unordered_map)](#swap)|[swap(unordered_multimap)](#swap_function_multimap)|
+[swap (unordered_map)](#swap) 
+ [swap (unordered_multimap)](#swap_function_multimap)
 
-## <a name="swap-unordered_map"></a><a name="swap"></a>스왑 (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a> swap (unordered_map)
 
 두 컨테이너의 내용을 바꿉니다.
 
@@ -34,22 +33,22 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 키 형식입니다.
 
-*타이*\
+*Ty*\
 매핑된 형식입니다.
 
-*해시*\
+*해시로*\
 해시 함수 개체 형식입니다.
 
 *Pred*\
 같음 비교 함수 개체 형식입니다.
 
-*Alloc*\
+*#C4*\
 할당자 클래스입니다.
 
-*왼쪽*\
+*비어*\
 교환할 첫 번째 컨테이너입니다.
 
 *오른쪽*\
@@ -57,7 +56,7 @@ void swap(
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 `left.` [unordered_map::swap을](../standard-library/unordered-map-class.md#swap)`(right)`실행합니다.
+템플릿 함수는 `left.` [unordered_map:: swap](../standard-library/unordered-map-class.md#swap)을 실행 합니다 `(right)` .
 
 ### <a name="example"></a>예제
 
@@ -114,7 +113,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>스왑 (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a> swap (unordered_multimap)
 
 두 컨테이너의 내용을 바꿉니다.
 
@@ -127,22 +126,22 @@ void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-*키*\
+*키인지*\
 키 형식입니다.
 
-*타이*\
+*Ty*\
 매핑된 형식입니다.
 
-*해시*\
+*해시로*\
 해시 함수 개체 형식입니다.
 
 *Pred*\
 같음 비교 함수 개체 형식입니다.
 
-*Alloc*\
+*#C4*\
 할당자 클래스입니다.
 
-*왼쪽*\
+*비어*\
 교환할 첫 번째 컨테이너입니다.
 
 *오른쪽*\
@@ -150,7 +149,7 @@ void swap(
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 `left.` [unordered_multimap::swap을](../standard-library/unordered-multimap-class.md#swap)`(right)`실행합니다.
+템플릿 함수는 `left.` [unordered_multimap:: swap](../standard-library/unordered-multimap-class.md#swap)을 실행 합니다 `(right)` .
 
 ### <a name="example"></a>예제
 

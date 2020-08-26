@@ -5,20 +5,19 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 969c9f8e05a9fafad4d3a1102060e2b3d4d0eb2e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561220"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844784"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 연산자
 
 이러한 함수는 할당자에 정의 된 전역 템플릿 연산자 함수 &lt; &gt; 입니다. 클래스 멤버 연산자 함수는 클래스 설명서를 참조 하세요.
 
-|||
-|-|-|
-|[연산자! =](#op_neq)|[연산자 = =](#op_eq_eq)|
+[연산자! =](#op_neq)\
+[연산자 = =](#op_eq_eq)
 
 ## <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
@@ -39,7 +38,7 @@ bool operator!=(
 *오른쪽*\
 같지 않은지를 테스트할 할당자 개체 중 하나입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 할당자 개체가 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 할당자 개체가 같으면입니다.
 
@@ -66,7 +65,7 @@ bool operator==(
 *오른쪽*\
 같은지를 테스트할 할당자 개체 중 하나입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 할당자 개체가 같으면이 고, 그렇지 않으면입니다. **`false`** 할당자 개체가 같지 않으면입니다.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 6edb38e6f6c818415e9e0813b359e8e0ea6ca099
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 31a445fcc7deb5e5bade5437058cb36e28dacd40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560298"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844329"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -95,13 +95,13 @@ void swap (
 
 ### <a name="manipulators"></a>조작자
 
-|||
+|Name|설명|
 |-|-|
 |[스왑을](../standard-library/sstream-functions.md#sstream_swap)|두 `sstream` 개체 간에 값을 교환합니다.|
 
 ### <a name="classes"></a>클래스
 
-|클래스|Description|
+|클래스|설명|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|배열 개체에 저장된 요소의 시퀀스에서 문자 특성이 `Tr` 클래스에 의해 결정되는 `Elem` 형식 요소의 전송을 제어하는 스트림 버퍼에 대해 설명합니다.|
 |[basic_istringstream](../standard-library/basic-istringstream-class.md)|[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem** **Tr** `Alloc` `Elem` 문자 특성이 클래스에 의해 결정 되 `Tr` 고 해당 요소가 클래스의 할당자에 의해 할당 되는 형식의 요소가 있는 클래스 basic_stringbuf Elem, Tr,>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어 하는 개체에 대해 설명 합니다 `Alloc` .|

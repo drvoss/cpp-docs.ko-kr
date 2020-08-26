@@ -19,12 +19,12 @@ helpviewer_keywords:
 - std::error_code::default_error_condition
 - std::error_code::message
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
-ms.openlocfilehash: 3f272c25572ebebd95e5a59b50094d8e1872c90a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5bbd67d2967a1a6d070ece54ea464a2a5a2deac9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228286"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844459"
 ---
 # <a name="error_code-class"></a>error_code 클래스
 
@@ -44,19 +44,19 @@ class error_code;
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[error_code](#error_code)|`error_code` 형식의 개체를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[value_type](#value_type)|저장된 오류 코드 값을 나타내는 형식입니다.|
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[assign](#assign)|오류 코드 값과 범주를 오류 코드에 할당합니다.|
 |[category](#category)|오류 범주를 반환합니다.|
@@ -66,7 +66,7 @@ class error_code;
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자 = =](#op_eq_eq)|`error_code` 개체가 같은지 테스트합니다.|
 |[연산자! =](#op_neq)|`error_code` 개체가 같지 않은지 테스트합니다.|
@@ -74,7 +74,7 @@ class error_code;
 |[연산자 =](#op_eq)|새 열거형 값을 `error_code` 개체에 할당합니다.|
 |[연산자 bool](#op_bool)|형식 `error_code`의 변수를 캐스트합니다.|
 
-### <a name="assign"></a><a name="assign"></a>할당
+### <a name="assign"></a><a name="assign"></a> 할당
 
 오류 코드 값과 범주를 오류 코드에 할당합니다.
 
@@ -94,7 +94,7 @@ void assign(value_type val, const error_category& _Cat);
 
 멤버 함수는 *val* 을 오류 코드 값으로 저장 하 고 *_Cat*에 대 한 포인터를 저장 합니다.
 
-### <a name="category"></a><a name="category"></a>범주
+### <a name="category"></a><a name="category"></a> 범주
 
 오류 범주를 반환합니다.
 
@@ -104,7 +104,7 @@ const error_category& category() const;
 
 #### <a name="remarks"></a>설명
 
-### <a name="clear"></a><a name="clear"></a>해제
+### <a name="clear"></a><a name="clear"></a> 해제
 
 오류 코드 값과 범주를 지웁니다.
 
@@ -116,7 +116,7 @@ clear();
 
 멤버 함수는 0 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category) 개체에 대한 포인터를 저장합니다.
 
-### <a name="default_error_condition"></a><a name="default_error_condition"></a>default_error_condition
+### <a name="default_error_condition"></a><a name="default_error_condition"></a> default_error_condition
 
 기본 오류 조건을 반환합니다.
 
@@ -124,7 +124,7 @@ clear();
 error_condition default_error_condition() const;
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 [default_error_condition](../standard-library/error-category-class.md#default_error_condition)에 의해 지정된 [error_condition](../standard-library/error-condition-class.md)입니다.
 
@@ -132,7 +132,7 @@ error_condition default_error_condition() const;
 
 이 멤버 함수는 `category().default_error_condition(value())`를 반환합니다.
 
-### <a name="error_code"></a><a name="error_code"></a>error_code
+### <a name="error_code"></a><a name="error_code"></a> error_code
 
 `error_code` 형식의 개체를 생성합니다.
 
@@ -166,7 +166,7 @@ error_code(_Enum _Errcode,
 
 세 번째 생성자는 `(value_type)_Errcode`를 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터로 저장합니다.
 
-### <a name="message"></a><a name="message"></a>메시지
+### <a name="message"></a><a name="message"></a> 메시지
 
 오류 코드의 이름을 반환합니다.
 
@@ -174,7 +174,7 @@ error_code(_Enum _Errcode,
 string message() const;
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 오류 코드의 이름을 나타내는 `string`입니다.
 
@@ -182,7 +182,7 @@ string message() const;
 
 이 멤버 함수는 `category().message(value())`를 반환합니다.
 
-### <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
+### <a name="operator"></a><a name="op_eq_eq"></a> 연산자 = =
 
 `error_code` 개체가 같은지 테스트합니다.
 
@@ -195,7 +195,7 @@ bool operator==(const error_code& right) const;
 *오른쪽*\
 같은지 테스트할 개체입니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 **`true`** 개체가 같으면이 고, 그렇지 않으면입니다. **`false`** 개체가 같지 않으면입니다.
 
@@ -203,7 +203,7 @@ bool operator==(const error_code& right) const;
 
 멤버 연산자는 `category() == right.category() && value == right.value()`를 반환합니다.
 
-### <a name="operator"></a><a name="op_neq"></a>연산자! =
+### <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
 `error_code` 개체가 같지 않은지 테스트합니다.
 
@@ -216,7 +216,7 @@ bool operator!=(const error_code& right) const;
 *오른쪽*\
 같지 않은지 테스트할 개체입니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 **`true`**`error_code`개체가 `error_code` *오른쪽*에 전달 된 개체와 같지 않으면이 고, 그렇지 않으면 **`false`** 입니다.
 
@@ -224,7 +224,7 @@ bool operator!=(const error_code& right) const;
 
 멤버 연산자는 `!(*this == right)`를 반환합니다.
 
-### <a name="operatorlt"></a><a name="op_lt"></a>연산자&lt;
+### <a name="operatorlt"></a><a name="op_lt"></a> 연산자&lt;
 
 `error_code` 개체가 비교를 위해 전달된 `error_code` 개체보다 작은지 테스트합니다.
 
@@ -237,7 +237,7 @@ bool operator<(const error_code& right) const;
 *오른쪽*\
 비교할 error_code 개체입니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 **`true`**`error_code`개체가 `error_code` 비교를 위해 전달 된 개체 보다 작은 경우 그렇지 않으면 **`false`** 입니다.
 
@@ -245,7 +245,7 @@ bool operator<(const error_code& right) const;
 
 멤버 연산자는 `category() < right.category() || category() == right.category() && value < right.value()`를 반환합니다.
 
-### <a name="operator"></a><a name="op_eq"></a>연산자 =
+### <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 새 열거형 값을 `error_code` 개체에 할당합니다.
 
@@ -260,7 +260,7 @@ typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
 *_Errcode*\
 `error_code` 개체에 할당할 열거형 값입니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 멤버 함수를 통해 새 열거형 값이 할당될 `error_code` 개체에 대한 참조입니다.
 
@@ -268,7 +268,7 @@ typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
 
 멤버 연산자는 `(value_type)_Errcode`를 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터로 저장합니다. 을 반환 **`*this`** 합니다.
 
-### <a name="operator-bool"></a><a name="op_bool"></a>연산자 bool
+### <a name="operator-bool"></a><a name="op_bool"></a> 연산자 bool
 
 형식 `error_code`의 변수를 캐스트합니다.
 
@@ -276,7 +276,7 @@ typename enable_if<is_error_code_enum<_Enum>::value, error_code>::type&
 explicit operator bool() const;
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 `error_code` 개체의 부울 값입니다.
 
@@ -292,11 +292,11 @@ explicit operator bool() const;
 value_type value() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 형식 [value_type](#value_type)의 저장된 오류 코드 값입니다.
 
-### <a name="value_type"></a><a name="value_type"></a>value_type
+### <a name="value_type"></a><a name="value_type"></a> value_type
 
 저장된 오류 코드 값을 나타내는 형식입니다.
 

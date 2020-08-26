@@ -5,20 +5,21 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 6a22ccfaf77c3be524bf7127eac3d76c7be827ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ecedcfa8444b5cbae8fbe64b528a593ed3498b4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201858"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844251"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 연산자
 
-|||||
-|-|-|-|-|
-|[연산자! =](#op_neq)|[연산자 = =](#op_eq_eq)|[연산자! =](#op_neq_multimap)|[연산자 = =](#op_eq_eq_multimap)|
+[unordered_map:: operator! =](#op_neq)\
+[unordered_map:: operator = =](#op_eq_eq)\
+[unordered_multimap:: operator! =](#op_neq_multimap)\
+[unordered_multimap:: operator = =](#op_eq_eq_multimap)
 
-## <a name="operator"></a><a name="op_neq"></a>연산자! =
+## <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
 연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같지 않은지 테스트합니다.
 
@@ -34,7 +35,7 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 *오른쪽*\
 `unordered_map` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** unordered_maps 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 같으면이 고, 그렇지 않으면입니다.
 
@@ -72,17 +73,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**출력:**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a> 연산자 = =
 
 연산자의 좌변에 있는 [unordered_map](../standard-library/unordered-map-class.md) 개체가 우변에 있는 unordered_map 개체와 같은지 테스트합니다.
 
@@ -98,7 +97,7 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 *오른쪽*\
 `unordered_map` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** unordered_maps 같으면이 고, 그렇지 않으면입니다. **`false`** 동일 하지 않은 경우입니다.
 
@@ -136,17 +135,15 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
 
-**출력:**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
-
-## <a name="operator"></a><a name="op_neq_multimap"></a>연산자! =
+## <a name="operator"></a><a name="op_neq_multimap"></a> 연산자! =
 
 연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같지 않은지 테스트합니다.
 
@@ -162,7 +159,7 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 *오른쪽*\
 `unordered_multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** unordered_multimaps 같지 않으면이 고, 그렇지 않으면입니다. **`false`** 같으면이 고, 그렇지 않으면입니다.
 
@@ -201,17 +198,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**출력:**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a> 연산자 = =
 
 연산자의 좌변에 있는 [unordered_multimap](../standard-library/unordered-multimap-class.md) 개체가 우변에 있는 unordered_multimap 개체와 같은지 테스트합니다.
 
@@ -227,7 +222,7 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 *오른쪽*\
 `unordered_multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** unordered_multimaps 같으면이 고, 그렇지 않으면입니다. **`false`** 동일 하지 않은 경우입니다.
 
@@ -266,15 +261,13 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
-
-**출력:**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
 
 ## <a name="see-also"></a>참고 항목
 

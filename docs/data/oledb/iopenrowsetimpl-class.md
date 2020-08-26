@@ -13,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 8ecbcd46e534baa73574f0930e1cbac4dbc49dfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a3c94c75db21218aae1205bf9c5c379ab772a7f8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210537"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843718"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl 클래스
 
-`IOpenRowset` 인터페이스에 대 한 구현을 제공 합니다.
+인터페이스에 대 한 구현을 제공 `IOpenRowset` 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -34,7 +34,7 @@ class IOpenRowsetImpl : public IOpenRowset
 ### <a name="parameters"></a>매개 변수
 
 *SessionClass*<br/>
-`IOpenRowsetImpl`에서 파생 된 클래스입니다.
+에서 파생 된 클래스 `IOpenRowsetImpl` 입니다.
 
 ## <a name="requirements"></a>요구 사항
 
@@ -44,16 +44,16 @@ class IOpenRowsetImpl : public IOpenRowset
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[CreateRowset](#createrowset)|행 집합 개체를 만듭니다. 사용자가 직접 호출 하지 않습니다.|
 |[OpenRowset](#openrowset)|단일 기본 테이블이 나 인덱스의 모든 행을 포함 하는 행 집합을 열고 반환 합니다. (ATLDB.H에 없습니다. 넣기|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 [Iopenrowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) 인터페이스는 session 개체에 대해 필수입니다. 단일 기본 테이블이 나 인덱스의 모든 행을 포함 하는 행 집합을 열고 반환 합니다.
 
-## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a>IOpenRowsetImpl:: CreateRowset
+## <a name="iopenrowsetimplcreaterowset"></a><a name="createrowset"></a> IOpenRowsetImpl:: CreateRowset
 
 행 집합 개체를 만듭니다. 사용자가 직접 호출 하지 않습니다. *OLE DB 프로그래머 참조* 에서 [Iopenrowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 을 참조 하세요.
 
@@ -81,7 +81,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 다른 매개 변수는 *OLE DB 프로그래머 참조* 에서 [Iopenrowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 을 참조 하세요.
 
-## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a>IOpenRowsetImpl:: OpenRowset
+## <a name="iopenrowsetimplopenrowset"></a><a name="openrowset"></a> IOpenRowsetImpl:: OpenRowset
 
 단일 기본 테이블이 나 인덱스의 모든 행을 포함 하는 행 집합을 열고 반환 합니다.
 
@@ -101,11 +101,11 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 *OLE DB 프로그래머 참조*에서 [Iopenrowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 을 참조 하세요.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 메서드는 ATLDB.H에서 찾을 수 없습니다. 넣기. 공급자를 만들 때 ATL 개체 마법사에 의해 만들어집니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB 공급자 템플릿 아키텍처](../../data/oledb/ole-db-provider-template-architecture.md)

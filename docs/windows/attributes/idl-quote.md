@@ -1,21 +1,21 @@
 ---
-title: idl_quote (C++ COM 특성)
+title: idl_quote (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_quote
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: 4b05da6d237d71e0cc645ad0f626f75ecd85c827
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1d0aa80f64593ed347720b84e4059a0c32dce4be
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168031"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844238"
 ---
 # <a name="idl_quote"></a>idl_quote
 
-현재 버전의 Visual C++ 에서 지원 되지 않는 idl 구문을 사용 하 여 생성 된 .idl 파일로 전달 하도록 할 수 있습니다.
+Visual C++ 현재 버전에서 지원 되지 않는 IDL 구문을 사용 하 여 생성 된 .idl 파일로 전달할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -26,11 +26,11 @@ ms.locfileid: "80168031"
 ### <a name="parameters"></a>매개 변수
 
 *text*<br/>
-Microsoft C++ 컴파일러에서 컴파일러 오류를 반환 하지 않고 생성 된 .idl 파일로 전달 하려는 특성 이름입니다.
+Microsoft c + + 컴파일러에서 컴파일러 오류를 반환 하지 않고 생성 된 .idl 파일로 전달 하려는 특성 이름입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Idl_quote** C++ 특성을 닫는 대괄호 뒤에 세미콜론을 사용 하 여 독립 실행형 특성으로 사용 하는 경우에는 *텍스트가* 병합 된 .idl 파일에 있는 그대로 배치 됩니다. 기호에 **idl_quote** 를 사용 하는 경우 *텍스트* 는 해당 기호에 대 한 특성 블록 내에 배치 됩니다.
+**Idl_quote** c + + 특성을 닫는 대괄호 뒤에 세미콜론을 사용 하 여 독립 실행형 특성으로 사용 하면 *텍스트가* 병합 된 .idl 파일에 있는 그대로 배치 됩니다. 기호에 **idl_quote** 를 사용 하는 경우 *텍스트* 는 해당 기호에 대 한 특성 블록 내에 배치 됩니다.
 
 ## <a name="example"></a>예제
 
@@ -69,16 +69,14 @@ __interface IStatic{
 };
 ```
 
-이 코드는 `MYFLOT` 및 `MYDUB`를 발생 시키고 *텍스트* 항목을 생성 된 .idl 파일에 배치 합니다. *Name* 매개 변수는 생성 된 .idl 파일에서 *이름을* 참조 하는 항목 앞에 *텍스트가* 배치 되도록 합니다. *종속성* 매개 변수는 종속성 목록 정의가 생성 된 .idl 파일의 *텍스트* 앞에 배치 되도록 합니다.
+이 코드를 적용 하면 `MYFLOT` 및 `MYDUB` 및 *텍스트* 항목이 생성 된 .idl 파일에 배치 됩니다. *Name* 매개 변수는 생성 된 .idl 파일에서 *이름을* 참조 하는 항목 앞에 *텍스트가* 배치 되도록 합니다. *종속성* 매개 변수는 종속성 목록 정의가 생성 된 .idl 파일의 *텍스트* 앞에 배치 되도록 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|원하는 위치|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
@@ -87,4 +85,4 @@ __interface IStatic{
 ## <a name="see-also"></a>참고 항목
 
 [IDL 특성](idl-attributes.md)<br/>
-[독립 실행형 특성](stand-alone-attributes.md)
+[독립형 특성](stand-alone-attributes.md)

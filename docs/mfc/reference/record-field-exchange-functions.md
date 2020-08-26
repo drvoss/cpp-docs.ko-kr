@@ -45,12 +45,12 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-ms.openlocfilehash: f4f1b12795252b91a2c14877822e221ca86ab39e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bb1b7bcbce16bba8029fcfbbeea7552b1d4a0ba
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214037"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843601"
 ---
 # <a name="record-field-exchange-functions"></a>레코드 필드 교환 함수
 
@@ -70,7 +70,7 @@ ODBC 기반 클래스에서 대량 행 페치를 구현 하지 않았거나 DAO 
 
 ### <a name="rfx-functions-odbc"></a>RFX 함수(ODBC)
 
-|||
+|Name|설명|
 |-|-|
 |[RFX_Binary](#rfx_binary)|[CByteArray](cbytearray-class.md)형식의 바이트 배열을 전송합니다.|
 |[RFX_Bool](#rfx_bool)|부울 데이터를 전송합니다.|
@@ -85,7 +85,7 @@ ODBC 기반 클래스에서 대량 행 페치를 구현 하지 않았거나 DAO 
 
 ### <a name="bulk-rfx-functions-odbc"></a>대량 RFX 함수(ODBC)
 
-|||
+|Name|설명|
 |-|-|
 |[RFX_Binary_Bulk](#rfx_binary_bulk)|바이트 데이터 배열을 전송합니다.|
 |[RFX_Bool_Bulk](#rfx_bool_bulk)|부울 데이터 배열을 전송합니다.|
@@ -99,7 +99,7 @@ ODBC 기반 클래스에서 대량 행 페치를 구현 하지 않았거나 DAO 
 
 ### <a name="dfx-functions-dao"></a>DFX 함수(DAO)
 
-|||
+|Name|설명|
 |-|-|
 |[DFX_Binary](#dfx_binary)|[CByteArray](cbytearray-class.md)형식의 바이트 배열을 전송합니다.|
 |[DFX_Bool](#dfx_bool)|부울 데이터를 전송합니다.|
@@ -115,7 +115,7 @@ ODBC 기반 클래스에서 대량 행 페치를 구현 하지 않았거나 DAO 
 
 =============================================
 
-## <a name="rfx_binary"></a><a name="rfx_binary"></a>RFX_Binary
+## <a name="rfx_binary"></a><a name="rfx_binary"></a> RFX_Binary
 
 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드 열 (SQL_BINARY, SQL_VARBINARY 또는 SQL_LONGVARBINARY 사이의 바이트 배열을 전송 합니다.
 
@@ -155,7 +155,7 @@ void RFX_Binary(
 
 **헤더:** afxdb
 
-## <a name="rfx_bool"></a><a name="rfx_bool"></a>RFX_Bool
+## <a name="rfx_bool"></a><a name="rfx_bool"></a> RFX_Bool
 
 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 부울 데이터를 전송 SQL_BIT 합니다.
 
@@ -187,7 +187,7 @@ void RFX_Bool(
 
 **헤더:** afxdb
 
-## <a name="rfx_byte"></a><a name="rfx_byte"></a>RFX_Byte
+## <a name="rfx_byte"></a><a name="rfx_byte"></a> RFX_Byte
 
 는 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 단일 바이트를 전송 SQL_TINYINT 합니다.
 
@@ -219,7 +219,7 @@ void RFX_Byte(
 
 **헤더:** afxdb
 
-## <a name="rfx_date"></a><a name="rfx_date"></a>RFX_Date
+## <a name="rfx_date"></a><a name="rfx_date"></a> RFX_Date
 
 `CTime`개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 유형의 데이터 원본에 있는 레코드의 열 SQL_DATE, SQL_TIME 또는 SQL_TIMESTAMP 간에 데이터를 전송 하거나 TIMESTAMP_STRUCT 합니다.
 
@@ -269,7 +269,7 @@ void RFX_Date(
 
 **헤더:** afxdb
 
-## <a name="rfx_double"></a><a name="rfx_double"></a>RFX_Double
+## <a name="rfx_double"></a><a name="rfx_double"></a> RFX_Double
 
 개체 **double float** 의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 이중 float 데이터를 전송 SQL_DOUBLE 합니다.
 
@@ -301,7 +301,7 @@ void RFX_Double(
 
 **헤더:** afxdb
 
-## <a name="rfx_int"></a><a name="rfx_int"></a>RFX_Int
+## <a name="rfx_int"></a><a name="rfx_int"></a> RFX_Int
 
 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 정수 데이터를 전송 SQL_SMALLINT 합니다.
 
@@ -333,7 +333,7 @@ void RFX_Int(
 
 **헤더:** afxdb
 
-## <a name="rfx_long"></a><a name="rfx_long"></a>RFX_Long
+## <a name="rfx_long"></a><a name="rfx_long"></a> RFX_Long
 
 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 정수 (long) 데이터를 전송 하는 SQL_INTEGER 합니다.
 
@@ -366,7 +366,7 @@ value );
 
 **헤더:** afxdb
 
-## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a>RFX_LongBinary
+## <a name="rfx_longbinary"></a><a name="rfx_longbinary"></a> RFX_LongBinary
 
 는 클래스 [CLongBinary](clongbinary-class.md) 를 사용 하 여 BLOB (binary large object) 데이터를 전송 합니다 .이 데이터는 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드 열 SQL_LONGVARBINARY 또는 SQL_LONGVARCHAR 사이에서 전송 됩니다.
 
@@ -398,7 +398,7 @@ void RFX_LongBinary(
 
 **헤더:** afxdb
 
-## <a name="rfx_single"></a><a name="rfx_single"></a>RFX_Single
+## <a name="rfx_single"></a><a name="rfx_single"></a> RFX_Single
 
 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드 열 간에 부동 소수점 데이터를 전송 SQL_REAL 합니다.
 
@@ -430,7 +430,7 @@ void RFX_Single(
 
 **헤더:** afxdb
 
-## <a name="rfx_text"></a><a name="rfx_text"></a>RFX_Text
+## <a name="rfx_text"></a><a name="rfx_text"></a> RFX_Text
 
 `CString`는 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 유형의 데이터 원본에 있는 레코드의 열 SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL 또는 SQL_NUMERIC 간에 데이터를 전송 합니다.
 
@@ -496,7 +496,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 
 **헤더:** afxdb
 
-## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
+## <a name="rfx_binary_bulk"></a><a name="rfx_binary_bulk"></a> RFX_Binary_Bulk
 
 ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 바이트 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -547,7 +547,7 @@ Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgByteVals*가
 
 **헤더:** afxdb
 
-## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
+## <a name="rfx_bool_bulk"></a><a name="rfx_bool_bulk"></a> RFX_Bool_Bulk
 
 ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 부울 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -594,7 +594,7 @@ Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgBoolVals*가
 
 **헤더:** afxdb
 
-## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
+## <a name="rfx_byte_bulk"></a><a name="rfx_byte_bulk"></a> RFX_Byte_Bulk
 
 ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 단일 바이트의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -641,7 +641,7 @@ Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgByteVals*가
 
 **헤더:** afxdb
 
-## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a>RFX_Date_Bulk
+## <a name="rfx_date_bulk"></a><a name="rfx_date_bulk"></a> RFX_Date_Bulk
 
 ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 TIMESTAMP_STRUCT 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -688,7 +688,7 @@ Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgTSVals*가 �
 
 **헤더:** afxdb
 
-## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a>RFX_Double_Bulk
+## <a name="rfx_double_bulk"></a><a name="rfx_double_bulk"></a> RFX_Double_Bulk
 
 ODBC 데이터 원본의 열에서 파생 된 개체의 해당 배열까지 배정밀도 부동 소수점 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -735,7 +735,7 @@ Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgDblVals*가 
 
 **헤더:** afxdb
 
-## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a>RFX_Int_Bulk
+## <a name="rfx_int_bulk"></a><a name="rfx_int_bulk"></a> RFX_Int_Bulk
 
 개체의 필드 데이터 멤버 `CRecordset` 와 ODBC 형식의 데이터 원본에 있는 레코드의 열 간에 정수 데이터를 전송 SQL_SMALLINT 합니다.
 
@@ -767,7 +767,7 @@ void RFX_Int(
 
 **헤더:** afxdb
 
-## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a>RFX_Long_Bulk
+## <a name="rfx_long_bulk"></a><a name="rfx_long_bulk"></a> RFX_Long_Bulk
 
 ODBC 데이터 원본의 열에서 파생 개체의 해당 배열까지 long 정수 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -814,7 +814,7 @@ Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgLongVals*가
 
 **헤더:** afxdb
 
-## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a>RFX_Single_Bulk
+## <a name="rfx_single_bulk"></a><a name="rfx_single_bulk"></a> RFX_Single_Bulk
 
 ODBC 데이터 원본의 열에서 파생 개체의 해당 배열에 부동 소수점 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -861,7 +861,7 @@ Long 정수 배열에 대 한 포인터입니다. 이 배열은 *prgFltVals*가 
 
 **헤더:** afxdb
 
-## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a>RFX_Text_Bulk
+## <a name="rfx_text_bulk"></a><a name="rfx_text_bulk"></a> RFX_Text_Bulk
 
 ODBC 데이터 원본 열에서 파생 개체의 해당 배열에 문자 데이터의 여러 행을 전송 `CRecordset` 합니다.
 
@@ -927,7 +927,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 
 **헤더:** afxdb
 
-## <a name="dfx_binary"></a><a name="dfx_binary"></a>DFX_Binary
+## <a name="dfx_binary"></a><a name="dfx_binary"></a> DFX_Binary
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 사이에 바이트 배열을 전송 합니다.
 
@@ -974,7 +974,7 @@ DAO의 형식 DAO_BYTES 간에 데이터가 매핑되고 레코드 집합에 [CB
 
 **헤더:** afxdao
 
-## <a name="dfx_bool"></a><a name="dfx_bool"></a>DFX_Bool
+## <a name="dfx_bool"></a><a name="dfx_bool"></a> DFX_Bool
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 부울 데이터를 전송 합니다.
 
@@ -1017,7 +1017,7 @@ void AFXAPI DFX_Bool(
 
 **헤더:** afxdao
 
-## <a name="dfx_byte"></a><a name="dfx_byte"></a>DFX_Byte
+## <a name="dfx_byte"></a><a name="dfx_byte"></a> DFX_Byte
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 단일 바이트를 전송 합니다.
 
@@ -1060,7 +1060,7 @@ void AFXAPI DFX_Byte(
 
 **헤더:** afxdao
 
-## <a name="dfx_currency"></a><a name="dfx_currency"></a>DFX_Currency
+## <a name="dfx_currency"></a><a name="dfx_currency"></a> DFX_Currency
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 통화 데이터를 전송 합니다.
 
@@ -1103,7 +1103,7 @@ DAO의 형식 DAO_CURRENCY 간에 데이터가 매핑되고 레코드 집합에 
 
 **헤더:** afxdao
 
-## <a name="dfx_datetime"></a><a name="dfx_datetime"></a>DFX_DateTime
+## <a name="dfx_datetime"></a><a name="dfx_datetime"></a> DFX_DateTime
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 시간 및 날짜 데이터를 전송 합니다.
 
@@ -1139,7 +1139,7 @@ void AFXAPI DFX_DateTime(
 DAO의 형식 DAO_DATE 간에 데이터가 매핑되고 레코드 집합에 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 형식이 있습니다.
 
 > [!NOTE]
-> `COleDateTime`DAO 클래스에서이 목적에 대 한 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 및 TIMESTAMP_STRUCT를 대체 합니다. `CTime`및 TIMESTAMP_STRUCT은 여전히 ODBC 기반 데이터 액세스 클래스에 사용 됩니다.
+> `COleDateTime` DAO 클래스에서이 목적에 대 한 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 및 TIMESTAMP_STRUCT를 대체 합니다. `CTime` 및 TIMESTAMP_STRUCT은 여전히 ODBC 기반 데이터 액세스 클래스에 사용 됩니다.
 
 ### <a name="example"></a>예제
 
@@ -1149,7 +1149,7 @@ DAO의 형식 DAO_DATE 간에 데이터가 매핑되고 레코드 집합에 [COl
 
 **헤더:** afxdao
 
-## <a name="dfx_double"></a><a name="dfx_double"></a>DFX_Double
+## <a name="dfx_double"></a><a name="dfx_double"></a> DFX_Double
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 **이중 float** 데이터를 전송 합니다.
 
@@ -1192,7 +1192,7 @@ DAO의 형식 DAO_R8 간에 데이터가 매핑되고 레코드 집합에 **doub
 
 **헤더:** afxdao
 
-## <a name="dfx_long"></a><a name="dfx_long"></a>DFX_Long
+## <a name="dfx_long"></a><a name="dfx_long"></a> DFX_Long
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 정수 (long) 데이터를 전송 합니다.
 
@@ -1235,7 +1235,7 @@ void AFXAPI DFX_Long(
 
 **헤더:** afxdao
 
-## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a>DFX_LongBinary
+## <a name="dfx_longbinary"></a><a name="dfx_longbinary"></a> DFX_LongBinary
 
 **중요** 이 함수 대신 [DFX_Binary](#dfx_binary) 를 사용 하는 것이 좋습니다.
 
@@ -1272,7 +1272,7 @@ void AFXAPI DFX_LongBinary(
 
 ### <a name="remarks"></a>설명
 
-`DFX_LongBinary`는 MFC ODBC 클래스와의 호환성을 위해 제공 됩니다. `DFX_LongBinary`함수는 `CLongBinary` [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 클래스를 사용 하 여 BLOB (binary large object) 데이터를 전송 합니다. DAO의 형식 DAO_BYTES 간에 데이터가 매핑되고 레코드 집합에 [CLongBinary](clongbinary-class.md) 형식이 있습니다.
+`DFX_LongBinary` 는 MFC ODBC 클래스와의 호환성을 위해 제공 됩니다. `DFX_LongBinary`함수는 `CLongBinary` [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 클래스를 사용 하 여 BLOB (binary large object) 데이터를 전송 합니다. DAO의 형식 DAO_BYTES 간에 데이터가 매핑되고 레코드 집합에 [CLongBinary](clongbinary-class.md) 형식이 있습니다.
 
 ### <a name="example"></a>예제
 
@@ -1282,7 +1282,7 @@ void AFXAPI DFX_LongBinary(
 
 **헤더:** afxdao
 
-## <a name="dfx_short"></a><a name="dfx_short"></a>DFX_Short
+## <a name="dfx_short"></a><a name="dfx_short"></a> DFX_Short
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 short 정수 데이터를 전송 합니다.
 
@@ -1318,7 +1318,7 @@ void AFXAPI DFX_Short(
 데이터는 DAO의 형식 DAO_I2와 **`short`** 레코드 집합의 형식 간에 매핑됩니다.
 
 > [!NOTE]
-> `DFX_Short`는 ODBC 기반 클래스의 [RFX_Int](#rfx_int) 와 동일 합니다.
+> `DFX_Short` 는 ODBC 기반 클래스의 [RFX_Int](#rfx_int) 와 동일 합니다.
 
 ### <a name="example"></a>예제
 
@@ -1328,7 +1328,7 @@ void AFXAPI DFX_Short(
 
 **헤더:** afxdao
 
-## <a name="dfx_single"></a><a name="dfx_single"></a>DFX_Single
+## <a name="dfx_single"></a><a name="dfx_single"></a> DFX_Single
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 부동 소수점 데이터를 전송 합니다.
 
@@ -1371,7 +1371,7 @@ void AFXAPI DFX_Single(
 
 **헤더:** afxdao
 
-## <a name="dfx_text"></a><a name="dfx_text"></a>DFX_Text
+## <a name="dfx_text"></a><a name="dfx_text"></a> DFX_Text
 
 [CDaoRecordset](cdaorecordset-class.md) 개체의 필드 데이터 멤버와 데이터 원본에 있는 레코드의 열 간에 `CString` 데이터를 전송합니다.
 

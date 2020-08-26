@@ -1,17 +1,17 @@
 ---
-title: uidefault (C++ COM 특성)
+title: uidefault (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.uidefault
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: 55e88ab4dfaaa4157a99c4dc523f205370f78c46
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 70f54c9d3e6aaa46aef08d109e8682989e382120
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214463"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843068"
 ---
 # <a name="uidefault"></a>uidefault
 
@@ -23,9 +23,9 @@ ms.locfileid: "80214463"
 [uidefault]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Uidefault** C++ 특성에는 [uidefault](/windows/win32/Midl/uidefault) MIDL 특성과 동일한 기능이 있습니다.
+**Uidefault** c + + 특성에는 [uidefault](/windows/win32/Midl/uidefault) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -50,12 +50,10 @@ __interface ICustom{
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 메서드|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

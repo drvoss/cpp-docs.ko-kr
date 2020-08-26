@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212266"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843250"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 클래스
 
@@ -75,24 +75,24 @@ class CArrayRowset :
 
 ### <a name="methods"></a>메서드
 
-|||
-|-|-|
-|[CArrayRowset](#carrayrowset)|생성자입니다.|
-|[스냅샷](#snapshot)|전체 행 집합을 메모리로 읽습니다.|
+| 속성 | 설명 |
+|--|--|
+| [CArrayRowset](#carrayrowset) | 생성자입니다. |
+| [스냅샷](#snapshot) | 전체 행 집합을 메모리로 읽습니다. |
 
 ### <a name="operators"></a>연산자
 
-|||
-|-|-|
-|[연산자&#91;&#93;](#operator)|행 집합의 요소에 액세스 합니다.|
+| Name | 설명 |
+|--|--|
+| [연산자&#91;&#93;](#operator) | 행 집합의 요소에 액세스 합니다. |
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
-|-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|이미 읽은 행 수입니다.|
+| Name | 설명 |
+|--|--|
+| [CArrayRowset::m_nRowsRead](#nrowsread) | 이미 읽은 행 수입니다. |
 
-## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a> CArrayRowset:: CArrayRowset
 
 새 `CArrayRowset` 개체를 만듭니다.
 
@@ -107,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 [in] 행 집합에 있는 최대 행 수입니다.
 
-## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a> CArrayRowset:: Snapshot
 
 전체 행 집합을 메모리로 읽어서 이에 대한 이미지 또는 스냅샷을 만듭니다.
 
@@ -117,7 +117,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset:: operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a> CArrayRowset:: operator
 
 행 집합의 행에 액세스 하기 위한 배열 형태의 구문을 제공 합니다.
 
@@ -139,11 +139,11 @@ TAccessor & operator[](int nrow);
 
 요청 된 행의 내용입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 *Nrow* 가 행 집합의 행 수를 초과 하면 예외가 throw 됩니다.
 
-## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a> CArrayRowset:: m_nRowsRead
 
 이미 읽은 행 집합의 행 수를 포함 합니다.
 

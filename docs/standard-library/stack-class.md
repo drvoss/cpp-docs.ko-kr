@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: 8c1da5d45acd68838174d02305a246ba2d2c169b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224632"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844303"
 ---
 # <a name="stack-class"></a>stack 클래스
 
@@ -64,13 +64,13 @@ class stack
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[겹치기](#stack)|비어 있거나 기본 컨테이너 개체의 복사본인 `stack`을 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[container_type](#container_type)|`stack`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|
 |[size_type](#size_type)|`stack`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|
@@ -78,7 +78,7 @@ class stack
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[empty](#empty)|`stack`이 비어 있는지를 테스트합니다.|
 |[창을](#pop)|`stack`의 맨 위에 있는 요소를 제거합니다.|
@@ -86,7 +86,7 @@ class stack
 |[size](#size)|`stack`에 있는 요소 수를 반환합니다.|
 |[top](#top)|`stack`의 맨 위에 있는 요소에 대한 참조를 반환합니다.|
 
-## <a name="container_type"></a><a name="container_type"></a>container_type
+## <a name="container_type"></a><a name="container_type"></a> container_type
 
 조정할 기본 컨테이너를 제공하는 형식입니다.
 
@@ -104,7 +104,7 @@ typedef Container container_type;
 
 `container_type`을 선언하고 사용하는 방법에 대한 예제는 [stack::stack](#stack)의 예제를 참조하세요.
 
-## <a name="empty"></a><a name="empty"></a>비우려면
+## <a name="empty"></a><a name="empty"></a> 비우려면
 
 스택이 비어 있는지 테스트합니다.
 
@@ -112,7 +112,7 @@ typedef Container container_type;
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 스택이 비어 있으면이 고, 그렇지 않으면입니다. **`false`** 스택이 비어 있지 않으면입니다.
 
@@ -149,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a><a name="pop"></a>창을
+## <a name="pop"></a><a name="pop"></a> 창을
 
 stack의 가장 윗부분의 요소를 제거합니다.
 
@@ -205,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a><a name="push"></a>누르기
+## <a name="push"></a><a name="push"></a> 누르기
 
 스택의 맨 위에 요소를 추가 합니다.
 
@@ -254,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a><a name="size"></a>크기가
+## <a name="size"></a><a name="size"></a> 크기가
 
 스택의 요소 수를 반환합니다.
 
@@ -262,7 +262,7 @@ The element at the top of the stack is 30.
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스택의 현재 길이입니다.
 
@@ -295,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 스택에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.
 
@@ -311,7 +311,7 @@ typedef typename Container::size_type size_type;
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.
 
-## <a name="stack"></a><a name="stack"></a>겹치기
+## <a name="stack"></a><a name="stack"></a> 겹치기
 
 비어 있거나 기본 컨테이너 개체의 복사본인 스택을 생성합니다.
 
@@ -365,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a><a name="top"></a>맨 위로
+## <a name="top"></a><a name="top"></a> 맨 위로
 
 stack의 가장 윗부분의 요소에 대한 참조를 반환합니다.
 
@@ -375,7 +375,7 @@ reference top();
 const_reference top() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 스택의 맨 위에 있는 컨테이너의 마지막 요소에 대한 참조입니다.
 
@@ -416,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 스택에 있는 요소로 저장된 개체의 형식을 나타내는 형식입니다.
 

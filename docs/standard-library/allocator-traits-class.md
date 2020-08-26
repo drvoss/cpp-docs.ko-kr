@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617410"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844810"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits 클래스
 
@@ -62,7 +62,7 @@ template <class Alloc>
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |`allocator_type`|이 형식은 템플릿 매개 변수 `Alloc`의 동의어입니다.|
 |`const_pointer`|잘 구성된 형식인 경우 이 형식은 `Alloc::const_pointer`이고, 아닌 경우 `pointer_traits<pointer>::rebind<const value_type>`입니다.|
@@ -80,16 +80,16 @@ template <class Alloc>
 
 다음 정적 메서드는 지정된 할당자 매개 변수에서 해당 메서드를 호출합니다.
 
-|||
+|Name|설명|
 |-|-|
-|[할당](#allocate)|지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.|
+|[추가로](#allocate)|지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.|
 |[구축](#construct)|지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.|
 |[할당](#deallocate)|지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.|
 |[삭제](#destroy)|지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.|
 |[max_size](#max_size)|지정된 할당자를 사용하여 할당 가능한 개체의 최대 수를 결정하는 정적 메서드입니다.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|지정된 할당자에서 `select_on_container_copy_construction`을 호출하는 정적 메서드입니다.|
 
-### <a name="allocate"></a><a name="allocate"></a>추가로
+### <a name="allocate"></a><a name="allocate"></a> 추가로
 
 지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.
 
@@ -119,7 +119,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 해당 식이 잘 구성되어 있는 경우 두 번째 메서드는 `al.allocate(count, hint)`를 반환하고, 아닌 경우 `al.allocate(count)`를 반환합니다.
 
-### <a name="construct"></a><a name="construct"></a>구축
+### <a name="construct"></a><a name="construct"></a> 구축
 
 지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.
 
@@ -143,7 +143,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 해당 식이 잘 구성되어 있는 경우 정적 멤버 함수는 `al.construct(ptr, args...)`를 호출하고, 아닌 경우 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`를 평가합니다.
 
-### <a name="deallocate"></a><a name="deallocate"></a>할당
+### <a name="deallocate"></a><a name="deallocate"></a> 할당
 
 지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.
 
@@ -170,7 +170,7 @@ static void deallocate(Alloc al,
 
 이 메서드는 아무것도 throw하지 않습니다.
 
-### <a name="destroy"></a><a name="destroy"></a>삭제
+### <a name="destroy"></a><a name="destroy"></a> 삭제
 
 지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.
 
@@ -191,7 +191,7 @@ template <class Uty>
 
 해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.destroy(ptr)`를 호출하고, 아닌 경우 `ptr->~Uty()`를 평가합니다.
 
-### <a name="max_size"></a><a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a> max_size
 
 지정된 할당자를 사용하여 할당 가능한 개체의 최대 수를 결정하는 정적 메서드입니다.
 
@@ -208,7 +208,7 @@ static size_type max_size(const Alloc& al);
 
 해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.max_size()`를 반환하고, 아닌 경우 `numeric_limits<size_type>::max()`를 반환합니다.
 
-### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 지정된 할당자에서 `select_on_container_copy_construction`을 호출하는 정적 메서드입니다.
 

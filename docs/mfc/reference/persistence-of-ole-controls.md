@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: a99757854e23708f86822906c7ef9023701ea06b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3ef5a1f465cc478b429b9fa41d6478f22030a8a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214063"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843614"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 컨트롤의 지속성
 
@@ -18,7 +18,7 @@ OLE 컨트롤의 한 가지 기능은 OLE 컨트롤에서 파일 또는 스트�
 
 ### <a name="persistence-of-ole-controls"></a>OLE 컨트롤의 지속성
 
-|||
+|Name|설명|
 |-|-|
 |[PX_Blob](#px_blob)|BLOB (binary large object) 데이터를 저장 하는 컨트롤 속성을 교환 합니다.|
 |[PX_Bool](#px_bool)|**BOOL**형식의 컨트롤 속성을 교환 합니다.|
@@ -39,7 +39,7 @@ OLE 컨트롤의 한 가지 기능은 OLE 컨트롤에서 파일 또는 스트�
 
 또한 `AfxOleTypeMatchGuid` TYPEDESC와 지정 된 GUID 사이에 일치 하는 항목을 테스트 하기 위해 전역 함수가 제공 됩니다.
 
-## <a name="px_blob"></a><a name="px_blob"></a>PX_Blob
+## <a name="px_blob"></a><a name="px_blob"></a> PX_Blob
 
 컨트롤의 멤버 함수 내에서이 함수 `DoPropExchange` 를 호출 하 여 BLOB (binary large object) 데이터를 저장 하는 속성을 직렬화 하거나 초기화 합니다.
 
@@ -65,7 +65,7 @@ BOOL PX_Blob(
 *hBlobDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -81,7 +81,7 @@ BOOL PX_Blob(
 
 `PX_Blob`에서는 BLOB 형식 속성을 로드할 때 Windows [globalalloc](/windows/win32/api/winbase/nf-winbase-globalalloc) API를 사용하여 메모리를 할당합니다. 이 메모리를 확보 해야 합니다. 따라서 컨트롤의 소멸자는 모든 BLOB 형식 속성 핸들에서 [Globalfree](/windows/win32/api/winbase/nf-winbase-globalfree) 를 호출 하 여 컨트롤에 할당 된 메모리를 확보 해야 합니다.
 
-## <a name="px_bool"></a><a name="px_bool"></a>PX_Bool
+## <a name="px_bool"></a><a name="px_bool"></a> PX_Bool
 
 `DoPropExchange`BOOL 형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다.
 
@@ -112,7 +112,7 @@ BOOL PX_Bool(
 *bDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -120,7 +120,7 @@ BOOL PX_Bool(
 
 속성의 값은 *Bvalue*에서 참조 하는 변수에서 읽거나 적절 하 게 기록 됩니다. *Bdefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_color"></a><a name="px_color"></a>PX_Color
+## <a name="px_color"></a><a name="px_color"></a> PX_Color
 
 `DoPropExchange`OLE_COLOR 형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다.
 
@@ -151,7 +151,7 @@ BOOL PX_Color(
 *clrDefault*<br/>
 컨트롤 개발자가 정의한 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -159,7 +159,7 @@ BOOL PX_Color(
 
 속성의 값은 적절 하 게 *Clrvalue*에서 참조 하는 변수에 읽거나 기록 됩니다. *Clrdefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_currency"></a><a name="px_currency"></a>PX_Currency
+## <a name="px_currency"></a><a name="px_currency"></a> PX_Currency
 
 컨트롤의 멤버 함수 내에서이 함수 `DoPropExchange` 를 호출 하 여 **currency**형식의 속성을 serialize 또는 초기화 합니다.
 
@@ -190,7 +190,7 @@ BOOL PX_Currency(
 *cyDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -198,7 +198,7 @@ BOOL PX_Currency(
 
 속성의 값은 *cyValue*에서 참조 하는 변수에서 읽거나 적절 하 게 기록 됩니다. *CyDefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_datapath"></a><a name="px_datapath"></a>PX_DataPath
+## <a name="px_datapath"></a><a name="px_datapath"></a> PX_DataPath
 
 [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) 형식의 데이터 경로 속성을 serialize 하거나 초기화하려면 컨트롤의 `DoPropExchange` 멤버 함수 내에서 이 함수를 호출합니다.
 
@@ -224,7 +224,7 @@ BOOL PX_DataPath(
 *dataPathProperty*<br/>
 속성이 저장 된 변수 (일반적으로 클래스의 멤버 변수)에 대 한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -232,7 +232,7 @@ BOOL PX_DataPath(
 
 데이터 경로 속성은 비동기 컨트롤 속성을 구현 합니다. 속성의 값은 *dataPathProperty*에서 참조 하는 변수에서 읽거나 적절 하 게 기록 됩니다.
 
-## <a name="px_double"></a><a name="px_double"></a>PX_Double
+## <a name="px_double"></a><a name="px_double"></a> PX_Double
 
 `DoPropExchange`형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다 **`double`** .
 
@@ -263,7 +263,7 @@ BOOL PX_Double(
 *doubleDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -271,7 +271,7 @@ BOOL PX_Double(
 
 속성의 값은 *doubleValue*에서 참조 하는 변수에서 읽거나 적절 하 게 기록 됩니다. *DoubleDefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_font"></a><a name="px_font"></a>PX_Font
+## <a name="px_font"></a><a name="px_font"></a> PX_Font
 
 컨트롤의 멤버 함수 내에서이 함수 `DoPropExchange` 를 호출 하 여 font 형식의 속성을 serialize 또는 초기화 합니다.
 
@@ -301,7 +301,7 @@ BOOL PX_Font(
 *pFontDispAmbient*<br/>
 `IFontDisp`글꼴 속성의 기본 상태를 초기화 하는 데 사용할 글꼴의 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -309,7 +309,7 @@ BOOL PX_Font(
 
 속성의 값은 해당 하는 `font` 경우 참조에서 읽거나 씁니다 `CFontHolder` . *Pfontdesc* 및 *pFontDispAmbient* 가 지정 된 경우 필요한 경우 속성의 기본값을 초기화 하는 데 사용 됩니다. 이러한 값은 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우에 사용 됩니다. 일반적으로 *P글꼴 desc* 에 대해 NULL을 전달 하 고 `COleControl::AmbientFont` *pFontDispAmbient*에 대해에서 반환 된 앰비언트 값을 전달 합니다. 에서 반환 되는 글꼴 개체는 `COleControl::AmbientFont` 멤버 함수를 호출 하 여 해제 해야 합니다 `IFontDisp::Release` .
 
-## <a name="px_float"></a><a name="px_float"></a>PX_Float
+## <a name="px_float"></a><a name="px_float"></a> PX_Float
 
 `DoPropExchange`형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다 **`float`** .
 
@@ -340,7 +340,7 @@ BOOL PX_Float(
 *floatDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -348,7 +348,7 @@ BOOL PX_Float(
 
 속성의 값은 *floatValue*에서 참조 하는 변수에서 읽거나 적절 하 게 기록 됩니다. *FloatDefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_iunknown"></a><a name="px_iunknown"></a>PX_IUnknown
+## <a name="px_iunknown"></a><a name="px_iunknown"></a> PX_IUnknown
 
 `DoPropExchange`파생 인터페이스가 있는 개체로 표시 되는 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 `IUnknown` 합니다.
 
@@ -378,7 +378,7 @@ BOOL PX_IUnknown(
 *pUnkDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -386,7 +386,7 @@ BOOL PX_IUnknown(
 
 속성의 값은 *pUnk*에서 참조 하는 변수에서 읽거나 적절 하 게 기록 됩니다. *PUnkDefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_long"></a><a name="px_long"></a>PX_Long
+## <a name="px_long"></a><a name="px_long"></a> PX_Long
 
 `DoPropExchange`형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다 **`long`** .
 
@@ -417,7 +417,7 @@ BOOL PX_Long(
 *lDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -425,7 +425,7 @@ BOOL PX_Long(
 
 속성의 값을 적절 하 게 *lValue*에서 참조 하는 변수에서 읽거나 씁니다. *Ldefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_picture"></a><a name="px_picture"></a>PX_Picture
+## <a name="px_picture"></a><a name="px_picture"></a> PX_Picture
 
 컨트롤의 멤버 함수 내에서이 함수 `DoPropExchange` 를 호출 하 여 컨트롤의 그림 속성을 serialize 또는 초기화 합니다.
 
@@ -456,7 +456,7 @@ BOOL PX_Picture(
 *pictDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -464,7 +464,7 @@ BOOL PX_Picture(
 
 적절 한 경우에는 *pict*에서 참조 하는 변수에서 속성의 값을 읽거나 씁니다. *PictDefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_short"></a><a name="px_short"></a>PX_Short
+## <a name="px_short"></a><a name="px_short"></a> PX_Short
 
 `DoPropExchange`형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다 **`short`** .
 
@@ -495,7 +495,7 @@ BOOL PX_Short(
 *sDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -503,7 +503,7 @@ BOOL PX_Short(
 
 속성의 값은 *sValue*에서 참조 하는 변수에서 읽거나 적절 하 게 기록 됩니다. *Sdefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_ulong"></a><a name="px_ulong"></a>PX_ULong
+## <a name="px_ulong"></a><a name="px_ulong"></a> PX_ULong
 
 컨트롤의 멤버 함수 내에서이 함수 `DoPropExchange` 를 호출 하 여 **ULONG**형식의 속성을 serialize 또는 초기화 합니다.
 
@@ -534,7 +534,7 @@ BOOL PX_ULong(
 *ulDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -542,7 +542,7 @@ BOOL PX_ULong(
 
 속성의 값은 *Ulvalue*에서 참조 하는 변수에서 적절 하 게 읽거나 씁니다. *Uldefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_ushort"></a><a name="px_ushort"></a>PX_UShort
+## <a name="px_ushort"></a><a name="px_ushort"></a> PX_UShort
 
 `DoPropExchange`형식의 속성을 serialize 하거나 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다 **`unsigned short`** .
 
@@ -573,7 +573,7 @@ BOOL PX_UShort(
 *usDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -581,7 +581,7 @@ BOOL PX_UShort(
 
 속성의 값을 적절 하 게 *Usvalue*에서 참조 하는 변수에 읽거나 씁니다. *Usdefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="pxstring"></a><a name="px_string"></a>PXstring
+## <a name="pxstring"></a><a name="px_string"></a> PXstring
 
 컨트롤의 멤버 함수 내에서이 함수 `DoPropExchange` 를 호출 하 여 문자열 속성을 serialize 또는 초기화 합니다.
 
@@ -612,7 +612,7 @@ BOOL PXstring(
 *strDefault*<br/>
 속성의 기본값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
@@ -620,7 +620,7 @@ BOOL PXstring(
 
 속성의 값은 *Strvalue*에서 참조 하는 변수를 적절 하 게 읽거나 씁니다. *Strdefault* 를 지정 하면 속성의 기본값으로 사용 됩니다. 어떤 이유로 든 컨트롤의 serialization 프로세스가 실패 하는 경우이 값이 사용 됩니다.
 
-## <a name="px_vbxfontconvert"></a><a name="px_vbxfontconvert"></a>PX_VBXFontConvert
+## <a name="px_vbxfontconvert"></a><a name="px_vbxfontconvert"></a> PX_VBXFontConvert
 
 `DoPropExchange`VBX 컨트롤의 글꼴 관련 속성을 변환 하 여 글꼴 속성을 초기화 하려면 컨트롤의 멤버 함수 내에서이 함수를 호출 합니다.
 
@@ -638,15 +638,15 @@ BOOL PX_VBXFontConvert(
 *굵게*<br/>
 변환 된 VBX 글꼴 관련 속성을 포함 하는 OLE 컨트롤의 font 속성입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 교환이 성공 하면 0이 아닌 값입니다. 실패 한 경우 0입니다.
 
 ### <a name="remarks"></a>설명
 
-이 함수는 VBX 컨트롤에 대 한 직접 대체로 디자인 된 OLE 컨트롤 에서만 사용 해야 합니다. Visual Basic 개발 환경에서 VBX 컨트롤이 포함 된 폼을 변환 하 여 해당 하는 대체 OLE 컨트롤을 사용 하는 경우 `IDataObject::SetData` VBX 컨트롤의 속성 데이터를 포함 하는 속성 집합을 전달 하 여 컨트롤의 함수를 호출 합니다. 이 작업을 수행 하면 컨트롤의 `DoPropExchange` 함수가 호출 됩니다. `DoPropExchange`는 `PX_VBXFontConvert` 를 호출 하 여 VBX 컨트롤의 글꼴 관련 속성 (예: "FontName", "FontSize" 등)을 OLE 컨트롤의 font 속성의 해당 구성 요소로 변환할 수 있습니다.
+이 함수는 VBX 컨트롤에 대 한 직접 대체로 디자인 된 OLE 컨트롤 에서만 사용 해야 합니다. Visual Basic 개발 환경에서 VBX 컨트롤이 포함 된 폼을 변환 하 여 해당 하는 대체 OLE 컨트롤을 사용 하는 경우 `IDataObject::SetData` VBX 컨트롤의 속성 데이터를 포함 하는 속성 집합을 전달 하 여 컨트롤의 함수를 호출 합니다. 이 작업을 수행 하면 컨트롤의 `DoPropExchange` 함수가 호출 됩니다. `DoPropExchange` 는 `PX_VBXFontConvert` 를 호출 하 여 VBX 컨트롤의 글꼴 관련 속성 (예: "FontName", "FontSize" 등)을 OLE 컨트롤의 font 속성의 해당 구성 요소로 변환할 수 있습니다.
 
-`PX_VBXFontConvert`컨트롤이 실제로 VBX 폼 응용 프로그램에서 변환 되는 경우에만 호출 해야 합니다. 예를 들면 다음과 같습니다.
+`PX_VBXFontConvert` 컨트롤이 실제로 VBX 폼 응용 프로그램에서 변환 되는 경우에만 호출 해야 합니다. 예를 들어:
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]

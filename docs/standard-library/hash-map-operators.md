@@ -5,21 +5,21 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: 6c0ec796265f462fe386962c0b2e8288f41da628
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b0884cacb11299f96d539c8c83a1fc9fa2840d16
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222435"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844394"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 연산자
 
-|||
-|-|-|
-|[연산자! =](#op_neq)|[operator! = (multimap)](#op_neq_mm)|
-|[연산자 = =](#op_eq_eq)|[operator = = (multimap)](#op_eq_eq_mm)|
+[연산자! =](#op_neq)\
+[operator! = (multimap)](#op_neq_mm)\
+[연산자 = =](#op_eq_eq)\
+[operator = = (multimap)](#op_eq_eq_mm)
 
-## <a name="operator"></a><a name="op_neq"></a>연산자! =
+## <a name="operator"></a><a name="op_neq"></a> 연산자! =
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -38,7 +38,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 *오른쪽*\
 `hash_map` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** hash_maps 같지 않으면이 고, 그렇지 않으면입니다. **`false`** hash_maps 같으면입니다.
 
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>연산자 = =
+## <a name="operator"></a><a name="op_eq_eq"></a> 연산자 = =
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. [unordered_map 클래스](unordered-map-class.md)를 대신 사용하는 것이 좋습니다.
@@ -107,7 +107,7 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 *오른쪽*\
 `hash_map` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 hash_map 연산자의 우변에 있는 hash_map와 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a> operator! = (hash_multimap)
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. 다른 방법은 [unordered_multimap Class](unordered-multimap-class.md)입니다.
@@ -174,7 +174,7 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 *오른쪽*\
 `hash_multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** hash_multimaps 같지 않으면이 고, 그렇지 않으면입니다. **`false`** hash_multimaps 같으면입니다.
 
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a> operator = = (hash_multimap)
 
 > [!NOTE]
 > 이 API는 더 이상 사용되지 않습니다. 다른 방법은 [unordered_multimap Class](unordered-multimap-class.md)입니다.
@@ -241,7 +241,7 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 *오른쪽*\
 `hash_multimap` 형식의 개체입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 연산자의 좌 변에 있는 hash_multimap 연산자의 우변에 있는 hash_multimap와 같으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 

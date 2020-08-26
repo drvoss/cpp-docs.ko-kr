@@ -1,17 +1,17 @@
 ---
-title: object (C++ COM 특성)
+title: object (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: 4545d899c13a1eabf8ea5fb6fe3918fb5f05b626
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c0c0ff552d8a33ebe70f56b9b186e963cc8e9b3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214686"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843107"
 ---
 # <a name="object-c"></a>object(C++)
 
@@ -23,11 +23,11 @@ ms.locfileid: "80214686"
 [object]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-인터페이스 정의 앞에 **개체** C++ 특성을 지정 하면 인터페이스가 .idl 파일에 사용자 지정 인터페이스로 배치 됩니다.
+인터페이스 정의 앞에 **개체** c + + 특성을 지정 하면 인터페이스가 .idl 파일에 사용자 지정 인터페이스로 배치 됩니다.
 
-개체로 표시 된 인터페이스는 `IUnknown`에서 상속 되어야 합니다. 기본 인터페이스가 `IUnknown`에서 상속 되는 경우이 조건이 충족 됩니다. `IUnknown`에서 상속 되는 기본 인터페이스가 없는 경우 컴파일러는 **개체로** 표시 된 인터페이스를 `IUnknown`파생 시킵니다.
+개체로 표시 된 인터페이스는에서 상속 해야 합니다 `IUnknown` . 기본 인터페이스가에서 상속 되는 경우이 조건이 충족 됩니다 `IUnknown` . 에서 상속 되는 기본 인터페이스가 없는 경우 `IUnknown` 컴파일러는 **개체로** 표시 된 인터페이스를 파생 시킵니다 `IUnknown` .
 
 ## <a name="example"></a>예제
 
@@ -35,12 +35,10 @@ ms.locfileid: "80214686"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**interface**|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 
@@ -52,5 +50,5 @@ ms.locfileid: "80214686"
 [인터페이스 특성](interface-attributes.md)<br/>
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-[custom](custom-cpp.md)<br/>
+[재구성](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216936"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843497"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -191,7 +191,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 *size*<br/>
 문자 형식의 단위에 있는 버퍼의 길이입니다. 이 매개 변수는 c + +의 *buffer* 인수에서 유추 됩니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 이러한 각 함수는 *버퍼*에 대 한 포인터를 반환 합니다. 반환되는 오류가 없습니다.
 
@@ -231,9 +231,8 @@ POSIX 이름 **itoa**, **ltoa**및 **ultoa** 는 **_itoa**, **_ltoa**및 **_ulto
 
 문자열 변환 함수에서 이러한 매크로 중 하나를 사용 하려면 해당 문자 형식의 변환 버퍼를 선언 하 고 정수 형식에 대 한 매크로 값과 기반을 버퍼 차원으로 사용 합니다. 다음 표에서는 나열 된 기본에 대 한 각 함수에 적합 한 매크로를 나열 합니다.
 
-||||
-|-|-|-|
 |Functions|radix|매크로|
+|-|-|-|
 |**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
