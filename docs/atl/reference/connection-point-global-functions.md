@@ -8,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 6474297f8b9adf04541f7d232fb88d5e52d4e88c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1a648f49b0f3715fd322b1099dcebbf194f57a10
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331527"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833532"
 ---
 # <a name="connection-point-global-functions"></a>연결 지점 전역 함수
 
-이러한 함수는 연결 점 및 싱크 맵에 대한 지원을 제공합니다.
+이러한 함수는 연결 지점과 싱크 맵에 대 한 지원을 제공 합니다.
 
 > [!IMPORTANT]
-> 다음 표에 나열된 함수는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> 다음 표에 나열 된 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
-|||
+|기능|설명|
 |-|-|
 |[AtlAdvise](#atladvise)|개체의 연결 지점과 클라이언트의 싱크 간에 연결을 만듭니다.|
-|[AtlUnadvise](#atlunadvise)|을 통해 `AtlAdvise`설정된 연결을 종료합니다.|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|이벤트 싱크 맵에서 항목을 조언하거나 취소합니다.|
+|[AtlUnadvise](#atlunadvise)|를 통해 설정 된 연결을 종료 `AtlAdvise` 합니다.|
+|[AtlAdviseSinkMap](#atladvisesinkmap)|이벤트 싱크 맵에 항목을 제안 하거나 제안 하지 않습니다.|
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** atlbase.h
+**헤더:** 서 기. h
 
-## <a name="atladvise"></a><a name="atladvise"></a>아틀어드
+## <a name="atladvise"></a><a name="atladvise"></a> 가 나 Advise
 
 개체의 연결 지점과 클라이언트의 싱크 간에 연결을 만듭니다.
 
 > [!IMPORTANT]
-> 이 함수는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
 ```
 HRESULT    AtlAdvise(
@@ -49,36 +49,36 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>매개 변수
 
-*punkCP*<br/>
-【인】 클라이언트가 `IUnknown` 연결하려는 개체에 대한 포인터입니다.
+*pUnkCP*<br/>
+진행 클라이언트에서 연결 하려는 개체의에 대 한 포인터입니다 `IUnknown` .
 
 *pUnk*<br/>
-【인】 클라이언트의 에 대한 `IUnknown`포인터입니다.
+진행 클라이언트의에 대 한 포인터 `IUnknown` 입니다.
 
-*Iid*<br/>
-【인】 연결 지점의 GUID입니다. 일반적으로 이는 연결 점에서 관리하는 나가는 인터페이스와 동일합니다.
+*iid*<br/>
+진행 연결 지점의 GUID입니다. 일반적으로이는 연결 지점에서 관리 하는 송신 인터페이스와 동일 합니다.
 
-*Pdw*<br/>
-【아웃】 연결을 고유하게 식별하는 쿠키에 대한 포인터입니다.
+*pdw*<br/>
+제한이 연결을 고유 하 게 식별 하는 쿠키에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다.
 
 ### <a name="remarks"></a>설명
 
-싱크는 연결 점에서 지원되는 나가는 인터페이스를 구현합니다. 클라이언트는 *pdw* 쿠키를 사용하여 [연결을 AtlUnadvise로](#atlunadvise)전달하여 연결을 제거합니다.
+싱크는 연결 지점에서 지 원하는 나가는 인터페이스를 구현 합니다. 클라이언트는 *pdw* 쿠키를 사용 하 여 [AtlUnadvise](#atlunadvise)에 전달 하 여 연결을 제거 합니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]
 
-## <a name="atlunadvise"></a><a name="atlunadvise"></a>아틀룬어드
+## <a name="atlunadvise"></a><a name="atlunadvise"></a> AtlUnadvise
 
-[AtlAdvise](#atladvise). 를 통해 설정된 연결을 종료합니다.
+이 [를 통해 설정](#atladvise)된 연결을 종료 합니다.
 
 > [!IMPORTANT]
-> 이 함수는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
 ```
 HRESULT    AtlUnadvise(
@@ -89,16 +89,16 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>매개 변수
 
-*punkCP*<br/>
-【인】 클라이언트가 연결된 `IUnknown` 개체에 대한 포인터입니다.
+*pUnkCP*<br/>
+진행 `IUnknown` 클라이언트와 연결 된 개체의에 대 한 포인터입니다.
 
-*Iid*<br/>
-【인】 연결 지점의 GUID입니다. 일반적으로 이는 연결 점에서 관리하는 나가는 인터페이스와 동일합니다.
+*iid*<br/>
+진행 연결 지점의 GUID입니다. 일반적으로이는 연결 지점에서 관리 하는 송신 인터페이스와 동일 합니다.
 
 *dw*<br/>
-【인】 연결을 고유하게 식별하는 쿠키입니다.
+진행 연결을 고유 하 게 식별 하는 쿠키입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다.
 
@@ -106,12 +106,12 @@ HRESULT    AtlUnadvise(
 
 [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]
 
-## <a name="atladvisesinkmap"></a><a name="atladvisesinkmap"></a>아틀어어드싱크맵
+## <a name="atladvisesinkmap"></a><a name="atladvisesinkmap"></a> AtlAdviseSinkMap
 
 개체의 싱크 이벤트 맵에서 모든 항목을 advise하거나 unadvise하려면 이 함수를 호출합니다.
 
 > [!IMPORTANT]
-> 이 함수는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> 이 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -119,13 +119,13 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>매개 변수
 
-*Pt*<br/>
-【인】 싱크 맵을 포함하는 개체에 대한 포인터입니다.
+*P t*<br/>
+진행 싱크 맵을 포함 하는 개체에 대 한 포인터입니다.
 
 *bAdvise*<br/>
-【인】 모든 싱크 항목을 권장하는 경우 TRUE; 모든 싱크 항목을 권장하지 않는 경우 FALSE입니다.
+진행 모든 싱크 항목이 advise 되 면 TRUE입니다. 모든 싱크 항목이 advise 되지 않으면 FALSE입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다.
 
@@ -133,7 +133,7 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[Functions](../../atl/reference/atl-functions.md)<br/>
+[함수](../../atl/reference/atl-functions.md)<br/>
 [연결 지점 매크로](../../atl/reference/connection-point-macros.md)

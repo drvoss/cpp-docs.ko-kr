@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-ms.openlocfilehash: 0113412fb86f7e0b326f4fa48462f8073f7754cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fd88bf359cbc3221a8f2a259d031bdbd6b581f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384844"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835014"
 ---
 # <a name="resource-management-classes"></a>리소스 관리 클래스
 
@@ -22,11 +22,12 @@ ms.locfileid: "62384844"
 
 ## <a name="in-this-section"></a>섹션 내용
 
-|||
-|-|-|
-|[auto_gcroot](../dotnet/auto-gcroot.md)|네이티브 형식에 가상 핸들을 포함합니다.|
-|[auto_handle](../dotnet/auto-handle.md)|관리되는 형식에 가상 핸들을 포함합니다.|
+[auto_gcroot](../dotnet/auto-gcroot.md)\
+네이티브 형식에 가상 핸들을 포함합니다.
 
-## <a name="see-also"></a>참고자료
+[auto_handle](../dotnet/auto-handle.md)\
+관리되는 형식에 가상 핸들을 포함합니다.
 
-[C++ 지원 라이브러리](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>참고 항목
+
+[C + + 지원 라이브러리](../dotnet/cpp-support-library.md)

@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: f41c5b238f74e85bc18e9ff5c3aa6a0050fe27e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d8a4e9196e27933c75a32c256114e968b55678a6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376916"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834897"
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; enums
 
-## <a name="memory_order-enum"></a><a name="memory_order_enum"></a>memory_order 에넘
+## <a name="memory_order-enum"></a><a name="memory_order_enum"></a> memory_order 열거형
 
 메모리 위치에서 동기화 연산에 대한 기호 이름을 제공합니다. 이러한 연산은 하나의 스레드의 할당이 다른 스레드에 표시될 방법에 영향을 미칩니다.
 
@@ -30,9 +30,9 @@ typedef enum memory_order {
 } memory_order;
 ```
 
-### <a name="enumeration-members"></a>열거 멤버
+### <a name="enumeration-members"></a>열거형 멤버
 
-|||
+|Name|설명|
 |-|-|
 |`memory_order_relaxed`|순서 지정할 필요가 없습니다.|
 |`memory_order_consume`|load 연산이 메모리 위치에서 consume 연산처럼 작동합니다.|
@@ -43,4 +43,4 @@ typedef enum memory_order {
 
 ## <a name="see-also"></a>참고 항목
 
-[\<원자>](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

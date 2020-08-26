@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: 5928a9bf8af12b2ce15a386871b845ef86cc7a2d
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168771"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833844"
 ---
 # <a name="catlarray-class"></a>CAtlArray 클래스
 
@@ -55,10 +55,10 @@ class CAtlArray
 
 ### <a name="methods"></a>메서드
 
-|||
+|기능|설명|
 |-|-|
 |[추가](#add)|배열 개체에 요소를 추가 하려면이 메서드를 호출 합니다.|
-|[추가할](#append)|한 배열의 내용을 다른 배열의 끝에 추가 하려면이 메서드를 호출 합니다.|
+|[Append](#append)|한 배열의 내용을 다른 배열의 끝에 추가 하려면이 메서드를 호출 합니다.|
 |[AssertValid](#assertvalid)|배열 개체가 유효한 지 확인 하려면이 메서드를 호출 합니다.|
 |[CAtlArray](#catlarray)|생성자입니다.|
 |[~ CAtlArray](#dtor)|소멸자입니다.|
@@ -78,24 +78,24 @@ class CAtlArray
 
 ### <a name="operators"></a>연산자
 
-|||
+|연산자|설명|
 |-|-|
 |[연산자 &#91;&#93;](#operator_at)|배열의 요소에 대 한 참조를 반환 하려면이 연산자를 호출 합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|형식 정의|Description|
 |-|-|
 |[INARGTYPE](#inargtype)|배열에 요소를 추가 하는 데 사용할 데이터 형식입니다.|
 |[OUTARGTYPE](#outargtype)|배열에서 요소를 검색 하는 데 사용할 데이터 형식입니다.|
 
 ## <a name="remarks"></a>설명
 
-`CAtlArray`사용자 정의 형식의 요소 배열을 만들고 관리 하는 메서드를 제공 합니다. 표준 C 배열과 유사 하지만 개체는 `CAtlArray` 필요에 따라 동적으로 축소 하 고 확장할 수 있습니다. 배열 인덱스는 항상 0 위치에서 시작 하 고, 상한을 고정 하거나, 새 요소가 추가 될 때 확장할 수 있습니다.
+`CAtlArray` 사용자 정의 형식의 요소 배열을 만들고 관리 하는 메서드를 제공 합니다. 표준 C 배열과 유사 하지만 `CAtlArray` 개체는 필요에 따라 동적으로 축소 하 고 확장할 수 있습니다. 배열 인덱스는 항상 0 위치에서 시작 하 고, 상한을 고정 하거나, 새 요소가 추가 될 때 확장할 수 있습니다.
 
 요소 수가 적은 배열의 경우에는 ATL 클래스 [CSimpleArray](../../atl/reference/csimplearray-class.md) 을 사용할 수 있습니다.
 
-`CAtlArray`는 MFC의 `CArray` 클래스와 밀접 하 게 관련 되어 있으며 serialization이 지원 되지 않는 한 mfc 프로젝트에서 작동 합니다.
+`CAtlArray` 는 MFC의 클래스와 밀접 하 게 관련 되어 `CArray` 있으며 serialization이 지원 되지 않는 한 mfc 프로젝트에서 작동 합니다.
 
 자세한 내용은 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)를 참조 하세요.
 
@@ -103,7 +103,7 @@ class CAtlArray
 
 **헤더:** atlcoll
 
-## <a name="catlarrayadd"></a><a name="add"></a>CAtlArray:: Add
+## <a name="catlarrayadd"></a><a name="add"></a> CAtlArray:: Add
 
 배열 개체에 요소를 추가 하려면이 메서드를 호출 합니다.
 
@@ -117,7 +117,7 @@ size_t Add();
 *요소인*<br/>
 배열에 추가할 요소입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 추가 된 요소의 인덱스를 반환 합니다.
 
@@ -129,7 +129,7 @@ size_t Add();
 
 [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]
 
-## <a name="catlarrayappend"></a><a name="append"></a>CAtlArray:: Append
+## <a name="catlarrayappend"></a><a name="append"></a> CAtlArray:: Append
 
 한 배열의 내용을 다른 배열의 끝에 추가 하려면이 메서드를 호출 합니다.
 
@@ -142,7 +142,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 *aSrc*<br/>
 추가할 배열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 추가 된 요소의 인덱스를 반환 합니다.
 
@@ -158,7 +158,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]
 
-## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a>CAtlArray::AssertValid
+## <a name="catlarrayassertvalid"></a><a name="assertvalid"></a> CAtlArray::AssertValid
 
 배열 개체가 유효한 지 확인 하려면이 메서드를 호출 합니다.
 
@@ -174,7 +174,7 @@ void AssertValid() const;
 
 [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="catlarray"></a>CAtlArray::CAtlArray
+## <a name="catlarraycatlarray"></a><a name="catlarray"></a> CAtlArray::CAtlArray
 
 생성자입니다.
 
@@ -190,7 +190,7 @@ CAtlArray() throw();
 
 [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]
 
-## <a name="catlarraycatlarray"></a><a name="dtor"></a>CAtlArray:: ~ CAtlArray
+## <a name="catlarraycatlarray"></a><a name="dtor"></a> CAtlArray:: ~ CAtlArray
 
 소멸자입니다.
 
@@ -202,7 +202,7 @@ CAtlArray() throw();
 
 배열 개체에서 사용 하는 모든 리소스를 해제 합니다.
 
-## <a name="catlarraycopy"></a><a name="copy"></a>CAtlArray:: Copy
+## <a name="catlarraycopy"></a><a name="copy"></a> CAtlArray:: Copy
 
 한 배열의 요소를 다른 배열의 요소에 복사 하려면이 메서드를 호출 합니다.
 
@@ -224,13 +224,13 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 디버그 빌드에서는 기존 `CAtlArray` 개체가 유효 하지 않거나 *asrc* 가 동일한 개체를 참조 하는 경우에는 해당 어설션이 발생 합니다. 릴리스 빌드에서 잘못 된 인수로 인해 예기치 않은 동작이 발생할 수 있습니다.
 
 > [!NOTE]
-> `CAtlArray::Copy`는 [CAutoPtr](../../atl/reference/cautoptr-class.md) 클래스를 사용 하 여 만든 요소로 구성 된 배열을 지원 하지 않습니다.
+> `CAtlArray::Copy` 는 [CAutoPtr](../../atl/reference/cautoptr-class.md) 클래스를 사용 하 여 만든 요소로 구성 된 배열을 지원 하지 않습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]
 
-## <a name="catlarrayfreeextra"></a><a name="freeextra"></a>CAtlArray:: FreeExtra
+## <a name="catlarrayfreeextra"></a><a name="freeextra"></a> CAtlArray:: FreeExtra
 
 배열에서 빈 요소를 제거 하려면이 메서드를 호출 합니다.
 
@@ -244,7 +244,7 @@ void FreeExtra() throw();
 
 CAtlArray 개체가 유효 하지 않거나 배열의 최대 크기를 초과 하는 경우 디버그 빌드에서 어설션이 발생 합니다.
 
-## <a name="catlarraygetat"></a><a name="getat"></a>CAtlArray:: GetAt
+## <a name="catlarraygetat"></a><a name="getat"></a> CAtlArray:: GetAt
 
 이 메서드를 호출 하 여 배열 개체에서 단일 요소를 검색 합니다.
 
@@ -258,7 +258,7 @@ E& GetAt(size_t iElement) throw();
 *iElement*<br/>
 반환할 배열 요소의 인덱스 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 필수 배열 요소에 대 한 참조를 반환 합니다.
 
@@ -270,7 +270,7 @@ IElement가 배열에 있는 요소 수를 초과 하는 경우 디버그 빌드
 
 [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]
 
-## <a name="catlarraygetcount"></a><a name="getcount"></a>CAtlArray:: GetCount
+## <a name="catlarraygetcount"></a><a name="getcount"></a> CAtlArray:: GetCount
 
 배열에 저장 된 요소의 수를 반환 하려면이 메서드를 호출 합니다.
 
@@ -278,19 +278,19 @@ IElement가 배열에 있는 요소 수를 초과 하는 경우 디버그 빌드
 size_t GetCount() const throw();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 배열에 저장 된 요소의 수를 반환 합니다.
 
 ### <a name="remarks"></a>설명
 
-배열의 첫 번째 요소가 위치 0에 있기 때문에에서 `GetCount` 반환 되는 값은 항상 가장 큰 인덱스 보다 1 큽니다.
+배열의 첫 번째 요소가 위치 0에 있기 때문에에서 반환 되는 값은 `GetCount` 항상 가장 큰 인덱스 보다 1 큽니다.
 
 ### <a name="example"></a>예제
 
 [CAtlArray:: GetAt](#getat)의 예제를 참조 하세요.
 
-## <a name="catlarraygetdata"></a><a name="getdata"></a>CAtlArray:: GetData
+## <a name="catlarraygetdata"></a><a name="getdata"></a> CAtlArray:: GetData
 
 배열의 첫 번째 요소에 대 한 포인터를 반환 하려면이 메서드를 호출 합니다.
 
@@ -299,7 +299,7 @@ E* GetData() throw();
 const E* GetData() const throw();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 배열의 첫 번째 요소를 저장 하는 메모리 위치에 대 한 포인터를 반환 합니다. 사용할 수 있는 요소가 없으면 NULL이 반환 됩니다.
 
@@ -307,7 +307,7 @@ const E* GetData() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]
 
-## <a name="catlarrayinargtype"></a><a name="inargtype"></a>CAtlArray:: INARGTYPE
+## <a name="catlarrayinargtype"></a><a name="inargtype"></a> CAtlArray:: INARGTYPE
 
 배열에 요소를 추가 하는 데 사용할 데이터 형식입니다.
 
@@ -315,7 +315,7 @@ const E* GetData() const throw();
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a>CAtlArray::InsertArrayAt
+## <a name="catlarrayinsertarrayat"></a><a name="insertarrayat"></a> CAtlArray::InsertArrayAt
 
 한 배열을 다른 배열에 삽입 하려면이 메서드를 호출 합니다.
 
@@ -335,16 +335,16 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 
 *PaNew* 배열의 요소는 *istart*요소에서 시작 하 여 배열 개체로 복사 됩니다. 기존 배열 요소를 덮어쓰지 않도록 이동 합니다.
 
-디버그 빌드에서는 `CAtlArray` 개체가 유효 하지 않거나 *paNew* 포인터가 NULL 이거나 잘못 된 경우에는가 없는 어설션이 발생 합니다.
+디버그 빌드에서는 `CAtlArray` 개체가 유효 하지 않거나 *PANEW* 포인터가 NULL 이거나 잘못 된 경우에는가 없는 어설션이 발생 합니다.
 
 > [!NOTE]
-> `CAtlArray::InsertArrayAt`는 [CAutoPtr](../../atl/reference/cautoptr-class.md) 클래스를 사용 하 여 만든 요소로 구성 된 배열을 지원 하지 않습니다.
+> `CAtlArray::InsertArrayAt` 는 [CAutoPtr](../../atl/reference/cautoptr-class.md) 클래스를 사용 하 여 만든 요소로 구성 된 배열을 지원 하지 않습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]
 
-## <a name="catlarrayinsertat"></a><a name="insertat"></a>CAtlArray:: InsertAt
+## <a name="catlarrayinsertat"></a><a name="insertat"></a> CAtlArray:: InsertAt
 
 이 메서드를 호출 하 여 새 요소 (또는 요소의 여러 복사본)를 배열 개체에 삽입 합니다.
 
@@ -373,7 +373,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 
 [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]
 
-## <a name="catlarrayisempty"></a><a name="isempty"></a>CAtlArray:: IsEmpty
+## <a name="catlarrayisempty"></a><a name="isempty"></a> CAtlArray:: IsEmpty
 
 배열이 비어 있는지 테스트 하려면이 메서드를 호출 합니다.
 
@@ -381,7 +381,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 bool IsEmpty() const throw();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 배열이 비어 있으면 true를 반환 하 고, 그렇지 않으면 false를 반환 합니다.
 
@@ -393,7 +393,7 @@ bool IsEmpty() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-## <a name="catlarrayoperator-"></a><a name="operator_at"></a>CAtlArray:: operator []
+## <a name="catlarrayoperator-"></a><a name="operator_at"></a> CAtlArray:: operator []
 
 배열의 요소에 대 한 참조를 반환 하려면이 연산자를 호출 합니다.
 
@@ -407,7 +407,7 @@ const E& operator[](size_t ielement) const throw();
 *iElement*<br/>
 반환할 배열 요소의 인덱스 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 필수 배열 요소에 대 한 참조를 반환 합니다.
 
@@ -417,7 +417,7 @@ const E& operator[](size_t ielement) const throw();
 
 IElement가 배열에 있는 요소의 총 수를 초과 하는 경우 디버그 빌드에서 *iElement* 어설션이 발생 합니다. 일반 정품 빌드에서는 잘못 된 매개 변수로 인해 예기치 않은 결과가 발생할 수 있습니다.
 
-## <a name="catlarrayoutargtype"></a><a name="outargtype"></a>CAtlArray:: OUTARGTYPE
+## <a name="catlarrayoutargtype"></a><a name="outargtype"></a> CAtlArray:: OUTARGTYPE
 
 배열에서 요소를 검색 하는 데 사용할 데이터 형식입니다.
 
@@ -425,7 +425,7 @@ IElement가 배열에 있는 요소의 총 수를 초과 하는 경우 디버그
 typedef ETraits::OUTARGTYPE OUTARGTYPE;
 ```
 
-## <a name="catlarrayremoveall"></a><a name="removeall"></a>CAtlArray:: RemoveAll
+## <a name="catlarrayremoveall"></a><a name="removeall"></a> CAtlArray:: RemoveAll
 
 이 메서드를 호출 하 여 배열 개체에서 모든 요소를 제거 합니다.
 
@@ -443,7 +443,7 @@ void RemoveAll() throw();
 
 [CAtlArray:: IsEmpty](#isempty)의 예제를 참조 하세요.
 
-## <a name="catlarrayremoveat"></a><a name="removeat"></a>CAtlArray:: RemoveAt
+## <a name="catlarrayremoveat"></a><a name="removeat"></a> CAtlArray:: RemoveAt
 
 배열에서 하나 이상의 요소를 제거 하려면이 메서드를 호출 합니다.
 
@@ -469,7 +469,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 
 [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]
 
-## <a name="catlarraysetat"></a><a name="setat"></a>CAtlArray:: SetAt
+## <a name="catlarraysetat"></a><a name="setat"></a> CAtlArray:: SetAt
 
 배열 개체의 요소 값을 설정 하려면이 메서드를 호출 합니다.
 
@@ -493,7 +493,7 @@ IElement가 배열에 있는 요소 수를 초과 하는 경우 디버그 빌드
 
 [CAtlArray:: GetAt](#getat)의 예제를 참조 하세요.
 
-## <a name="catlarraysetcount"></a><a name="setcount"></a>CAtlArray:: SetCount
+## <a name="catlarraysetcount"></a><a name="setcount"></a> CAtlArray:: SetCount
 
 이 메서드를 호출 하 여 배열 개체의 크기를 설정 합니다.
 
@@ -509,7 +509,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 *nGrowBy*<br/>
 버퍼를 만들 크기를 결정 하는 데 사용 되는 값입니다. 값이-1 이면 내부적으로 계산 된 값이 사용 됩니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 배열의 크기가 성공적으로 조정 되 면 true를 반환 하 고, 그렇지 않으면 false를 반환 합니다.
 
@@ -517,13 +517,13 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 배열의 크기를 늘리거나 줄일 수 있습니다. 증가 하면 빈 요소가 배열에 추가 됩니다. 감소 하면 인덱스가 가장 큰 요소가 삭제 되 고 메모리가 확보 됩니다.
 
-이 메서드를 사용 하 여 배열의 크기를 설정 합니다. 를 `SetCount` 사용 하지 않으면 요소를 추가 하는 프로세스와 후속 메모리 할당이 수행 되 면 성능 및 조각화 메모리가 줄어듭니다.
+이 메서드를 사용 하 여 배열의 크기를 설정 합니다. `SetCount`를 사용 하지 않으면 요소를 추가 하는 프로세스와 후속 메모리 할당이 수행 되 면 성능 및 조각화 메모리가 줄어듭니다.
 
 ### <a name="example"></a>예제
 
 [CAtlArray:: GetData](#getdata)의 예제를 참조 하세요.
 
-## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a>CAtlArray::SetAtGrow
+## <a name="catlarraysetatgrow"></a><a name="setatgrow"></a> CAtlArray::SetAtGrow
 
 배열 개체의 요소 값을 설정 하 여 필요에 따라 배열을 확장 하는이 메서드를 호출 합니다.
 
@@ -541,7 +541,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 ### <a name="remarks"></a>설명
 
-인덱스에서 가리키는 요소의 값을 바꿉니다. *IElement* 가 배열의 현재 크기 보다 크면 [CAtlArray:: setcount](#setcount)호출을 사용 하 여 배열이 자동으로 증가 합니다. 디버그 빌드에서는 `CAtlArray` 개체가 유효 하지 않은 경우에는가 없는 어설션이 발생 합니다. 정품 빌드에서 잘못 된 매개 변수는 예기치 않은 결과를 일으킬 수 있습니다.
+인덱스에서 가리키는 요소의 값을 바꿉니다. *IElement* 가 배열의 현재 크기 보다 크면 [CAtlArray:: setcount](#setcount)호출을 사용 하 여 배열이 자동으로 증가 합니다. 디버그 빌드에서는 개체가 유효 하지 않은 경우에는가 없는 어설션이 발생 `CAtlArray` 합니다. 정품 빌드에서 잘못 된 매개 변수는 예기치 않은 결과를 일으킬 수 있습니다.
 
 ### <a name="example"></a>예제
 

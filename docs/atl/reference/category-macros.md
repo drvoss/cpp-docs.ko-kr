@@ -7,18 +7,18 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 2b677ac6e7dac4eed5fc920ece064d94119ceb97
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168438"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833896"
 ---
 # <a name="category-macros"></a>범주 매크로
 
 이러한 매크로는 범주 맵을 정의 합니다.
 
-|||
+|매크로|설명|
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|범주 맵의 시작을 표시 합니다.|
 |[END_CATEGORY_MAP](#end_category_map)|범주 맵의 끝을 표시 합니다.|
@@ -29,7 +29,7 @@ ms.locfileid: "82168438"
 
 **헤더:**
 
-## <a name="begin_category_map"></a><a name="begin_category_map"></a>BEGIN_CATEGORY_MAP
+## <a name="begin_category_map"></a><a name="begin_category_map"></a> BEGIN_CATEGORY_MAP
 
 범주 맵의 시작을 표시 합니다.
 
@@ -59,7 +59,7 @@ COM 클래스에서 구현 하는 각 범주에 대 한 [IMPLEMENTED_CATEGORY](#
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-## <a name="end_category_map"></a><a name="end_category_map"></a>END_CATEGORY_MAP
+## <a name="end_category_map"></a><a name="end_category_map"></a> END_CATEGORY_MAP
 
 범주 맵의 끝을 표시 합니다.
 
@@ -71,7 +71,7 @@ END_CATEGORY_MAP()
 
 [BEGIN_CATEGORY_MAP](#begin_category_map)의 예제를 참조 하세요.
 
-## <a name="implemented_category"></a><a name="implemented_category"></a>IMPLEMENTED_CATEGORY
+## <a name="implemented_category"></a><a name="implemented_category"></a> IMPLEMENTED_CATEGORY
 
 구성 요소의 [범주 맵에](#begin_category_map) IMPLEMENTED_CATEGORY 매크로를 추가 하 여 *catID* 매개 변수로 식별 된 범주를 구현 하도록 등록 해야 함을 지정 합니다.
 
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>선택 된 스톡 범주
 
-|Description|기호|레지스트리 GUID|
+|설명|기호|레지스트리 GUID|
 |-----------------|------------|-------------------|
 |스크립팅에 안전|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |초기화 안전|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -108,7 +108,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-## <a name="required_category"></a><a name="required_category"></a>REQUIRED_CATEGORY
+## <a name="required_category"></a><a name="required_category"></a> REQUIRED_CATEGORY
 
 구성 요소 [범주 맵에](#begin_category_map) REQUIRED_CATEGORY 매크로를 추가 하 여 *catID* 매개 변수로 식별 된 범주가 필요한 것으로 등록 되도록 지정 합니다.
 
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>선택 된 스톡 범주
 
-|Description|기호|레지스트리 GUID|
+|설명|기호|레지스트리 GUID|
 |-----------------|------------|-------------------|
 |스크립팅에 안전|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |초기화 안전|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|

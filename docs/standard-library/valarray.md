@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: eb782b0d16c4bc826da4ea9291756f34ca0eaf29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215415"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840143"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "87215415"
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 절대값과 같은 valarray를 반환합니다.|
 |[acos](../standard-library/valarray-functions.md#acos)|입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 아크코사인과 같은 valarray를 반환합니다.|
@@ -58,7 +58,7 @@ ms.locfileid: "87215415"
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자! =](../standard-library/valarray-operators.md#op_neq)|크기가 같은 두 valarray의 해당 요소가 서로 같지 않은지 또는 valarray의 모든 요소가 valarray 요소 형식의 지정된 값과 같지 않은지 테스트합니다.|
 |[연산자](../standard-library/valarray-operators.md#op_mod)|크기가 같은 두 valarray의 해당 요소를 나눈 나머지 또는 valarray를 valarray 요소 형식의 지정된 값으로 나누거나 지정된 값을 valarray로 나눈 나머지를 가져옵니다.|
@@ -81,7 +81,7 @@ ms.locfileid: "87215415"
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[gslice 클래스](../standard-library/gslice-class.md)|valarray의 다차원 조각을 정의하는 데 사용되는 valarray에 대한 유틸리티 클래스입니다.|
 |[gslice_array 클래스](../standard-library/gslice-array-class.md)|Valarray의 일반 조각으로 정의 된 하위 집합 배열 간의 작업을 제공 하 여 일반 조각 개체를 지 원하는 내부 보조 클래스 템플릿입니다.|
@@ -93,7 +93,7 @@ ms.locfileid: "87215415"
 
 ### <a name="specializations"></a>특수화
 
-|||
+|Name|설명|
 |-|-|
 |[valarray \<bool> 클래스](../standard-library/valarray-bool-class.md)|형식의 요소에 대 한 클래스 템플릿 valarray의 특수화 된 버전입니다 \<**Type**> **`bool`** .|
 

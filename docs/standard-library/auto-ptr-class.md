@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203877"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834780"
 ---
 # <a name="auto_ptr-class"></a>auto_ptr 클래스
 
@@ -71,19 +71,19 @@ class auto_ptr {
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[auto_ptr](#auto_ptr)|`auto_ptr` 형식의 개체에 대한 생성자입니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[element_type](#element_type)|이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.|
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[get](#get)|이 멤버 함수는 저장된 포인터 `myptr`을 반환합니다.|
 |[릴리스](#release)|이 멤버는 저장된 포인터 `myptr`을 null 포인터로 대체하고 이전에 저장된 포인터를 반환합니다.|
@@ -91,7 +91,7 @@ class auto_ptr {
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자 =](#op_eq)|한 `auto_ptr` 개체에서 다른 개체로 소유권을 전송하는 대입 연산자입니다.|
 |[연산자](#op_star)|`auto_ptr` 형식의 개체에 대한 역참조 연산자입니다.|
@@ -99,7 +99,7 @@ class auto_ptr {
 |[operator auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|한 종류의 `auto_ptr`에서 다른 종류의 `auto_ptr`로 캐스팅합니다.|
 |[operator auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|`auto_ptr`에서 `auto_ptr_ref`로 캐스팅합니다.|
 
-### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a> auto_ptr
 
 `auto_ptr` 형식의 개체에 대한 생성자입니다.
 
@@ -126,7 +126,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 첫 번째 생성자는 *ptr* 할당 된 `myptr` 개체에 대 한 저장 된 포인터인 ptr를 저장 합니다. 두 번째 생성자 *는 right를*저장 하 여 *오른쪽*에 저장 된 포인터의 소유권을 전송 합니다. `myptr`에서 [릴리스](#release).
 
-세 번째 생성자는를 저장 한다는 점을 제외 하 고 두 번째 생성자와 동일 하 게 동작 합니다 `right` . `ref`. `release`에서 `myptr` `ref` 는에 저장 된 참조입니다 `right` .
+세 번째 생성자는를 저장 한다는 점을 제외 하 고 두 번째 생성자와 동일 하 게 동작 합니다 `right` . `ref`. `release` 에서 `myptr` `ref` 는에 저장 된 참조입니다 `right` .
 
 에 대 한 포인터를 `Other` 에 대 한 포인터로 암시적으로 변환할 수 있는 경우 템플릿 생성자는 두 번째 생성자와 동일 하 게 동작 합니다 `Type` .
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.
 
@@ -197,7 +197,7 @@ Destructing 00311AF8
 typedef Type element  _type;
 ```
 
-### <a name="get"></a><a name="get"></a>가져오기
+### <a name="get"></a><a name="get"></a> 가져오기
 
 이 멤버 함수는 저장된 포인터 `myptr`을 반환합니다.
 
@@ -205,7 +205,7 @@ typedef Type element  _type;
 Type *get() const throw();
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 저장 된 포인터 `myptr` 입니다.
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>연산자 =
+### <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 한 `auto_ptr` 개체에서 다른 개체로 소유권을 전송하는 대입 연산자입니다.
 
@@ -272,7 +272,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 *오른쪽*\
 `auto_ptr` 형식의 개체입니다.
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 `auto_ptr<Type>` 형식의 개체에 대한 참조입니다.
 
@@ -284,7 +284,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 멤버 연산자 사용에 대 한 예제는 [auto_ptr](#auto_ptr)를 참조 하세요.
 
-### <a name="operator"></a><a name="op_star"></a>연산자
+### <a name="operator"></a><a name="op_star"></a> 연산자
 
 `auto_ptr` 형식의 개체에 대한 역참조 연산자입니다.
 
@@ -292,7 +292,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 Type& operator*() const throw();
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 포인터가 소유 하는 형식의 개체에 대 한 참조 `Type` 입니다.
 
@@ -304,7 +304,7 @@ Type& operator*() const throw();
 
 멤버 함수를 사용 하는 방법에 대 한 예제는 [auto_ptr](#auto_ptr)를 참조 하세요.
 
-### <a name="operator-gt"></a><a name="op_arrow"></a>연산자&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a> 연산자&gt;
 
 멤버 액세스를 허용하기 위한 연산자입니다.
 
@@ -312,7 +312,7 @@ Type& operator*() const throw();
 Type * operator->() const throw();
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 을 소유 하는 개체의 멤버입니다 `auto_ptr` .
 
@@ -324,7 +324,7 @@ Type * operator->() const throw();
 
 멤버 함수를 사용 하는 방법에 대 한 예제는 [auto_ptr](#auto_ptr)를 참조 하세요.
 
-### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>연산자 auto_ptr &lt; 기타&gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a> 연산자 auto_ptr &lt; 기타&gt;
 
 한 종류의 `auto_ptr`에서 다른 종류의 `auto_ptr`로 캐스팅합니다.
 
@@ -333,7 +333,7 @@ template <class Other>
 operator auto _ptr<Other>() throw();
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 형식 캐스트 연산자는 `auto_ptr` \< **Other**> ( ** \* this**)를 반환 합니다.
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>연산자 auto_ptr_ref &lt; 기타&gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a> 연산자 auto_ptr_ref &lt; 기타&gt;
 
 `auto_ptr`에서 `auto_ptr_ref`로 캐스팅합니다.
 
@@ -363,7 +363,7 @@ template <class Other>
 operator auto _ptr  _ref<Other>() throw();
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 형식 캐스트 연산자는 **auto_ptr_ref** \< **Other**> ( ** \* this**)를 반환 합니다.
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a><a name="release"></a>릴리스
+### <a name="release"></a><a name="release"></a> 릴리스
 
 이 멤버는 저장된 포인터 `myptr`을 null 포인터로 대체하고 이전에 저장된 포인터를 반환합니다.
 
@@ -423,7 +423,7 @@ main exiting
 Type *release() throw();
 ```
 
-#### <a name="return-value"></a>Return Value
+#### <a name="return-value"></a>반환 값
 
 이전에 저장된 포인터입니다.
 
@@ -477,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a><a name="reset"></a>다시 설정
+### <a name="reset"></a><a name="reset"></a> 다시 설정
 
 멤버 함수는 `delete myptr` 저장 된 포인터 값이 `myptr` 함수 호출의 결과로 변경 되는 경우에만 식을 계산 합니다. 그런 다음 저장된 포인터를 `ptr`로 바꿉니다.
 
