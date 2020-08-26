@@ -5,12 +5,12 @@ f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 6074c80b20ae0c69d34768bc16d7aaae16c99579
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232822"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835664"
 ---
 # <a name="ltvariantgt"></a>&lt;variant&gt;
 
@@ -26,7 +26,7 @@ Variant 개체는 값을 보유 하 고 관리 합니다. 변형에 값이 포�
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자 = =](../standard-library/forward-list-operators.md#op_eq_eq)|연산자의 좌 변에 있는 variant 개체가 우변에 있는 variant 개체와 같은지 테스트 합니다.|
 |[연산자! =](../standard-library/forward-list-operators.md#op_neq)|연산자의 좌 변에 있는 variant 개체가 우변에 있는 variant 개체와 같지 않은 지 테스트 합니다.|
@@ -37,7 +37,7 @@ Variant 개체는 값을 보유 하 고 관리 합니다. 변형에 값이 포�
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[get](../standard-library/variant-functions.md#get)|개체의 변형을 가져옵니다.|
 |[get_if](../standard-library/variant-functions.md#get_if)|개체의 변형 (있는 경우)을 가져옵니다.|
@@ -47,14 +47,14 @@ Variant 개체는 값을 보유 하 고 관리 합니다. 변형에 값이 포�
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[bad_variant_access](../standard-library/bad-variant-access-class.md)|변형 개체의 값에 대 한 잘못 된 액세스를 보고 하기 위해 throw 되는 개체입니다.|
 |[variant](../standard-library/variant.md)|대체 형식 중 하나의 값을 보유 하거나 값을 보유 하지 않는 개체입니다.|
 
 ### <a name="structs"></a>구조체
 
-|||
+|Name|설명|
 |-|-|
 |[hash](../standard-library/hash-structure.md)||
 |[monostate](../standard-library/monostate-structure.md)|변형 유형을 기본 생성 가능 하는 변형에 대 한 대체 유형입니다.|
@@ -64,7 +64,7 @@ Variant 개체는 값을 보유 하 고 관리 합니다. 변형에 값이 포�
 
 ### <a name="objects"></a>개체
 
-|||
+|Name|설명|
 |-|-|
 |[variant_npos](../standard-library/variant-functions.md#variant_npos)||
 

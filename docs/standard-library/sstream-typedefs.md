@@ -11,22 +11,25 @@ f1_keywords:
 - iosfwd/std::wstringbuf
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
-ms.openlocfilehash: a549b413a58e138cda279cd6f3f3e2afc68c6aa6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9236f652cad85d0bbe9a3a15139ac0dc04937273
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217430"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846136"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; 형식 정의
 
-||||
-|-|-|-|
-|[istringstream](#istringstream)|[ostringstream](#ostringstream)|[stringbuf](#stringbuf)|
-|[stringstream](#stringstream)|[wistringstream](#wistringstream)|[wostringstream](#wostringstream)|
-|[wstringbuf](#wstringbuf)|[wstringstream](#wstringstream)|
+[istringstream](#istringstream)\
+[ostringstream](#ostringstream)\
+[stringbuf](#stringbuf)\
+[stringstream](#stringstream)\
+[wistringstream](#wistringstream)\
+[wostringstream](#wostringstream)\
+[wstringbuf](#wstringbuf)\
+[wstringstream](#wstringstream)
 
-## <a name="istringstream"></a><a name="istringstream"></a>istringstream
+## <a name="istringstream"></a><a name="istringstream"></a> istringstream
 
 `basic_istringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .
 
@@ -38,7 +41,7 @@ typedef basic_istringstream<char> istringstream;
 
 형식은 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_istringstream](../standard-library/basic-istringstream-class.md)의 동의어입니다 **`char`** .
 
-## <a name="ostringstream"></a><a name="ostringstream"></a>ostringstream
+## <a name="ostringstream"></a><a name="ostringstream"></a> ostringstream
 
 `basic_ostringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .
 
@@ -50,7 +53,7 @@ typedef basic_ostringstream<char> ostringstream;
 
 형식은 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_ostringstream](../standard-library/basic-ostringstream-class.md)의 동의어입니다 **`char`** .
 
-## <a name="stringbuf"></a><a name="stringbuf"></a>stringbuf
+## <a name="stringbuf"></a><a name="stringbuf"></a> stringbuf
 
 `basic_stringbuf`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .
 
@@ -62,7 +65,7 @@ typedef basic_stringbuf<char> stringbuf;
 
 형식은 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)의 동의어입니다 **`char`** .
 
-## <a name="stringstream"></a><a name="stringstream"></a>stringstream
+## <a name="stringstream"></a><a name="stringstream"></a> stringstream
 
 `basic_stringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`char`** .
 
@@ -74,7 +77,7 @@ typedef basic_stringstream<char> stringstream;
 
 형식은 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_stringstream](../standard-library/basic-stringstream-class.md)의 동의어입니다 **`char`** .
 
-## <a name="wistringstream"></a><a name="wistringstream"></a>wistringstream
+## <a name="wistringstream"></a><a name="wistringstream"></a> wistringstream
 
 `basic_istringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .
 
@@ -86,7 +89,7 @@ typedef basic_istringstream<wchar_t> wistringstream;
 
 형식은 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_istringstream](../standard-library/basic-istringstream-class.md)의 동의어입니다 **`wchar_t`** .
 
-## <a name="wostringstream"></a><a name="wostringstream"></a>wostringstream
+## <a name="wostringstream"></a><a name="wostringstream"></a> wostringstream
 
 `basic_ostringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .
 
@@ -98,7 +101,7 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 
 형식은 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_ostringstream](../standard-library/basic-ostringstream-class.md)의 동의어입니다 **`wchar_t`** .
 
-## <a name="wstringbuf"></a><a name="wstringbuf"></a>wstringbuf
+## <a name="wstringbuf"></a><a name="wstringbuf"></a> wstringbuf
 
 `basic_stringbuf`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .
 
@@ -110,7 +113,7 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 
 형식은 형식의 요소에 대해 특수화 된 클래스 템플릿 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)의 동의어입니다 **`wchar_t`** .
 
-## <a name="wstringstream"></a><a name="wstringstream"></a>wstringstream
+## <a name="wstringstream"></a><a name="wstringstream"></a> wstringstream
 
 `basic_stringstream`템플릿 매개 변수에서 특수화 된 형식을 만듭니다 **`wchar_t`** .
 

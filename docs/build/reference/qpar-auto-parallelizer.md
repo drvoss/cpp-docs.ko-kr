@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: 18aaa1dc678ca2c73f9fad6c016aa40cfa95982b
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: effe1ad7799022ea85184513de1dc48c72d6bfcb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373803"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839441"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar(자동 평행화 도우미)
 
@@ -48,4 +48,4 @@ ms.locfileid: "86373803"
 [MSVC 컴파일러 옵션](compiler-options.md)<br/>
 [MSVC 컴파일러 명령줄 구문](compiler-command-line-syntax.md)<br/>
 [#pragma loop ()](../../preprocessor/loop.md)<br/>
-[Visual Studio의 네이티브 코드 벡터화](https://docs.microsoft.com/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)
+[Visual Studio의 네이티브 코드 벡터화](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

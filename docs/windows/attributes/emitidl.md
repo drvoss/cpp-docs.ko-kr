@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 4ddf71c385414a28c2b616b359a93a637abc24aa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222136"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846331"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ ms.locfileid: "87222136"
 
 - 인 경우 `forced` `restricted` `module` 파일에 IDL 특성이 있는 경우 파일이 특성을 갖도록 요구 하는 후속 특성을 재정의 합니다.
 
-- `push`현재 **emitidl** 설정을 내부 **emitidl** 스택에 저장 하 고 `pop` **emitidl** 를 내부 **emitidl** 스택의 맨 위에 있는 값으로 설정할 수 있습니다.
+- `push` 현재 **emitidl** 설정을 내부 **emitidl** 스택에 저장 하 고 `pop` **emitidl** 를 내부 **emitidl** 스택의 맨 위에 있는 값으로 설정할 수 있습니다.
 
 `defaultimports=`*부울* \( 필드
 
@@ -54,12 +54,10 @@ ms.locfileid: "87222136"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|원하는 위치|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

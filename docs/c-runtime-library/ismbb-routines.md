@@ -20,25 +20,35 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 374c78ca222f9c63f6b37f26d4cf3a00f48f845e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: b8828018040b8b6b7b13c88c08599333dc1124d0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944538"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839376"
 ---
 # <a name="_ismbb-routines"></a>_ismbb 루틴
 
 현재 로캘 또는 지정된 LC_CTYPE 변환 상태 범주를 사용하여 지정된 정수 값 `c` 를 특정 조건에 대해 테스트합니다.
 
-|||
-|-|-|
-|[_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|[_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|
-|[_ismbbalpha, _ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)|[_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|
-|[_ismbbblank, _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)|[_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|
-|[_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|[_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|
-|[_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|
-|[_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|
+:::row:::
+   :::column span="":::
+      [_ismbbalnum, _ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)\
+      [_ismbbalpha, _ismbbalpha_l](../c-runtime-library/reference/ismbbalpha-ismbbalpha-l.md)\
+      [_ismbbblank, _ismbbblank_l](../c-runtime-library/reference/ismbbblank-ismbbblank-l.md)\
+      [_ismbbgraph, _ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)\
+      [_ismbbkalnum, _ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)\
+      [_ismbbkana, _ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)\
+   :::column-end:::
+   :::column span="":::
+      [_ismbbkprint, _ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)\
+      [_ismbbkpunct, _ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)\
+      [_ismbblead, _ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)\
+      [_ismbbprint, _ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)\
+      [_ismbbpunct, _ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)\
+      [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)\
+   :::column-end:::
+:::row-end:::
 
 ## <a name="remarks"></a>설명
 
@@ -56,8 +66,8 @@ ms.locfileid: "70944538"
 |[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|`_ismbbprint`와 같지만 `_ismbbgraph` 에는 공백 문자(0x20)가 포함되지 않습니다.|
 |[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|문장 부호 이외에 ASCII가 아닌 텍스트 기호. 예를 들어 코드 페이지 932에 한해 `_ismbbkalnum` 은 가타카나 영숫자를 테스트합니다.|
 |[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|가타카나(0xA1 – 0xDF). 코드 페이지 932에만 해당합니다.|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|ASCII가 아닌 텍스트 또는 ASCII가 아닌 문장 부호 기호. 예를 들어 코드 페이지 932에 한해 `_ismbbkprint`는 가타카나 영숫자 또는 가타카나 문장 부호를 테스트합니다(범위: 0xA1-0xDF).|
-|[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|ASCII가 아닌 문장 부호. 예를 들어 코드 페이지 932에 한해 `_ismbbkpunct` 는 가타카나 문장 부호를 테스트합니다.|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|ASCII가 아닌 텍스트 또는 ASCII가 아닌 문장 부호 기호. 예를 들어 코드 페이지 932에 한해 `_ismbbkprint`는 가타카나 영숫자 또는 가타카나 문장 부호를 테스트합니다(범위: 0xA1 – 0xDF).|
+|[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|ASCII가 아닌 문장 부호. 예를 들어 코드 페이지 932에 한해 `_ismbbkpunct`는 가타카나 문장 부호를 테스트합니다.|
 |[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|멀티바이트 문자의 첫 번째 바이트. 예를 들어 코드 페이지 932에 한해 유효한 범위는 0x81 ~ 0x9F, 0xE0 ~ 0xFC입니다.|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** 에는 공백 문자(0x20)가 포함됩니다.|
 |[_ismbbpunct](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|`ispunct` &#124;&#124; `_ismbbkpunct`.|
@@ -65,7 +75,7 @@ ms.locfileid: "70944538"
 
 다음 표에서는 이들 루틴에 대한 테스트 조건을 구성하는 ORed 값을 보여 줍니다. 매니페스트 상수 `_BLANK`, `_DIGIT`, `_LOWER`, `_PUNCT`및 `_UPPER` 은 Ctype.h에서 정의됩니다.
 
-|루틴에서 반환된 값|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> 텍스트|Non-<br /><br /> ASCII<br /><br /> punct|
+|루틴에서 반환된 값|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> text|Non-<br /><br /> ASCII<br /><br /> punct|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|

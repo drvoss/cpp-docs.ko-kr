@@ -6,31 +6,31 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: b839e93b6251a09ce79df60a49b4054d1af76cc9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79b19b613fbae49c0f8338dcadd2225e092fb371
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326268"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835326"
 ---
 # <a name="marshaling-global-functions"></a>마샬링 전역 함수
 
-이러한 함수는 마샬링 데이터를 인터페이스 포인터로 마샬링하고 변환하는 데 대한 지원을 제공합니다.
+이러한 함수는 마샬링 데이터를 인터페이스 포인터로 마샬링 및 변환 하기 위한 지원을 제공 합니다.
 
 > [!IMPORTANT]
-> 다음 표에 나열된 함수는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다.
+> 다음 표에 나열 된 함수는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.
 
-|||
+|Name|설명|
 |-|-|
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|마샬링 데이터와 포인터를 해제합니다. `IStream`|
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|새 스트림 개체를 만들고 지정된 인터페이스 포인터를 마샬링합니다.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|스트림의 마샬링 데이터를 인터페이스 포인터로 변환합니다.|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|마샬링 데이터와 포인터를 해제 합니다 `IStream` .|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|새 스트림 개체를 만들고 지정 된 인터페이스 포인터를 마샬링합니다.|
+|[AtlUnmarshalPtr](#atlunmarshalptr)|스트림의 마샬링 데이터를 인터페이스 포인터로 변환 합니다.|
 
 ## <a name="requirements"></a>요구 사항:
 
-**헤더:** atlbase.h
+**헤더:** 서 기. h
 
-## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>아틀프리마샬스트림
+## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a> AtlFreeMarshalStream
 
 스트림에서 마샬링 데이터를 해제한 다음 스트림 포인터를 해제합니다.
 
@@ -41,13 +41,13 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="parameters"></a>매개 변수
 
 *pStream*<br/>
-【인】 마샬링에 `IStream` 사용되는 스트림의 인터페이스에 대한 포인터입니다.
+진행 `IStream` 마샬링에 사용 되는 스트림의 인터페이스에 대 한 포인터입니다.
 
 ### <a name="example"></a>예제
 
-[AtlMarshalPtrInProc에](#atlmarshalptrinproc)대한 예제를 참조하십시오.
+[AtlMarshalPtrInProc](#atlmarshalptrinproc)의 예제를 참조 하세요.
 
-## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>아틀마샬프트르인프락
+## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a> AtlMarshalPtrInProc
 
 새 스트림 개체를 만들고, 프록시의 CLSID를 스트림에 쓰고, 프록시를 스트림으로 초기화하는 데 필요한 데이터를 작성하여 제공된 인터페이스 포인터를 마샬링합니다.
 
@@ -61,31 +61,31 @@ HRESULT AtlMarshalPtrInProc(
 ### <a name="parameters"></a>매개 변수
 
 *pUnk*<br/>
-【인】 마샬링할 인터페이스에 대한 포인터입니다.
+진행 마샬링할 인터페이스에 대 한 포인터입니다.
 
-*Iid*<br/>
-【인】 마샬링되는 인터페이스의 GUID입니다.
+*iid*<br/>
+진행 마샬링되는 인터페이스의 GUID입니다.
 
 *ppStream*<br/>
-【아웃】 마샬링에 `IStream` 사용되는 새 스트림 개체의 인터페이스에 대한 포인터입니다.
+제한이 `IStream` 마샬링에 사용 되는 새 스트림 개체의 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다.
 
 ### <a name="remarks"></a>설명
 
-포인터를 여러 스트림으로 마샬링할 수 있도록 MSHLFLAGS_TABLESTRONG 플래그가 설정됩니다. 포인터는 여러 번 마샬링해제할 수도 있습니다.
+MSHLFLAGS_TABLESTRONG 플래그는 포인터를 여러 스트림으로 마샬링할 수 있도록 설정 됩니다. 포인터를 여러 번 역 마샬링할 수도 있습니다.
 
-마샬링에 실패하면 스트림 포인터가 해제됩니다.
+마샬링을 수행 하지 못하면 스트림 포인터가 해제 됩니다.
 
-`AtlMarshalPtrInProc`프로세스 내 개체에 대한 포인터에서만 사용할 수 있습니다.
+`AtlMarshalPtrInProc` in-process 개체에 대 한 포인터에만 사용할 수 있습니다.
 
 ### <a name="example"></a>예제
 
 [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
 
-## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a>아틀룬마샬프트르
+## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a> AtlUnmarshalPtr
 
 스트림의 마샬링 데이터를 클라이언트에서 사용할 수 있는 인터페이스 포인터로 변환합니다.
 
@@ -99,22 +99,22 @@ HRESULT AtlUnmarshalPtr(
 ### <a name="parameters"></a>매개 변수
 
 *pStream*<br/>
-【인】 마샬링되지 않은 스트림에 대한 포인터입니다.
+진행 역마샬링 되는 스트림에 대 한 포인터입니다.
 
-*Iid*<br/>
-【인】 마샬링되지 않은 인터페이스의 GUID입니다.
+*iid*<br/>
+진행 역마샬링 되는 인터페이스의 GUID입니다.
 
-*ppunk*<br/>
-【아웃】 마샬링되지 않은 인터페이스에 대한 포인터입니다.
+*ppUnk*<br/>
+제한이 역마샬링 된 인터페이스에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다.
 
 ### <a name="example"></a>예제
 
-[AtlMarshalPtrInProc에](#atlmarshalptrinproc)대한 예제를 참조하십시오.
+[AtlMarshalPtrInProc](#atlmarshalptrinproc)의 예제를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
-[Functions](../../atl/reference/atl-functions.md)
+[함수](../../atl/reference/atl-functions.md)

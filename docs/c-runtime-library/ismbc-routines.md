@@ -19,22 +19,27 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 6dc14f269cafa8ccc343c5403ab0e23d319c71c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 056cc4bc5344ee8833b3f6e645616657f1958897
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940161"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839363"
 ---
 # <a name="_ismbc-routines"></a>_ismbc 루틴
 
 각 **_ismbc** 루틴은 특정 조건에 대해 지정된 멀티바이트 문자 `c`를 테스트합니다.
 
-|||
-|-|-|
-|[_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|[_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|
-|[_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|[_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|
-|[_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|
+:::row:::
+   :::column span="":::
+      [_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)\
+      [_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)\
+      [_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)\
+      [_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)\
+      [_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)\
+      [_ismbclower, _ismbclower_l, _ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="remarks"></a>설명
 
@@ -44,18 +49,18 @@ ms.locfileid: "70940161"
 
 |루틴에서 반환된 값|테스트 조건|932 코드 페이지 예제|
 |-------------|--------------------|---------------------------|
-|[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|영숫자|`c`가 ASCII 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcdigit` 및 `_ismbcalpha`에 대한 예제를 참조하세요.|
-|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Alphabetic|`c`가 ASCII 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcupper` 및 `_ismbclower` 또는 가타카나 문자: 0xA6<=`c`<=0xDF에 대한 예제를 참조하세요.|
-|[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|숫자|`c`가 ASCII 숫자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. 0x30<=`c`<=0x39|
-|[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|그래픽|`c`가 공백 ( )을 제외하고 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcdigit`, `_ismbcalpha` 및 `_ismbcpunct`에 대한 예를 참조하세요.|
+|[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|영숫자|`c`가 ASCII 영어 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcdigit` 및 `_ismbcalpha`의 예제를 참조하십시오.|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|사전순|`c`가 ASCII 영어 문자(`_ismbcupper` 및 `_ismbclower`에 대한 예 참조) 또는 가타카나 문자(0xA6<=`c`<=0xDF)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|
+|[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|숫자|`c`가 ASCII 숫자(0x30<=`c`<=0x39)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|
+|[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Graphic|`c`가 공백 ( )을 제외하고 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcdigit`, `_ismbcalpha` 및 `_ismbcpunct`에 대한 예를 참조하세요.|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|유효한 멀티바이트 문자|`c`의 첫 번째 바이트는 0x81 – 0x9F 또는 0xE0 – 0xFC 범위 내에 있고 두 번째 바이트는 0x40 - 0x7E 또는 0x80 - FC 범위 내에 있는 경우에만 0이 아닌 값을 반환합니다.|
-|[_ismbclower, _ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|소문자 영문자|`c`가 ASCII 영어 소문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. 0x61<=`c`<=0x7A|
-|[_ismbcprint, _ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|인쇄 가능|`c`가 공백( )을 포함하여 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcspace`, `_ismbcdigit`, `_ismbcalpha` 및 `_ismbcpunct`에 대한 예제를 참조하세요.|
+|[_ismbclower, _ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|소문자 영문자|`c`가 ASCII 영어 소문자(0x61<=`c`<=0x7A)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|
+|[_ismbcprint, _ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|인쇄 가능|`c`가 공백 ( )을 포함하여 모든 ASCII 또는 가타카나 인쇄 가능한 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. `_ismbcspace`, `_ismbcdigit`, `_ismbcalpha` 및 `_ismbcpunct`에 대한 예를 참조하세요.|
 |[_ismbcpunct, _ismbcpunct_l](../c-runtime-library/reference/ismbcgraph-functions.md)|문장 부호|`c`가 모든 ASCII 또는 가타카나 문장 부호 문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|
 |[_ismbcblank, _ismbcblank_l,](../c-runtime-library/reference/ismbcgraph-functions.md)|공백 또는 가로 탭|`c`가 공백 문자 또는 가로 탭 문자의 싱글바이트 표현인 경우(`c`=0x20 또는 `c`=0x09)에만 0이 아닌 값을 반환합니다.|
-|[_ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Whitespace|`c`가 공백 문자(`c`=0x20 또는 0x09<=`c`<=0x0D)인 경우에만 0이 아닌 값을 반환합니다.|
+|[_ismbcspace, _ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|공백|`c`가 공백 문자(`c`=0x20 또는 0x09<=`c`<=0x0D)인 경우에만 0이 아닌 값을 반환합니다.|
 |[_ismbcsymbol, _ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|멀티바이트 기호|0x8141<=`c`<=0x81AC인 경우에만 0이 아닌 값을 반환합니다.|
-|[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|대문자 영문자|`c`가 ASCII 영어 대문자의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다. 0x41<=`c`<=0x5A|
+|[_ismbcupper, _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|대문자 영문자|`c`가 ASCII 영어 대문자(0x41<=`c`<=0x5A)의 싱글바이트 표현인 경우에만 0이 아닌 값을 반환합니다.|
 
 **코드 페이지 932 관련**
 
@@ -63,11 +68,11 @@ ms.locfileid: "70940161"
 
 |루틴에서 반환된 값|테스트 조건(코드 페이지 932만 해당)|
 |-------------|-------------------------------------------|
-|[_ismbchira, _ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|더블바이트 히라가나: 0x829F<=`c`<=0x82F1|
-|[_ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|더블바이트 가타카나: 0x8340<=`c`<=0x8396|
-|[_ismbcl0, _ismbcl0_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 비간지: 0x8140<=`c`<=0x889E|
-|[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 수준-1: 0x889F<=`c`<=0x9872|
-|[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 수준-2: 0x989F<=`c`<=0xEA9E|
+|[_ismbchira, _ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|더블바이트 히라가나: 0x829F<=`c`<=0x82F1.|
+|[_ismbckata, _ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|더블바이트 가타카나: 0x8340<=`c`<=0x8396.|
+|[_ismbcl0, _ismbcl0_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 비간지: 0x8140<=`c`<=0x889E.|
+|[_ismbcl1, _ismbcl1_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 수준 1: 0x889F<=`c`<=0x9872.|
+|[_ismbcl2, _ismbcl2_l](../c-runtime-library/reference/ismbcl0-ismbcl0-l-ismbcl1-ismbcl1-l-ismbcl2-ismbcl2-l.md)|JIS 수준 2: 0x989F<=`c`<=0xEA9E.|
 
 `_ismbcl0`, `_ismbcl1` 및 `_ismbcl2`는 지정된 값 `c`가 이전 테이블에 설명된 테스트 조건과 일치하는지 확인하지만 `c`가 유효한 멀티바이트 문자인지는 확인하지 않습니다. 하위 바이트 범위가 0x00 – 0x3F, 0x7F 또는 0xFD – 0xFF인 경우 이러한 함수는 0이 아닌 값을 반환하여 문자가 테스트 조건을 충족함을 나타냅니다. [_ismbbtrail, _ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)을 사용하여 멀티바이트 문자가 정의되었는지 여부를 테스트합니다.
 

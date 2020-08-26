@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403870"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837790"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>레코드 집합: 데이터 열 동적 바인딩(ODBC)
 
@@ -92,12 +92,12 @@ ms.locfileid: "86403870"
 
 작업해야 하는 목록 4개는 다음 표와 같습니다.
 
-|||
-|-|-|
-|**Current-Table-Columns**| (그림에서 목록 1) 데이터 원본의 테이블에 현재 있는 열의 목록입니다. 이 목록은 레코드 집합에 현재 바인딩된 열의 목록과 일치할 수 있습니다.|
-|**Bound-Recordset-Columns**| (그림에서 목록 2) 레코드 집합에 바인딩된 열의 목록입니다. 이 열은 `DoFieldExchange` 함수에 RFX 문을 이미 포함합니다.|
-|**Columns-To-Bind-Dynamically**| (그림에서 목록 3) 테이블에 있지만 레코드 집합에 없는 열의 목록입니다. 이는 동적으로 바인딩할 열입니다.|
-|**Dynamic-Column-Values**| (그림에서 목록 4) 동적으로 바인딩하는 열에서 검색한 값에 대한 스토리지를 포함하는 목록입니다. 이 목록의 요소는 Columns-to-Bind-Dynamically의 요소와 일대일로 대응합니다.|
+| 목록 | 설명 |
+|--|--|
+| **Current-Table-Columns** | (그림에서 목록 1) 데이터 원본의 테이블에 현재 있는 열의 목록입니다. 이 목록은 레코드 집합에 현재 바인딩된 열의 목록과 일치할 수 있습니다. |
+| **Bound-Recordset-Columns** | (그림에서 목록 2) 레코드 집합에 바인딩된 열의 목록입니다. 이 열은 `DoFieldExchange` 함수에 RFX 문을 이미 포함합니다. |
+| **Columns-To-Bind-Dynamically** | (그림에서 목록 3) 테이블에 있지만 레코드 집합에 없는 열의 목록입니다. 이는 동적으로 바인딩할 열입니다. |
+| **Dynamic-Column-Values** | (그림에서 목록 4) 동적으로 바인딩하는 열에서 검색한 값에 대한 스토리지를 포함하는 목록입니다. 이 목록의 요소는 Columns-to-Bind-Dynamically의 요소와 일대일로 대응합니다. |
 
 ### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> 목록 만들기
 

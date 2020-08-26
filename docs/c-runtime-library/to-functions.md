@@ -23,23 +23,22 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301693"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836080"
 ---
 # <a name="to-functions"></a>to 함수
 
 각 **to** 함수와 이 함수에 연결된 매크로가 있는 경우에는 단일 문자를 다른 문자로 변환합니다.
 
-|||
-|-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+[__toascii](../c-runtime-library/reference/toascii-toascii.md)\
+[tolower, _tolower, towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
+[toupper, _toupper, towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **to** 함수 및 매크로 변환은 다음과 같이 수행됩니다.
 
@@ -48,10 +47,10 @@ ms.locfileid: "75301693"
 |`__toascii`|`__toascii`|`c`를 ASCII 문자로 변환|
 |`tolower`|`tolower`|해당하는 경우 `c`를 소문자로 변환|
 |`_tolower`|`_tolower`|`c`를 소문자로 변환|
-|`towlower`|None|`c`를 해당하는 와이드 문자 소문자로 변환|
+|`towlower`|없음|`c`를 해당하는 와이드 문자 소문자로 변환|
 |`toupper`|`toupper`|해당하는 경우 `c`를 대문자로 변환|
 |`_toupper`|`_toupper`|`c`를 대문자로 변환|
-|`towupper`|None|c를 해당하는 와이드 문자 대문자로 변환|
+|`towupper`|없음|c를 해당하는 와이드 문자 대문자로 변환|
 
 역시 매크로로 정의된 **to** 루틴의 함수 버전을 사용하려면 `#undef` 지시문을 사용하여 매크로 정의를 제거하거나 CTYPE.H를 포함하지 마세요. /Za 컴파일러 옵션을 사용하는 경우 컴파일러는 `toupper` 또는 `tolower`의 함수 버전을 사용합니다. `toupper` 및 `tolower` 함수의 선언은 STDLIB.H에 있습니다.
 
@@ -67,7 +66,7 @@ ms.locfileid: "75301693"
 
 - 로캘과 관련이 없으며 속도가 훨씬 더 빠른 `tolower` 및 **toupper** 버전입니다.
 
-- **isascii(** `c` **)** 및 **isupper(** `c` **)** 또는 **islower(** `c` **)** 중 하나가 각각 0이 아닌 경우에만 사용할 수 있습니다.
+- **Isascii (** `c` **)** 와 **isupper (** `c` **)** 또는 **isascii (** `c` **)** 가 각각 0이 아닌 경우에만 사용할 수 있습니다.
 
 - `c`가 변환하려는 적절한 대/소문자의 ASCII 문자가 아닌 경우 정의되지 않은 결과를 포함합니다.
 
@@ -77,7 +76,7 @@ ms.locfileid: "75301693"
 
 - 대상 대/소문자에 해당하는 와이드 문자가 있는 경우(즉, `iswlower` 또는 **iswupper**이 각각 0이 아닌 경우)
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```c
 // crt_toupper.c
@@ -115,7 +114,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [데이터 변환](../c-runtime-library/data-conversion.md)<br/>
 [로캘](../c-runtime-library/locale.md)<br/>

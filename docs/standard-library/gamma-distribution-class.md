@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 1ddef32c1ef2d3eb83c8a8a560914dc1f0ec3d1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 37b4661cf14fe4302d50557472ce03c120eb2741
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220914"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837926"
 ---
 # <a name="gamma_distribution-class"></a>gamma_distribution 클래스
 
@@ -80,10 +80,8 @@ public:
 
 감마 분포에 따라 분포 된 경우 클래스 템플릿은 사용자 지정 부동 소수점 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[gamma_distribution](#gamma_distribution)|`gamma_distribution::alpha`|`gamma_distribution::param`|
-|`gamma_distribution::operator()`|`gamma_distribution::beta`|[param_type](#param_type)|
+[gamma_distribution](#gamma_distribution)\
+[param_type](#param_type)
 
 속성 함수 `alpha()` 및 `beta()`는 저장된 분포 매개 변수인 *alpha* 및 *beta* 각각에 대한 값을 반환합니다.
 
@@ -188,7 +186,7 @@ Distribution for 10 samples:
 
 **네임스페이스:** std
 
-## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a>gamma_distribution:: gamma_distribution
+## <a name="gamma_distributiongamma_distribution"></a><a name="gamma_distribution"></a> gamma_distribution:: gamma_distribution
 
 분포를 생성합니다.
 
@@ -216,7 +214,7 @@ explicit gamma_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="gamma_distributionparam_type"></a><a name="param_type"></a>gamma_distribution::p aram_type
+## <a name="gamma_distributionparam_type"></a><a name="param_type"></a> gamma_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

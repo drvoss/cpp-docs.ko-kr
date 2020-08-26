@@ -1,19 +1,19 @@
 ---
-title: '&lt;실행&gt;'
+title: '&lt;문제점&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 81e9aa63265c367412fda709aacd5ca3953e9fdf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445035"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835938"
 ---
-# <a name="ltexecutiongt"></a>&lt;실행&gt;
+# <a name="ltexecutiongt"></a>&lt;문제점&gt;
 
 병렬 알고리즘에 대 한 실행 정책에 대해 설명 합니다.
 
@@ -32,7 +32,7 @@ namespace std::execution {
 
 ### <a name="classes-and-structs"></a>클래스 및 구조체
 
-|||
+|Name|설명|
 |-|-|
 |[is_execution_policy 구조체](is-execution-policy-struct.md)|모호한 오버 로드 확인 참여의 함수 시그니처를 제외 하기 위해 실행 정책을 검색 합니다.|
 |[parallel_policy 클래스](parallel-policy-class.md)|병렬 알고리즘 오버 로드를 명확 하 게 구분 하는 고유 형식으로 사용 되며 병렬 알고리즘의 실행이 병렬화 될 수 있음을 표시 합니다.|
@@ -41,12 +41,12 @@ namespace std::execution {
 
 ## <a name="requirements"></a>요구 사항
 
-**헤더:** \<실행 >
+**헤더:**\<execution>
 
 **네임스페이스:** stdext
 
 ## <a name="see-also"></a>참고 항목
 
 [헤더 파일 참조](cpp-standard-library-header-files.md)\
-[C++ 표준 라이브러리의 스레드 보안](thread-safety-in-the-cpp-standard-library.md)\
-[C++ 표준 라이브러리 참조](cpp-standard-library-reference.md)
+[C + + 표준 라이브러리의 스레드 보안](thread-safety-in-the-cpp-standard-library.md)\
+[C + + 표준 라이브러리 참조](cpp-standard-library-reference.md)

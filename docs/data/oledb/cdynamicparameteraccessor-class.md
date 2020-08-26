@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b7125390013e417123f09a5cc7f58be9ea87db56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: de9aafe5b04b949112c44be09ac36bede7e7f660
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216468"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838180"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 클래스
 
@@ -115,7 +115,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[CDynamicParameterAccessor](#cdynamicparameteraccessor)|생성자입니다.|
 |[GetParam](#getparam)|버퍼에서 매개 변수 데이터를 검색합니다.|
@@ -139,7 +139,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 이 클래스를 사용 하 여 SQL Server 저장 프로시저를 실행 하 고 출력 매개 변수 값을 가져오는 방법을 보여 주는 예제는 GitHub의 [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) 리포지토리에서 [dynamicconsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) 샘플 코드를 참조 하세요.
 
-## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a>CDynamicParameterAccessor:: CDynamicParameterAccessor
+## <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a><a name="cdynamicparameteraccessor"></a> CDynamicParameterAccessor:: CDynamicParameterAccessor
 
 생성자입니다.
 
@@ -165,7 +165,7 @@ BLOB 데이터를 처리 하는 방법을 지정 합니다. 기본값은 DBBLOBH
 
 BLOB 처리에 대 한 자세한 내용은 [cdynamicaccessor:: cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) 생성자를 참조 하세요.
 
-## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a>CDynamicParameterAccessor:: GetParam
+## <a name="cdynamicparameteraccessorgetparam"></a><a name="getparam"></a> CDynamicParameterAccessor:: GetParam
 
 매개 변수 버퍼에서 지정 된 매개 변수에 대 한 문자열이 아닌 데이터를 검색 합니다.
 
@@ -197,13 +197,13 @@ void* GetParam(TCHAR* pParamName) const throw();
 *pData*<br/>
 제한이 버퍼에서 검색 된 데이터를 포함 하는 메모리에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 템플릿이 아닌 버전의 경우는 버퍼에서 검색 된 데이터를 포함 하는 메모리를 가리킵니다. 템플릿 기반 버전의 경우 **`true`** 성공 시 또는 실패 시를 반환 **`false`** 합니다.
 
 `GetParam`를 사용 하 여 버퍼에서 문자열이 아닌 매개 변수 데이터를 검색 합니다. [Getparamstring](../../data/oledb/cdynamicparameteraccessor-getparamstring.md) 을 사용 하 여 버퍼에서 문자열 매개 변수 데이터를 검색 합니다.
 
-## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a>CDynamicParameterAccessor:: GetParamCount
+## <a name="cdynamicparameteraccessorgetparamcount"></a><a name="getparamcount"></a> CDynamicParameterAccessor:: GetParamCount
 
 버퍼에 저장된 매개 변수의 수를 검색합니다.
 
@@ -217,7 +217,7 @@ DB_UPARAMS GetParamCount() const throw();
 
 매개 변수 수입니다.
 
-## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a>CDynamicParameterAccessor:: GetParamIO
+## <a name="cdynamicparameteraccessorgetparamio"></a><a name="getparamio"></a> CDynamicParameterAccessor:: GetParamIO
 
 지정된 매개 변수가 입력 매개 변수인지 출력 매개 변수인지를 결정합니다.
 
@@ -246,11 +246,11 @@ enum DBPARAMIOENUM {
 };
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
-## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a>CDynamicParameterAccessor:: GetParamLength
+## <a name="cdynamicparameteraccessorgetparamlength"></a><a name="getparamlength"></a> CDynamicParameterAccessor:: GetParamLength
 
 버퍼에 저장된 지정된 매개 변수의 길이를 검색합니다.
 
@@ -275,7 +275,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 
 첫 번째 재정의는 **`true`** 성공 또는 실패 시 반환 **`false`** 됩니다. 두 번째 재정의는 매개 변수 길이를 포함하는 메모리를 가리킵니다.
 
-## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a>CDynamicParameterAccessor:: GetParamName
+## <a name="cdynamicparameteraccessorgetparamname"></a><a name="getparamname"></a> CDynamicParameterAccessor:: GetParamName
 
 지정 된 매개 변수의 이름을 검색 합니다.
 
@@ -290,11 +290,11 @@ LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 *nParam*<br/>
 [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예는 [Setparam](../../data/oledb/cdynamicparameteraccessor-setparam.md) 을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 매개 변수의 이름입니다.
 
-## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a>CDynamicParameterAccessor:: GetParamStatus
+## <a name="cdynamicparameteraccessorgetparamstatus"></a><a name="getparamstatus"></a> CDynamicParameterAccessor:: GetParamStatus
 
 버퍼에 저장된 지정된 매개 변수의 상태를 검색합니다.
 
@@ -319,7 +319,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 
 첫 번째 재정의는 **`true`** 성공 또는 실패 시 반환 **`false`** 됩니다. 두 번째 재정의는 지정 된 매개 변수의 상태를 포함 하는 메모리를 가리킵니다.
 
-## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a>CDynamicParameterAccessor:: GetParamString
+## <a name="cdynamicparameteraccessorgetparamstring"></a><a name="getparamstring"></a> CDynamicParameterAccessor:: GetParamString
 
 버퍼에 저장된 지정된 매개 변수의 문자열 데이터를 검색합니다.
 
@@ -367,7 +367,7 @@ bool GetParamString(DBORDINAL nParam,
 
 `GetParamString`를 사용 하 여 버퍼에서 문자열 매개 변수 데이터를 검색 합니다. [Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 을 사용 하 여 버퍼에서 문자열이 아닌 매개 변수 데이터를 검색 합니다.
 
-## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a>CDynamicParameterAccessor:: GetParamType
+## <a name="cdynamicparameteraccessorgetparamtype"></a><a name="getparamtype"></a> CDynamicParameterAccessor:: GetParamType
 
 지정된 매개 변수의 데이터 형식을 검색합니다.
 
@@ -386,11 +386,11 @@ bool GetParamType(DBORDINAL nParam,
 *pType*<br/>
 제한이 지정 된 매개 변수의 데이터 형식을 포함 하는 변수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
-## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a>CDynamicParameterAccessor:: SetParam
+## <a name="cdynamicparameteraccessorsetparam"></a><a name="setparam"></a> CDynamicParameterAccessor:: SetParam
 
 지정 된 (문자열이 아닌) 데이터를 사용 하 여 매개 변수 버퍼를 설정 합니다.
 
@@ -414,7 +414,7 @@ bool SetParam(TCHAR* pParamName,
 데이터 형식인 템플릿 매개 변수입니다.
 
 *nParam*<br/>
-[in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예를 들면 다음과 같습니다.
+[in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예를 들어:
 
 [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]
 
@@ -427,13 +427,13 @@ bool SetParam(TCHAR* pParamName,
 *status*<br/>
 진행 DBSTATUS 열 상태입니다. DBSTATUS 값에 대 한 자세한 내용은 *OLE DB 프로그래머 참조*의 [상태](/previous-versions/windows/desktop/ms722617(v=vs.85)) 를 참조 하거나 oledb에서 dbstatus를 검색 하십시오.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
 `SetParam`를 사용 하 여 버퍼에서 문자열이 아닌 매개 변수 데이터를 설정 합니다. [Setparamstring](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) 을 사용 하 여 버퍼에 문자열 매개 변수 데이터를 설정 합니다.
 
-## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a>CDynamicParameterAccessor:: SetParamLength
+## <a name="cdynamicparameteraccessorsetparamlength"></a><a name="setparamlength"></a> CDynamicParameterAccessor:: SetParamLength
 
 버퍼에 저장된 지정된 매개 변수의 길이를 설정합니다.
 
@@ -456,7 +456,7 @@ bool SetParamLength(DBORDINAL nParam,
 
 **`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
-## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a>CDynamicParameterAccessor:: SetParamStatus
+## <a name="cdynamicparameteraccessorsetparamstatus"></a><a name="setparamstatus"></a> CDynamicParameterAccessor:: SetParamStatus
 
 버퍼에 저장된 지정된 매개 변수의 상태를 설정합니다.
 
@@ -479,7 +479,7 @@ bool SetParamStatus(DBORDINAL nParam,
 
 **`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
-## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a>CDynamicParameterAccessor:: SetParamString
+## <a name="cdynamicparameteraccessorsetparamstring"></a><a name="setparamstring"></a> CDynamicParameterAccessor:: SetParamString
 
 버퍼에 저장된 지정된 매개 변수의 문자열 데이터를 설정합니다.
 

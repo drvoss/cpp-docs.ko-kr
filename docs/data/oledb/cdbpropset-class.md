@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216494"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838259"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 클래스
 
@@ -57,7 +57,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[AddProperty](#addproperty)|속성 집합에 속성을 추가 합니다.|
 |[CDBPropSet](#cdbpropset)|생성자입니다.|
@@ -65,7 +65,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>연산자
 
-|||
+| Name | 설명 |
 |-|-|
 |[연산자 =](#op_equal)|한 속성 집합의 내용을 다른 속성에 할당 합니다.|
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 OLE DB 공급자 및 소비자는 `DBPROPSET` 구조체를 사용 하 여 `DBPROP` 구조체 배열을 전달 합니다. 각 `DBPROP` 구조는 설정할 수 있는 단일 속성을 나타냅니다.
 
-## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet:: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a> CDBPropSet:: AddProperty
 
 속성 집합에 속성을 추가 합니다.
 
@@ -106,7 +106,7 @@ bool AddProperty(DWORD dwPropertyID,
 진행 속성 집합에 추가 된 구조체의 속성 값을 초기화 하는 데 사용 되는 문자열 `DBPROP` 입니다.
 
 *되며 bvalue*<br/>
-진행 `BYTE`속성 집합에 추가 된 구조체의 속성 값을 초기화 하는 데 사용 되는 또는 부울 값 `DBPROP` 입니다.
+진행 `BYTE` 속성 집합에 추가 된 구조체의 속성 값을 초기화 하는 데 사용 되는 또는 부울 값 `DBPROP` 입니다.
 
 *N 값*<br/>
 진행 속성 집합에 추가 된 구조체의 속성 값을 초기화 하는 데 사용 되는 정수 값 `DBPROP` 입니다.
@@ -120,11 +120,11 @@ bool AddProperty(DWORD dwPropertyID,
 *cyValue*<br/>
 진행 속성 집합에 추가 된 구조체의 속성 값을 초기화 하는 데 사용 되는 CY 통화 값 `DBPROP` 입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 속성이 성공적으로 추가 되었으면이 고, 그렇지 않으면 **`false`** 입니다.
 
-## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet:: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> CDBPropSet:: CDBPropSet
 
 생성자입니다. `rgProperties` `cProperties` `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 구조체의, 및 필드를 초기화 합니다.
 
@@ -146,7 +146,7 @@ CDBPropSet();
 *propset*<br/>
 [in] 복사 생성을 위한 다른 `CDBPropSet` 개체입니다.
 
-## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet:: SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a> CDBPropSet:: SetGUID
 
 `guidPropertySet`구조체의 필드를 설정 합니다 `DBPROPSET` .
 
@@ -165,7 +165,7 @@ void SetGUID(const GUID& guid) throw();
 
 이 필드는 [생성자](../../data/oledb/cdbpropset-cdbpropset.md) 로도 설정할 수 있습니다.
 
-## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet:: operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet:: operator =
 
 한 속성 집합의 내용을 다른 속성 집합에 할당 합니다.
 

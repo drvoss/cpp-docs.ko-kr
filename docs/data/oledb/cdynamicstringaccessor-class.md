@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211870"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838167"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 클래스
 
@@ -38,24 +38,24 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[GetString](#getstring)|지정된 열 데이터를 문자열로 검색합니다.|
 |[SetString](#setstring)|지정된 열 데이터를 문자열로 설정합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-[Cdynamicaccessor](../../data/oledb/cdynamicaccessor-class.md) 는 공급자가 보고 하는 네이티브 형식으로 데이터를 요청 하는 반면, 공급자는 데이터 저장소에서 액세스 하는 모든 데이터를 문자열 데이터로 인출 하도록 요청 `CDynamicStringAccessor` 합니다. 데이터 저장소의 내용 표시 또는 인쇄와 같이 데이터 저장소의 값을 계산 하지 않아도 되는 간단한 작업에 특히 유용 합니다.
+[Cdynamicaccessor](../../data/oledb/cdynamicaccessor-class.md) 는 공급자가 보고 하는 네이티브 형식으로 데이터를 요청 하지만 `CDynamicStringAccessor` 은 공급자가 데이터 저장소에서 액세스 하는 모든 데이터를 문자열 데이터로 인출 하도록 요청 합니다. 데이터 저장소의 내용 표시 또는 인쇄와 같이 데이터 저장소의 값을 계산 하지 않아도 되는 간단한 작업에 특히 유용 합니다.
 
 데이터 저장소에 있는 열 데이터의 네이티브 형식은 중요하지 않습니다. 공급자가 데이터 변환을 지원할 수 있는 한 데이터를 문자열 형식으로 제공합니다. 드문 경우지만 공급자가 네이티브 데이터 형식에서 문자열로의 변환을 지원하지 않을 경우에는 요청 호출이 성공 값 DB_S_ERRORSOCCURED를 반환하고, 해당 열의 상태는 DBSTATUS_E_CANTCONVERTVALUE로 변환 문제가 있음을 나타냅니다.
 
-`CDynamicStringAccessor` 메서드를 사용 하 여 열 정보를 가져올 수 있습니다. 이 열 정보를 사용 하 여 런타임에 동적으로 접근자를 만들 수 있습니다.
+`CDynamicStringAccessor`메서드를 사용 하 여 열 정보를 가져올 수 있습니다. 이 열 정보를 사용 하 여 런타임에 동적으로 접근자를 만들 수 있습니다.
 
 열 정보는이 클래스에서 만들고 관리 하는 버퍼에 저장 됩니다. [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)를 사용 하 여 버퍼에서 데이터를 가져오거나 [setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)을 사용 하 여 버퍼에 저장 합니다.
 
 동적 접근자 클래스 사용에 대 한 설명 및 예제는 [동적 접근자 사용](../../data/oledb/using-dynamic-accessors.md)을 참조 하세요.
 
-## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a> CDynamicStringAccessor:: GetString
 
 지정된 열 데이터를 문자열로 검색합니다.
 
@@ -79,13 +79,13 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 ### <a name="return-value"></a>반환 값
 
-지정 된 열에서 검색 된 문자열 값에 대 한 포인터입니다. 값은 `BaseType`형식입니다. _UNICODE 정의 여부에 따라 **CHAR** 또는 **WCHAR** 가 됩니다. 지정 된 열을 찾을 수 없는 경우 NULL을 반환 합니다.
+지정 된 열에서 검색 된 문자열 값에 대 한 포인터입니다. 값은 형식입니다 `BaseType` . _UNICODE 정의 여부에 따라 **CHAR** 또는 **WCHAR** 가 됩니다. 지정 된 열을 찾을 수 없는 경우 NULL을 반환 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 번째 재정의 폼은 열 이름을 ANSI 문자열로 사용 합니다. 세 번째 재정의 폼은 열 이름을 유니코드 문자열로 사용 합니다.
 
-## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a> CDynamicStringAccessor:: SetString
 
 지정된 열 데이터를 문자열로 설정합니다.
 
@@ -115,9 +115,9 @@ HRESULT SetString(const WCHAR* pColumnName,
 
 ### <a name="return-value"></a>반환 값
 
-지정 된 열을 설정할 문자열 값에 대 한 포인터입니다. 값은 `BaseType`형식입니다. _UNICODE 정의 여부에 따라 **CHAR** 또는 **WCHAR** 가 됩니다.
+지정 된 열을 설정할 문자열 값에 대 한 포인터입니다. 값은 형식입니다 `BaseType` . _UNICODE 정의 여부에 따라 **CHAR** 또는 **WCHAR** 가 됩니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 두 번째 재정의 폼은 열 이름을 ANSI 문자열로 사용 하 고 세 번째 재정의 폼은 열 이름을 유니코드 문자열로 사용 합니다.
 

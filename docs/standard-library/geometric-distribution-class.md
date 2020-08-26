@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 6a9e2c55da7278c50d43a63a4cce79d2a21f573c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98ecbc96d104a900d222c660de7f16563f566a9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233186"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837881"
 ---
 # <a name="geometric_distribution-class"></a>geometric_distribution 클래스
 
@@ -76,10 +76,8 @@ public:
 
 클래스 템플릿은 기하학적 분포를 사용 하 여 사용자 지정 정수 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
-|`geometric_distribution::operator()`||[param_type](#param_type)|
+[geometric_distribution](#geometric_distribution)\
+[param_type](#param_type)
 
 속성 함수 `p()`은 저장된 분포 매개 변수 `p`의 값을 반환합니다.
 
@@ -209,7 +207,7 @@ Distribution for 100 samples:
 
 **네임스페이스:** std
 
-## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution:: geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a> geometric_distribution:: geometric_distribution
 
 분포를 생성합니다.
 
@@ -234,7 +232,7 @@ explicit geometric_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution::p aram_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a> geometric_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

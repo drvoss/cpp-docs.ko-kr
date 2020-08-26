@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212360"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835911"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution 클래스
 
@@ -77,10 +77,8 @@ public:
 
 지 수 분포에 따라 분포 된 경우 클래스 템플릿은 사용자 지정 정수 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
-|`exponential_distribution::operator()`||[param_type](#param_type)|
+[exponential_distribution](#exponential_distribution)\
+[param_type](#param_type)
 
 속성 멤버 함수 `lambda()`는 저장된 분포 매개 변수 `lambda`의 값을 반환합니다.
 
@@ -171,7 +169,7 @@ Distribution for 10 samples:
 
 **네임스페이스:** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution:: exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a> exponential_distribution:: exponential_distribution
 
 분포를 생성합니다.
 
@@ -196,7 +194,7 @@ explicit exponential_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution::p aram_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a> exponential_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

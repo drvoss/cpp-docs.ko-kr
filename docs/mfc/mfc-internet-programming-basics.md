@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: b41ce97a9b5efe6ad84c543f5c49dd091557b3a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86405028"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846318"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 인터넷 프로그래밍 기본 사항
 
@@ -38,7 +38,7 @@ MFC는 인터넷 프로그래밍을 지 원하는 클래스를 제공 합니다.
 
 - [인터넷 관련 MFC 클래스](internet-related-mfc-classes.md)
 
-- [항목별 인터넷 정보](internet-information-by-topic.md)
+- [항목 별 인터넷 정보](internet-information-by-topic.md)
 
 - [작업별 인터넷 정보](internet-information-by-task.md)
 
@@ -54,26 +54,26 @@ MFC는 인터넷 프로그래밍을 지 원하는 클래스를 제공 합니다.
 
 - [인터넷의 비동기 모니커](asynchronous-monikers-on-the-internet.md)
 
-- [Win32 인터넷 확장명(WinInet)](win32-internet-extensions-wininet.md)
+- [Win32 인터넷 확장 (WinInet)](win32-internet-extensions-wininet.md)
 
 - [MFC 인터넷 프로그래밍 작업](mfc-internet-programming-tasks.md)
 
-- [애플리케이션 디자인 선택](application-design-choices.md)
+- [응용 프로그램 디자인 선택](application-design-choices.md)
 
-- [MFC 애플리케이션 작성](writing-mfc-applications.md)
+- [MFC 응용 프로그램 작성](writing-mfc-applications.md)
 
-- [인터넷 애플리케이션 테스트](testing-internet-applications.md)
+- [인터넷 응용 프로그램 테스트](testing-internet-applications.md)
 
 - [인터넷 보안](internet-security-cpp.md)
 
-- [DHTML 컨트롤에 대한 ATL 지원](../atl/atl-support-for-dhtml-controls.md)
+- [DHTML 컨트롤에 대 한 ATL 지원](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>추가 정보를 위한 웹 사이트
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a> 추가 정보를 위한 웹 사이트
 
-Microsoft 인터넷 기술에 대 한 자세한 내용은 [Microsoft Docs](https://docs.microsoft.com/)를 참조 하십시오.
+Microsoft 인터넷 기술에 대 한 자세한 내용은 [네트워킹 및 인터넷](/windows/win32/networking)을 참조 하십시오.
 
 [W3C (World Wide Web 컨소시엄)](https://go.microsoft.com/fwlink/p/?linkid=37125) 는 HTML, HTTP, CGI 및 기타 World Wide Web 기술에 대 한 사양을 게시 합니다.
 
-## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a>추가 인터넷 도움말
+## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> 추가 인터넷 도움말
 
 Windows SDK OLE 섹션에는 OLE 프로그래밍에 대 한 추가 정보가 포함 되어 있습니다. 이 정보는 MFC 클래스가 아니라 Win32 WinInet 함수를 직접 사용 하는 방법에 대 한 자세한 정보를 제공 합니다. 또한 인터넷 기술에 대 한 개요 정보도 포함 되어 있습니다.

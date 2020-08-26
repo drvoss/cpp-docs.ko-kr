@@ -29,29 +29,29 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 472200d6941867387d99ab52c08a70467f802f62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219120"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838089"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 함수
 
 이러한 함수는 c + + 11에서 더 이상 사용 되지 않으며 c + + 17에서 제거 되었습니다.
 
-||||
-|-|-|-|
-|[bind1st](#bind1st) |[bind2nd](#bind2nd)|[mem_fun](#mem_fun)|
-|[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
+[bind1st](#bind1st)\
+[bind2nd](#bind2nd)\
+[mem_fun](#mem_fun)\
+[mem_fun_ref](#mem_fun_ref)\
+[ptr_fun](#ptr_fun)
 
 이러한 함수는 c + + 17에서 더 이상 사용 되지 않습니다.
 
-|||
-|-|-|
-|[not1](#not1)|[not2](#not2)|
+[not1](#not1)\
+[not2](#not2)
 
-## <a name="bind"></a><a name="bind"></a>바인딩하며
+## <a name="bind"></a><a name="bind"></a> 바인딩하며
 
 호출 가능 개체에 인수를 바인딩합니다.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a><a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a> bind1st
 
 이항 함수 개체를 단항 함수 개체로 변환 하는 어댑터를 만드는 도우미 템플릿 함수입니다. 이항 함수의 첫 번째 인수를 지정 된 값에 바인딩합니다. C + + 11에서 사용 되지 않으며 c + + 17에서 제거 되었습니다.
 
@@ -169,7 +169,7 @@ template <class Operation, class Type>
 *비어*\
 이항 함수 개체의 첫 번째 인수가 바인딩되는 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이항 함수 개체의 첫 번째 인수를 *왼쪽*값에 바인딩하여 생성 되는 단항 함수 개체입니다.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a> bind2nd
 
 이항 함수 개체를 단항 함수 개체로 변환 하는 어댑터를 만드는 도우미 템플릿 함수입니다. 이항 함수의 두 번째 인수를 지정 된 값에 바인딩합니다. C + + 11에서 사용 되지 않으며 c + + 17에서 제거 되었습니다.
 
@@ -263,7 +263,7 @@ template <class Operation, class Type>
 *오른쪽*\
 이항 함수 개체의 두 번째 인수가 바인딩되는 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이항 함수 개체의 두 번째 인수를 *right*에 바인딩한 단항 함수 개체의 결과입니다.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a><a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a> bit_and
 
 인수에서 비트 AND 연산 (이진)을 수행 하는 미리 정의 된 함수 개체 `operator&` 입니다.
 
@@ -373,7 +373,7 @@ struct bit_and<void>
 *오른쪽*\
 비트 AND 연산의 오른쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *U*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `Left & Right`의 결과입니다. 특수화된 템플릿은 `operator&`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.
 
@@ -381,7 +381,7 @@ struct bit_and<void>
 
 `bit_and` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator&`를 구현하는 사용자 정의 형식으로 제한됩니다.
 
-## <a name="bit_not"></a><a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a> bit_not
 
 인수에 대해 비트 보수 (NOT) 연산 (단항)을 수행 하는 미리 정의 된 함수 개체입니다 `operator~` . C + + 14에 추가 되었습니다.
 
@@ -409,7 +409,7 @@ struct bit_not<void>
 *오른쪽*\
 비트 보수 연산의 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *형식의*lvalue 또는 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `~ Right`의 결과입니다. 특수화된 템플릿은 `operator~`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.
 
@@ -417,7 +417,7 @@ struct bit_not<void>
 
 `bit_not` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator~`를 구현하는 사용자 정의 형식으로 제한됩니다.
 
-## <a name="bit_or"></a><a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a> bit_or
 
 인수에 대해 비트 OR 연산 ()을 수행 하는 미리 정의 된 함수 개체 `operator|` 입니다.
 
@@ -450,7 +450,7 @@ struct bit_or<void>
 *오른쪽*\
 비트 OR 연산의 오른쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *U*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `Left | Right`의 결과입니다. 특수화된 템플릿은 `operator|`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.
 
@@ -458,7 +458,7 @@ struct bit_or<void>
 
 `bit_or` 함수는 기본 데이터 형식에 대한 필수 형식이나 `operator|`를 구현하는 사용자 정의 형식으로 제한됩니다.
 
-## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a> bit_xor
 
 인수에 대해 비트 XOR 연산 (이진)을 수행 하는 미리 정의 된 함수 개체 `operator^` 입니다.
 
@@ -491,7 +491,7 @@ struct bit_xor<void>
 *오른쪽*\
 비트 XOR 연산의 오른쪽 피연산자입니다. 특수화 되지 않은 *템플릿은 형식의 lvalue*참조 인수를 사용 합니다. 특수화 된 템플릿은 유추 형식 *U*의 lvalue 및 rvalue 참조 인수를 완벽 하 게 전달 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `Left ^ Right`의 결과입니다. 특수화된 템플릿은 `operator^`에 의해 반환되는 형식을 가지고 있는 결과를 완벽하게 전달합니다.
 
@@ -499,7 +499,7 @@ struct bit_xor<void>
 
 `bit_xor` 함수는 기본 데이터 형식에 대한 필수 형식이나 이항 `operator^`를 구현하는 사용자 정의 형식으로 제한됩니다.
 
-## <a name="cref"></a><a name="cref"></a>cref
+## <a name="cref"></a><a name="cref"></a> cref
 
 인수에서 const `reference_wrapper`를 생성합니다.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a><a name="invoke"></a>호출
+## <a name="invoke"></a><a name="invoke"></a> 호출
 
 지정 된 인수를 사용 하 여 호출 가능 개체를 호출 합니다. C + + 17에 추가 되었습니다.
 
@@ -594,9 +594,9 @@ invoke_result_t<Callable, Args...>
 
 - N == 1이며 `f`가 `T` 클래스의 멤버 데이터에 대한 포인터이고, `t1`이 `T` 형식의 개체이거나 `T` 형식의 개체에 대한 참조 또는 `T`에서 파생된 형식의 개체에 대한 참조인 경우 `t1.*f`입니다.  즉,가 true 인 경우입니다 `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` .
 
-- `t1.get().*f`N = = 1이 고는 `f` 클래스의 멤버 데이터에 대 한 포인터이 `T` 고는 `std::decay_t<decltype(t1)>` 의 특수화입니다 `std::reference_wrapper` .
+- `t1.get().*f` N = = 1이 고는 `f` 클래스의 멤버 데이터에 대 한 포인터이 `T` 고는 `std::decay_t<decltype(t1)>` 의 특수화입니다 `std::reference_wrapper` .
 
-- `(*t1).*f`N = = 1이 고 `f` 는 클래스의 멤버 데이터에 대 한 포인터이 `T` 고는 `t1` 이전 형식 중 하나가 아닙니다.
+- `(*t1).*f` N = = 1이 고 `f` 는 클래스의 멤버 데이터에 대 한 포인터이 `T` 고는 `t1` 이전 형식 중 하나가 아닙니다.
 
 - 다른 모든 경우에는 `f(t1, t2, ..., tN)`.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a> mem_fn
 
 단순 호출 래퍼를 생성합니다.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a> mem_fun
 
 포인터 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다. C + + 11에서 사용 되지 않으며 c + + 17에서 제거 되는 [mem_fn](#mem_fn) 및 [바인딩입니다](#bind).
 
@@ -762,7 +762,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 *pMem*\
 함수 개체로 변환할 `Type` 클래스의 멤버 함수 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`const`** 또는 형식의 또는 **non_const** 함수 개체입니다 `mem_fun_t` `mem_fun1_t` .
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a> mem_fun_ref
 
 참조 인수를 사용하여 초기화할 때 멤버 함수에 대한 함수 개체 어댑터를 생성하는 데 사용되는 도우미 템플릿 함수입니다. C + + 11에서 사용 되지 않으며 c + + 17에서 제거 되었습니다.
 
@@ -849,7 +849,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 *pMem*\
 함수 개체로 변환할 `Type` 클래스의 멤버 함수 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`const`** `non_const` 또는 형식의 함수 개체입니다 `mem_fun_ref_t` `mem_fun1_ref_t` .
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a><a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a> not1
 
 단항 조건자의 보수를 반환합니다. C + + 17의 [not_fn](#not_fn) 에는 사용 되지 않습니다.
 
@@ -945,7 +945,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 *가*\
 부정할 단항 조건자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 수정된 단항 조건자의 부정을 나타내는 단항 조건자입니다.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a><a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a> not2
 
 이항 조건자의 보수를 반환합니다. C + + 17의 [not_fn](#not_fn) 에는 사용 되지 않습니다.
 
@@ -1017,7 +1017,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 *func*\
 부정할 이항 조건자입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 수정된 이항 조건자의 부정을 나타내는 이항 조건자입니다.
 
@@ -1079,9 +1079,9 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a><a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a> not_fn
 
-`not_fn`함수 템플릿은 호출 가능 개체를 사용 하 여 호출 가능 개체를 반환 합니다. 반환 된 호출 가능 개체는 나중에 일부 인수를 사용 하 여 호출 될 때 해당 개체를 원래 호출 가능 개체로 전달 하 고 결과를 논리적으로 부정 합니다. 래핑된 호출 가능 개체의 const 한정자 및 값 범주 동작을 유지 합니다. `not_fn`는 c + + 17에서 새로 사용 되며, 더 이상 사용 되지 않는 `std::not1` ,, 및를 대체 합니다 `std::not2` `std::unary_negate` `std::binary_negate` .
+`not_fn`함수 템플릿은 호출 가능 개체를 사용 하 여 호출 가능 개체를 반환 합니다. 반환 된 호출 가능 개체는 나중에 일부 인수를 사용 하 여 호출 될 때 해당 개체를 원래 호출 가능 개체로 전달 하 고 결과를 논리적으로 부정 합니다. 래핑된 호출 가능 개체의 const 한정자 및 값 범주 동작을 유지 합니다. `not_fn` 는 c + + 17에서 새로 사용 되며, 더 이상 사용 되지 않는 `std::not1` ,, 및를 대체 합니다 `std::not2` `std::unary_negate` `std::binary_negate` .
 
 ```cpp
 template <class Callable>
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a> ptr_fun
 
 단항 및 이항 함수 포인터를 각각 조정 가능한 단항 및 이항 함수로 변환하는 데 사용되는 도우미 템플릿 함수입니다. C + + 11에서 사용 되지 않으며 c + + 17에서 제거 되었습니다.
 
@@ -1196,7 +1196,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 *pfunc*\
 조정 가능한 함수로 변환할 단항 또는 이항 함수 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 첫 번째 템플릿 함수는 단항 함수 [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg` , **Result**> ()을 반환 합니다 \* `pfunc` .
 
@@ -1210,7 +1210,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a><a name="ref"></a>행위자
+## <a name="ref"></a><a name="ref"></a> 행위자
 
 인수에서 `reference_wrapper` 를 생성합니다.
 
@@ -1222,7 +1222,7 @@ template <class Ty>
     reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `arg`, 특히 `reference_wrapper<Ty>(arg)`에 대한 참조입니다.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 `function` 개체를 교환합니다.
 

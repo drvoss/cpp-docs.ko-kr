@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214921"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838154"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 클래스
 
@@ -48,7 +48,7 @@ class CEnumerator :
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[찾기](#find)|사용 가능한 공급자 (데이터 원본)에서 지정 된 이름을 가진 하나를 검색 합니다.|
 |[GetMoniker](#getmoniker)|`IMoniker`현재 레코드에 대 한 인터페이스를 검색 합니다.|
@@ -58,7 +58,7 @@ class CEnumerator :
 
 `ISourcesRowset`이 클래스에서 데이터를 간접적으로 검색할 수 있습니다.
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator:: Find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator:: Find
 
 사용 가능한 공급자 중에서 지정 된 이름을 찾습니다.
 
@@ -73,7 +73,7 @@ bool Find(TCHAR* szSearchName) throw();
 *szSearchName*<br/>
 진행 검색할 이름입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 이름을 찾았으면입니다. 그렇지 않으면 **`false`** 입니다.
 
@@ -81,7 +81,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 이 이름은 `SOURCES_NAME` [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) 인터페이스의 멤버에 매핑됩니다.
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator:: GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator:: GetMoniker
 
 표시 이름을 구문 분석 하 여 모니커로 변환할 수 있는 문자열의 구성 요소를 추출 합니다.
 
@@ -102,11 +102,11 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 *lpszDisplayName*<br/>
 진행 구문 분석할 표시 이름입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator:: Open
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator:: Open
 
 열거자에 대 한 모니커 (지정 된 경우)를 바인딩한 다음 [ISourcesRowset:: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85))을 호출 하 여 열거자에 대 한 행 집합을 검색 합니다.
 
@@ -131,7 +131,7 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 *열거*<br/>
 진행 열거자에 대 한 참조입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT입니다.
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 37642cbcbe57fba54f071a8fc94af53c97684a36
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffcb6c7b2f95b0b62659f6080c9ed0d1f111237c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228143"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846396"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -34,7 +34,7 @@ Iostreams에 대 한 삽입을 중재 클래스 템플릿 [basic_ostream](../sta
 
 ### <a name="manipulators"></a>조작자
 
-|||
+|Name|설명|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|줄을 종료하고 버퍼를 플러시합니다.|
 |[종료](../standard-library/ostream-functions.md#ends)|문자열을 종료합니다.|
@@ -43,7 +43,7 @@ Iostreams에 대 한 삽입을 중재 클래스 템플릿 [basic_ostream](../sta
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
 |[연산자<<](../standard-library/ostream-operators.md#op_lt_lt)|스트림에 다양한 형식을 씁니다.|
 

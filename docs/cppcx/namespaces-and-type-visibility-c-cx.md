@@ -2,12 +2,12 @@
 title: 네임스페이스 및 형식 표시 유형(C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: cbfbd8c27065121eb176d9a62662eab7e1f4271b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230976"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837803"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>네임스페이스 및 형식 표시 유형(C++/CX)
 
@@ -28,15 +28,14 @@ private ref 클래스, 인터페이스 또는 대리자에서는 public 액세�
 
 다음 액세스 한정자를 사용하여 메타데이터 표시 유형과 소스 코드 액세스 가능성을 제어할 수 있습니다.
 
-||||
-|-|-|-|
-|한정자|의미|메타데이터로 내보낼지 여부|
-|private|기본 액세스 가능성입니다. 표준 C++에서와 동일한 의미를 갖습니다.|아니요|
-|protected|응용 프로그램 또는 구성 요소와 메타데이터에서 표준 C++에서와 동일한 의미를 갖습니다.|예|
-|공공|표준 C++에서와 동일한 의미를 갖습니다.|예|
-|`public protected` 또는 `protected public`|액세스 가능성이 메타데이터에서는 protected이고 응용 프로그램 또는 구성 요소에서는 public입니다.|예|
-|`protected private` 또는 `private protected`|메타데이터에서는 표시되지 않고 응용 프로그램 또는 구성 요소에서는 액세스 가능성이 protected입니다.||
-|`internal` 또는 `private public`|멤버가 응용 프로그램 또는 구성 요소에서는 public이지만 메타데이터에서는 표시되지 않습니다.|아니요|
+| 한정자 | 의미 | 메타데이터로 내보낼지 여부 |
+|--|--|--|
+| **`private`** | 기본 액세스 가능성입니다. 표준 C++에서와 동일한 의미를 갖습니다. | 아니요 |
+| **`protected`** | 응용 프로그램 또는 구성 요소와 메타데이터에서 표준 C++에서와 동일한 의미를 갖습니다. | 예 |
+| **`public`** | 표준 C++에서와 동일한 의미를 갖습니다. | 예 |
+| **`public protected`** 디스크나 **`protected public`** | 액세스 가능성이 메타데이터에서는 protected이고 응용 프로그램 또는 구성 요소에서는 public입니다. | 예 |
+| **`protected private`** 또는 **`private protected`** | 메타데이터에서는 표시되지 않고 응용 프로그램 또는 구성 요소에서는 액세스 가능성이 protected입니다. |  |
+| **`internal`** 또는 **`private public`** | 멤버가 응용 프로그램 또는 구성 요소에서는 public이지만 메타데이터에서는 표시되지 않습니다. | 아니요 |
 
 ## <a name="windows-runtime-namespaces"></a>네임 스페이스 Windows 런타임
 
@@ -46,13 +45,12 @@ Windows API는 Windows:: 네임 스페이스에 선언 된 형식으로 구성 �
 
 C + +/CX는 Windows 런타임 형식 시스템의 프로젝션의 일부로 이러한 네임 스페이스의 특정 형식을 정의 합니다.
 
-|||
-|-|-|
-|**Namespace**|**설명**|
-|기본값|기본 제공되는 숫자 및 char16 형식을 포함하고 있습니다. 이러한 형식은 모든 네임 스페이스에서 범위 내에 있고 **`using`** 문은 필요 하지 않습니다.|
-|플랫폼|,, 및와 같은 Windows 런타임 형식에 해당 하는 공용 형식을 주로 포함 `Array<T>` `String` `Guid` `Boolean` 합니다. `Platform::Agile<T>` 및 `Platform::Box<T>`와 같은 특수한 도우미 형식도 포함합니다.|
-|Platform::Collections|Windows 런타임 컬렉션 인터페이스, 등을 구현 하는 구체적 컬렉션 클래스를 포함 합니다 `IVector` `IMap` . 이러한 형식은 platform.winmd가 아니라 헤더 파일인 collection.h에 정의되어 있습니다.|
-|Platform::Details|컴파일러가 사용하며 공용으로는 사용되지 않는 형식을 포함합니다.|
+| 네임스페이스 | Description |
+|--|--|
+| default | 기본 제공되는 숫자 및 char16 형식을 포함하고 있습니다. 이러한 형식은 모든 네임 스페이스에서 범위 내에 있고 **`using`** 문은 필요 하지 않습니다. |
+| `Platform` | ,, 및와 같은 Windows 런타임 형식에 해당 하는 공용 형식을 주로 포함 `Array<T>` `String` `Guid` `Boolean` 합니다. `Platform::Agile<T>` 및 `Platform::Box<T>`와 같은 특수한 도우미 형식도 포함합니다. |
+| `Platform::Collections` | Windows 런타임 컬렉션 인터페이스, 등을 구현 하는 구체적 컬렉션 클래스를 포함 합니다 `IVector` `IMap` . 이러한 형식은 platform.winmd가 아니라 헤더 파일인 collection.h에 정의되어 있습니다. |
+| `Platform::Details` | 컴파일러가 사용하며 공용으로는 사용되지 않는 형식을 포함합니다. |
 
 ## <a name="see-also"></a>참고 항목
 

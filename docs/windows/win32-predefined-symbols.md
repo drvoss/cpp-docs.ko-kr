@@ -6,18 +6,18 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165927"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835651"
 ---
 # <a name="win32-predefined-symbols"></a>미리 정의된 Win32 기호
 
 이러한 기호는 Win32 헤더 파일에 정의 되며 표준 Windows 응용 프로그램 함수 및 작업을 지원 합니다. 이러한 기호는 주로 일반적인 UI 요소와 함께 사용 됩니다. 리소스 편집기에서 컨트롤을 사용 하는 경우 이러한 기호는 공용 컨트롤과 연결 된 [속성 창](/visualstudio/ide/reference/properties-window) 에 나타납니다. 예를 들어 도구 모음에서 응용 프로그램 아이콘을 표시 해야 하는 경우 **속성** 창에서 IDI_SMALL 기호와 연결 된 아이콘이 표시 됩니다.
 
-|||
+|Name|설명|
 |-|-|
 |IDABORT|조절 대화 상자, 중단 단추|
 |IDC_STATIC|조절 대화 상자의 정적 텍스트|
@@ -40,6 +40,6 @@ Win32
 
 ## <a name="see-also"></a>참고 항목
 
-[미리 정의된 기호 ID](../windows/predefined-symbol-ids.md)<br/>
-[미리 정의된 MFC 기호](../windows/mfc-predefined-symbols.md)<br/>
-[미리 정의된 ATL 기호](../windows/atl-predefined-symbols.md)<br/>
+[미리 정의 된 기호 Id](../windows/predefined-symbol-ids.md)<br/>
+[미리 정의 된 MFC 기호](../windows/mfc-predefined-symbols.md)<br/>
+[미리 정의 된 ATL 기호](../windows/atl-predefined-symbols.md)<br/>

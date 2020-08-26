@@ -1,43 +1,43 @@
 ---
-title: '&lt;:::no-loc(filesystem):::&gt;'
-description: :::no-loc(filesystem):::표준 c + + 라이브러리 헤더의 클래스, 함수 및 형식을 설명 합니다.
+title: '&lt;filesystem&gt;'
+description: filesystem표준 c + + 라이브러리 헤더의 클래스, 함수 및 형식을 설명 합니다.
 ms.date: 01/22/2020
 f1_keywords:
-- <:::no-loc(filesystem):::>
+- <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
-- ':::no-loc(filesystem):::'
-- ':::no-loc(experimental):::'
-- ':::no-loc(char):::'
-- ':::no-loc(wchar_t):::'
-- ':::no-loc(char16_t):::'
-- ':::no-loc(char32_t):::'
-ms.openlocfilehash: 1b3f541619bde85131915a4d1586a44675c2906a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+- filesystem
+- experimental
+- char
+- wchar_t
+- char16_t
+- char32_t
+ms.openlocfilehash: 0cf5e16eb21c02cfb96577c1dada873f087a71cf
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835833"
 ---
-# &lt;:::no-loc(filesystem):::&gt;
+# &lt;filesystem&gt;
 
-&lt; :::no-loc(filesystem)::: 경로, 파일 및 디렉터리에 대 한 정보를 조작 하 고 검색 하는 클래스 및 함수에 액세스할 수 있도록 헤더>를 포함 합니다.
+&lt; filesystem 경로, 파일 및 디렉터리에 대 한 정보를 조작 하 고 검색 하는 클래스 및 함수에 액세스할 수 있도록 헤더>를 포함 합니다.
 
 ## <a name="syntax"></a>구문
 
 ```cpp
-#include <:::no-loc(filesystem):::> // C++17 standard header file name
-#include <:::no-loc(experimental):::/:::no-loc(filesystem):::> // Header file for pre-standard implementation
-using namespace std:::::no-loc(experimental)::::::::no-loc(filesystem):::::v1;
+#include <filesystem> // C++17 standard header file name
+#include <experimental/filesystem> // Header file for pre-standard implementation
+using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017의 릴리스에서 \<:::no-loc(filesystem):::> 헤더는 아직 c + + 표준이 아닙니다. Visual Studio의 c + + 2017 RTW는 [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)에 있는 최종 초안 표준을 구현 합니다. Visual Studio 2017 버전 15.7 이상에서는 새로운 c + + 17 \<:::no-loc(filesystem):::> 표준을 지원 합니다.
-> 이것은 이전 버전과 호환 되지 않는 완전히 새로운 구현입니다 `std:::::no-loc(experimental):::` . Symlink 지원, 버그 수정 및 표준 필수 동작의 변경에 의해 필요 했습니다. 현재를 포함 하는는 \<:::no-loc(filesystem):::> 새 및 이전를 제공 합니다 `std:::::no-loc(filesystem):::` `std:::::no-loc(experimental)::::::::no-loc(filesystem):::` . 포함 \<:::no-loc(experimental):::/:::no-loc(filesystem):::> 은 이전 구현만 제공 :::no-loc(experimental)::: 합니다. :::no-loc(experimental):::구현은 다음 ABI 분리 라이브러리 릴리스에서 제거 될 예정입니다.
+> Visual Studio 2017의 릴리스에서 \<filesystem> 헤더는 아직 c + + 표준이 아닙니다. Visual Studio의 c + + 2017 RTW는 [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)에 있는 최종 초안 표준을 구현 합니다. Visual Studio 2017 버전 15.7 이상에서는 새로운 c + + 17 \<filesystem> 표준을 지원 합니다.
+> 이것은 이전 버전과 호환 되지 않는 완전히 새로운 구현입니다 `std::experimental` . Symlink 지원, 버그 수정 및 표준 필수 동작의 변경에 의해 필요 했습니다. 현재를 포함 하는는 \<filesystem> 새 및 이전를 제공 합니다 `std::filesystem` `std::experimental::filesystem` . 포함 \<experimental/filesystem> 은 이전 구현만 제공 experimental 합니다. experimental구현은 다음 ABI 분리 라이브러리 릴리스에서 제거 될 예정입니다.
 
 이 헤더는 Microsoft Windows 및 POSIX의 광범위 한 두 호스트 운영 체제 클래스 중 하나에 대 한 파일 시스템을 지원 합니다.
 
-대부분의 기능이 두 운영 체제에서 공통되지만 이 문서에서는 차이가 있는 위치를 식별합니다. 예를 들면 다음과 같습니다.
+대부분의 기능이 두 운영 체제에서 공통되지만 이 문서에서는 차이가 있는 위치를 식별합니다. 예를 들어:
 
 - Windows는 또는와 같은 여러 루트 이름을 `c:` 지원 `\\network_name` 합니다. 파일 시스템은 트리의 포리스트로 구성 되며, 각각에는 고유한 루트 디렉터리 (예: 또는) `c:\` 가 `\\network_name\` 있으며 상대 경로 이름 (절대 경로 이름 아님)을 완료 하는 데 고유한 현재 디렉터리가 있습니다.
 
@@ -45,21 +45,21 @@ using namespace std:::::no-loc(experimental)::::::::no-loc(filesystem):::::v1;
 
 또 다른 중요한 차이점은 경로 이름의 기본 표시입니다.
 
-- Windows에서는 **`:::no-loc(wchar_t):::`** u t f-16으로 인코딩된의 null로 끝나는 시퀀스를 사용 합니다 (각 acter에 대해 하나 이상의 요소 :::no-loc(char)::: ).
+- Windows에서는 **`wchar_t`** u t f-16으로 인코딩된의 null로 끝나는 시퀀스를 사용 합니다 (각 acter에 대해 하나 이상의 요소 char ).
 
-- POSIX는 **`:::no-loc(char):::`** u t f-8로 인코딩된의 null로 끝나는 시퀀스를 사용 합니다 (각 acter에 대해 하나 이상의 요소 :::no-loc(char)::: ).
+- POSIX는 **`char`** u t f-8로 인코딩된의 null로 끝나는 시퀀스를 사용 합니다 (각 acter에 대해 하나 이상의 요소 char ).
 
 - 클래스의 개체는 `path` 경로 이름을 네이티브 형식으로 저장 하지만이 저장 된 형식과 여러 외부 양식 간의 쉬운 변환을 지원 합니다.
 
-  - 운영 체제에서 선호 하는 대로 인코딩된의 null로 끝나는 시퀀스입니다 **`:::no-loc(char):::`** .
+  - 운영 체제에서 선호 하는 대로 인코딩된의 null로 끝나는 시퀀스입니다 **`char`** .
 
-  - **`:::no-loc(char):::`** U t f-8로 인코딩된의 null로 끝나는 시퀀스입니다.
+  - **`char`** U t f-8로 인코딩된의 null로 끝나는 시퀀스입니다.
 
-  - 운영 체제에서 선호 하는 대로 인코딩된의 null로 끝나는 시퀀스입니다 **`:::no-loc(wchar_t):::`** .
+  - 운영 체제에서 선호 하는 대로 인코딩된의 null로 끝나는 시퀀스입니다 **`wchar_t`** .
 
-  - **`:::no-loc(char16_t):::`** U t f-16으로 인코딩된의 null로 끝나는 시퀀스입니다.
+  - **`char16_t`** U t f-16으로 인코딩된의 null로 끝나는 시퀀스입니다.
 
-  - **`:::no-loc(char32_t):::`** U t f-32로 인코딩된의 null로 끝나는 시퀀스입니다.
+  - **`char32_t`** U t f-32로 인코딩된의 null로 끝나는 시퀀스입니다.
 
   이러한 표시 간의 상호 변환은 하나 이상의 `codecvt` 패싯을 사용하여 필요에 따라 조정됩니다. 특정 로캘 개체를 지정 하지 않으면 전역 로캘에서 이러한 패싯을 가져옵니다.
 
@@ -97,38 +97,38 @@ using namespace std:::::no-loc(experimental)::::::::no-loc(filesystem):::::v1;
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[directory_entry 클래스](../standard-library/directory-entry-class.md)|또는에 의해 반환 되 `directory_iterator` `recursive_directory_iterator` 고를 포함 하는 개체를 설명 합니다 `path` .|
 |[directory_iterator 클래스](../standard-library/directory-iterator-class.md)|파일 시스템 디렉터리에서 파일 이름을 통해 시퀀스되는 입력 반복기에 대해 설명합니다.|
-|[:::no-loc(filesystem):::_error 클래스](../standard-library/:::no-loc(filesystem):::-error-class.md)|하위 수준 시스템 오버플로를 보고하기 위해 throw되는 예외에 대한 기본 클래스입니다.|
+|[filesystem_error 클래스](../standard-library/filesystem-error-class.md)|하위 수준 시스템 오버플로를 보고하기 위해 throw되는 예외에 대한 기본 클래스입니다.|
 |[path 클래스](../standard-library/path-class.md)|파일 이름으로 사용하기 적합한 템플릿 형식 `String` 의 개체를 저장하는 클래스를 정의합니다.|
 |[recursive_directory_iterator 클래스](../standard-library/recursive-directory-iterator-class.md)|파일 시스템 디렉터리에서 파일 이름을 통해 시퀀스되는 입력 반복기에 대해 설명합니다. 이 반복기는 하위 디렉터리로도 상속됩니다.|
 |[file_status 클래스](../standard-library/file-status-class.md)|`file_type`을 래핑합니다.|
 
 ### <a name="structs"></a>구조체
 
-|||
+|Name|설명|
 |-|-|
 |[space_info 구조체](../standard-library/space-info-structure.md)|볼륨에 대한 정보를 보관합니다.|
 
 ## <a name="functions"></a>Functions
 
-[\<:::no-loc(filesystem):::>역함수](../standard-library/:::no-loc(filesystem):::-functions.md)
+[\<filesystem> 역함수](../standard-library/filesystem-functions.md)
 
 ## <a name="operators"></a>연산자
 
-[\<:::no-loc(filesystem):::>작업자](../standard-library/:::no-loc(filesystem):::-operators.md)
+[\<filesystem> 작업자](../standard-library/filesystem-operators.md)
 
 ## <a name="enumerations"></a>열거형
 
-|||
+|Name|설명|
 |-|-|
-|[copy_options](../standard-library/:::no-loc(filesystem):::-enumerations.md#copy_options)|[copy_file](../standard-library/:::no-loc(filesystem):::-functions.md#copy_file) 과 함께 사용되는 열거형이며 대상 파일이 이미 있는 경우의 동작을 결정합니다.|
-|[directory_options](../standard-library/:::no-loc(filesystem):::-enumerations.md#directory_options)|디렉터리 반복기에 대한 옵션을 지정하는 열거형입니다.|
-|[file_type](../standard-library/:::no-loc(filesystem):::-enumerations.md#file_type)|파일 형식에 대한 열거형입니다.|
-|[perm_options](../standard-library/:::no-loc(filesystem):::-enumerations.md#perm_options)| 함수에 대 한 옵션을 열거 `permissions` 합니다. |
-|[perms](../standard-library/:::no-loc(filesystem):::-enumerations.md#perms)|사용 권한 및 사용 권한에 대한 옵션을 전달하는 데 사용되는 비트 마스크 형식입니다.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) 과 함께 사용되는 열거형이며 대상 파일이 이미 있는 경우의 동작을 결정합니다.|
+|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|디렉터리 반복기에 대한 옵션을 지정하는 열거형입니다.|
+|[file_type](../standard-library/filesystem-enumerations.md#file_type)|파일 형식에 대한 열거형입니다.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| 함수에 대 한 옵션을 열거 `permissions` 합니다. |
+|[perms](../standard-library/filesystem-enumerations.md#perms)|사용 권한 및 사용 권한에 대한 옵션을 전달하는 데 사용되는 비트 마스크 형식입니다.|
 
 ## <a name="see-also"></a>참고 항목
 

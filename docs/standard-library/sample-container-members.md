@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228117"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846266"
 ---
 # <a name="sample-container-members"></a>샘플 컨테이너 멤버
 
@@ -20,7 +20,7 @@ ms.locfileid: "87228117"
 
 ## <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|제어되는 시퀀스의 상수 반복기로 사용될 수 있는 개체를 설명합니다.|
 |[const_reference](../standard-library/container-class-const-reference.md)|제어되는 시퀀스의 요소에 대한 상수 참조로 사용될 수 있는 개체를 설명합니다.|
@@ -34,7 +34,7 @@ ms.locfileid: "87228117"
 
 ## <a name="member-functions"></a>멤버 함수
 
-|||
+|Name|설명|
 |-|-|
 |[시작](../standard-library/container-class-begin.md)|시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 반복기를 반환합니다.|
 |[해제](../standard-library/container-class-clear.md)|[erase](../standard-library/container-class-erase.md)( [begin](../standard-library/container-class-begin.md), [end](../standard-library/container-class-end.md))를 호출합니다.|

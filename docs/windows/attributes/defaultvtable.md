@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 2da0d8070f961f1ae0fc075585eb28881f712fb4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b1d6960a065bf2df46852d3df1ca53d4239f1bc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215259"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839493"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -64,12 +64,10 @@ class CMyC3 : public IMyI3 {};
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`**|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|**coclass**|
 |**잘못된 특성**|없음|
 

@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 6182d66b49647758bf17ab160d536e39b97b8c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216481"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838206"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 클래스
 
@@ -149,7 +149,7 @@ class CDynamicAccessor : public CAccessorBase
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[AddBindEntry](#addbindentry)|기본 접근자를 재정의할 때 출력 열에 바인드 항목을 추가 합니다.|
 |[CDynamicAccessor](#cdynamicaccessor)|개체를 인스턴스화하고 초기화 `CDynamicAccessor` 합니다.|
@@ -180,7 +180,7 @@ class CDynamicAccessor : public CAccessorBase
 
 동적 접근자 클래스 사용에 대 한 설명 및 예제는 [동적 접근자 사용](../../data/oledb/using-dynamic-accessors.md)을 참조 하세요.
 
-## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a>CDynamicAccessor:: AddBindEntry
+## <a name="cdynamicaccessoraddbindentry"></a><a name="addbindentry"></a> CDynamicAccessor:: AddBindEntry
 
 출력 열에 바인드 항목을 추가 합니다.
 
@@ -193,9 +193,9 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>매개 변수
 
 *나타납니다*<br/>
-진행 `DBCOLUMNINFO`열 정보를 포함 하는 구조체입니다. *OLE DB 프로그래머 참조*에서 [IColumnsInfo:: GETCOLUMNINFO](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 의 "DBCOLUMNINFO 구조체"를 참조 하세요.
+진행 `DBCOLUMNINFO` 열 정보를 포함 하는 구조체입니다. *OLE DB 프로그래머 참조*에서 [IColumnsInfo:: GETCOLUMNINFO](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 의 "DBCOLUMNINFO 구조체"를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값 중 하나입니다.
 
@@ -203,7 +203,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 로 만든 기본 접근자를 재정의할 때이 메서드를 사용 `CDynamicAccessor` 합니다 ( [데이터를 인출 하려면 어떻게 해야 하나요?](../../data/oledb/fetching-data.md)참조).
 
-## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a>CDynamicAccessor:: CDynamicAccessor
+## <a name="cdynamicaccessorcdynamicaccessor"></a><a name="cdynamicaccessor"></a> CDynamicAccessor:: CDynamicAccessor
 
 개체를 인스턴스화하고 초기화 `CDynamicAccessor` 합니다.
 
@@ -228,7 +228,7 @@ BLOB (binary large object) 데이터를 처리 하는 방법을 지정 합니다
 
 에서 blob 데이터로 한정 되는 열 데이터를 처리 하는 방법을 지정할 수도 있습니다 .이는 blob 데이터를 기본 방식으로 처리할 수 있습니다. 즉, blob 데이터는 `CDynamicAccessor` 무시 (바인딩하지 않음) 하거나 공급자가 할당 한 메모리에 blob 데이터를 바인딩할 수 있습니다.
 
-## <a name="cdynamicaccessorclose"></a><a name="close"></a>CDynamicAccessor:: Close
+## <a name="cdynamicaccessorclose"></a><a name="close"></a> CDynamicAccessor:: Close
 
 모든 열을 바인딩 해제 하 고 할당 된 메모리를 해제 하며 클래스에서 [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) 인터페이스 포인터를 해제 합니다.
 
@@ -238,7 +238,7 @@ BLOB (binary large object) 데이터를 처리 하는 방법을 지정 합니다
 void Close() throw();
 ```
 
-## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a>CDynamicAccessor:: GetBlobHandling
+## <a name="cdynamicaccessorgetblobhandling"></a><a name="getblobhandling"></a> CDynamicAccessor:: GetBlobHandling
 
 현재 행에 대 한 BLOB 처리 값을 검색 합니다.
 
@@ -252,7 +252,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 [Setblobhandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)에 의해 설정 된 대로 BLOB 처리 값 *eblob* 처리를 반환 합니다.
 
-## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a>CDynamicAccessor:: GetBlobSizeLimit
+## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor:: GetBlobSizeLimit
 
 최대 BLOB 크기 (바이트)를 검색 합니다.
 
@@ -266,7 +266,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 [Setblobsizelimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)로 설정 된 대로 BLOB 처리 값 *nBlobSize* 를 반환 합니다.
 
-## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a>CDynamicAccessor:: GetBookmark
+## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor:: GetBookmark
 
 현재 행에 대 한 책갈피를 검색 합니다.
 
@@ -281,7 +281,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 *pBookmark*<br/>
 제한이 [CBookmark](../../data/oledb/cbookmark-class.md) 개체에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값 중 하나입니다.
 
@@ -289,7 +289,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 
 `DBPROP_IRowsetLocate`책갈피를 검색 하려면 VARIANT_TRUE으로 설정 해야 합니다.
 
-## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a>CDynamicAccessor:: GetColumnCount
+## <a name="cdynamicaccessorgetcolumncount"></a><a name="getcolumncount"></a> CDynamicAccessor:: GetColumnCount
 
 열 수를 검색 합니다.
 
@@ -303,7 +303,7 @@ DBORDINAL GetColumnCount() const throw();
 
 검색 된 열의 수입니다.
 
-## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a>CDynamicAccessor:: GetColumnFlags
+## <a name="cdynamicaccessorgetcolumnflags"></a><a name="getcolumnflags"></a> CDynamicAccessor:: GetColumnFlags
 
 열 특징을 검색 합니다.
 
@@ -322,7 +322,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 *pFlags*<br/>
 제한이 열 특징을 설명 하는 비트 마스크에 대 한 포인터입니다. *OLE DB 프로그래머 참조*의 [IColumnsInfo:: GETCOLUMNINFO](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 에서 "DBCOLUMNFLAGS 열거 형식"을 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 열 특징이 성공적으로 검색 되 면를 반환 합니다. 그렇지 않으면를 반환 **`false`** 합니다.
 
@@ -330,7 +330,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 
 열 번호는 1에서 오프셋 됩니다. 열 0은 특수 한 경우입니다. 사용 가능한 경우 책갈피입니다.
 
-## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a>CDynamicAccessor:: GetColumnInfo
+## <a name="cdynamicaccessorgetcolumninfo"></a><a name="getcolumninfo"></a> CDynamicAccessor:: GetColumnInfo
 
 대부분의 소비자에 필요한 열 메타데이터를 반환합니다.
 
@@ -357,7 +357,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 *ppStringsBuffer*<br/>
 제한이 단일 할당 블록 내에서 모든 문자열 값 ( *columnid* 또는 for *pwszName*내에서 사용 되는 이름)의 저장소에 대 한 포인터를 반환할 메모리에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값 중 하나입니다.
 
@@ -365,7 +365,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 데이터 형식, 및에 대 한 자세한 내용은 *OLE DB 프로그래머 참조* 에서 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 를 참조 하세요 `DBORDINAL` `DBCOLUMNINFO` `OLECHAR` .
 
-## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a>CDynamicAccessor:: GetColumnName
+## <a name="cdynamicaccessorgetcolumnname"></a><a name="getcolumnname"></a> CDynamicAccessor:: GetColumnName
 
 지정 된 열의 이름을 검색 합니다.
 
@@ -380,11 +380,11 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 *nColumn*<br/>
 [in] 열 번호입니다. 열 번호는 1로 시작 합니다. 값 0은 책갈피 열 (있는 경우)을 참조 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정된 열의 이름입니다.
 
-## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a>CDynamicAccessor:: GetColumnType
+## <a name="cdynamicaccessorgetcolumntype"></a><a name="getcolumntype"></a> CDynamicAccessor:: GetColumnType
 
 지정 된 열의 데이터 형식을 검색 합니다.
 
@@ -403,11 +403,11 @@ bool GetColumnType(DBORDINAL nColumn,
 *pType*<br/>
 제한이 지정 된 열의 데이터 형식에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 성공 시 또는 실패 시 반환 **`false`** 됩니다.
 
-## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a>CDynamicAccessor:: GetLength
+## <a name="cdynamicaccessorgetlength"></a><a name="getlength"></a> CDynamicAccessor:: GetLength
 
 지정 된 열의 길이를 검색 합니다.
 
@@ -435,7 +435,7 @@ bool GetLength(const WCHAR* pColumnName,
 *pLength*<br/>
 제한이 열의 길이 (바이트)를 포함 하는 정수에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 지정 된 열이 있으면를 반환 합니다. 그렇지 않으면이 함수는을 반환 **`false`** 합니다.
 
@@ -443,7 +443,7 @@ bool GetLength(const WCHAR* pColumnName,
 
 첫 번째 재정의는 열 번호를 사용 하 고 두 번째와 세 번째 재정의는 각각 ANSI 또는 유니코드 형식으로 열 이름을 사용 합니다.
 
-## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a>CDynamicAccessor:: GetOrdinal
+## <a name="cdynamicaccessorgetordinal"></a><a name="getordinal"></a> CDynamicAccessor:: GetOrdinal
 
 열 이름이 지정 된 경우 열 번호를 검색 합니다.
 
@@ -465,11 +465,11 @@ bool GetOrdinal(const WCHAR* pColumnName,
 *pOrdinal*<br/>
 제한이 열 번호에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 지정 된 이름의 열이 있으면를 반환 합니다. 그렇지 않으면이 함수는을 반환 **`false`** 합니다.
 
-## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a>CDynamicAccessor:: GetStatus
+## <a name="cdynamicaccessorgetstatus"></a><a name="getstatus"></a> CDynamicAccessor:: GetStatus
 
 지정 된 열의 상태를 검색 합니다.
 
@@ -497,11 +497,11 @@ bool GetStatus(const WCHAR* pColumnName,
 *pStatus*<br/>
 제한이 열 상태를 포함 하는 변수에 대 한 포인터입니다. 자세한 내용은 *OLE DB 프로그래머 참조* 에서 [dbstatus](/previous-versions/windows/desktop/ms722617(v=vs.85)) 를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 지정 된 열이 있으면를 반환 합니다. 그렇지 않으면이 함수는을 반환 **`false`** 합니다.
 
-## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a>CDynamicAccessor:: GetValue
+## <a name="cdynamicaccessorgetvalue"></a><a name="getvalue"></a> CDynamicAccessor:: GetValue
 
 지정 된 열에 대 한 데이터를 검색 합니다.
 
@@ -527,7 +527,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 #### <a name="parameters"></a>매개 변수
 
 *ctype*<br/>
-진행 특수 처리를 필요로 하는 문자열 형식 ( `CHAR*` ,)을 제외한 모든 데이터 형식을 처리 하는 템플릿 매개 변수입니다 `WCHAR*` . `GetValue`는 여기에서 지정한 내용에 따라 적절 한 데이터 형식을 사용 합니다.
+진행 특수 처리를 필요로 하는 문자열 형식 ( `CHAR*` ,)을 제외한 모든 데이터 형식을 처리 하는 템플릿 매개 변수입니다 `WCHAR*` . `GetValue` 는 여기에서 지정한 내용에 따라 적절 한 데이터 형식을 사용 합니다.
 
 *nColumn*<br/>
 [in] 열 번호입니다. 열 번호는 1로 시작 합니다. 값 0은 책갈피 열 (있는 경우)을 참조 합니다.
@@ -538,7 +538,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 *pData*<br/>
 제한이 지정 된 열의 내용에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열 데이터를 전달 하려는 경우 템플릿이 아닌 버전의를 사용 `GetValue` 합니다. 이 메서드의 템플릿이 아닌 버전은 지정 된 **`void*`** 열 데이터를 포함 하는 버퍼의 일부를 가리키는을 반환 합니다. 열을 찾을 수 없는 경우 NULL을 반환 합니다.
 
@@ -550,7 +550,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 
 디버그 모드에서는 *.pdata* 의 크기가 가리키는 열의 크기와 같지 않은 경우 어설션을 받게 됩니다.
 
-## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a>CDynamicAccessor:: SetBlobHandling
+## <a name="cdynamicaccessorsetblobhandling"></a><a name="setblobhandling"></a> CDynamicAccessor:: SetBlobHandling
 
 현재 행에 대 한 BLOB 처리 값을 설정 합니다.
 
@@ -577,7 +577,7 @@ BLOB 데이터를 처리 하는 방법을 지정 합니다. 사용되는 값은 
 
 생성자 메서드 [Cdynamicaccessor](../../data/oledb/cdynamicaccessor-class.md) 는 DBBLOBHANDLING_DEFAULT BLOB 처리 값을 설정 합니다.
 
-## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a>CDynamicAccessor:: SetBlobSizeLimit
+## <a name="cdynamicaccessorsetblobsizelimit"></a><a name="setblobsizelimit"></a> CDynamicAccessor:: SetBlobSizeLimit
 
 최대 BLOB 크기 (바이트)를 설정 합니다.
 
@@ -598,7 +598,7 @@ BLOB 크기 제한을 지정 합니다.
 
 생성자 메서드 [Cdynamicaccessor](../../data/oledb/cdynamicaccessor-class.md) 는 최대 BLOB 크기를 기본값인 8000 바이트로 설정 합니다.
 
-## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a>CDynamicAccessor:: SetLength
+## <a name="cdynamicaccessorsetlength"></a><a name="setlength"></a> CDynamicAccessor:: SetLength
 
 지정 된 열의 길이를 설정 합니다.
 
@@ -626,11 +626,11 @@ bool SetLength(const WCHAR* pColumnName,
 *pColumnName*<br/>
 진행 열 이름을 포함 하는 문자열에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 지정 된 열 길이가 성공적으로 설정 되 면를 반환 합니다. 그렇지 않으면이 함수는을 반환 **`false`** 합니다.
 
-## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a>CDynamicAccessor:: SetStatus
+## <a name="cdynamicaccessorsetstatus"></a><a name="setstatus"></a> CDynamicAccessor:: SetStatus
 
 지정 된 열의 상태를 설정 합니다.
 
@@ -658,11 +658,11 @@ bool SetStatus(const WCHAR* pColumnName,
 *pColumnName*<br/>
 진행 열 이름을 포함 하는 문자열에 대 한 포인터입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 지정 된 열 상태가 성공적으로 설정 된 경우를 반환 합니다. 그렇지 않으면이 함수는을 반환 **`false`** 합니다.
 
-## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a>CDynamicAccessor:: SetValue
+## <a name="cdynamicaccessorsetvalue"></a><a name="setvalue"></a> CDynamicAccessor:: SetValue
 
 지정 된 열에 데이터를 저장 합니다.
 
@@ -688,7 +688,7 @@ bool SetValue(
 #### <a name="parameters"></a>매개 변수
 
 *ctype*<br/>
-진행 특수 처리를 필요로 하는 문자열 형식 ( `CHAR*` ,)을 제외한 모든 데이터 형식을 처리 하는 템플릿 매개 변수입니다 `WCHAR*` . `GetValue`는 여기에서 지정한 내용에 따라 적절 한 데이터 형식을 사용 합니다.
+진행 특수 처리를 필요로 하는 문자열 형식 ( `CHAR*` ,)을 제외한 모든 데이터 형식을 처리 하는 템플릿 매개 변수입니다 `WCHAR*` . `GetValue` 는 여기에서 지정한 내용에 따라 적절 한 데이터 형식을 사용 합니다.
 
 *pColumnName*<br/>
 진행 열 이름을 포함 하는 문자열에 대 한 포인터입니다.
@@ -699,7 +699,7 @@ bool SetValue(
 *nColumn*<br/>
 [in] 열 번호입니다. 열 번호는 1로 시작 합니다. 값 0은 책갈피 열 (있는 경우)을 참조 합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 문자열 데이터를 설정 하려는 경우 템플릿이 아닌 버전의를 사용 `GetValue` 합니다. 이 메서드의 템플릿이 아닌 버전은 지정 된 **`void*`** 열 데이터를 포함 하는 버퍼의 일부를 가리키는을 반환 합니다. 열을 찾을 수 없는 경우 NULL을 반환 합니다.
 

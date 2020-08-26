@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 47c9899889bbbf9b09300779691085786db0e088
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a967ef8fa2832afd56442ae4f988ba080d0b2872
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211148"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845642"
 ---
 # <a name="ctable-class"></a>CTable 클래스
 
@@ -49,15 +49,15 @@ class CTable :
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[열기](#open)|테이블을 엽니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 명령을 실행 하 여 행 집합에 액세스 하는 방법에 대 한 자세한 내용은 [CCommand](../../data/oledb/ccommand-class.md) 를 참조 하세요.
 
-## <a name="ctableopen"></a><a name="open"></a>CTable:: Open
+## <a name="ctableopen"></a><a name="open"></a> CTable:: Open
 
 테이블을 엽니다.
 
@@ -92,7 +92,7 @@ HRESULT Open(const CSession& session,
 진행 ANSI 문자열로 전달 되는 열 테이블의 이름입니다.
 
 *dbid*<br/>
-진행 열 테이블의 `DBID`입니다.
+진행 `DBID` 열 테이블의입니다.
 
 *pPropSet*<br/>
 진행 설정할 속성 및 값을 포함 하는 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 구조체의 배열에 대 한 포인터입니다. Windows SDK에서 *OLE DB 프로그래머 참조* 의 [속성 집합 및 속성 그룹](/previous-versions/windows/desktop/ms713696(v=vs.85)) 을 참조 하세요. NULL의 기본값은 속성을 지정 하지 않습니다.
@@ -104,7 +104,7 @@ HRESULT Open(const CSession& session,
 
 표준 HRESULT입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조*에서 [Iopenrowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 을 참조 하세요.
 

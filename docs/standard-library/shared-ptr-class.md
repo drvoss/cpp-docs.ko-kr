@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 5488b7d63565bfcca22be3de522615db5aa822e3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e41c76e7bd3e77b34ad38d3998ee1d38cdc2fee4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217469"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846214"
 ---
 # <a name="shared_ptr-class"></a>shared_ptr 클래스
 
@@ -57,7 +57,7 @@ class shared_ptr;
 
 특정 멤버 함수에 대해 언급된 경우를 제외하고 템플릿 인수 `T`는 불완전한 형식일 수 있습니다.
 
-`G*` 형식의 리소스 포인터 또는 `shared_ptr<G>`에서 `shared_ptr<T>` 개체가 생성된 경우 포인터 형식 `G*`를 `T*`로 변환할 수 있어야 합니다. 변환할 수 없는 경우 코드는 컴파일되지 않습니다. 예를 들면 다음과 같습니다.
+`G*` 형식의 리소스 포인터 또는 `shared_ptr<G>`에서 `shared_ptr<T>` 개체가 생성된 경우 포인터 형식 `G*`를 `T*`로 변환할 수 있어야 합니다. 변환할 수 없는 경우 코드는 컴파일되지 않습니다. 예를 들어:
 
 ```cpp
 #include <memory>
@@ -127,7 +127,7 @@ null 포인터를 사용하여 초기화된 `shared_ptr` 개체에는 제어 블
 
 ## <a name="members"></a>멤버
 
-|||
+|Name|설명|
 |-|-|
 | **생성자** | |
 |[shared_ptr](#shared_ptr)|`shared_ptr`를 생성합니다.|
@@ -148,7 +148,7 @@ null 포인터를 사용하여 초기화된 `shared_ptr` 개체에는 제어 블
 |[연산자 =](#op_eq)|소유하는 리소스를 대체합니다.|
 |[연산자&gt;](#op_arrow)|지정된 값으로 포인터를 가져옵니다.|
 
-## <a name="element_type"></a><a name="element_type"></a>element_type
+## <a name="element_type"></a><a name="element_type"></a> element_type
 
 요소의 형식입니다.
 
@@ -184,7 +184,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a><a name="get"></a>가져오기
+## <a name="get"></a><a name="get"></a> 가져오기
 
 소유하는 리소스의 주소를 가져옵니다.
 
@@ -222,7 +222,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>연산자 bool
+## <a name="operator-bool"></a><a name="op_bool"></a> 연산자 bool
 
 소유하는 리소스가 있는지 테스트합니다.
 
@@ -261,7 +261,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_star"></a>연산자
+## <a name="operator"></a><a name="op_star"></a> 연산자
 
 지정된 값을 가져옵니다.
 
@@ -295,7 +295,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 소유하는 리소스를 대체합니다.
 
@@ -367,7 +367,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="operator-"></a><a name="op_arrow"></a>연산자->
+## <a name="operator-"></a><a name="op_arrow"></a> 연산자->
 
 지정된 값으로 포인터를 가져옵니다.
 
@@ -404,7 +404,7 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a><a name="owner_before"></a>owner_before
+## <a name="owner_before"></a><a name="owner_before"></a> owner_before
 
 `shared_ptr`이 제공된 포인터 앞에 정렬되는(또는 보다 작은) 경우 true를 반환합니다.
 
@@ -425,7 +425,7 @@ bool owner_before(const weak_ptr<Other>& ptr) const noexcept;
 
 템플릿 멤버 함수는 **`*this`** 가 이전에 정렬 된 경우 true를 반환 합니다 `ptr` .
 
-## <a name="reset"></a><a name="reset"></a>다시 설정
+## <a name="reset"></a><a name="reset"></a> 다시 설정
 
 소유하는 리소스를 대체합니다.
 
@@ -517,7 +517,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a><a name="shared_ptr"></a>shared_ptr
+## <a name="shared_ptr"></a><a name="shared_ptr"></a> shared_ptr
 
 `shared_ptr`를 생성합니다.
 
@@ -675,7 +675,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a>~ shared_ptr
+## <a name="shared_ptr"></a><a name="dtorshared_ptr"></a> ~ shared_ptr
 
 `shared_ptr`을 삭제합니다.
 
@@ -722,7 +722,7 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 `shared_ptr` 개체를 교환합니다.
 
@@ -783,7 +783,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a><a name="unique"></a>고유
+## <a name="unique"></a><a name="unique"></a> 고유
 
 소유하는 리소스가 고유한지 테스트합니다. 이 함수는 c + + 17에서 사용 되지 않으며 c + + 20에서 제거 되었습니다.
 
@@ -822,7 +822,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a><a name="use_count"></a>use_count
+## <a name="use_count"></a><a name="use_count"></a> use_count
 
 리소스 소유자 수를 계산합니다.
 
@@ -861,7 +861,7 @@ sp1.use_count() == 1
 sp1.use_count() == 2
 ```
 
-## <a name="weak_type"></a><a name="weak_type"></a>weak_type
+## <a name="weak_type"></a><a name="weak_type"></a> weak_type
 
 요소에 대 한 약한 포인터의 형식입니다.
 

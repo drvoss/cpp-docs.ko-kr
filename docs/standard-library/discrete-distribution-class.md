@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 65d5c993efd1cb9c6dd35f11223ed39e026ed7c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217807"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846279"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution 클래스
 
@@ -81,10 +81,8 @@ public:
 
 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-|||
-|-|-|
-|[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|
-|`discrete_distribution::operator()`|[param_type](#param_type)|
+[discrete_distribution](#discrete_distribution)\
+[param_type](#param_type)
 
 속성 함수 `vector<double> probabilities()`는 생성된 각 정수에 대한 개별 확률을 반환합니다.
 
@@ -175,7 +173,7 @@ Distribution for 100 samples:
 
 **네임스페이스:** std
 
-## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::d iscrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a> discrete_distribution::d iscrete_distribution
 
 분포를 생성합니다.
 
@@ -239,7 +237,7 @@ explicit discrete_distribution(const param_type& parm);
 
 `param_type` 매개 변수 *parm*이 포함된 생성자는 *parm*을 사용하여 분포 개체를 저장된 매개 변수 구조체로 생성합니다.
 
-## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::p aram_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a> discrete_distribution::p aram_type
 
 분포의 모든 매개 변수를 저장합니다.
 

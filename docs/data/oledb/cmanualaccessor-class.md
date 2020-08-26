@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211850"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838102"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 클래스
 
@@ -55,18 +55,18 @@ class CManualAccessor : public CAccessorBase
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[AddBindEntry](#addbindentry)|출력 열에 바인드 항목을 추가 합니다.|
 |[AddParameterEntry](#addparameterentry)|매개 변수 접근자에 매개 변수 항목을 추가 합니다.|
 |[CreateAccessor](#createaccessor)|열 바인딩 구조에 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.|
 |[CreateParameterAccessor](#createparameteraccessor)|매개 변수 바인딩 구조에 메모리를 할당 하 고 매개 변수 데이터 멤버를 초기화 합니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`CManualAccessor`를 사용 하 여 런타임 함수 호출을 통해 매개 변수 및 출력 열 바인딩을 지정할 수 있습니다.
+를 사용 하 여 `CManualAccessor` 런타임 함수 호출을 통해 매개 변수 및 출력 열 바인딩을 지정할 수 있습니다.
 
-## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor:: AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a> CManualAccessor:: AddBindEntry
 
 출력 열에 바인드 항목을 추가 합니다.
 
@@ -102,11 +102,11 @@ void AddBindEntry(DBORDINAL nOrdinal,
 *pStatus*<br/>
 진행 필요한 경우 열 상태에 바인딩될 변수에 대 한 포인터입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-이 함수를 사용 하려면 먼저 [Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)를 호출 해야 합니다. `CreateAccessor`에 지정 된 열 개수 보다 많은 항목을 추가할 수 없습니다.
+이 함수를 사용 하려면 먼저 [Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)를 호출 해야 합니다. 에 지정 된 열 개수 보다 많은 항목을 추가할 수 없습니다 `CreateAccessor` .
 
-## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor:: AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor:: AddParameterEntry
 
 매개 변수 엔트리를 매개 변수 항목 구조에 추가 합니다.
 
@@ -146,11 +146,11 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 *eParamIO*<br/>
 진행 바인딩과 연결 된 매개 변수가 입력, 입/출력 또는 출력 매개 변수 인지 여부를 지정 합니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 이 함수를 사용 하려면 먼저 [Createparameteraccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)를 호출 해야 합니다.
 
-## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor:: CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor:: CreateAccessor
 
 열 바인딩 구조에 메모리를 할당 하 고 열 데이터 멤버를 초기화 합니다.
 
@@ -177,11 +177,11 @@ HRESULT CreateAccessor(int nBindEntries,
 
 표준 HRESULT 값 중 하나입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
-`CManualAccessor::AddBindEntry` 함수를 호출 하기 전에이 함수를 호출 합니다.
+함수를 호출 하기 전에이 함수를 호출 `CManualAccessor::AddBindEntry` 합니다.
 
-## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor:: CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a> CManualAccessor:: CreateParameterAccessor
 
 매개 변수 바인딩 구조에 메모리를 할당 하 고 매개 변수 데이터 멤버를 초기화 합니다.
 
@@ -208,7 +208,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 표준 HRESULT 값 중 하나입니다.
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 [Addparameterentry](../../data/oledb/cmanualaccessor-addparameterentry.md)를 호출 하기 전에이 함수를 호출 해야 합니다.
 

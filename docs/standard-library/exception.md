@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 1627ba411fd201c84daee534ea134be2dba73376
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1533e8238b40f6ca5dc6faaef35a65db9020defd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193655"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835971"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -27,7 +27,7 @@ ms.locfileid: "87193655"
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|예외에 대한 포인터를 설명하는 형식입니다.|
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|`terminate_handler`로 사용하는 데 적합한 함수에 대한 포인터를 설명하는 형식입니다.|
@@ -35,7 +35,7 @@ ms.locfileid: "87193655"
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[current_exception](../standard-library/exception-functions.md#current_exception)|현재 예외에 대한 포인터를 가져옵니다.|
 |[get_terminate](../standard-library/exception-functions.md#get_terminate)|현재 `terminate_handler` 함수를 가져옵니다.|
@@ -52,7 +52,7 @@ ms.locfileid: "87193655"
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[bad_exception 클래스](../standard-library/bad-exception-class.md)|이 클래스는 `unexpected_handler`에서 throw할 수 있는 예외를 설명합니다.|
 |[exception 클래스](../standard-library/exception-class.md)|이 클래스는 특정 식과 C++ 표준 라이브러리로 throw된 모든 예외에 대한 기본 클래스로 사용됩니다.|

@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211834"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838141"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 클래스
 
@@ -60,7 +60,7 @@ class CEnumeratorAccessor
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+| Name | 설명 |
 |-|-|
 |[m_bIsParent](#bisparent)|열거자가 부모 열거자 인지 여부를 나타내는 변수입니다 (행이 열거자 인 경우).|
 |[m_nType](#ntype)|행이 데이터 소스 또는 열거자를 설명 하는지 여부를 나타내는 변수입니다.|
@@ -68,11 +68,11 @@ class CEnumeratorAccessor
 |[m_szName](#szname)|데이터 소스 또는 열거자의 이름입니다.|
 |[m_szParseName](#szparsename)|데이터 소스 또는 열거자에 대 한 모니커를 가져오기 위해 [Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) 에 전달할 문자열입니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 이 행 집합은 현재 열거자에서 표시 되는 데이터 소스와 열거자로 구성 됩니다.
 
-## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor:: m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a> CEnumeratorAccessor:: m_bIsParent
 
 열거자가 부모 열거자 인지 여부를 나타내는 변수입니다 (행이 열거자 인 경우).
 
@@ -82,11 +82,11 @@ class CEnumeratorAccessor
 VARIANT_BOOL m_bIsParent;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor:: m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a> CEnumeratorAccessor:: m_nType
 
 행이 데이터 소스 또는 열거자를 설명 하는지 여부를 나타내는 변수입니다.
 
@@ -96,11 +96,11 @@ VARIANT_BOOL m_bIsParent;
 USHORT m_nType;
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor:: m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a> CEnumeratorAccessor:: m_szDescription
 
 데이터 원본 또는 열거자에 대 한 설명입니다.
 
@@ -110,11 +110,11 @@ USHORT m_nType;
 WCHAR m_szDescription[129];
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor:: m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a> CEnumeratorAccessor:: m_szName
 
 데이터 소스 또는 열거자의 이름입니다.
 
@@ -124,11 +124,11 @@ WCHAR m_szDescription[129];
 WCHAR m_szName[129];
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 
-## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor:: m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a> CEnumeratorAccessor:: m_szParseName
 
 데이터 소스 또는 열거자에 대 한 모니커를 가져오기 위해 [Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) 에 전달할 문자열입니다.
 
@@ -138,7 +138,7 @@ WCHAR m_szName[129];
 WCHAR m_szParseName[129];
 ```
 
-### <a name="remarks"></a>주의
+### <a name="remarks"></a>설명
 
 자세한 내용은 *OLE DB 프로그래머 참조* 에서 [ISourcesRowset:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 을 참조 하세요.
 

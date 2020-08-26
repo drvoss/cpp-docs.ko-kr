@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f5de7914f76d70d4bc618508d6a13ed0bdaf13df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 16471f0986d58e38fed436b2921ce3f8a3e89325
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193538"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835781"
 ---
 # <a name="forward_list-class"></a>forward_list 클래스
 
@@ -121,13 +121,13 @@ forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 �
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[forward_list](#forward_list)|`forward_list` 형식의 개체를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[allocator_type](#allocator_type)|정방향 목록 개체의 할당자 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|정방향 목록에 대한 상수 반복기를 제공하는 형식입니다.|
@@ -142,7 +142,7 @@ forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 �
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[assign](#assign)|정방향 목록에서 요소를 삭제하고 대상 정방향 목록에서 요소의 새 집합을 복사합니다.|
 |[before_begin](#before_begin)|정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 반복기를 반환합니다.|
@@ -174,11 +174,11 @@ forward_list의 메모리 할당 및 할당 취소에 대한 세부 정보를 �
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자 =](#op_eq)|정방향 목록의 요소를 다른 정방향 목록의 복사본으로 바꿉니다.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 정방향 목록 개체의 할당자 클래스를 나타내는 형식입니다.
 
@@ -190,7 +190,7 @@ typedef Allocator allocator_type;
 
 `allocator_type`은 템플릿 매개 변수 Allocator의 동의어입니다.
 
-## <a name="assign"></a><a name="assign"></a>할당
+## <a name="assign"></a><a name="assign"></a> 할당
 
 정방향 목록에서 요소를 삭제하고 대상 정방향 목록에서 요소의 새 집합을 복사합니다.
 
@@ -234,7 +234,7 @@ forward_list가 정수 형식이면 첫 번째 멤버 함수는 `assign((size_ty
 
 세 번째 멤버 함수는 initializer_list의 요소를 forward_list로 복사합니다.
 
-## <a name="before_begin"></a><a name="before_begin"></a>before_begin
+## <a name="before_begin"></a><a name="before_begin"></a> before_begin
 
 정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 반복기를 반환합니다.
 
@@ -243,13 +243,13 @@ const_iterator before_begin() const;
 iterator before_begin();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="begin"></a><a name="begin"></a>시작
+## <a name="begin"></a><a name="begin"></a> 시작
 
 정방향 목록에서 첫 번째 요소의 주소를 지정하는 반복기를 반환합니다.
 
@@ -258,13 +258,13 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 시퀀스의 첫 번째 요소(또는 빈 시퀀스의 끝 바로 다음)를 가리키는 정방향 반복기입니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="cbefore_begin"></a><a name="cbefore_begin"></a>cbefore_begin
+## <a name="cbefore_begin"></a><a name="cbefore_begin"></a> cbefore_begin
 
 정방향 목록에서 첫 번째 요소 앞의 위치에 주소를 지정하는 const 반복기를 반환합니다.
 
@@ -272,13 +272,13 @@ iterator begin();
 const_iterator cbefore_begin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 시퀀스의 첫 번째 요소 바로 앞(또는 빈 시퀀스의 끝 바로 앞)을 가리키는 정방향 반복기입니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 **`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
@@ -286,7 +286,7 @@ const_iterator cbefore_begin() const;
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`const`** 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 전방 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()` ).
 
@@ -303,7 +303,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 **`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
@@ -311,7 +311,7 @@ auto i2 = Container.cbegin();
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 범위 끝의 바로 다음을 가리키는 정방향 액세스 반복기입니다.
 
@@ -331,7 +331,7 @@ auto i2 = Container.cend();
 
 `cend`에서 반환한 값은 역참조되지 않아야 합니다.
 
-## <a name="clear"></a><a name="clear"></a>해제
+## <a name="clear"></a><a name="clear"></a> 해제
 
 정방향 목록의 모든 요소를 지웁니다.
 
@@ -343,7 +343,7 @@ void clear();
 
 이 멤버 함수는 `erase_after(before_begin(), end()).`를 호출합니다.
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 정방향 목록에 대한 상수 반복기를 제공하는 형식입니다.
 
@@ -355,7 +355,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator`는 제어되는 시퀀스의 상수 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 전방 목록의 요소에 대 한 포인터를 제공 하는 형식입니다 **`const`** .
 
@@ -366,7 +366,7 @@ typedef typename Allocator::const_pointer
 
 ### <a name="remarks"></a>설명
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 정방향 목록의 요소에 대한 상수 참조를 제공하는 형식입니다.
 
@@ -376,7 +376,7 @@ typedef typename Allocator::const_reference const_reference;
 
 ### <a name="remarks"></a>설명
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 반복기가 가리키는 요소 사이의 범위에 있는 정방향 목록의 요소 수를 나타내는 데 사용할 수 있는 부호 있는 정수 형식입니다.
 
@@ -388,7 +388,7 @@ typedef typename Allocator::difference_type difference_type;
 
 `difference_type`은 제어되는 시퀀스에서 두 요소의 주소 간 차이점을 나타낼 수 있는 개체를 설명합니다.
 
-## <a name="emplace_after"></a><a name="emplace_after"></a>emplace_after
+## <a name="emplace_after"></a><a name="emplace_after"></a> emplace_after
 
 이동 후 지정된 위치 뒤에 새 요소를 생성합니다.
 
@@ -405,7 +405,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 *짧은*\
 생성자 인수입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 새로 삽입된 요소를 지정하는 반복기입니다.
 
@@ -413,7 +413,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 이 멤버 함수는 제어 *되* 는 시퀀스에서가 가리키는 요소 바로 뒤에 생성자 인수 *val* 을 사용 하 여 요소를 삽입 합니다. 그렇지 않으면 해당 동작은 [forward_list::insert_after](#insert_after)와 동일합니다.
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 생성된 요소를 목록 시작 부분에 추가합니다.
 
@@ -433,7 +433,7 @@ template <class Type>
 
 예외가 throw되면 컨테이너는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.
 
-## <a name="empty"></a><a name="empty"></a>비우려면
+## <a name="empty"></a><a name="empty"></a> 비우려면
 
 정방향 목록이 비어 있는지 테스트합니다.
 
@@ -441,11 +441,11 @@ template <class Type>
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 전방 목록이 비어 있으면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="end"></a><a name="end"></a>종단
+## <a name="end"></a><a name="end"></a> 종단
 
 정방향 목록에서 마지막 요소 다음에 나오는 위치의 주소를 지정하는 반복기를 반환합니다.
 
@@ -454,11 +454,11 @@ const_iterator end() const;
 iterator end();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 시퀀스의 끝 바로 다음을 가리키는 정방향 반복기입니다.
 
-## <a name="erase_after"></a><a name="erase_after"></a>erase_after
+## <a name="erase_after"></a><a name="erase_after"></a> erase_after
 
 정방향 목록의 지정된 위치 뒤에서 요소를 제거합니다.
 
@@ -478,7 +478,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 *최신*\
 지울 범위의 끝입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 반복기이거나, 남아 있는 요소가 없는 경우에는 [forward_list::end](#end)입니다.
 
@@ -492,7 +492,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 멤버 함수는 예외를 throw하지 않습니다.
 
-## <a name="forward_list"></a><a name="forward_list"></a>forward_list
+## <a name="forward_list"></a><a name="forward_list"></a> forward_list
 
 `forward_list` 형식의 개체를 생성합니다.
 
@@ -552,7 +552,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 마지막 생성자는 `initializer_list<Type>` 클래스의 개체를 사용하여 초기 제어되는 시퀀스를 지정합니다.
 
-## <a name="front"></a><a name="front"></a>앞뒤
+## <a name="front"></a><a name="front"></a> 앞뒤
 
 정방향 목록의 첫 번째 요소에 대한 참조를 반환합니다.
 
@@ -561,7 +561,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 비어 있지 않아야 하는 제어된 시퀀스의 첫 번째 요소에 대한 참조입니다.
 
@@ -573,11 +573,11 @@ const_reference front() const;
 allocator_type get_allocator() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 저장된 [할당자](../standard-library/allocator-class.md) 개체입니다.
 
-## <a name="insert_after"></a><a name="insert_after"></a>insert_after
+## <a name="insert_after"></a><a name="insert_after"></a> insert_after
 
 정방향 목록의 지정된 위치 뒤에 요소를 추가합니다.
 
@@ -610,7 +610,7 @@ template <class InputIterator>
 *IList*\
 삽입할 initializer_list입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 새로 삽입된 요소(첫 번째 및 마지막 멤버 함수만)를 지정하는 반복기입니다.
 
@@ -632,7 +632,7 @@ template <class InputIterator>
 
 하나 이상의 요소를 삽입하는 동안 예외가 throw되면 컨테이너는 변경되지 않고 예외가 다시 throw됩니다.
 
-## <a name="iterator"></a><a name="iterator"></a>반복
+## <a name="iterator"></a><a name="iterator"></a> 반복
 
 정방향 목록에 대한 반복기를 제공하는 형식입니다.
 
@@ -644,7 +644,7 @@ typedef implementation-defined iterator;
 
 `iterator`는 제어되는 시퀀스의 정방향 반복기로 사용될 수 있는 개체를 설명합니다. 여기서는 구현에서 정의된 형식의 동의어로 설명됩니다.
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 정방향 목록의 최대 길이를 반환합니다.
 
@@ -652,13 +652,13 @@ typedef implementation-defined iterator;
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 개체가 제어할 수 있는 가장 긴 시퀀스의 길이입니다.
 
 ### <a name="remarks"></a>설명
 
-## <a name="merge"></a><a name="merge"></a>결합
+## <a name="merge"></a><a name="merge"></a> 결합
 
 두 개의 정렬된 시퀀스를 선형 시간의 단일 정렬된 시퀀스로 결합합니다. 인수 목록에서 요소를 제거하고 이 `forward_list`에 삽입합니다. `merge`를 호출하기 전에 같은 비교 함수 개체별로 두 목록을 정렬해야 합니다. 결합된 목록은 해당 비교 함수 개체별로 정렬됩니다.
 
@@ -678,7 +678,7 @@ template <class Predicate>
 
 ### <a name="remarks"></a>설명
 
-`forward_list::merge`에서 요소를 제거 `forward_list` `right` 하 고이에 삽입 `forward_list` 합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.
+`forward_list::merge` 에서 요소를 제거 `forward_list` `right` 하 고이에 삽입 `forward_list` 합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.
 
 위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 순서 대로 정렬 됩니다 `ascending` . 두 번째 멤버 함수는 항상 순서를 적용 합니다 `! comp(*Pj, *Pi)` `i < j` .
 
@@ -686,7 +686,7 @@ template <class Predicate>
 
 `comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 정방향 목록의 요소를 다른 정방향 목록의 복사본으로 바꿉니다.
 
@@ -720,7 +720,7 @@ forward_list& operator=(forward_list&& right);
 typedef typename Allocator::pointer pointer;
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 정방향 목록의 시작 부분에 있는 요소를 삭제합니다.
 
@@ -734,7 +734,7 @@ void pop_front();
 
 멤버 함수는 예외를 throw하지 않습니다.
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 정방향 목록의 시작 부분에 요소를 추가합니다.
 
@@ -752,7 +752,7 @@ void push_front(Type&& val);
 
 예외가 throw되면 컨테이너는 변경되지 않은 상태로 유지되며 예외가 다시 throw됩니다.
 
-## <a name="reference"></a><a name="reference"></a>참조일
+## <a name="reference"></a><a name="reference"></a> 참조일
 
 정방향 목록의 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -760,7 +760,7 @@ void push_front(Type&& val);
 typedef typename Allocator::reference reference;
 ```
 
-## <a name="remove"></a><a name="remove"></a>삭제
+## <a name="remove"></a><a name="remove"></a> 삭제
 
 정방향 목록에서 지정된 값과 일치하는 요소를 지웁니다.
 
@@ -779,7 +779,7 @@ void remove(const Type& val);
 
 멤버 함수는 예외를 throw하지 않습니다.
 
-## <a name="remove_if"></a><a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a> remove_if
 
 지정된 조건자를 충족하는 요소를 정방향 목록에서 지웁니다.
 
@@ -799,7 +799,7 @@ template <class Predicate>
 
 *Pred* 가 예외를 throw 하는 경우에만 예외가 발생 합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.
 
-## <a name="resize"></a><a name="resize"></a>조정해
+## <a name="resize"></a><a name="resize"></a> 조정해
 
 정방향 목록의 새 크기를 지정합니다.
 
@@ -820,7 +820,7 @@ void resize(size_type _Newsize, const Type& val);
 
 멤버 함수는 예측이 목록에 있는 요소 수가 *_Newsize*되는지 확인 합니다. 제어 되는 시퀀스를 더 길게 만들어야 하는 경우 첫 번째 멤버 함수는 값 `Type()` 이 인 요소를 추가 하는 반면 두 번째 멤버 함수는 값 *val*을 사용 하 여 요소를 추가 합니다. 제어되는 시퀀스 길이를 줄이기 위해 두 멤버 함수는 모두 실제로 `erase_after(begin() + _Newsize - 1, end())`를 호출합니다.
 
-## <a name="reverse"></a><a name="reverse"></a>되돌립니다
+## <a name="reverse"></a><a name="reverse"></a> 되돌립니다
 
 정방향 목록에 요소가 나타나는 순서를 반대로 바꿉니다.
 
@@ -828,7 +828,7 @@ void resize(size_type _Newsize, const Type& val);
 void reverse();
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 두 요소 사이의 부호가 없는 거리를 나타내는 형식입니다.
 
@@ -840,7 +840,7 @@ typedef typename Allocator::size_type size_type;
 
 부호 없는 정수 형식은 제어되는 시퀀스의 길이를 나타낼 수 있는 개체를 설명합니다.
 
-## <a name="sort"></a><a name="sort"></a>정렬
+## <a name="sort"></a><a name="sort"></a> 정렬
 
 오름차순 또는 조건자를 통해 지정된 순서로 요소를 정렬합니다.
 
@@ -863,7 +863,7 @@ void sort(Predicate pred);
 
 *Pred* 가 예외를 throw 하는 경우에만 예외가 발생 합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 순서로 남아 있고 예외가 다시 throw됩니다.
 
-## <a name="splice_after"></a><a name="splice_after"></a>splice_after
+## <a name="splice_after"></a><a name="splice_after"></a> splice_after
 
 요소를 원본 forward_list에서 제거한 다음 대상 forward_list에 삽입합니다.
 
@@ -992,7 +992,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 정방향 목록의 요소를 교환합니다.
 
@@ -1009,7 +1009,7 @@ void swap(forward_list& right);
 
 멤버 함수는 제어 되는 시퀀스를 **`*this`** 과 *오른쪽*으로 바꿉니다. `get_allocator() ==  right.get_allocator()`인 경우 일정한 시간에 이 작업을 수행하고, 예외를 throw하지 않고, 두 개의 제어되는 시퀀스에서 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다. 그렇지 않으면 두 개의 제어되는 시퀀스에 있는 요소 수에 비례하여 많은 요소 할당 및 생성자 호출을 수행합니다.
 
-## <a name="unique"></a><a name="unique"></a>고유
+## <a name="unique"></a><a name="unique"></a> 고유
 
 동일한 요소의 모든 연속 그룹에서 첫 번째 요소를 제외하고 모두 제거합니다.
 
@@ -1034,7 +1034,7 @@ void unique(BinaryPredicate comp);
 
 `comp`가 예외를 throw하는 경우에만 예외가 발생합니다. 이 경우 제어되는 시퀀스는 지정되지 않은 상태로 남아 있고 예외가 다시 throw됩니다.
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 정방향 목록에 저장된 요소의 형식을 나타내는 형식입니다.
 

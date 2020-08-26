@@ -1,17 +1,17 @@
 ---
-title: range (C++ COM 특성)
+title: range (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 380f7c9e15a3682b486217c842f00c944251e631
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214619"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839480"
 ---
 # <a name="range-c"></a>range(C++)
 
@@ -25,15 +25,15 @@ ms.locfileid: "80214619"
 
 ### <a name="parameters"></a>매개 변수
 
-*low*<br/>
+*거의*<br/>
 낮은 범위 값입니다.
 
-*high*<br/>
+*최고*<br/>
 상위 범위 값입니다.
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-**Range** C++ 특성에는 [range](/windows/win32/Midl/range) MIDL 특성과 동일한 기능이 있습니다.
+**Range** c + + 특성에는 [range](/windows/win32/Midl/range) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -53,12 +53,10 @@ __interface ICustom {
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 메서드, 인터페이스 매개 변수|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

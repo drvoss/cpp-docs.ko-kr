@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: 694ea94ac0e9dcd31d89a3a83bd3400bac3e8e4f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e6c7d8dd9835545c4aaa677a39f5e3149743d14
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222188"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835677"
 ---
 # <a name="unique_ptr-class"></a>unique_ptr 클래스
 
@@ -94,13 +94,13 @@ public:
 ### <a name="parameters"></a>매개 변수
 
 *오른쪽*\
-`unique_ptr`입니다.
+`unique_ptr`
 
 *Nptr*\
 `rvalue` 형식의 `std::nullptr_t`입니다.
 
 *Ptr*\
-`pointer`입니다.
+`pointer`
 
 *Deleter*\
 `deleter`에 바인딩되는 `unique_ptr` 함수.
@@ -125,13 +125,13 @@ public:
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[unique_ptr](#unique_ptr)|`unique_ptr`의 8가지 생성자가 있습니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[deleter_type](#deleter_type)|템플릿 매개 변수 `Del`의 동의어.|
 |[element_type](#element_type)|템플릿 매개 변수 `T`의 동의어.|
@@ -139,7 +139,7 @@ public:
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[get](#get)|`stored_ptr`를 반환합니다.|
 |[get_deleter](#get_deleter)|`stored_deleter`에 대한 참조를 반환합니다.|
@@ -149,14 +149,14 @@ public:
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |**연산자 bool**|연산자는로 변환할 수 있는 형식의 값을 반환 **`bool`** 합니다. 인 경우로 변환 된 결과 **`bool`** 이 **`true`** 고 `get() != pointer()` , 그렇지 않으면 **`false`** 입니다.|
 |`operator->`|멤버 함수는 `stored_ptr`를 반환합니다.|
 |`operator*`|멤버 함수는 `*stored_ptr`를 반환합니다.|
 |[연산자 =](#unique_ptr_operator_eq)|`unique_ptr` 또는 `pointer-type`의 값을 현재 `unique_ptr`에 할당합니다.|
 
-### <a name="deleter_type"></a><a name="deleter_type"></a>deleter_type
+### <a name="deleter_type"></a><a name="deleter_type"></a> deleter_type
 
 이 형식은 템플릿 매개 변수 `Del`의 동의어입니다.
 
@@ -168,7 +168,7 @@ typedef Del deleter_type;
 
 이 형식은 템플릿 매개 변수 `Del`의 동의어입니다.
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 이 형식은 템플릿 매개 변수 `Type`의 동의어입니다.
 
@@ -180,7 +180,7 @@ typedef Type element_type;
 
 이 형식은 템플릿 매개 변수 `Ty`의 동의어입니다.
 
-### <a name="get"></a><a name="get"></a>가져오기
+### <a name="get"></a><a name="get"></a> 가져오기
 
 `stored_ptr`를 반환합니다.
 
@@ -192,7 +192,7 @@ pointer get() const;
 
 멤버 함수는 `stored_ptr`를 반환합니다.
 
-### <a name="get_deleter"></a><a name="get_deleter"></a>get_deleter
+### <a name="get_deleter"></a><a name="get_deleter"></a> get_deleter
 
 `stored_deleter`에 대한 참조를 반환합니다.
 
@@ -206,7 +206,7 @@ const Del& get_deleter() const;
 
 멤버 함수는 `stored_deleter`에 대한 참조를 반환합니다.
 
-### <a name="operator"></a><a name="unique_ptr_operator_eq"></a>연산자 =
+### <a name="operator"></a><a name="unique_ptr_operator_eq"></a> 연산자 =
 
 제공된 `unique_ptr`의 주소를 현재 항목에 할당합니다.
 
@@ -237,7 +237,7 @@ typedef T1 pointer;
 
 형식은 `Del::pointer`의 동의어(정의된 경우)이며 그렇지 않은 경우 `Type *`입니다.
 
-### <a name="release"></a><a name="release"></a>릴리스
+### <a name="release"></a><a name="release"></a> 릴리스
 
 호출자에 대해 저장 된 포인터의 소유권을 해제 하 고 저장 된 포인터 값을로 설정 **`nullptr`** 합니다.
 
@@ -297,7 +297,7 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-### <a name="reset"></a><a name="reset"></a>다시 설정
+### <a name="reset"></a><a name="reset"></a> 다시 설정
 
 포인터 매개 변수의 소유권을 가져온 후 원래 저장된 포인터를 삭제합니다. 새 포인터가 원래 저장 된 포인터와 동일한 경우은 `reset` 포인터를 삭제 하 고 저장 된 포인터를로 설정 **`nullptr`** 합니다.
 
@@ -317,7 +317,7 @@ void reset(nullptr_t ptr);
 
 는 `reset` 먼저 새 포인터 *ptr*을 저장 한 다음 원래 저장 된 포인터를 삭제 하므로 `reset` 원래 저장 된 포인터와 동일한 경우 *ptr* 을 즉시 삭제할 수 있습니다.
 
-### <a name="swap"></a><a name="swap"></a>스왑을
+### <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 `unique_ptr` 개체 간에 포인터를 교환합니다.
 
@@ -334,7 +334,7 @@ void swap(unique_ptr& right);
 
 멤버 함수는 `stored_ptr`을 `right.stored_ptr`로 교환하고 `stored_deleter`를 `right.stored_deleter`로 교환합니다.
 
-### <a name="unique_ptr"></a><a name="unique_ptr"></a>unique_ptr
+### <a name="unique_ptr"></a><a name="unique_ptr"></a> unique_ptr
 
 `unique_ptr`의 8가지 생성자가 있습니다.
 
@@ -374,7 +374,7 @@ template <class Ty2, Class Del2>
 
 다섯 번째 생성자는에서 *ptr* 을 저장 `stored_ptr` 하 고 `deleter` 로 이동 `stored_deleter` 합니다. 여섯 번째와 일곱 번째 생성자는 `right.release()`을 `stored_ptr`에 저장하고 `right.get_deleter()`을 `stored_deleter`로 이동합니다.
 
-### <a name="unique_ptr"></a><a name="dtorunique_ptr"></a>~ unique_ptr
+### <a name="unique_ptr"></a><a name="dtorunique_ptr"></a> ~ unique_ptr
 
 `unique_ptr`에 대한 소멸자는 `unique_ptr` 개체를 삭제합니다.
 
