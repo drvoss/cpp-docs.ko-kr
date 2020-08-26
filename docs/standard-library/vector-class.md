@@ -87,12 +87,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 71b55b4af44a641846ca7b8706bee420887950c5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6cc8378fee72304bb909c3baacc305d446474bfa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224567"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840039"
 ---
 # <a name="vector-class"></a>vector 클래스
 
@@ -127,13 +127,13 @@ class vector
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[경로](#vector)|특정 크기의 벡터 또는 특정 값의 요소나 특정 `allocator`가 포함된 벡터를 생성하거나 다른 벡터의 복사본으로 벡터를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|||
+|Name|설명|
 |-|-|
 |[allocator_type](#allocator_type)|벡터 개체의 `allocator` 클래스를 나타내는 형식입니다.|
 |[const_iterator](#const_iterator)|벡터의 요소를 읽을 수 있는 임의 액세스 반복기를 제공 하는 형식입니다 **`const`** .|
@@ -150,7 +150,7 @@ class vector
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[assign](#assign)|벡터를 지우고 지정된 요소를 빈 벡터에 복사합니다.|
 |[at](#at)|벡터의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.|
@@ -184,12 +184,12 @@ class vector
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[operator&#91;&#93;](#op_at)|지정된 위치에서 벡터 요소에 참조를 반환합니다.|
 |[연산자 =](#op_eq)|벡터의 요소를 다른 벡터의 복사본으로 바꿉니다.|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 벡터 개체의 할당자 클래스를 나타내는 형식입니다.
 
@@ -205,7 +205,7 @@ typedef Allocator allocator_type;
 
 `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.
 
-## <a name="assign"></a><a name="assign"></a>할당
+## <a name="assign"></a><a name="assign"></a> 할당
 
 벡터를 지우고 지정된 요소를 빈 벡터에 복사합니다.
 
@@ -285,7 +285,7 @@ int main()
 }
 ```
 
-## <a name="at"></a><a name="at"></a>속도
+## <a name="at"></a><a name="at"></a> 속도
 
 벡터의 지정된 위치에 있는 요소에 대한 참조를 반환합니다.
 
@@ -300,7 +300,7 @@ const_reference at(size_type position) const;
 *놓을*\
 벡터에서 참조할 요소의 아래 첨자 또는 위치 번호입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 인수에서 아래 첨자로 설정된 요소에 대한 참조입니다. *Position* 이 벡터 크기 보다 크면에서 `at` 예외를 throw 합니다.
 
@@ -336,7 +336,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a><a name="back"></a>뒤로
+## <a name="back"></a><a name="back"></a> 뒤로
 
 벡터의 마지막 요소에 대한 참조를 반환합니다.
 
@@ -346,7 +346,7 @@ reference back();
 const_reference back() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 벡터의 마지막 요소입니다. 벡터가 비어 있으면 반환 값이 정의되지 않습니다.
 
@@ -380,7 +380,7 @@ int main() {
 }
 ```
 
-## <a name="begin"></a><a name="begin"></a>시작
+## <a name="begin"></a><a name="begin"></a> 시작
 
 벡터의 첫 번째 요소에 대한 임의 액세스 반복기를 반환합니다.
 
@@ -390,7 +390,7 @@ const_iterator begin() const;
 iterator begin();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `vector`의 첫 번째 요소 또는 빈 `vector` 다음의 위치 주소를 지정하는 임의 액세스 반복기입니다. 항상 [vector:: end](#end) 와 함께 반환 되는 값을 비교 하 여 유효한 지 확인 합니다.
 
@@ -443,7 +443,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="capacity"></a><a name="capacity"></a>수용
+## <a name="capacity"></a><a name="capacity"></a> 수용
 
 스토리지를 더 할당하지 않고 벡터가 포함할 수 있는 요소의 수를 반환합니다.
 
@@ -451,7 +451,7 @@ The vector c1 now contains elements: 20 2
 size_type capacity() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 벡터에 할당된 스토리지의 현재 길이입니다.
 
@@ -487,7 +487,7 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 **`const`** 범위에 있는 첫 번째 요소의 주소를 처리 하는 반복기를 반환 합니다.
 
@@ -495,7 +495,7 @@ The length of storage allocated is now 2.
 const_iterator cbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`const`** 범위의 첫 번째 요소 또는 빈 범위의 끝 바로 다음 위치를 가리키는 임의 액세스 반복기입니다 (빈 범위의 경우 `cbegin() == cend()` ).
 
@@ -513,7 +513,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 **`const`** 범위에서 마지막 요소 바로 다음 위치의 주소를 가리키는 반복기를 반환 합니다.
 
@@ -521,7 +521,7 @@ auto i2 = Container.cbegin();
 const_iterator cend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`const`** 범위 끝의 바로 다음을 가리키는 임의 액세스 반복기입니다.
 
@@ -541,7 +541,7 @@ auto i2 = Container.cend();
 
 에서 반환 된 값은 `cend` 역참조 되지 않아야 합니다. 비교에만 사용 합니다.
 
-## <a name="clear"></a><a name="clear"></a>해제
+## <a name="clear"></a><a name="clear"></a> 해제
 
 벡터의 요소를 지웁니다.
 
@@ -577,7 +577,7 @@ The size of v1 is 3
 The size of v1 after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 벡터의 요소를 읽을 수 있는 임의 액세스 반복기를 제공 하는 형식입니다 **`const`** .
 
@@ -593,7 +593,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator`를 사용하는 예제는 [back](#back)의 예제를 참조하세요.
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 벡터의 요소에 대 한 포인터를 제공 하는 형식입니다 **`const`** .
 
@@ -607,7 +607,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 [iterator](#iterator)는 벡터 요소에 액세스하는 데 사용되는 경우가 더 많습니다.
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 벡터에 저장 된 요소에 대 한 참조를 제공 하는 형식입니다 **`const`** . 작업을 읽고 수행 하는 데 사용 **`const`** 됩니다.
 
@@ -651,7 +651,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 Vector의 모든 요소를 읽을 수 있는 임의 액세스 반복기를 제공 하는 형식입니다 **`const`** .
 
@@ -667,7 +667,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 반복기를 선언하고 사용하는 방법의 예제는 [rbegin](#rbegin)을 참조하세요.
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 역방향 벡터의 첫 번째 요소에 대해 const 반복기를 반환합니다.
 
@@ -675,7 +675,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 const_reverse_iterator crbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 [vector](../standard-library/vector-class.md)에서 첫 번째 요소의 주소를 지정하거나 정방향 `vector`에서 마지막 요소의 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
@@ -716,7 +716,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 역방향 vector에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 상수 반복기를 반환합니다.
 
@@ -724,7 +724,7 @@ The first element of the reversed vector is 2.
 const_reverse_iterator crend() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 [vector](../standard-library/vector-class.md)에서 마지막 요소 다음의 위치(정방향 `vector`의 첫 번째 요소 앞의 위치) 주소를 지정하는 const 역방향 임의 액세스 반복기입니다.
 
@@ -775,7 +775,7 @@ const_pointer data() const;
 pointer data();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 [vector](../standard-library/vector-class.md)의 첫 번째 요소 또는 빈 `vector` 다음의 위치에 대한 포인터입니다.
 
@@ -821,7 +821,7 @@ The vector c1 contains elements: 1 2
 The vector c1 now contains elements: 20 2
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 동일한 벡터 내의 요소를 참조하는 두 반복기 간의 차이를 제공하는 형식입니다.
 
@@ -878,7 +878,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 내부에서 생성된 요소를 벡터의 지정된 위치에 삽입합니다.
 
@@ -897,7 +897,7 @@ iterator emplace(
 *args*\
 생성자 인수입니다. 이 함수는 제공되는 인수에 따라 호출할 생성자 오버로드를 유추합니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 이 함수는 새 요소를 `vector`에 삽입한 위치를 가리키는 반복기를 반환합니다.
 
@@ -947,7 +947,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 내부에서 생성된 요소를 벡터의 끝에 추가합니다.
 
@@ -977,7 +977,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a><a name="empty"></a>비우려면
+## <a name="empty"></a><a name="empty"></a> 비우려면
 
 벡터가 비어 있는지 테스트합니다.
 
@@ -985,7 +985,7 @@ int main()
 bool empty() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 벡터가 비어 있으면이 고, 그렇지 않으면입니다. **`false`** 벡터가 비어 있지 않으면입니다.
 
@@ -1015,7 +1015,7 @@ int main( )
 The vector is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>종단
+## <a name="end"></a><a name="end"></a> 종단
 
 마지막 바로 다음 반복기를 반환합니다.
 
@@ -1025,7 +1025,7 @@ iterator end();
 const_iterator end() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 벡터의 마지막 바로 다음 반복기입니다. 벡터가 비어 있으면이 고, 그렇지 않으면 `vector::end() == vector::begin()` 입니다.
 
@@ -1059,7 +1059,7 @@ int main( )
 2
 ```
 
-## <a name="erase"></a><a name="erase"></a>지우는
+## <a name="erase"></a><a name="erase"></a> 지우는
 
 벡터의 지정된 위치에서 요소 또는 요소 범위를 제거합니다.
 
@@ -1083,7 +1083,7 @@ iterator erase(
 *최신*\
 벡터에서 제거되는 마지막 요소 바로 뒤의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 제거되는 요소 뒤에 남아 있는 첫 번째 요소를 지정하는 반복기이거나, 남아 있는 요소가 없는 경우에는 벡터 끝에 대한 포인터입니다.
 
@@ -1132,7 +1132,7 @@ v1 = 20 30 40 50
 v1 = 20 50
 ```
 
-## <a name="front"></a><a name="front"></a>앞뒤
+## <a name="front"></a><a name="front"></a> 앞뒤
 
 벡터의 첫 번째 요소에 대한 참조를 반환합니다.
 
@@ -1142,7 +1142,7 @@ reference front();
 const_reference front() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 벡터 개체의 첫 번째 요소에 대한 참조입니다. 벡터가 비어 있으면 반환이 정의되지 않습니다.
 
@@ -1186,7 +1186,7 @@ int main( )
 Allocator get_allocator() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 벡터에서 사용되는 할당자입니다.
 
@@ -1217,7 +1217,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>넣거나
+## <a name="insert"></a><a name="insert"></a> 넣거나
 
 요소, 여러 요소 또는 요소의 범위를 벡터의 지정 된 위치에 삽입 합니다.
 
@@ -1259,7 +1259,7 @@ void insert(
 *최신*\
 복사할 요소의 범위를 벗어나는 첫 번째 요소의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 처음 두 `insert` 함수는 새 요소가 벡터에 삽입된 위치를 가리키는 반복기를 반환합니다.
 
@@ -1331,7 +1331,7 @@ v1 = 10 50 50 40 50 50 50 50 20 30
 vv1[0] = 10 50 50 40 50 50 50 50 20 30
 ```
 
-## <a name="iterator"></a><a name="iterator"></a>반복
+## <a name="iterator"></a><a name="iterator"></a> 반복
 
 벡터에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.
 
@@ -1347,7 +1347,7 @@ typedef implementation-defined iterator;
 
 [begin](#begin)의 예제를 참조하세요.
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 벡터의 최대 길이를 반환합니다.
 
@@ -1355,7 +1355,7 @@ typedef implementation-defined iterator;
 size_type max_size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 벡터의 최대 허용 길이입니다.
 
@@ -1378,7 +1378,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>연산자 []
+## <a name="operator"></a><a name="op_at"></a> 연산자 []
 
 지정된 위치에서 벡터 요소에 참조를 반환합니다.
 
@@ -1393,7 +1393,7 @@ const_reference operator[](size_type position) const;
 *놓을*\
 벡터 요소의 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정된 위치가 컨테이너의 크기보다 크거나 같을 경우 결과가 정의되지 않습니다.
 
@@ -1424,7 +1424,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 벡터의 요소를 다른 벡터의 복사본으로 바꿉니다.
 
@@ -1526,7 +1526,7 @@ int main( )
 44
 ```
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 벡터의 끝에 있는 요소를 삭제합니다.
 
@@ -1538,7 +1538,7 @@ void pop_back();
 
 코드 예제를 보려면 [vector::push_back()](#push_back)을 참조하세요.
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 벡터 끝에 요소를 추가합니다.
 
@@ -1593,7 +1593,7 @@ int main()
 }
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 역방향 벡터의 첫 번째 요소에 대한 반복기를 반환합니다.
 
@@ -1602,7 +1602,7 @@ reverse_iterator rbegin();
 const_reverse_iterator rbegin() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 벡터에서 첫 번째 요소의 주소를 지정하거나 정방향 벡터에서 마지막 요소의 주소를 지정하는 역방향 임의 액세스 반복기입니다.
 
@@ -1643,7 +1643,7 @@ The first element of vector is 1.
 The first element of the reversed vector is 2.
 ```
 
-## <a name="reference"></a><a name="reference"></a>참조일
+## <a name="reference"></a><a name="reference"></a> 참조일
 
 벡터에 저장된 요소에 대한 참조를 제공하는 형식입니다.
 
@@ -1655,7 +1655,7 @@ typedef typename Allocator::reference reference;
 
 벡터 클래스에서 **reference**를 사용하는 방법의 예제는 [at](#at)을 참조하세요.
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 역방향 벡터에서 마지막 요소 다음에 나오는 위치를 주소 지정하는 반복기를 반환합니다.
 
@@ -1664,7 +1664,7 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 역방향 벡터에서 마지막 요소 다음의 위치(정방향 벡터의 첫 번째 요소 앞의 위치) 주소를 지정하는 역방향 임의 액세스 반복기입니다.
 
@@ -1705,7 +1705,7 @@ int main( )
 1
 ```
 
-## <a name="reserve"></a><a name="reserve"></a>두기
+## <a name="reserve"></a><a name="reserve"></a> 두기
 
 벡터 개체의 최소 스토리지 길이를 예약하며 필요한 경우 공간을 할당합니다.
 
@@ -1746,7 +1746,7 @@ Current capacity of v1 = 1
 Current capacity of v1 = 20
 ```
 
-## <a name="resize"></a><a name="resize"></a>조정해
+## <a name="resize"></a><a name="resize"></a> 조정해
 
 벡터의 새 크기를 지정합니다.
 
@@ -1875,7 +1875,7 @@ int main()
 }
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 역방향 벡터에 있는 모든 요소를 읽거나 수정할 수 있는 임의 액세스 반복기를 제공하는 형식입니다.
 
@@ -1891,7 +1891,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 [rbegin](#rbegin)에 대한 예제를 참조하세요.
 
-## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> shrink_to_fit
 
 여분의 용량을 삭제합니다.
 
@@ -1931,7 +1931,7 @@ Current capacity of v1 = 20
 Current capacity of v1 = 1
 ```
 
-## <a name="size"></a><a name="size"></a>크기가
+## <a name="size"></a><a name="size"></a> 크기가
 
 벡터에 있는 요소 수를 반환합니다.
 
@@ -1939,7 +1939,7 @@ Current capacity of v1 = 1
 size_type size() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 벡터의 현재 길이입니다.
 
@@ -1972,7 +1972,7 @@ Vector length is 1.
 Vector length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 벡터의 요소 수를 계산하는 형식입니다.
 
@@ -1984,7 +1984,7 @@ typedef typename Allocator::size_type size_type;
 
 [capacity](#capacity)의 예제를 참조하세요.
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 두 벡터의 요소를 교환합니다.
 
@@ -2044,7 +2044,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 벡터에 저장된 데이터 형식을 나타내는 형식입니다.
 
@@ -2077,7 +2077,7 @@ int main( )
 44
 ```
 
-## <a name="vector"></a><a name="vector"></a>경로
+## <a name="vector"></a><a name="vector"></a> 경로
 
 벡터를 생성 합니다. 오버 로드는 특정 크기의 벡터 또는 특정 값의 요소를 생성 합니다. 또는 다른 벡터의 전체 또는 일부에 대 한 복사본으로 포함 됩니다. 일부 오버 로드를 사용 하 여 사용할 할당자를 지정할 수도 있습니다.
 

@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202963"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836467"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -28,7 +28,7 @@ ms.locfileid: "87202963"
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|개체의 실제 주소를 가져옵니다.|
 |[align](../standard-library/memory-functions.md#align)|제공된 정렬 및 시작 주소를 기준으로 지정된 크기 범위에 포인터를 반환합니다.|
@@ -77,7 +77,7 @@ ms.locfileid: "87202963"
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자! =](../standard-library/memory-operators.md#op_neq)|지정된 클래스의 할당자 개체가 다른지 테스트합니다.|
 |[연산자 = =](../standard-library/memory-operators.md#op_eq_eq)|지정된 클래스의 할당자 개체가 같은지 테스트합니다.|
@@ -89,7 +89,7 @@ ms.locfileid: "87202963"
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|클래스 **템플릿은 형식 형식**개체의 배열에 대해 저장소 할당 및 해제를 관리 하는 개체를 설명 합니다.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|할당자를 사용할 수 있는 컨테이너에 필요한 모든 정보를 확인하는 개체에 대해 설명합니다.|
@@ -104,7 +104,7 @@ ms.locfileid: "87202963"
 
 ### <a name="structures"></a>구조체
 
-|||
+|Name|설명|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,7 +114,7 @@ ms.locfileid: "87202963"
 
 ### <a name="specializations"></a>특수화
 
-|||
+|Name|설명|
 |-|-|
 |[allocator\<void>](../standard-library/allocator-void-class.md)|형식에 대 한 클래스 템플릿 할당자의 특수화 **`void`** 로,이 특수화 된 컨텍스트에서 맞는 멤버 형식만 정의 합니다.|
 

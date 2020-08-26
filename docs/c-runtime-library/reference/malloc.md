@@ -27,12 +27,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: 30d92975d1a3971d29b1758dc23d3a84372288c9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a093dbdbc4849b1c2f3d86e85a5e2b25a7b988e2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232510"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836662"
 ---
 # <a name="malloc"></a>malloc
 
@@ -51,7 +51,7 @@ void *malloc(
 *size*<br/>
 할당할 바이트입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 **malloc** 은 할당 된 공간에 대 한 void 포인터를 반환 하거나 사용 가능한 메모리가 부족 한 경우 **NULL** 을 반환 합니다. 이외의 형식에 대 한 포인터를 반환 하려면 **`void`** 반환 값에 형식 캐스팅을 사용 합니다. 반환 값이 가리키는 스토리지 공간은 맞춤 요구 사항이 기본 맞춤보다 작거나 같은 모든 형식의 개체 스토리지에 적절하게 맞춰지도록 보장됩니다. Visual C++ 기본 맞춤은 또는 8 바이트에 필요한 맞춤입니다 **`double`** . 64 비트 플랫폼을 대상으로 하는 코드에서는 16 바이트입니다. [_Aligned_malloc](aligned-malloc.md) 를 사용 하 여 맞춤 요구 사항이 더 큰 개체에 대 한 저장소를 할당 합니다. 예를 들어, 및의 SSE [__m128](../../cpp/m128.md) 형식과 **`__m256`** 를 사용 하 여 선언 된 형식 ( `__declspec(align( n ))` 여기서 **n** 은 8 보다 큼)이 있습니다. *Size* 가 0 인 경우 **malloc** 는 힙에서 길이가 0 인 항목을 할당 하 고 해당 항목에 대 한 유효한 포인터를 반환 합니다. 요청 된 메모리 양이 적은 경우에도 항상 **malloc**에서 반환을 확인 합니다.
 
@@ -63,18 +63,54 @@ void *malloc(
 
 시작 코드는 **malloc** 를 사용 하 여 **_environ**, *envp*및 *argv* 변수에 대 한 저장소를 할당 합니다. 다음 함수와 해당 와이드 문자는 **malloc**도 호출 합니다.
 
-|||||
-|-|-|-|-|
-|[calloc](calloc.md)|[fscanf](fscanf-fscanf-l-fwscanf-fwscanf-l.md)|[_getw](getw.md)|[setvbuf](setvbuf.md)|
-|[_exec 함수](../../c-runtime-library/exec-wexec-functions.md)|[fseek](fseek-fseeki64.md)|[_popen](popen-wpopen.md)|[_spawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)|
-|[fgetc](fgetc-fgetwc.md)|[fsetpos](fsetpos.md)|[printf](printf-printf-l-wprintf-wprintf-l.md)|[_strdup](strdup-wcsdup-mbsdup.md)|
-|[_fgetchar](fgetc-fgetwc.md)|[_fullpath](fullpath-wfullpath.md)|[putc](putc-putwc.md)|[시스템](system-wsystem.md)|
-|[fgets](fgets-fgetws.md)|[fwrite](fwrite.md)|[putchar](putc-putwc.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)|[getc](getc-getwc.md)|[_putenv](putenv-wputenv.md)|[ungetc](ungetc-ungetwc.md)|
-|[fputc](fputc-fputwc.md)|[getchar](getc-getwc.md)|[puts](puts-putws.md)|[vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
-|[_fputchar](fputc-fputwc.md)|[_getcwd](getcwd-wgetcwd.md)|[_putw](putw.md)|[vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)|
-|[fputs](fputs-fputws.md)|[_getdcwd](getcwd-wgetcwd.md)|[scanf](scanf-scanf-l-wscanf-wscanf-l.md)||
-|[fread](fread.md)|[가져옵니다](../../c-runtime-library/gets-getws.md)|[_searchenv](searchenv-wsearchenv.md)||
+:::row:::
+   :::column span="":::
+      [calloc](calloc.md)\
+      [_exec 함수](../../c-runtime-library/exec-wexec-functions.md)\
+      [fgetc](fgetc-fgetwc.md)\
+      [_fgetchar](fgetc-fgetwc.md)\
+      [fgets](fgets-fgetws.md)\
+      [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
+      [fputc](fputc-fputwc.md)\
+      [_fputchar](fputc-fputwc.md)\
+      [fputs](fputs-fputws.md)\
+      [fread](fread.md)
+   :::column-end:::
+   :::column span="":::
+      [fscanf](fscanf-fscanf-l-fwscanf-fwscanf-l.md)\
+      [fseek](fseek-fseeki64.md)\
+      [fsetpos](fsetpos.md)\
+      [_fullpath](fullpath-wfullpath.md)\
+      [fwrite](fwrite.md)\
+      [getc](getc-getwc.md)\
+      [getchar](getc-getwc.md)\
+      [_getcwd](getcwd-wgetcwd.md)\
+      [_getdcwd](getcwd-wgetcwd.md)\
+      [가져옵니다](../../c-runtime-library/gets-getws.md)
+   :::column-end:::
+   :::column span="":::
+      [_getw](getw.md)\
+      [_popen](popen-wpopen.md)\
+      [printf](printf-printf-l-wprintf-wprintf-l.md)\
+      [putc](putc-putwc.md)\
+      [putchar](putc-putwc.md)\
+      [_putenv](putenv-wputenv.md)\
+      [설정](puts-putws.md)\
+      [_putw](putw.md)\
+      [scanf](scanf-scanf-l-wscanf-wscanf-l.md)
+   :::column-end:::
+   :::column span="":::
+      [_searchenv](searchenv-wsearchenv.md)\
+      [setvbuf](setvbuf.md)\
+      [_spawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)\
+      [_strdup](strdup-wcsdup-mbsdup.md)\
+      [컴퓨터](system-wsystem.md)\
+      [_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)\
+      [ungetc](ungetc-ungetwc.md)\
+      [vfprintf](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)\
+      [vprintf](vprintf-vprintf-l-vwprintf-vwprintf-l.md)
+   :::column-end:::
+:::row-end:::
 
 C++ [_set_new_mode](set-new-mode.md) 함수는 **malloc**에 대한 새 처리기 모드를 설정합니다. 새 처리기 모드는 실패 시 **malloc** 가 [_set_new_handler](set-new-handler.md)에 의해 설정 된 대로 새 처리기 루틴을 호출 하는지 여부를 나타냅니다. 기본적으로 **malloc** 은 메모리 할당 실패 시 새 처리기 루틴을 호출 하지 않습니다. 이 기본 동작을 재정의 하 여 **malloc** 에서 메모리를 할당 하지 못할 때 **malloc** 이 **`new`** 연산자가 같은 이유로 실패 했을 때와 동일한 방식으로 새 처리기 루틴을 호출 하도록 할 수 있습니다. 기본값을 재정의 하려면 `_set_new_mode(1)` 프로그램에서 조기에 호출 하거나 NEWMODE를 사용 하 여 연결 합니다. OBJ ( [링크 옵션](../../c-runtime-library/link-options.md)참조).
 

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920261"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846591"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -69,15 +69,15 @@ int _waccess(
 *mode*<br/>
 읽기/쓰기 특성입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 파일에 지정된 모드가 있으면 각 함수는 0을 반환합니다. 명명 된 파일이 없거나 지정 된 모드가 없는 경우 함수는-1을 반환 합니다. 이 경우 `errno` 는 다음 표와 같이 설정 됩니다.
 
-|||
-|-|-|
-`EACCES`|액세스 거부됨: 파일의 권한 설정이 지정된 액세스를 허용하지 않습니다.
-`ENOENT`|파일 이름 또는 경로를 찾을 수 없습니다.
-`EINVAL`|잘못된 매개 변수입니다.
+| 값 | 설명 |
+|--|--|
+| `EACCES` | 액세스 거부됨: 파일의 권한 설정이 지정된 액세스를 허용하지 않습니다. |
+| `ENOENT` | 파일 이름 또는 경로를 찾을 수 없습니다. |
+| `EINVAL` | 잘못된 매개 변수입니다. |
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
 
@@ -147,7 +147,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.
 ```
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [파일 처리](../../c-runtime-library/file-handling.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>

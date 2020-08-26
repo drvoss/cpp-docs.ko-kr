@@ -1,17 +1,17 @@
 ---
-title: readonly (C++ COM 특성)
+title: readonly (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.readonly
 helpviewer_keywords:
 - readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-ms.openlocfilehash: 415ad5e33de3132e055e53178e6e65d411f169f3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ea2b0a46d34fc415a3b9eca97b92cda764fc7d42
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214606"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839805"
 ---
 # <a name="readonly-c"></a>readonly(C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "80214606"
 [readonly]
 ```
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
 **readonly** C++ 특성에는 [readonly](/windows/win32/Midl/readonly) MIDL 특성과 동일한 기능이 있습니다.
 
@@ -49,12 +49,10 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|인터페이스 메서드|
-|**반복 가능**|아니요|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

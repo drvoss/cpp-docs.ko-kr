@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: fa85bc7947b3b446ec7c6d3fdb0d7b62d308fb53
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2f8c80570e4771d1b0e713083f64bc982ddb9009
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210329"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840286"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 클래스
 
@@ -50,16 +50,16 @@ class IRowsetNotifyCP :
 ### <a name="parameters"></a>매개 변수
 
 *T*<br/>
-`IRowsetNotifyCP`에서 파생 된 클래스입니다.
+에서 파생 된 클래스 `IRowsetNotifyCP` 입니다.
 
 *ReentrantEventSync*<br/>
-재진입을 지 원하는 뮤텍스 클래스입니다. 기본값은 `CComSharedMutex`입니다. 뮤텍스는 한 스레드가 한 리소스에 상호 배타적으로 액세스 하도록 허용 하는 동기화 개체입니다.
+재진입을 지 원하는 뮤텍스 클래스입니다. 기본값은입니다 `CComSharedMutex` . 뮤텍스는 한 스레드가 한 리소스에 상호 배타적으로 액세스 하도록 허용 하는 동기화 개체입니다.
 
 *piid*<br/>
-`IRowsetNotify` 연결 지점 인터페이스에 대 한 인터페이스 ID 포인터 (`IID*`)입니다. 기본값은 `&__uuidof(IRowsetNotify)`입니다.
+`IID*`연결 지점 인터페이스에 대 한 인터페이스 ID 포인터 () `IRowsetNotify` 입니다. 기본값은 `&__uuidof(IRowsetNotify)`입니다.
 
 *DynamicUnkArray*<br/>
-클라이언트 싱크 인터페이스에 대 한 `IUnknown` 포인터의 동적으로 할당 된 배열인 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)형식의 배열입니다.
+클라이언트 싱크 인터페이스에 대해 동적으로 할당 된 포인터 배열인 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)형식의 배열입니다 `IUnknown` .
 
 ## <a name="requirements"></a>요구 사항
 
@@ -69,21 +69,21 @@ class IRowsetNotifyCP :
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[Fire_OnFieldChange](#onfieldchange)|열의 값에 대 한 변경 사항을 소비자에 게 알립니다.|
 |[Fire_OnRowChange](#onrowchange)|행에 영향을 주는 변경 사항을 소비자에 게 알립니다.|
 |[Fire_OnRowsetChange](#onrowsetchange)|전체 행 집합에 영향을 주는 변경 사항을 소비자에 게 알립니다.|
 
-## <a name="remarks"></a>주의
+## <a name="remarks"></a>설명
 
-`IRowsetNotifyCP`는 연결 `IID_IRowsetNotify` 지점에 대 한 수신기에서 행 집합 내용에 대 한 변경 내용을 알리기 위해 브로드캐스트 함수를 구현 합니다.
+`IRowsetNotifyCP` 는 행 집합 내용에 대 한 변경 내용의 연결 지점에 수신기를 알리기 위해 브로드캐스트 함수를 구현 `IID_IRowsetNotify` 합니다.
 
-소비자가 알림을 처리할 수 있도록 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) 를 사용 하 여 소비자 ("싱크" 라고도 함)에 `IRowsetNotify`을 구현 하 고 등록 해야 합니다. 소비자에서 연결 지점 인터페이스 구현에 대 한 [알림 받기](../../data/oledb/receiving-notifications.md) 를 참조 하세요.
+또한 `IRowsetNotify` 소비자가 알림을 처리할 수 있도록 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) 를 사용 하 여 소비자 ("싱크" 라고도 함)를 구현 하 고 등록 해야 합니다. 소비자에서 연결 지점 인터페이스 구현에 대 한 [알림 받기](../../data/oledb/receiving-notifications.md) 를 참조 하세요.
 
 알림 구현에 대 한 자세한 내용은 [업데이트 가능 공급자 만들기](../../data/oledb/creating-an-updatable-provider.md)의 "알림 지원"을 참조 하십시오.
 
-## <a name="irowsetnotifycpfire_onfieldchange"></a><a name="onfieldchange"></a>IRowsetNotifyCP:: Fire_OnFieldChange
+## <a name="irowsetnotifycpfire_onfieldchange"></a><a name="onfieldchange"></a> IRowsetNotifyCP:: Fire_OnFieldChange
 
 열 값에 대 한 변경 사항을 소비자에 게 알리기 위해 [Onfieldchange](/previous-versions/windows/desktop/ms715961(v=vs.85)) 이벤트를 브로드캐스트합니다.
 
@@ -103,9 +103,9 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 *OLE DB 프로그래머 참조*에서 [IRowsetNotify:: onfieldchange](/previous-versions/windows/desktop/ms715961(v=vs.85)) 를 참조 하세요.
 
-## <a name="irowsetnotifycpfire_onrowchange"></a><a name="onrowchange"></a>IRowsetNotifyCP:: Fire_OnRowChange
+## <a name="irowsetnotifycpfire_onrowchange"></a><a name="onrowchange"></a> IRowsetNotifyCP:: Fire_OnRowChange
 
-연결 지점에 대 한 모든 수신기에 [Onrowchange](/previous-versions/windows/desktop/ms722694(v=vs.85)) 이벤트를 브로드캐스팅하 `IID_IRowsetNotify` 하 여 행에 영향을 주는 변경 사항을 소비자에 게 알립니다.
+연결 지점의 모든 수신기에 [Onrowchange](/previous-versions/windows/desktop/ms722694(v=vs.85)) 이벤트를 브로드캐스트하고 `IID_IRowsetNotify` 행에 영향을 주는 변경 사항을 소비자에 게 알립니다.
 
 ### <a name="syntax"></a>구문
 
@@ -122,9 +122,9 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 *OLE DB 프로그래머 참조*의 [IRowsetNotify:: onrowchange](/previous-versions/windows/desktop/ms722694(v=vs.85)) 를 참조 하십시오.
 
-## <a name="irowsetnotifycpfire_onrowsetchange"></a><a name="onrowsetchange"></a>IRowsetNotifyCP:: Fire_OnRowsetChange
+## <a name="irowsetnotifycpfire_onrowsetchange"></a><a name="onrowsetchange"></a> IRowsetNotifyCP:: Fire_OnRowsetChange
 
-[OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) 이벤트를 연결 `IID_IRowsetNotify` 지점의 모든 수신기에 브로드캐스트합니다 .이를 통해 소비자는 전체 행 집합에 영향을 주는 변경 사항을 소비자에 게 알립니다.
+[OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) `IID_IRowsetNotify` 전체 행 집합에 영향을 주는 변경 사항을 소비자에 게 알리기 위해 연결 지점의 모든 수신기에 OnRowsetChange 이벤트를 브로드캐스트합니다.
 
 ### <a name="syntax"></a>구문
 
@@ -142,7 +142,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 ## <a name="see-also"></a>참고 항목
 
 [OLE DB 공급자 템플릿](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB 공급자 템플릿 구조](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
+[OLE DB 공급자 템플릿 아키텍처](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [알림 (COM)](/windows/win32/com/notifications)<br/>
 [BEGIN_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#begin_connection_point_map)<br/>
 [END_CONNECTION_POINT_MAP](../../atl/reference/connection-point-macros.md#end_connection_point_map)<br/>

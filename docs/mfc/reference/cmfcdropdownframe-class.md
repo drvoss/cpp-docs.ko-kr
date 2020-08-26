@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], RecalcLayout
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
-ms.openlocfilehash: d99dae9d8e7eca96c736a33621f0b544f1962f0f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 62bab0fbde364406f35edb959abb6e55a9125504
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560896"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840741"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 클래스
 
@@ -37,17 +37,15 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|기본 생성자입니다.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|소멸자|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|||
+|이름|설명|
 |-|-|
-|이름|Description|
 |[CMFCDropDownFrame:: Create](#create)|`CMFCDropDownFrame` 개체를 만듭니다.|
 |`CMFCDropDownFrame::CreateObject`|프레임워크에서 이 클래스 형식의 동적 인스턴스를 만드는 데 사용합니다.|
 |[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|드롭다운 프레임의 부모 메뉴 모음을 검색 합니다.|
@@ -112,7 +110,7 @@ virtual BOOL Create(
 *pWndOriginToolbar*\
 진행 이 메서드가 새 드롭다운 프레임 개체를 채우는 데 사용 하는 드롭다운 단추가 있는 도구 모음입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 드롭다운 프레임이 성공적으로 생성 되었으면 TRUE이 고, 그렇지 않으면 FALSE입니다.
 
@@ -130,7 +128,7 @@ virtual BOOL Create(
 CMFCMenuBar* GetParentMenuBar() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 드롭다운 프레임의 부모 메뉴 모음에 대 한 포인터 이거나, 프레임에 부모가 없는 경우 NULL입니다.
 
@@ -146,7 +144,7 @@ CMFCMenuBar* GetParentMenuBar() const;
 CMFCDropDownFrame* GetParentPopupMenu() const;
 ```
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 드롭다운 프레임의 부모 드롭다운 메뉴에 대 한 포인터 이거나, 프레임에 부모가 없는 경우 NULL입니다.
 

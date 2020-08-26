@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 37399bb50f195c683b52eea4c8fadf8679d62852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233095"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846461"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -36,14 +36,14 @@ Iostreams의 추출 중재 클래스 템플릿 및 삽입과 추출를 모두 �
 
 ### <a name="manipulators"></a>조작자
 
-|||
+|Name|설명|
 |-|-|
 |[ws-trust](../standard-library/istream-functions.md#ws)|스트림의 공백을 건너뜁니다.|
 |[스왑을](../standard-library/istream-functions.md#istream_swap)|두 스트림 개체를 교환합니다.|
 
 ### <a name="operators"></a>연산자
 
-|연산자|Description|
+|연산자|설명|
 |-|-|
 |[연산자>>](../standard-library/istream-operators.md#op_gt_gt)|스트림에서 문자 및 문자열을 추출합니다.|
 

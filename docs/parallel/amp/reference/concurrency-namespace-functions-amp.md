@@ -13,26 +13,48 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 5bf3c1f8a1de4d61b849bd56363ce3f0c7437348
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b03a6189d2205dff62d94f07bc597ca2e1013a28
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222747"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840208"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 네임스페이스 함수(AMP)
 
-||||
-|-|-|-|
-|[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange 함수(C++ AMP)](#atomic_exchange)|[atomic_fetch_add 함수(C++ AMP)](#atomic_fetch_add)|[atomic_fetch_and 함수(C++ AMP)](#atomic_fetch_and)|
-|[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 함수(C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub 함수 (C++ AMP)](#atomic_fetch_sub)|
-|[atomic_fetch_xor 함수(C++ AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
-|[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence](#global_memory_fence)|[parallel_for_each 함수(C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
+:::row:::
+   :::column span="":::
+      [`all_memory_fence`](#all_memory_fence)\
+      [`amp_uninitialize`](#amp_uninitialize)\
+      [`atomic_compare_exchange`](#atomic_compare_exchange)\
+      [`atomic_exchange`](#atomic_exchange)\
+      [`atomic_fetch_add`](#atomic_fetch_add)\
+      [`atomic_fetch_and`](#atomic_fetch_and)
+   :::column-end:::
+   :::column span="":::
+      [`atomic_fetch_dec`](#atomic_fetch_dec)\
+      [`atomic_fetch_inc`](#atomic_fetch_inc)\
+      [`atomic_fetch_max`](#atomic_fetch_max)\
+      [`atomic_fetch_min`](#atomic_fetch_min)\
+      [`atomic_fetch_or`](#atomic_fetch_or)
+   :::column-end:::
+   :::column span="":::
+      [`atomic_fetch_sub`](#atomic_fetch_sub)\
+      [`atomic_fetch_xor`](#atomic_fetch_xor)\
+      [`copy`](#copy)\
+      [`copy_async`](#copy_async)\
+      [`direct3d_abort`](#direct3d_abort)
+   :::column-end:::
+   :::column span="":::
+      [`direct3d_errorf`](#direct3d_errorf)\
+      [`direct3d_printf`](#direct3d_printf)\
+      [`global_memory_fence`](#global_memory_fence)\
+      [`parallel_for_each`](#parallel_for_each)\
+      [`tile_static_memory_fence`](#tile_static_memory_fence)
+   :::column-end:::
+:::row-end:::
 
-## <a name="all_memory_fence"></a><a name="all_memory_fence"></a>all_memory_fence
+## <a name="all_memory_fence"></a><a name="all_memory_fence"></a> all_memory_fence
 
 모든 메모리 액세스가 완료 될 때까지 타일에 있는 모든 스레드의 실행을 차단 합니다. 이렇게 하면 모든 메모리 액세스가 스레드 타일의 다른 스레드에 표시 되 고 프로그램 순서로 실행 됩니다.
 
@@ -45,7 +67,7 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 `tile_barrier` 개체입니다.
 
-## <a name="amp_uninitialize"></a><a name="amp_uninitialize"></a>amp_uninitialize
+## <a name="amp_uninitialize"></a><a name="amp_uninitialize"></a> amp_uninitialize
 
 C++ AMP 런타임을 초기화 하지 않습니다 합니다. 응용 프로그램 수명 중에이 함수를 여러 번 호출할 수 있습니다. 이 함수를 호출한 후 C++ AMP API를 호출 하면 C++ AMP 런타임이 다시 초기화 됩니다. 이 함수에 대 한 호출에서 C++ AMP 개체를 사용할 수 없으며, 이렇게 하면 정의 되지 않은 동작이 발생 합니다. 또한이 함수 및 다른 AMP Api를 동시에 호출 하는 것은 잘못 된 것 이며 정의 되지 않은 동작이 발생 합니다.
 
@@ -53,7 +75,7 @@ C++ AMP 런타임을 초기화 하지 않습니다 합니다. 응용 프로그�
 void __cdecl amp_uninitialize();
 ```
 
-## <a name="atomic_compare_exchange"></a><a name="atomic_compare_exchange"></a>atomic_compare_exchange
+## <a name="atomic_compare_exchange"></a><a name="atomic_compare_exchange"></a> atomic_compare_exchange
 
 원자 단위로 첫 번째 인수에 지정 된 메모리 위치에 저장 된 값과 두 번째 지정 된 인수의 값이 같은지 비교 하 고 값이 같으면 메모리 위치의 값이 세 번째 지정 된 인수의 값으로 변경 됩니다.
 
@@ -82,11 +104,11 @@ inline bool atomic_compare_exchange(
 *value*<br/>
 `_Dest`가와 같은 경우에 지정 된 메모리 위치에 저장 되는 값입니다 `_Dest` `_Expected_value` .
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 **`true`** 작업이 성공 하면이 고, 그렇지 않으면입니다. 그렇지 않으면 **`false`** 입니다.
 
-## <a name="atomic_exchange-function-c-amp"></a><a name="atomic_exchange"></a>atomic_exchange 함수 (C++ AMP)
+## <a name="atomic_exchange-function-c-amp"></a><a name="atomic_exchange"></a> atomic_exchange 함수 (C++ AMP)
 
 원자 단위 작업으로 대상 위치의 값을 설정합니다.
 
@@ -115,11 +137,11 @@ inline float atomic_exchange(
 *value*<br/>
 새 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 대상 위치의 원본 값입니다.
 
-## <a name="atomic_fetch_add-function-c-amp"></a><a name="atomic_fetch_add"></a>atomic_fetch_add 함수 (C++ AMP)
+## <a name="atomic_fetch_add-function-c-amp"></a><a name="atomic_fetch_add"></a> atomic_fetch_add 함수 (C++ AMP)
 
 메모리 위치 값에 값을 원자 단위로 추가 합니다.
 
@@ -143,11 +165,11 @@ inline unsigned int atomic_fetch_add(
 *value*<br/>
 추가할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메모리 위치의 원본 값입니다.
 
-## <a name="atomic_fetch_and-function-c-amp"></a><a name="atomic_fetch_and"></a>atomic_fetch_and 함수 (C++ AMP)
+## <a name="atomic_fetch_and-function-c-amp"></a><a name="atomic_fetch_and"></a> atomic_fetch_and 함수 (C++ AMP)
 
 값의 비트 AND 연산과 메모리 위치 값을 원자 단위로 수행 합니다.
 
@@ -171,11 +193,11 @@ inline unsigned int atomic_fetch_and(
 *value*<br/>
 비트 AND 계산에 사용할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메모리 위치의 원본 값입니다.
 
-## <a name="atomic_fetch_dec"></a><a name="atomic_fetch_dec"></a>atomic_fetch_dec
+## <a name="atomic_fetch_dec"></a><a name="atomic_fetch_dec"></a> atomic_fetch_dec
 
 지정 된 메모리 위치에 저장 된 값을 원자 단위로 감소 시킵니다.
 
@@ -191,11 +213,11 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 *_Dest*<br/>
 감소 시킬 값의 메모리 내 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메모리 위치에 저장 된 원래 값입니다.
 
-## <a name="atomic_fetch_inc"></a><a name="atomic_fetch_inc"></a>atomic_fetch_inc
+## <a name="atomic_fetch_inc"></a><a name="atomic_fetch_inc"></a> atomic_fetch_inc
 
 지정 된 메모리 위치에 저장 된 값을 원자 단위로 늘립니다.
 
@@ -210,11 +232,11 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 *_Dest*<br/>
 증가 시킬 값의 메모리 내 위치입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메모리 위치에 저장 된 원래 값입니다.
 
-## <a name="atomic_fetch_max"></a><a name="atomic_fetch_max"></a>atomic_fetch_max
+## <a name="atomic_fetch_max"></a><a name="atomic_fetch_max"></a> atomic_fetch_max
 
 원자 단위로 첫 번째 인수에 지정 된 메모리 위치에 저장 된 값과 두 번째 인수에 지정 된 값 사이의 최대값을 계산 하 고 같은 메모리 위치에 저장 합니다.
 
@@ -238,11 +260,11 @@ inline unsigned int atomic_fetch_max(
 *value*<br/>
 지정 된 위치에 있는 값과 비교할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 위치에 저장 된 원래 값입니다.
 
-## <a name="atomic_fetch_min"></a><a name="atomic_fetch_min"></a>atomic_fetch_min
+## <a name="atomic_fetch_min"></a><a name="atomic_fetch_min"></a> atomic_fetch_min
 
 원자 단위로 첫 번째 인수에 지정 된 메모리 위치에 저장 된 값과 두 번째 인수에 지정 된 값 사이의 최소값을 계산 하 고 같은 메모리 위치에 저장 합니다.
 
@@ -266,11 +288,11 @@ inline unsigned int atomic_fetch_min(
 *value*<br/>
 지정 된 위치에 있는 값과 비교할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 지정 된 위치에 저장 된 원래 값입니다.
 
-## <a name="atomic_fetch_or-function-c-amp"></a><a name="atomic_fetch_or"></a>atomic_fetch_or 함수 (C++ AMP)
+## <a name="atomic_fetch_or-function-c-amp"></a><a name="atomic_fetch_or"></a> atomic_fetch_or 함수 (C++ AMP)
 
 값 및 메모리 위치의 값으로 비트 OR 연산을 원자 단위로 수행합니다.
 
@@ -294,11 +316,11 @@ inline unsigned int atomic_fetch_or(
 *value*<br/>
 비트 OR 계산에 사용할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메모리 위치의 원본 값입니다.
 
-## <a name="atomic_fetch_sub-function-c-amp"></a><a name="atomic_fetch_sub"></a>atomic_fetch_sub 함수 (C++ AMP)
+## <a name="atomic_fetch_sub-function-c-amp"></a><a name="atomic_fetch_sub"></a> atomic_fetch_sub 함수 (C++ AMP)
 
 메모리 위치에서 값을 원자 단위로 뺍니다.
 
@@ -322,11 +344,11 @@ inline unsigned int atomic_fetch_sub(
 *value*<br/>
 뺄 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메모리 위치의 원본 값입니다.
 
-## <a name="atomic_fetch_xor-function-c-amp"></a><a name="atomic_fetch_xor"></a>atomic_fetch_xor 함수 (C++ AMP)
+## <a name="atomic_fetch_xor-function-c-amp"></a><a name="atomic_fetch_xor"></a> atomic_fetch_xor 함수 (C++ AMP)
 
 값 및 메모리 위치의 비트 XOR 연산을 원자 단위로 수행 합니다.
 
@@ -350,11 +372,11 @@ inline unsigned int atomic_fetch_xor(
 *value*<br/>
 XOR 계산에 사용할 값입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 메모리 위치의 원본 값입니다.
 
-## <a name="copy"></a><a name="copy"></a>복사
+## <a name="copy"></a><a name="copy"></a> 복사
 
 C++ AMP 개체를 복사 합니다. 모든 동기 데이터 전송 요구 사항이 충족 됩니다. 액셀러레이터 키에서 코드를 실행할 때는 데이터를 복사할 수 없습니다. 이 함수의 일반적인 형태는 `copy(src, dest)` 입니다.
 
@@ -451,7 +473,7 @@ void copy(
 *value_type*<br/>
 복사 되는 요소의 데이터 형식입니다.
 
-## <a name="copy_async"></a><a name="copy_async"></a>copy_async
+## <a name="copy_async"></a><a name="copy_async"></a> copy_async
 
 C++ AMP 개체를 복사 하 고 대기 될 수 있는 [completion_future](completion-future-class.md) 개체를 반환 합니다. 액셀러레이터 키에서 코드를 실행할 때는 데이터를 복사할 수 없습니다.  이 함수의 일반적인 형태는 `copy(src, dest)` 입니다.
 
@@ -540,11 +562,11 @@ concurrency::completion_future copy_async(
 *value_type*<br/>
 복사 되는 요소의 데이터 형식입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 `future<void>`대기 시킬 수 있는입니다.
 
-## <a name="direct3d_abort"></a><a name="direct3d_abort"></a>direct3d_abort
+## <a name="direct3d_abort"></a><a name="direct3d_abort"></a> direct3d_abort
 
 `restrict(amp)` 제한 절이 있는 함수의 실행을 중단합니다. AMP 런타임이 호출을 감지하면 "Reference Rasterizer: Shader abort instruction hit" 오류 메시지로 [runtime_exception](runtime-exception-class.md) 예외를 발생시킵니다.
 
@@ -552,7 +574,7 @@ concurrency::completion_future copy_async(
 void direct3d_abort() restrict(amp);
 ```
 
-## <a name="direct3d_errorf"></a><a name="direct3d_errorf"></a>direct3d_errorf
+## <a name="direct3d_errorf"></a><a name="direct3d_errorf"></a> direct3d_errorf
 
 서식이 지정 된 문자열을 Visual Studio 출력 창에 인쇄 합니다. Restriction 절을 사용 하 여 함수에서 호출 됩니다 `restrict(amp)` . AMP 런타임에서 호출을 감지 하면 동일한 서식 문자열을 사용 하 여 [runtime_exception](runtime-exception-class.md) 예외가 발생 합니다.
 
@@ -562,7 +584,7 @@ void direct3d_errorf(
 ...) restrict(amp);
 ```
 
-## <a name="direct3d_printf"></a><a name="direct3d_printf"></a>direct3d_printf
+## <a name="direct3d_printf"></a><a name="direct3d_printf"></a> direct3d_printf
 
 서식이 지정 된 문자열을 Visual Studio 출력 창에 인쇄 합니다. Restriction 절을 사용 하 여 함수에서 호출 됩니다 `restrict(amp)` .
 
@@ -572,7 +594,7 @@ void direct3d_printf(
 ...) restrict(amp);
 ```
 
-## <a name="global_memory_fence"></a><a name="global_memory_fence"></a>global_memory_fence
+## <a name="global_memory_fence"></a><a name="global_memory_fence"></a> global_memory_fence
 
 모든 전역 메모리 액세스가 완료 될 때까지 타일에 있는 모든 스레드의 실행을 차단 합니다. 이렇게 하면 전역 메모리 액세스가 스레드 타일의 다른 스레드에 표시 되 고 프로그램 순서로 실행 됩니다.
 
@@ -585,7 +607,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 Tile_barrier 개체
 
-## <a name="parallel_for_each-function-c-amp"></a><a name="parallel_for_each"></a>parallel_for_each 함수 (C++ AMP)
+## <a name="parallel_for_each-function-c-amp"></a><a name="parallel_for_each"></a> parallel_for_each 함수 (C++ AMP)
 
 계산 도메인에서 함수를 실행 합니다. 자세한 내용은 [C++ AMP 개요](../../../parallel/amp/cpp-amp-overview.md)를 참조 하세요.
 
@@ -661,7 +683,7 @@ void parallel_for_each(
 *_Rank*<br/>
 익스텐트의 순위입니다.
 
-## <a name="tile_static_memory_fence"></a><a name="tile_static_memory_fence"></a>tile_static_memory_fence
+## <a name="tile_static_memory_fence"></a><a name="tile_static_memory_fence"></a> tile_static_memory_fence
 
 처리 중인 모든 메모리 액세스가 완료 될 때까지 타일에 있는 모든 스레드의 실행을 차단 `tile_static` 합니다. 이렇게 하면 `tile_static` 메모리 액세스가 스레드 타일의 다른 스레드에 표시 되 고 액세스는 프로그램 순서로 실행 됩니다.
 

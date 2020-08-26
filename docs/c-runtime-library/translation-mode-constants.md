@@ -17,12 +17,12 @@ helpviewer_keywords:
 - translation, modes
 - translation modes (file I/O)
 ms.assetid: a5993bf4-7e7a-47f9-83c3-e46332b85579
-ms.openlocfilehash: a86c0c1a0b70613c6e7749c78f58f6dfb3602d4d
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.openlocfilehash: 0b951fc76635f67115f4a832ed316d66b6de7497
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376285"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836701"
 ---
 # <a name="translation-mode-constants"></a>변환 모드 상수
 
@@ -38,7 +38,7 @@ ms.locfileid: "68376285"
 
 허용되는 값은 다음과 같습니다.
 
-|||
+|값|설명|
 |-|-|
 `_O_TEXT`  | 파일을 텍스트(변환됨) 모드에서 엽니다. 캐리지 리턴-줄 바꿈(CR-LF) 조합은 입력 시 단일 줄 바꿈(LF)으로 변환됩니다. 줄 바꿈 문자는 출력 시 CR-LF 조합으로 변환됩니다. 또한 CTRL+Z는 입력 시 파일 끝 문자로 변환됩니다. 읽기용 및 읽기/쓰기용으로 열려 있는 파일에서 `fopen`은 파일 끝에 CTRL+Z가 있는지 확인하고 가능한 경우 이를 제거합니다. 이렇게 처리되는 이유는 `fseek` 및 `ftell` 함수를 사용하여 CTRL+Z로 끝나는 파일 내에서 이동하면 `fseek`가 파일 끝 부분에서 제대로 동작하지 않을 수 있기 때문입니다.
 `_O_BINARY`  | 파일을 이진(변환되지 않음) 모드에서 엽니다. 위 변환은 표시되지 않습니다.

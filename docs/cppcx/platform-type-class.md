@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185036"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846565"
 ---
 # <a name="platformtype-class"></a>Platform::Type 클래스
 
@@ -33,23 +33,23 @@ public ref class Platform::Type :
 
 ## <a name="public-methods"></a>public 메서드
 
-|||
-|-|-|
-|[Type::GetTypeCode 메서드](#gettypecode)|개체의 [Platform::TypeCode 열거형](../cppcx/platform-typecode-enumeration.md) 값을 반환합니다.|
-|[Type:: ToString 메서드](#tostring)|메타 데이터에 지정 된 형식의 이름을 반환 합니다.|
+| Name | 설명 |
+|--|--|
+| [Type::GetTypeCode 메서드](#gettypecode) | 개체의 [Platform::TypeCode 열거형](../cppcx/platform-typecode-enumeration.md) 값을 반환합니다. |
+| [Type:: ToString 메서드](#tostring) | 메타 데이터에 지정 된 형식의 이름을 반환 합니다. |
 
 ## <a name="public-properties"></a>public 속성
 
-|||
-|-|-|
-|[형식:: FullName](#fullname)|형식의 정규화된 이름을 나타내며 ::(콜론 두 개) 대신 .(점)을 구분 기호로 사용(예: "MyNamespace.MyClass")하는 [Platform::String 클래스](../cppcx/platform-string-class.md)^을 (점)을 구분 기호로 사용할 수 없습니다 (예: `MyNamespace.MyClass` ).|
+| Name | 설명 |
+|--|--|
+| [형식:: FullName](#fullname) | 형식의 정규화된 이름을 나타내며 ::(콜론 두 개) 대신 .(점)을 구분 기호로 사용(예: "MyNamespace.MyClass")하는 [Platform::String 클래스](../cppcx/platform-string-class.md)^을 (점)을 구분 기호로 사용할 수 없습니다 (예: `MyNamespace.MyClass` ). |
 
 ## <a name="conversion-operators"></a>변환 연산자
 
-|||
-|-|-|
-|[연산자 유형 ^](../cppcx/operator-type-hat.md)|`Windows::UI::Xaml::Interop::TypeName` 을 `Platform::Type`으로 변환할 수 있습니다.|
-|[연산자 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|`Platform::Type` 을 `Windows::UI::Xaml::Interop::TypeName`으로 변환할 수 있습니다.|
+| Name | 설명 |
+|--|--|
+| [연산자 유형 ^](../cppcx/operator-type-hat.md) | `Windows::UI::Xaml::Interop::TypeName` 을 `Platform::Type`으로 변환할 수 있습니다. |
+| [연산자 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md) | `Platform::Type` 을 `Windows::UI::Xaml::Interop::TypeName`으로 변환할 수 있습니다. |
 
 ### <a name="requirements"></a>요구 사항
 
@@ -61,7 +61,7 @@ public ref class Platform::Type :
 
 **메타 데이터:** platform.object
 
-## <a name="typefullname-property"></a><a name="fullname"></a>Type:: FullName 속성
+## <a name="typefullname-property"></a><a name="fullname"></a> Type:: FullName 속성
 
 폼에서 현재 형식의 정규화 된 이름을 검색 합니다 `Namespace.Type` .
 
@@ -88,7 +88,7 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Type:: GetTypeCode 메서드
+## <a name="typegettypecode-method"></a><a name="gettypecode"></a> Type:: GetTypeCode 메서드
 
 기본 제공 형식의 숫자 형식 범주를 검색합니다.
 
@@ -106,7 +106,7 @@ Platform::TypeCode 열거형 값의 하나입니다.
 
 GetTypeCode () 멤버 메서드에 해당 하는는 **`typeid`** 속성입니다.
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Type:: ToString 메서드
+## <a name="typetostring-method"></a><a name="tostring"></a> Type:: ToString 메서드
 
 형식의 이름을 검색 합니다.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: 85ee066a12d4297d9a782ae07ef0fa16798f1616
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b017ba6dd2bbdfab7bfb5fa2dbf19e613e14772b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228052"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840543"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -33,9 +33,7 @@ Union 멤버를 선택 하는 union 판별 역할을 하는 식 또는 식별자
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`typedef`**|
 |**불가능**|아니요|

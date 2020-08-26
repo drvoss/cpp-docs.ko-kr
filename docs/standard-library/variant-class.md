@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215402"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840026"
 ---
 # <a name="variant-class"></a>variant 클래스
 
@@ -33,13 +33,13 @@ template <class... Types>
 
 ### <a name="constructors"></a>생성자
 
-|||
+|속성|설명|
 |-|-|
 |[variant](#variant)|`variant` 형식의 개체를 생성합니다.|
 
 ### <a name="functions"></a>Functions
 
-|||
+|Name|설명|
 |-|-|
 |[emplace](#emplace)|새 포함 된 값을 만듭니다.|
 |[index](#index)|포함 된 값의 인덱스를 반환 합니다.|
@@ -48,11 +48,11 @@ template <class... Types>
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자 =](#op_eq)|Variant를 다른 variant의 복사본으로 바꿉니다.|
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 새 포함 된 값을 만듭니다.
 
@@ -67,7 +67,7 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a><a name="index"></a>인덱싱할
+## <a name="index"></a><a name="index"></a> 인덱싱할
 
 포함 된 값의 인덱스를 반환 합니다.
 
@@ -75,7 +75,7 @@ template <size_t I, class U, class... Args>
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a><a name="variant"></a>변형은
+## <a name="variant"></a><a name="variant"></a> 변형은
 
 `variant` 형식의 개체를 생성합니다. 소멸자도 포함 합니다.
 
@@ -119,7 +119,7 @@ template <class Alloc, size_t I, class U, class... Args>
 *항상*\
 이 개체에 사용할 할당자 클래스입니다.
 
-## <a name="operator"></a><a name="op_eq"></a>연산자 =
+## <a name="operator"></a><a name="op_eq"></a> 연산자 =
 
 Variant를 다른 variant의 복사본으로 바꿉니다.
 
@@ -130,13 +130,13 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a><a name="swap"></a>스왑을
+## <a name="swap"></a><a name="swap"></a> 스왑을
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a> valueless_by_exception
 
 **`false`** 변형에 값이 포함 된 경우를 반환 합니다.
 

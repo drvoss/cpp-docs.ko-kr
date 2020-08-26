@@ -3,12 +3,12 @@ title: Windows 런타임 C++ 템플릿 라이브러리(WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: b03dc98212bbc822ddc44871632fda73d1be8740
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404914"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840540"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 런타임 C++ 템플릿 라이브러리(WRL)
 
@@ -17,7 +17,7 @@ WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성
 > [!NOTE]
 > WRL는 이제 Windows 런타임 Api에 대 한 표준 c + + 17 언어 프로젝션으로 c + +/WinRT로 대체 되었습니다. C++/WinRT는 버전 1803부터 Windows 10 SDK에서 제공됩니다. C + +/WinRT는 헤더 파일에 완전히 구현 되며 최신 Windows API에 대 한 최고 수준의 액세스를 제공 하도록 설계 되었습니다.
 >
-> C + +/WinRT를 사용 하면 표준 규격 c + + 17 컴파일러를 사용 하 여 Windows 런타임 Api를 사용 하 고 제작할 수 있습니다. 일반적으로 c + +/WinRT는 Windows 런타임에 대 한 다른 언어 옵션 보다 더 작은 이진 파일을 생성 합니다. C++/CX와 WRL도 계속 지원되지만, 새 애플리케이션에서는 C++/WinRT를 사용하는 것이 좋습니다. 자세한 내용은 [c + +/Winrt](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)를 참조 하세요.
+> C + +/WinRT를 사용 하면 표준 규격 c + + 17 컴파일러를 사용 하 여 Windows 런타임 Api를 사용 하 고 제작할 수 있습니다. 일반적으로 c + +/WinRT는 Windows 런타임에 대 한 다른 언어 옵션 보다 더 작은 이진 파일을 생성 합니다. C++/CX와 WRL도 계속 지원되지만, 새 애플리케이션에서는 C++/WinRT를 사용하는 것이 좋습니다. 자세한 내용은 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index) 참조하세요.
 
 ## <a name="benefits"></a>이점
 
@@ -36,7 +36,7 @@ Windows 런타임 c + + 템플릿 라이브러리 및 c + +/CX는 서로 다른 
 
 - Windows 런타임 c + + 템플릿 라이브러리의 목적과 디자인은 COM 개체의 프로그래밍을 간소화 하는 템플릿 기반 c + + 클래스 집합인 ATL (액티브 템플릿 라이브러리)에 의해 결정 됩니다. Windows 런타임 c + + 템플릿 라이브러리는 표준 c + +를 사용 하 여 Windows 런타임 래핑할 수 있으므로 ATL로 작성 된 많은 기존 COM 구성 요소를 보다 쉽게 이식 하 고 Windows 런타임 수 있습니다. ATL을 이미 알고 있는 경우 Windows 런타임 c + + 템플릿 라이브러리를 프로그래밍 하는 것이 더 쉬울 수 있습니다.
 
-## <a name="getting-started"></a>시작
+## <a name="getting-started"></a>시작하기
 
 다음은 Windows 런타임 c + + 템플릿 라이브러리를 즉시 사용 하는 데 도움이 되는 몇 가지 리소스입니다.
 
@@ -73,7 +73,7 @@ Windows 런타임 c + + 템플릿 라이브러리를 사용 하 여 기본 COM �
 [C++ 샘플을 사용하여 Windows 런타임 DLL 구성 요소 만들기](https://github.com/Microsoft/VCSamples/tree/master/VC2012Samples/Windows%208%20samples/C%2B%2B/Windows%208%20app%20samples)<br/>
 Windows 런타임 c + + 템플릿 라이브러리를 사용 하 여 in-process DLL 구성 요소를 만들고이를 c + +/CX, JavaScript 및 c #에서 사용 하는 방법을 보여 줍니다.
 
-[DirectX Marble Maze 게임 샘플](https://docs.microsoft.com/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
+[DirectX Marble Maze 게임 샘플](/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 Windows 런타임 c + + 템플릿 라이브러리를 사용 하 여 전체 3 차원 게임의 컨텍스트에서 DirectX 및 미디어 파운데이션 같은 COM 구성 요소의 수명을 관리 하는 방법을 보여 줍니다.
 
 [데스크톱 앱의 알림 메시지](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
@@ -143,9 +143,14 @@ Windows 런타임 c + + 템플릿 라이브러리는 몇 가지 기본 개념을
 
 ## <a name="related-topics"></a>관련 항목
 
-|||
-|-|-|
-|[범주별 키 API](key-wrl-apis-by-category.md)|기본 Windows 런타임 c + + 템플릿 라이브러리 형식, 함수 및 매크로를 강조 표시 합니다.|
-|[참조](wrl-reference.md)|Windows 런타임 c + + 템플릿 라이브러리에 대 한 참조 정보를 포함 합니다.|
-|[빠른 참조(C++/CX)](../../cppcx/quick-reference-c-cx.md)|Windows 런타임를 지 원하는 c + +/CX 기능을 간략하게 설명 합니다.|
-|[Visual C++에서 Windows 런타임 구성 요소 사용](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|C + +/CX를 사용 하 여 기본 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다.|
+[범주별 키 Api](key-wrl-apis-by-category.md)\
+기본 Windows 런타임 c + + 템플릿 라이브러리 형식, 함수 및 매크로를 강조 표시 합니다.
+
+[참조일](wrl-reference.md)\
+Windows 런타임 c + + 템플릿 라이브러리에 대 한 참조 정보를 포함 합니다.
+
+[빠른 참조 (c + +/CX)](../../cppcx/quick-reference-c-cx.md)\
+Windows 런타임를 지 원하는 c + +/CX 기능을 간략하게 설명 합니다.
+
+[Visual C++에서 Windows 런타임 구성 요소 사용](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)\
+C + +/CX를 사용 하 여 기본 Windows 런타임 구성 요소를 만드는 방법을 보여 줍니다.

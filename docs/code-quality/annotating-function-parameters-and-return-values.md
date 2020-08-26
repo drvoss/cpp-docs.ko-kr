@@ -124,12 +124,12 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b1831a2a504bb12473f564cd914340bc429fab8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231262"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836676"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>함수 매개 변수 및 반환 값에 주석 달기
 
@@ -188,7 +188,7 @@ ms.locfileid: "87231262"
      void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
      ```
 
-     이 예제에서 호출자는의 요소 버퍼를 제공 합니다 `size` `p1` . `MyStringCopy`이러한 요소 중 일부를 사용할 수 있도록 합니다. 무엇 보다도, `_Null_terminated_` 의 주석은 `PWSTR` `p1` 사후 상태에서 null로 종료 됨을 의미 합니다. 이러한 방식으로 올바른 요소 수는 여전히 잘 정의 되어 있지만 특정 요소 수는 필요 하지 않습니다.
+     이 예제에서 호출자는의 요소 버퍼를 제공 합니다 `size` `p1` . `MyStringCopy` 이러한 요소 중 일부를 사용할 수 있도록 합니다. 무엇 보다도, `_Null_terminated_` 의 주석은 `PWSTR` `p1` 사후 상태에서 null로 종료 됨을 의미 합니다. 이러한 방식으로 올바른 요소 수는 여전히 잘 정의 되어 있지만 특정 요소 수는 필요 하지 않습니다.
 
      `_bytes_`변형은 요소 대신 크기 (바이트)를 제공 합니다. 크기를 요소로 표현할 수 없는 경우에만이 변형을 사용 합니다. 예를 들어 **`char`** 문자열은에서 `_bytes_` 사용 하는 유사한 함수에서 variant를 사용 **`wchar_t`** 합니다.
 
@@ -218,7 +218,7 @@ ms.locfileid: "87231262"
 
      요소의 배열에 대 한 포인터 `s` 입니다. 요소는 사전 상태에서 유효 하지 않아도 됩니다. 사후 상태에서 `c` -th 요소 까지의 요소가 유효 해야 합니다. `_bytes_`크기를 요소 수가 아닌 바이트 단위로 알고 있는 경우 variant를 사용할 수 있습니다.
 
-     예를 들면 다음과 같습니다.
+     예를 들어:
 
      ```cpp
      void *memcpy(_Out_writes_bytes_all_(s) char *p1, _In_reads_bytes_(s) char *p2, _In_ int s);
@@ -249,7 +249,7 @@ ms.locfileid: "87231262"
 
      `p - _Curr_`(즉, `p` 빼기 `_Curr_` )가 유효한 식인 배열에 대 한 포인터입니다. 이전 요소는 `p` 사전 상태에서 유효 해야 합니다.
 
-    예를 들면 다음과 같습니다.
+    예를 들어:
 
     ```cpp
     int ReadAllElements(_In_reads_to_ptr_(EndOfArray) const int *Array, const int *EndOfArray);
@@ -272,15 +272,37 @@ ms.locfileid: "87231262"
 포인터 매개 변수 주석에 포함 된 경우 `_opt_` 매개 변수가 null 일 수 있음을 나타냅니다. 그렇지 않으면 주석이 포함 되지 않은 버전과 동일 하 게 동작 합니다 `_opt_` . `_opt_`포인터 매개 변수 주석의 변형 목록은 다음과 같습니다.
 
 :::row:::
-    :::column:::
-        `_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`
-    :::column-end:::
-    :::column:::
-        `_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`
-    :::column-end:::
-    :::column:::
-        `_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`
-    :::column-end:::
+   :::column:::
+      `_In_opt_`\
+      `_Out_opt_`\
+      `_Inout_opt_`\
+      `_In_opt_z_`\
+      `_Inout_opt_z_`\
+      `_In_reads_opt_`\
+      `_In_reads_bytes_opt_`\
+      `_In_reads_opt_z_`
+   :::column-end:::
+   :::column:::
+      `_Out_writes_opt_`\
+      `_Out_writes_opt_z_`\
+      `_Inout_updates_opt_`\
+      `_Inout_updates_bytes_opt_`\
+      `_Inout_updates_opt_z_`\
+      `_Out_writes_to_opt_`\
+      `_Out_writes_bytes_to_opt_`\
+      `_Out_writes_all_opt_`\
+      `_Out_writes_bytes_all_opt_`
+   :::column-end:::
+   :::column:::
+      `_Inout_updates_to_opt_`\
+      `_Inout_updates_bytes_to_opt_`\
+      `_Inout_updates_all_opt_`\
+      `_Inout_updates_bytes_all_opt_`\
+      `_In_reads_to_ptr_opt_`\
+      `_In_reads_to_ptr_opt_z_`\
+      `_Out_writes_to_ptr_opt_`\
+      `_Out_writes_to_ptr_opt_z_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="output-pointer-parameters"></a>출력 포인터 매개 변수
@@ -439,17 +461,30 @@ ms.locfileid: "87231262"
 함수의 반환 값은 `_Out_` 매개 변수와 비슷하지만 참조의 다른 수준에 있으므로 결과에 대 한 포인터의 개념을 고려할 필요가 없습니다. 다음 주석에서 반환 값은 주석이 추가 된 개체 (스칼라, 구조체에 대 한 포인터 또는 버퍼에 대 한 포인터)입니다. 이러한 주석에는 해당 주석과 동일한 의미 체계가 있습니다 `_Out_` .
 
 :::row:::
-    :::column:::
-        `_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`
-    :::column-end:::
-    :::column:::
-        `_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`
-    :::column-end:::
+   :::column:::
+      `_Ret_z_`\
+      `_Ret_writes_(s)`\
+      `_Ret_writes_bytes_(s)`\
+      `_Ret_writes_z_(s)`\
+      `_Ret_writes_to_(s,c)`\
+      `_Ret_writes_maybenull_(s)`\
+      `_Ret_writes_to_maybenull_(s)`\
+      `_Ret_writes_maybenull_z_(s)`
+   :::column-end:::
+   :::column:::
+      `_Ret_maybenull_`\
+      `_Ret_maybenull_z_`\
+      `_Ret_null_`\
+      `_Ret_notnull_`\
+      `_Ret_writes_bytes_to_`\
+      `_Ret_writes_bytes_maybenull_`\
+      `_Ret_writes_bytes_to_maybenull_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="format-string-parameters"></a>형식 문자열 매개 변수
 
-- `_Printf_format_string_`매개 변수가 식에 사용할 형식 문자열 임을 나타냅니다 `printf` .
+- `_Printf_format_string_` 매개 변수가 식에 사용할 형식 문자열 임을 나타냅니다 `printf` .
 
      **예제**
 
@@ -464,7 +499,7 @@ ms.locfileid: "87231262"
     }
     ```
 
-- `_Scanf_format_string_`매개 변수가 식에 사용할 형식 문자열 임을 나타냅니다 `scanf` .
+- `_Scanf_format_string_` 매개 변수가 식에 사용할 형식 문자열 임을 나타냅니다 `scanf` .
 
      **예제**
 
@@ -479,7 +514,7 @@ ms.locfileid: "87231262"
     }
     ```
 
-- `_Scanf_s_format_string_`매개 변수가 식에 사용할 형식 문자열 임을 나타냅니다 `scanf_s` .
+- `_Scanf_s_format_string_` 매개 변수가 식에 사용할 형식 문자열 임을 나타냅니다 `scanf_s` .
 
      **예제**
 
@@ -525,7 +560,7 @@ ms.locfileid: "87231262"
 
 - `_Struct_size_bytes_(size)`
 
-     구조체 또는 클래스 선언에 적용 됩니다. 에서 제공 하는 바이트 수를 사용 하 여 해당 형식의 유효한 개체가 선언 된 형식 보다 클 수 있음을 나타냅니다 `size` . 예를 들면 다음과 같습니다.
+     구조체 또는 클래스 선언에 적용 됩니다. 에서 제공 하는 바이트 수를 사용 하 여 해당 형식의 유효한 개체가 선언 된 형식 보다 클 수 있음을 나타냅니다 `size` . 예를 들어:
 
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`
 

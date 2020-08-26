@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bf6cb4a620243f35886835e996eb34bc7b0e6960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 28ecadfce3e52d9541358d8aa9f68b2e0857661b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224788"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839610"
 ---
 # <a name="lognormal_distribution-class"></a>lognormal_distribution 클래스
 
@@ -75,10 +75,8 @@ public:
 
 클래스 템플릿은 로그 정규 분포에 따라 분포 된 경우 사용자 지정 정수 형식 또는 **`double`** 아무것도 제공 되지 않은 경우 형식의 값을 생성 하는 분포를 설명 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
-||||
-|-|-|-|
-|[lognormal_distribution](#lognormal_distribution)|`lognormal_distribution::m`|`lognormal_distribution::param`|
-|`lognormal_distribution::operator()`|`lognormal_distribution::s`|[param_type](#param_type)|
+[lognormal_distribution](#lognormal_distribution)\
+[param_type](#param_type)
 
 속성 함수 `m()` 및 `s()`는 각각 저장된 분포 매개 변수인 *m* 및 *s*에 대한 값을 반환합니다.
 
@@ -184,7 +182,7 @@ Distribution for 10 samples:
 
 **네임스페이스:** std
 
-## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a>lognormal_distribution:: lognormal_distribution
+## <a name="lognormal_distributionlognormal_distribution"></a><a name="lognormal_distribution"></a> lognormal_distribution:: lognormal_distribution
 
 분포를 생성합니다.
 
@@ -212,7 +210,7 @@ explicit lognormal_distribution(const param_type& parm);
 
 두 번째 생성자는 저장된 매개 변수가 *parm*에서 초기화되는 개체를 생성합니다. `param()` 멤버 함수를 호출하여 기존 분포의 현재 매개 변수를 가져와 설정할 수 있습니다.
 
-## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a>lognormal_distribution::p aram_type
+## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a> lognormal_distribution::p aram_type
 
 분포의 매개 변수를 저장합니다.
 

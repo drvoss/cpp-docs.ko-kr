@@ -6,21 +6,21 @@ f1_keywords:
 - xstring/std::u16string_view
 - xstring/std::u32string_view
 - xstring/std::wstring_view
-ms.openlocfilehash: 6aadd4ad3ff08a0b020fd8e683e60063fe516c63
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2afaaea466cc3b1ca46d2acdf0ceb5a42c597743
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215597"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836132"
 ---
 # <a name="ltstring_viewgt-typedefs"></a>&lt;&gt;형식 정의 string_view
 
-||||
-|-|-|-|
-|[string_view](#string_view)|[u16string_view](#u16string_view)|[u32string_view](#u32string_view)|
-|[wstring_view](#wstring_view)|
+[string_view](#string_view)\
+[u16string_view](#u16string_view)\
+[u32string_view](#u32string_view)\
+[wstring_view](#wstring_view)
 
-## <a name="string_view"></a><a name="string_view"></a>string_view
+## <a name="string_view"></a><a name="string_view"></a> string_view
 
 형식의 요소를 사용 하 여 [basic_string_view](../standard-library/basic-string-view-class.md) 클래스 템플릿의 특수화를 설명 하는 형식 **`char`** 입니다.
 
@@ -40,7 +40,7 @@ basic_string_view<char> str("Hello");
 
 문자열 생성자 목록은 [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)을 참조하세요.
 
-## <a name="u16string_view"></a><a name="u16string_view"></a>u16string_view
+## <a name="u16string_view"></a><a name="u16string_view"></a> u16string_view
 
 형식의 요소를 사용 하 여 [basic_string_view](../standard-library/basic-string-view-class.md) 클래스 템플릿의 특수화를 설명 하는 형식 **`char16_t`** 입니다.
 
@@ -52,7 +52,7 @@ typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
 
 문자열 생성자 목록은 [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)을 참조하세요.
 
-## <a name="u32string_view"></a><a name="u32string_view"></a>u32string_view
+## <a name="u32string_view"></a><a name="u32string_view"></a> u32string_view
 
 형식의 요소를 사용 하 여 [basic_string_view](../standard-library/basic-string-view-class.md) 클래스 템플릿의 특수화를 설명 하는 형식 **`char32_t`** 입니다.
 
@@ -64,7 +64,7 @@ typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 
 문자열 생성자 목록은 [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)을 참조하세요.
 
-## <a name="wstring_view"></a><a name="wstring_view"></a>wstring_view
+## <a name="wstring_view"></a><a name="wstring_view"></a> wstring_view
 
 형식의 요소를 사용 하 여 [basic_string_view](../standard-library/basic-string-view-class.md) 클래스 템플릿의 특수화를 설명 하는 형식 **`wchar_t`** 입니다.
 

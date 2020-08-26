@@ -2,12 +2,12 @@
 title: 잠재적인 업그레이드 문제 개요(Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231639"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839675"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
 
@@ -98,9 +98,8 @@ Microsoft Visual C++ 6.0 이전 버전에서는 **`wchar_t`** 가 기본 제공 
 
 다음 표에서는 Visual Studio 2015부터 콘텐츠가 변경된 라이브러리를 보여 줍니다. 업그레이드하려면 첫 번째 열의 라이브러리에 두 번째 열의 이름을 추가해야 합니다. 이러한 라이브러리 중 일부는 가져오기 라이브러리 이지만 중요 하지 않습니다.
 
-|||
-|-|-|
 |기존 이름|다음 라이브러리를 사용해야 합니다.|
+|-|-|
 |LIBCMT.lib|libcmt.lib, libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib, libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib, ucrt.lib, vcruntime.lib|

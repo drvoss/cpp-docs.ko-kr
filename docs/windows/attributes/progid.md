@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: 3092111236afe1e1360a2814c3091ab0de4ff6ea
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 136c651ec92c78339c2f701804a6a409523dd30f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213855"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840000"
 ---
 # <a name="progid"></a>progid
 
@@ -36,7 +36,7 @@ Progid는 COM/ActiveX 개체를 식별 하는 데 사용 되는 CLSID (클래스
 
 에서 사용 하는 특성 블록 `progid` 에서도를 사용 하지 않는 경우 `uuid` 컴파일러는 레지스트리를 검사 하 여 지정 된에 `uuid` 대 한가 있는지 확인 합니다 `progid` . 을 `progid` 지정 하지 않으면 버전 (coclass를 만드는 경우 coclass 이름)이를 생성 하는 데 사용 됩니다 `progid` .
 
-`progid`특성을 암시 합니다. 즉,를 지정 하는 `coclass` 경우 및 특성을 지정 하는 것과 동일한 작업을 수행 합니다 `progid` `coclass` `progid` .
+`progid` 특성을 암시 합니다. 즉,를 지정 하는 `coclass` 경우 및 특성을 지정 하는 것과 동일한 작업을 수행 합니다 `progid` `coclass` `progid` .
 
 `progid`특성을 지정 하면 지정 된 이름으로 클래스가 자동으로 등록 됩니다. 생성 된 .idl 파일에는 값이 표시 되지 않습니다 `progid` .
 
@@ -48,12 +48,10 @@ ATL을 사용 하는 프로젝트 내에서이 특성을 사용 하는 경우 �
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|`class`, `struct`|
-|**불가능**|예|
+|**불가능**|아니요|
 |**필수 특성**|없음|
 |**잘못된 특성**|없음|
 

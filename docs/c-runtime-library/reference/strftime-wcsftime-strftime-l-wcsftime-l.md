@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: c59e8297013e02592e623859621bb1ff11474733
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215142"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846578"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -101,7 +101,7 @@ size_t _wcsftime_l(
 *locale*<br/>
 사용할 로캘입니다.
 
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 **strftime** 은 *strdest* 에 배치 된 문자 수를 반환 하 고 **wcsftime** 은 해당 하는 와이드 문자 수를 반환 합니다.
 
@@ -127,9 +127,8 @@ size_t _wcsftime_l(
 
 **Strftime** 함수는 다음과 같은 서식 지정 코드를 지원 합니다.
 
-|||
-|-|-|
 |코드|바꾸기 문자열|
+|-|-|
 |**% a**|로캘의 축약 된 요일 이름|
 |**% A**|로캘의 전체 요일 이름|
 |**% b**|로캘의 약식 월 이름|
@@ -172,7 +171,7 @@ size_t _wcsftime_l(
 
 |코드 형식|의미|
 |-----------------|-------------|
-|**% #a**, **% #A**,% **#b**,% **#B**, **% #g**, **% #G**, **% #h**, **% #n**, **% #p**, **% #t**, **% #u**, **% #w**, **% #X**, **% #z**, **% #Z**,**%#%**|**#** 플래그는 무시 됩니다.|
+|**% #a**, **% #A**,% **#b**,% **#B**, **% #g**, **% #G**, **% #h**, **% #n**, **% #p**, **% #t**, **% #u**, **% #w**, **% #X**, **% #z**, **% #Z**, **%#%**|**#** 플래그는 무시 됩니다.|
 |**% #c**|로캘에 적합 한 긴 날짜 및 시간 표현입니다. 예를 들면 "1995년 3월 14일 화요일 12:41:29"와 같습니다.|
 |**% #x**|로캘에 적합 한 긴 날짜 표현입니다. 예를 들면 "1995년 3월 14일 화요일"과 같습니다.|
 |**% #d**, **% #D**,% **#e**,% **#F**, **% #H**, **% #I**, **% #j**,% **#m**, **% #M**, **% #r**, **% #R,%**#S,% #T,% **#U**, **% #V**, **% #W**, **% #y**, **% #Y** **%#S** **%#T**|앞에 오는 0 또는 공백을 제거 합니다 (있는 경우).|

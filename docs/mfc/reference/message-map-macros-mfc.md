@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: e0980a5c00459b9f166296b7436d013bb8a42319
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 33b5d2eaefa11f9ccf6459aa05b4e24138731e80
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231782"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840273"
 ---
 # <a name="message-map-macros-mfc"></a>메시지 맵 매크로(MFC)
 
@@ -41,7 +41,7 @@ ms.locfileid: "87231782"
 
 ### <a name="message-map-declaration-and-demarcation-macros"></a>메시지 맵 선언 및 경계 매크로
 
-|||
+|Name|설명|
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|메시지 맵을 클래스에서 사용 하 여 메시지를 함수에 매핑하는 것을 선언 합니다 (클래스 선언에서 사용 되어야 함).|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|메시지 맵의 정의를 시작 합니다 (클래스 구현에서 사용 되어야 함).|
@@ -50,7 +50,7 @@ ms.locfileid: "87231782"
 
 ### <a name="message-mapping-macros"></a>메시지 매핑 매크로
 
-|||
+|Name|설명|
 |-|-|
 |[ON_COMMAND](#on_command)|지정 된 명령 메시지를 처리할 함수를 나타냅니다.|
 |[ON_COMMAND_EX](#on_command_ex)|지정 된 명령 메시지를 처리할 함수를 나타냅니다.|
@@ -64,7 +64,7 @@ ms.locfileid: "87231782"
 
 ### <a name="message-map-range-macros"></a>메시지 맵 범위 매크로
 
-|||
+|Name|설명|
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|매크로에 대 한 처음 두 매개 변수에 지정 된 명령 Id의 범위를 처리 하는 함수를 나타냅니다.|
 |[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|매크로에 대 한 처음 두 매개 변수에 지정 된 명령 Id의 범위를 처리 하는 업데이트 처리기를 나타냅니다.|
@@ -72,7 +72,7 @@ ms.locfileid: "87231782"
 
 메시지 맵, 메시지 맵 선언 및 경계 매크로 및 메시지 매핑 매크로에 대 한 자세한 내용은 [메시지 맵](../../mfc/reference/message-maps-mfc.md) 및 [메시지 처리 및 매핑 항목](../../mfc/message-handling-and-mapping.md)을 참조 하세요. 메시지 맵 범위에 대 한 자세한 내용은 [메시지 맵 범위에 대 한 처리기](../../mfc/handlers-for-message-map-ranges.md)를 참조 하세요.
 
-## <a name="begin_message_map"></a><a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
+## <a name="begin_message_map"></a><a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
 메시지 맵의 정의를 시작 합니다.
 
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **헤더:** afxwin.h
 
-## <a name="begin_template_message_map"></a><a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begin_template_message_map"></a><a name="begin_template_message_map"></a> BEGIN_TEMPLATE_MESSAGE_MAP
 
 단일 템플릿 인수를 포함 하는 클래스 형식에 대 한 메시지 맵의 정의를 시작 합니다.
 
@@ -141,7 +141,7 @@ BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 
 **헤더:** afxwin.h
 
-## <a name="declare_message_map"></a><a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
+## <a name="declare_message_map"></a><a name="declare_message_map"></a> DECLARE_MESSAGE_MAP
 
 클래스가 메시지 맵을 정의 함을 선언 합니다. `CCmdTarget`프로그램의 각 파생 클래스는 메시지 맵을 제공 하 여 메시지를 처리 해야 합니다.
 
@@ -174,7 +174,7 @@ class CMainFrame : public CMDIFrameWnd
 
 **헤더:** afxwin.h
 
-## <a name="end_message_map"></a><a name="end_message_map"></a>END_MESSAGE_MAP
+## <a name="end_message_map"></a><a name="end_message_map"></a> END_MESSAGE_MAP
 
 메시지 맵의 정의를 종료 합니다.
 
@@ -192,7 +192,7 @@ END_MESSAGE_MAP( )
 
 **헤더:** afxwin.h
 
-## <a name="on_command"></a><a name="on_command"></a>ON_COMMAND
+## <a name="on_command"></a><a name="on_command"></a> ON_COMMAND
 
 이 매크로는 명령 메시지를 멤버 함수에 매핑합니다.
 
@@ -230,7 +230,7 @@ END_MESSAGE_MAP()
 
 **헤더:** afxmsg_. h
 
-## <a name="on_command_ex"></a><a name="on_command_ex"></a>ON_COMMAND_EX
+## <a name="on_command_ex"></a><a name="on_command_ex"></a> ON_COMMAND_EX
 
 확장 된 명령 처리기 멤버 함수입니다.
 
@@ -258,7 +258,7 @@ ON_COMMAND_EX(commandId, memberFxn);
 
 헤더 파일: afxmsg_. h
 
-## <a name="on_control"></a><a name="on_control"></a>ON_CONTROL
+## <a name="on_control"></a><a name="on_control"></a> ON_CONTROL
 
 사용자 지정 컨트롤 알림 메시지를 처리할 함수를 나타냅니다.
 
@@ -291,7 +291,7 @@ ON_CONTROL( wNotifyCode, commandId, memberFxn )
 
 **헤더:** afxmsg_. h
 
-## <a name="on_message"></a><a name="on_message"></a>ON_MESSAGE
+## <a name="on_message"></a><a name="on_message"></a> ON_MESSAGE
 
 사용자 정의 메시지를 처리할 함수를 나타냅니다.
 
@@ -349,7 +349,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **헤더:** afxmsg_. h
 
-## <a name="on_olecmd"></a><a name="on_olecmd"></a>ON_OLECMD
+## <a name="on_olecmd"></a><a name="on_olecmd"></a> ON_OLECMD
 
 명령 디스패치 인터페이스를 통해 명령을 라우팅합니다 `IOleCommandTarget` .
 
@@ -372,9 +372,9 @@ OLE 명령의 식별자입니다.
 
 ### <a name="remarks"></a>설명
 
-`IOleCommandTarget`컨테이너가 DocObject의 사용자 인터페이스에서 발생 하는 명령을 받을 수 있도록 하 고, 컨테이너가 동일한 명령 (예: 파일 메뉴의 새로 만들기, 열기, 다음으로 인쇄 및 인쇄, 편집 메뉴에서 복사, 붙여넣기, 실행 취소 등)을 DocObject에 보낼 수 있도록 허용 합니다.
+`IOleCommandTarget` 컨테이너가 DocObject의 사용자 인터페이스에서 발생 하는 명령을 받을 수 있도록 하 고, 컨테이너가 동일한 명령 (예: 파일 메뉴의 새로 만들기, 열기, 다음으로 인쇄 및 인쇄, 편집 메뉴에서 복사, 붙여넣기, 실행 취소 등)을 DocObject에 보낼 수 있도록 허용 합니다.
 
-`IOleCommandTarget`는 OLE Automation의 보다 간단 `IDispatch` 합니다. `IOleCommandTarget`는 거의 인수를 포함 하지 않는 표준 명령 집합을 전적으로 사용 하 고, 형식 정보는 포함 되지 않습니다. 명령 인수의 경우 형식 안전성이 떨어집니다. 인수를 사용 하 여 명령을 디스패치하지 않아도 되는 경우 [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)를 사용 합니다.
+`IOleCommandTarget` 는 OLE Automation의 보다 간단 `IDispatch` 합니다. `IOleCommandTarget` 는 거의 인수를 포함 하지 않는 표준 명령 집합을 전적으로 사용 하 고, 형식 정보는 포함 되지 않습니다. 명령 인수의 경우 형식 안전성이 떨어집니다. 인수를 사용 하 여 명령을 디스패치하지 않아도 되는 경우 [COleServerDoc:: OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)를 사용 합니다.
 
 `IOleCommandTarget`표준 메뉴 명령은 다음 매크로에서 MFC에 의해 구현 되었습니다.
 
@@ -478,7 +478,7 @@ File Save 명령을 디스패치합니다. 다음으로 구현 됨:
 
 **헤더:** afxdocob
 
-## <a name="on_registered_message"></a><a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
+## <a name="on_registered_message"></a><a name="on_registered_message"></a> ON_REGISTERED_MESSAGE
 
 Windows `RegisterWindowMessage` 함수는 시스템 전체에서 고유 하 게 보장 되는 새 창 메시지를 정의 하는 데 사용 됩니다.
 
@@ -516,7 +516,7 @@ END_MESSAGE_MAP()
 
 **헤더:** afxmsg_. h
 
-## <a name="on_registered_thread_message"></a><a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE
+## <a name="on_registered_thread_message"></a><a name="on_registered_thread_message"></a> ON_REGISTERED_THREAD_MESSAGE
 
 Windows RegisterWindowMessage 함수에서 등록 한 메시지를 처리할 함수를 나타냅니다.
 
@@ -542,7 +542,7 @@ RegisterWindowMessage는 시스템 전체에서 고유 하 게 보장 되는 새
 
 **헤더:** afxmsg_. h
 
-## <a name="on_thread_message"></a><a name="on_thread_message"></a>ON_THREAD_MESSAGE
+## <a name="on_thread_message"></a><a name="on_thread_message"></a> ON_THREAD_MESSAGE
 
 사용자 정의 메시지를 처리할 함수를 나타냅니다.
 
@@ -568,7 +568,7 @@ ON_THREAD_MESSAGE( message, memberFxn )
 
 **헤더:** afxole
 
-## <a name="on_update_command_ui"></a><a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI
+## <a name="on_update_command_ui"></a><a name="on_update_command_ui"></a> ON_UPDATE_COMMAND_UI
 
 이 매크로는 사용자 인터페이스 업데이트 명령 메시지를 처리 하는 함수를 나타냅니다.
 
@@ -596,7 +596,7 @@ ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 
 **헤더:** afxole
 
-## <a name="on_command_range"></a><a name="on_command_range"></a>ON_COMMAND_RANGE
+## <a name="on_command_range"></a><a name="on_command_range"></a> ON_COMMAND_RANGE
 
 이 매크로를 사용 하 여 연속 된 명령 Id 범위를 단일 메시지 처리기 함수에 매핑할 수 있습니다.
 
@@ -651,7 +651,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **헤더:** afxmsg_. h
 
-## <a name="on_update_command_ui_range"></a><a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE
+## <a name="on_update_command_ui_range"></a><a name="on_update_command_ui_range"></a> ON_UPDATE_COMMAND_UI_RANGE
 
 연속 하는 명령 Id 범위를 단일 업데이트 메시지 처리기 함수에 매핑합니다.
 
@@ -682,7 +682,7 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 **헤더:** afxmsg_. h
 
-## <a name="on_control_range"></a><a name="on_control_range"></a>ON_CONTROL_RANGE
+## <a name="on_control_range"></a><a name="on_control_range"></a> ON_CONTROL_RANGE
 
 이 매크로를 사용 하 여 BN_CLICKED와 같은 지정 된 Windows 알림 메시지에 대 한 연속 된 컨트롤 Id 범위를 단일 메시지 처리기 함수에 매핑할 수 있습니다.
 

@@ -1,17 +1,17 @@
 ---
-title: propputref (C++ COM 특성)
+title: propputref (c + + COM 특성)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: a9c4413e9bb8c7faa332bb842700dfcf84d6666a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dbb5d5966fc82f69be0ed7d2fa0a66ad558a7915
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166434"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839909"
 ---
 # <a name="propputref"></a>propputref
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166434"
 
 ## <a name="remarks"></a>설명
 
-**Propputref** C++ 특성은 [propputref](/windows/win32/Midl/propputref) MIDL 특성과 동일한 기능을 포함 합니다.
+**Propputref** c + + 특성에는 [propputref](/windows/win32/Midl/propputref) MIDL 특성과 동일한 기능이 있습니다.
 
 ## <a name="example"></a>예제
 
@@ -33,13 +33,11 @@ ms.locfileid: "80166434"
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
-|**적용 대상**|방법|
-|**반복 가능**|예|
-|**필수 특성**|None|
+|**적용 대상**|메서드|
+|**불가능**|아니요|
+|**필수 특성**|없음|
 |**잘못된 특성**|`propget`, `propput`|
 
 특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](cpp-attributes-com-net.md#contexts)를 참조하세요.

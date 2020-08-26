@@ -48,23 +48,31 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322966"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840416"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn 함수
 
 각 `_spawn` 함수는 새로운 프로세스를 만들고 실행합니다.
 
-|||
-|-|-|
-|[_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)|[_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)|
-|[_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)|[_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)|
-|[_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)|[_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)|
-|[_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)|[_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)|
+:::row:::
+   :::column span="":::
+      [_spawnl, _wspawnl](../c-runtime-library/reference/spawnl-wspawnl.md)\
+      [_spawnle, _wspawnle](../c-runtime-library/reference/spawnle-wspawnle.md)\
+      [_spawnlp, _wspawnlp](../c-runtime-library/reference/spawnlp-wspawnlp.md)\
+      [_spawnlpe, _wspawnlpe](../c-runtime-library/reference/spawnlpe-wspawnlpe.md)\
+   :::column-end:::
+   :::column span="":::
+      [_spawnv, _wspawnv](../c-runtime-library/reference/spawnv-wspawnv.md)\
+      [_spawnve, _wspawnve](../c-runtime-library/reference/spawnve-wspawnve.md)\
+      [_spawnvp, _wspawnvp](../c-runtime-library/reference/spawnvp-wspawnvp.md)\
+      [_spawnvpe, _wspawnvpe](../c-runtime-library/reference/spawnvpe-wspawnvpe.md)\
+   :::column-end:::
+:::row-end:::
 
 함수 이름 끝에 있는 문자에 따라 변형이 결정됩니다.
 
@@ -94,7 +102,7 @@ ms.locfileid: "81322966"
 
 새로운 프로세스를 로드 및 실행하려면 사용할 수 있는 메모리가 충분해야 합니다. `mode` 인수는 `_spawn`을 실행하기 전과 실행하는 중에 호출 프로세스에 의해 수행되는 작업을 결정합니다. `mode`의 다음 값은 Process.h에서 정의됩니다.
 
-|||
+|값|설명|
 |-|-|
 | `_P_OVERLAY`  | 호출 프로세스를 제거하며 호출 프로세스를 새로운 프로세스와 겹쳐서 표시합니다(`_exec` 호출과 효과가 같음).  |
 | `_P_WAIT`  | 새로운 프로세스의 실행이 완료될 때까지 호출 스레드를 일시 중단합니다(동기적 `_spawn`).  |
@@ -130,7 +138,7 @@ ms.locfileid: "81322966"
 
 ## <a name="environment-of-the-spawned-process"></a>생성된 프로세스의 환경
 
-`_spawn` 호출 실행 시 열려 있는 파일은 새로운 프로세스에서 열린 채로 유지됩니다. `_spawnl`, `_spawnlp`, `_spawnv` 및 `_spawnvp` 호출에서 새로운 프로세스는 호출 프로세스의 환경을 상속 받습니다. `_spawnle`, `_spawnlpe`, `_spawnve` 및 `_spawnvpe` 호출을 사용하면 `envp` 인수를 통해 환경 설정 목록을 전달하여 새로운 프로세스에 대한 환경을 변경할 수 있습니다. `envp` 인수는 문자 포인터 배열이며, 마지막 요소를 제외한 각 요소는 환경 변수를 정의하고 null로 종료되는 문자열을 가리킵니다. 이러한 문자열의 형식은 일반적으로 `NAME`=`value`입니다. 여기서 `NAME`은 환경 변수의 이름이고, `value`는 해당 변수가 설정된 문자열 값입니다. `value` 이중 따옴표로 동봉되어 있지 않습니다. 배열의 `envp` 마지막 요소는 **NULL이어야**합니다. `envp` 자체가 **NULL**이면 생성된 프로세스가 부모 프로세스의 환경 설정을 상속 받습니다.
+`_spawn` 호출 실행 시 열려 있는 파일은 새로운 프로세스에서 열린 채로 유지됩니다. `_spawnl`, `_spawnlp`, `_spawnv` 및 `_spawnvp` 호출에서 새로운 프로세스는 호출 프로세스의 환경을 상속 받습니다. `_spawnle`, `_spawnlpe`, `_spawnve` 및 `_spawnvpe` 호출을 사용하면 `envp` 인수를 통해 환경 설정 목록을 전달하여 새로운 프로세스에 대한 환경을 변경할 수 있습니다. `envp` 인수는 문자 포인터 배열이며, 마지막 요소를 제외한 각 요소는 환경 변수를 정의하고 null로 종료되는 문자열을 가리킵니다. 이러한 문자열의 형식은 일반적으로 `NAME`=`value`입니다. 여기서 `NAME`은 환경 변수의 이름이고, `value`는 해당 변수가 설정된 문자열 값입니다. 는 큰따옴표로 `value` 묶지 않습니다. 배열의 마지막 요소는 NULL 이어야 합니다 `envp` . **NULL** `envp` 자체가 **NULL**이면 생성된 프로세스가 부모 프로세스의 환경 설정을 상속 받습니다.
 
 `_spawn` 함수는 변환 모드를 포함하여 열려 있는 파일에 대한 모든 정보를 새로운 프로세스에 전달할 수 있습니다. 이 정보는 환경의 `C_FILE_INFO` 항목을 통해 리얼 모드에서 전달됩니다. 시작 코드는 일반적으로 이 항목을 처리한 다음 환경에서 삭제합니다. 그러나 `_spawn` 함수가 C 프로세스가 아닌 프로세스를 생성하면 이 항목이 환경에 남아 있습니다. 환경을 인쇄하면 이 항목에 대한 정의 문자열에 그래픽 문자가 표시됩니다. 이는 환경 정보가 리얼 모드에서 이진 형식으로 전달되기 때문입니다. 일반 작업에서는 다른 효과가 없습니다. 보호 모드에서는 환경 정보가 텍스트 형식으로 전달되므로 그래픽 문자를 포함하지 않습니다.
 
@@ -232,9 +240,9 @@ from SPAWN!
 ## <a name="see-also"></a>참고 항목
 
 [프로세스 및 환경 제어](../c-runtime-library/process-and-environment-control.md)<br/>
-[중단](../c-runtime-library/reference/abort.md)<br/>
+[중단이](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[_exec, _wexec 기능](../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec 함수](../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_flushall](../c-runtime-library/reference/flushall.md)<br/>
 [_getmbcp](../c-runtime-library/reference/getmbcp.md)<br/>

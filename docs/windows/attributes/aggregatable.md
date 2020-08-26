@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224489"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836376"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -28,11 +28,11 @@ ms.locfileid: "87224489"
 *value*<br/>
 필드 COM 개체를 집계할 수 있는 시기를 나타내는 매개 변수입니다.
 
-- `never`COM 개체를 집계할 수 없습니다.
+- `never` COM 개체를 집계할 수 없습니다.
 
-- `allowed`COM 개체를 직접 만들거나 집계할 수 있습니다. 이것이 기본값입니다.
+- `allowed` COM 개체를 직접 만들거나 집계할 수 있습니다. 이것이 기본값입니다.
 
-- `always`COM 개체는 직접 만들 수 없으며 집계할 수도 있습니다. 이 개체에 대해를 호출 하는 경우 `CoCreateInstance` 집계 개체의 `IUnknown` 인터페이스 (제어)를 지정 해야 합니다 `IUnknown` .
+- `always` COM 개체는 직접 만들 수 없으며 집계할 수도 있습니다. 이 개체에 대해를 호출 하는 경우 `CoCreateInstance` 집계 개체의 `IUnknown` 인터페이스 (제어)를 지정 해야 합니다 `IUnknown` .
 
 ## <a name="remarks"></a>설명
 
@@ -68,9 +68,7 @@ class CMyClass {};
 
 ## <a name="requirements"></a>요구 사항
 
-### <a name="attribute-context"></a>특성 컨텍스트
-
-|||
+| 특성 컨텍스트 | 값 |
 |-|-|
 |**적용 대상**|**`class`**, **`struct`**|
 |**불가능**|아니요|

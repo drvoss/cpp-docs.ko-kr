@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 4e9f3e4a35cd772897e326fafedf359062e6128b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224528"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840013"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -93,7 +93,7 @@ void swap (
 
 ### <a name="operators"></a>연산자
 
-|||
+|Name|설명|
 |-|-|
 |[연산자! =](../standard-library/vector-operators.md#op_neq)|연산자의 왼쪽에 있는 벡터 개체가 오른쪽에 있는 벡터 개체와 같지 않은지 테스트합니다.|
 |[연산자<](../standard-library/vector-operators.md#op_lt)|연산자의 왼쪽에 있는 벡터 개체가 오른쪽에 있는 벡터 개체보다 작은지 테스트합니다.|
@@ -104,13 +104,13 @@ void swap (
 
 ### <a name="classes"></a>클래스
 
-|||
+|이름|설명|
 |-|-|
 |[vector 클래스](../standard-library/vector-class.md)|선형 정렬에서 지정된 형식의 요소를 정렬하고 모든 요소에 대한 빠른 임의 액세스를 허용하는 시퀀스 컨테이너의 클래스 템플릿입니다.|
 
 ### <a name="specializations"></a>특수화
 
-|||
+|Name|설명|
 |-|-|
 |hash|벡터의 해시를 반환 합니다.|
 |[vector \<bool> 클래스](../standard-library/vector-bool-class.md)|**`bool`** 특수화에서 사용 하는 기본 형식에 대 한 할당자를 포함 하는 형식의 요소에 대 한 클래스 템플릿 벡터의 전체 특수화입니다.|

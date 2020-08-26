@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: f440bb891c30033962208c3e89648bd05ba3f81b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 470755744783272245ca3aa8e4b57e2943db5fae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840403"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 클래스
 
@@ -134,7 +134,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 
 ### <a name="methods"></a>메서드
 
-|||
+| 속성 | 설명 |
 |-|-|
 |[AddRefRows](#addrefrows)|기존 행 핸들에 참조 횟수를 추가합니다.|
 |[CreateRow](#createrow)|새를 할당 하기 위해 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 에서 호출 `HROW` 됩니다. 사용자가 직접 호출 하지 않습니다.|
@@ -149,7 +149,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 
 ### <a name="data-members"></a>데이터 멤버
 
-|||
+| Name | 설명 |
 |-|-|
 |[m_bCanFetchBack](#bcanfetchback)|공급자가 뒤로 페치를 지원할지 여부를 나타냅니다.|
 |[m_bCanScrollBack](#bcanscrollback)|공급자가 커서를 뒤로 스크롤할 수 있는지 여부를 나타냅니다.|
@@ -161,7 +161,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) 는 기본 행 집합 인터페이스입니다.
 
-## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a>IRowsetImpl:: AddRefRows
+## <a name="irowsetimpladdrefrows"></a><a name="addrefrows"></a> IRowsetImpl:: AddRefRows
 
 기존 행 핸들에 참조 횟수를 추가합니다.
 
@@ -178,7 +178,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 *OLE DB 프로그래머 참조*에서 [IRowset:: addrefrows](/previous-versions/windows/desktop/ms719619(v=vs.85)) 를 참조 하세요.
 
-## <a name="irowsetimplcreaterow"></a><a name="createrow"></a>IRowsetImpl:: CreateRow
+## <a name="irowsetimplcreaterow"></a><a name="createrow"></a> IRowsetImpl:: CreateRow
 
 새를 할당 하기 위해 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 에서 호출 하는 도우미 메서드입니다 `HROW` .
 
@@ -205,7 +205,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 
 행이 있으면이 메서드는 [Addrefrows](../../data/oledb/irowsetimpl-addrefrows.md) 를 호출 하 고를 반환 합니다. 그렇지 않으면 RowClass 템플릿 변수의 새 인스턴스를 할당 하 고 [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)에 추가 합니다.
 
-## <a name="irowsetimplgetdata"></a><a name="getdata"></a>IRowsetImpl:: GetData
+## <a name="irowsetimplgetdata"></a><a name="getdata"></a> IRowsetImpl:: GetData
 
 행 집합의 행 복사본에서 데이터를 검색합니다.
 
@@ -231,7 +231,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 또한 OLE DB 데이터 변환 DLL을 사용 하 여 데이터 변환을 처리 합니다.
 
-## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a>IRowsetImpl:: GetDBStatus
+## <a name="irowsetimplgetdbstatus"></a><a name="getdbstatus"></a> IRowsetImpl:: GetDBStatus
 
 지정 된 필드의 DBSTATUS 상태 플래그를 반환 합니다.
 
@@ -250,11 +250,11 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 *columnNames*<br/>
 진행 상태를 요청 하는 열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 열에 대 한 [Dbstatus](/previous-versions/windows/desktop/ms722617(v=vs.85)) 플래그입니다.
 
-## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a>IRowsetImpl:: GetNextRows
+## <a name="irowsetimplgetnextrows"></a><a name="getnextrows"></a> IRowsetImpl:: GetNextRows
 
 이전 위치를 기억하여 행을 순서대로 페치합니다.
 
@@ -272,7 +272,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 *OLE DB 프로그래머 참조*에서 [IRowset:: GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) 를 참조 하세요.
 
-## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a>IRowsetImpl:: IRowsetImpl
+## <a name="irowsetimplirowsetimpl"></a><a name="irowsetimpl"></a> IRowsetImpl:: IRowsetImpl
 
 생성자입니다.
 
@@ -286,7 +286,7 @@ IRowsetImpl();
 
 일반적으로이 메서드를 직접 호출할 필요는 없습니다.
 
-## <a name="irowsetimplrefrows"></a><a name="refrows"></a>IRowsetImpl:: RefRows
+## <a name="irowsetimplrefrows"></a><a name="refrows"></a> IRowsetImpl:: RefRows
 
 기존 행 핸들의 참조 횟수를 증가 시키거나 해제 하기 위해 [Addrefrows](../../data/oledb/irowsetimpl-addrefrows.md) 및 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) 에서 호출 됩니다.
 
@@ -304,11 +304,11 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 *OLE DB 프로그래머 참조*에서 [IRowset:: addrefrows](/previous-versions/windows/desktop/ms719619(v=vs.85)) 를 참조 하세요.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다.
 
-## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a>IRowsetImpl:: ReleaseRows
+## <a name="irowsetimplreleaserows"></a><a name="releaserows"></a> IRowsetImpl:: ReleaseRows
 
 행을 해제합니다.
 
@@ -326,7 +326,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 *OLE DB 프로그래머 참조*에서 [IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) 를 참조 하세요.
 
-## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a>IRowsetImpl:: RestartPosition
+## <a name="irowsetimplrestartposition"></a><a name="restartposition"></a> IRowsetImpl:: RestartPosition
 
 다음 인출 위치를 초기 위치로 위치를 다시 배치 합니다. 즉, 행 집합을 처음 만들 때의 위치입니다.
 
@@ -344,7 +344,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 행 집합 위치는가 호출 될 때까지 정의 되지 않습니다 `GetNextRow` . 을 호출 하 `RestartPosition` 고 뒤로 인출 또는 스크롤 하 여 rost에서 뒤로 이동할 수 있습니다.
 
-## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a>IRowsetImpl:: SetDBStatus
+## <a name="irowsetimplsetdbstatus"></a><a name="setdbstatus"></a> IRowsetImpl:: SetDBStatus
 
 지정 된 필드에 대 한 DBSTATUS 상태 플래그를 설정 합니다.
 
@@ -367,7 +367,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 *columnInfo*<br/>
 상태를 설정할 열입니다.
 
-### <a name="return-value"></a>Return Value
+### <a name="return-value"></a>반환 값
 
 표준 HRESULT 값입니다.
 
@@ -375,7 +375,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 
 공급자는이 함수를 재정의 하 여 DBSTATUS_S_ISNULL 및 DBSTATUS_S_DEFAULT에 대 한 특수 한 처리를 제공 합니다.
 
-## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a>IRowsetImpl:: m_bCanFetchBack
+## <a name="irowsetimplm_bcanfetchback"></a><a name="bcanfetchback"></a> IRowsetImpl:: m_bCanFetchBack
 
 공급자가 뒤로 페치를 지원할지 여부를 나타냅니다.
 
@@ -389,7 +389,7 @@ unsigned m_bCanFetchBack:1;
 
 `DBPROP_CANFETCHBACKWARDS`그룹의 속성에 연결 `DBPROPSET_ROWSET` 됩니다. 공급자는를 지원 해야 합니다 `DBPROP_CANFETCHBACKWARDS` `m_bCanFetchBackwards` **`true`** .
 
-## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a>IRowsetImpl:: m_bCanScrollBack
+## <a name="irowsetimplm_bcanscrollback"></a><a name="bcanscrollback"></a> IRowsetImpl:: m_bCanScrollBack
 
 공급자가 커서를 뒤로 스크롤할 수 있는지 여부를 나타냅니다.
 
@@ -403,7 +403,7 @@ unsigned  m_bCanScrollBack:1;
 
 `DBPROP_CANSCROLLBACKWARDS`그룹의 속성에 연결 `DBPROPSET_ROWSET` 됩니다. 공급자는를 지원 해야 합니다 `DBPROP_CANSCROLLBACKWARDS` `m_bCanFetchBackwards` **`true`** .
 
-## <a name="irowsetimplm_breset"></a><a name="breset"></a>IRowsetImpl:: m_bReset
+## <a name="irowsetimplm_breset"></a><a name="breset"></a> IRowsetImpl:: m_bReset
 
 커서 위치가 행 집합에 정의 되어 있는지 여부를 확인 하는 데 사용 되는 비트 플래그입니다.
 
@@ -417,7 +417,7 @@ unsigned m_bReset:1;
 
 소비자가 음수 또는 CRows를 사용 하 여 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 를 호출 `lOffset` 하 *cRows* 고 `m_bReset` 가 true 이면 `GetNextRows` 행 집합의 끝으로 이동 합니다. `m_bReset`가 false 이면 소비자는 OLE DB 사양을 준수 하 여 오류 코드를 수신 합니다. `m_bReset`플래그는 **`true`** 행 집합을 처음 만들 때와 소비자가 [IRowsetImpl:: RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)를 호출 하는 경우로 설정 됩니다. 를 **`false`** 호출할 때로 설정 `GetNextRows` 됩니다.
 
-## <a name="irowsetimplm_irowset"></a><a name="irowset"></a>IRowsetImpl:: m_iRowset
+## <a name="irowsetimplm_irowset"></a><a name="irowset"></a> IRowsetImpl:: m_iRowset
 
 커서를 나타내는 행 집합에 대 한 인덱스입니다.
 
@@ -427,7 +427,7 @@ unsigned m_bReset:1;
 DBROWOFFSET m_iRowset;
 ```
 
-## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a>IRowsetImpl:: m_rgRowHandles
+## <a name="irowsetimplm_rgrowhandles"></a><a name="rgrowhandles"></a> IRowsetImpl:: m_rgRowHandles
 
 에 대 한 응답으로 공급자에 현재 포함 된 행 핸들의 맵입니다 `GetNextRows` .
 

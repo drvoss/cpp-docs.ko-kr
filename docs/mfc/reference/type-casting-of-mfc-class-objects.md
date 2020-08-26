@@ -8,29 +8,29 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: 953acc32c3510b31c265f2d64d0a013f6dee06cc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e3702ced83021e42ac6bf71a78efc51fa07b8be9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372887"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840494"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC 클래스 개체의 형식 캐스팅
 
-형식 캐스팅 매크로는 캐스트가 합법적인지 여부와 함께 또는 확인하지 않고 특정 클래스의 개체를 가리키는 포인터에 지정된 포인터를 캐스팅하는 방법을 제공합니다.
+형식 캐스팅 매크로는 특정 클래스의 개체를 가리키는 포인터에 대 한 포인터를 캐스트 하는 방법을 제공 합니다.
 
-다음 표에는 매크로를 캐스팅하는 MFC 형식이 나열되어 있습니다.
+다음 표에서는 MFC 형식 캐스팅 매크로를 보여 줍니다.
 
-### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>MFC 클래스 개체에 포인터를 캐스팅하는 매크로
+### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>MFC 클래스 개체에 대 한 포인터를 캐스트 하는 매크로
 
-|||
+|Name|설명|
 |-|-|
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|캐스트가 합법적인지 확인하는 동안 클래스 개체에 대한 포인터를 캐스팅합니다.|
-|[STATIC_DOWNCAST](#static_downcast)|한 클래스에서 관련 형식의 포인터로 개체에 대한 포인터를 캐스팅합니다. 디버그 빌드에서 개체가 대상 형식의 "일종"이 아닌 경우 ASSERT를 발생시킵니다.|
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|캐스트가 유효한 지 여부를 확인 하는 동안 클래스 개체에 대 한 포인터로 포인터를 캐스팅 합니다.|
+|[STATIC_DOWNCAST](#static_downcast)|특정 클래스의 개체에 대 한 포인터를 관련 형식의 포인터로 캐스팅 합니다. 디버그 빌드에서 개체가 대상 형식의 "종류"가 아니면 어설션이 발생 합니다.|
 
-## <a name="dynamic_downcast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST
+## <a name="dynamic_downcast"></a><a name="dynamic_downcast"></a> DYNAMIC_DOWNCAST
 
-캐스트가 합법적인지 확인하는 동안 클래스 개체에 대한 포인터를 캐스팅하는 편리한 방법을 제공합니다.
+캐스팅이 유효한 지 여부를 확인 하는 동안 클래스 개체에 대 한 포인터를 포인터로 캐스팅 하는 편리한 방법을 제공 합니다.
 
 ```
 DYNAMIC_DOWNCAST(class, pointer)
@@ -41,18 +41,18 @@ DYNAMIC_DOWNCAST(class, pointer)
 *class*<br/>
 클래스의 이름입니다.
 
-*포인터(pointer)*<br/>
-형식 *클래스의*개체에 대한 포인터에 캐스팅할 포인터입니다.
+*놓고*<br/>
+*클래스*형식의 개체에 대 한 포인터로 캐스팅 될 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-매크로는 *포인터* 매개 변수를 *클래스* 매개 변수 형식의 개체에 대한 포인터로 캐스팅합니다.
+이 매크로는 *포인터* 매개 변수를 *클래스* 매개 변수 형식의 개체에 대 한 포인터로 캐스팅 합니다.
 
-포인터에서 참조하는 개체가 식별된 클래스의 "종류"인 경우 매크로는 적절한 포인터를 반환합니다. 법적 캐스트가 아닌 경우 매크로는 NULL을 반환합니다.
+포인터가 참조 하는 개체가 식별 된 클래스의 "종류" 이면 매크로는 적절 한 포인터를 반환 합니다. 올바른 캐스트가 아니면 매크로가 NULL을 반환 합니다.
 
-## <a name="static_downcast"></a><a name="static_downcast"></a>STATIC_DOWNCAST
+## <a name="static_downcast"></a><a name="static_downcast"></a> STATIC_DOWNCAST
 
-*pobject를* *class_name* 개체에 대한 포인터로 캐스팅합니다.
+*Pobject* 를 *class_name* 개체에 대 한 포인터로 캐스팅 합니다.
 
 ```
 STATIC_DOWNCAST(class_name, pobject)
@@ -61,22 +61,22 @@ STATIC_DOWNCAST(class_name, pobject)
 ### <a name="parameters"></a>매개 변수
 
 *class_name*<br/>
-캐스팅중인 클래스의 이름입니다.
+캐스팅 되는 클래스의 이름입니다.
 
-*대상 (것)과 같은*<br/>
-*class_name* 개체에 대한 포인터에 캐스팅할 포인터입니다.
+*pobject*<br/>
+*Class_name* 개체에 대 한 포인터로 캐스팅 될 포인터입니다.
 
 ### <a name="remarks"></a>설명
 
-*pobject는* null이거나 *class_name*에서 직접 또는 간접적으로 파생되는 클래스의 개체를 가리킬 수 있어야 합니다. _DEBUG 전처리 기호가 정의된 응용 프로그램 빌드에서 *매크로는 pobject가* NULL이 아니거나 *class_name* 매개 변수에 지정된 클래스의 "종류"가 아닌 개체를 가리키는 경우 [assert합니다(CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)참조). _DEBUG **빌드가** 아닌 빌드에서 매크로는 형식 검사 없이 캐스트를 수행합니다.
+*pobject* 은 NULL 이거나, *class_name*에서 직접 파생 되거나 간접적으로 파생 되는 클래스의 개체를 가리켜야 합니다. _DEBUG 전처리기 기호가 정의 된 응용 프로그램의 빌드에서는 *pobject* 가 NULL이 아니거나 *class_name* 매개 변수에 지정 된 클래스의 "종류"가 아닌 개체를 가리키는 경우 ( [CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)참조)를 어설션 합니다. **_DEBUG** 되지 않은 빌드에서는 매크로는 형식 검사 없이 캐스트를 수행 합니다.
 
-*class_name* 매개 변수에 지정된 클래스는 `CObject` DECLARE_DYNAMIC 및 IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE 및 IMPLEMENT_DYNCREATE 또는 [cObject 클래스: CObject에서 클래스 파생이라는](../../mfc/deriving-a-class-from-cobject.md)문서에 설명된 대로 DECLARE_SERIAL 및 IMPLEMENT_SERIAL 매크로에서 파생되어야 합니다.
+*Class_name* 매개 변수에 지정 된 클래스는에서 파생 되어야 `CObject` 하며, CObject [클래스: cobject에서 클래스 파생](../../mfc/deriving-a-class-from-cobject.md)문서에 설명 된 대로 DECLARE_DYNAMIC 및 IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE 및 IMPLEMENT_DYNCREATE, DECLARE_SERIAL 및 IMPLEMENT_SERIAL 매크로를 사용 해야 합니다.
 
-예를 들어 이 식을 `CMyDoc`사용하는 `pMyDoc`포인터에 대해 `CDocument` "라고 하는"에 대한 포인터를 캐스팅할 수 있습니다.
+예를 들어, 라고 하는 포인터를 `CMyDoc` `pMyDoc` 이 식을 사용 하는 포인터로 캐스팅할 수 있습니다 `CDocument` .
 
 [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]
 
-직접 `pMyDoc` 또는 간접적으로 `CDocument`파생된 개체를 가리키지 않으면 매크로가 ASSERT됩니다.
+`pMyDoc`가에서 직접 또는 간접적으로 파생 된 개체를 가리키지 않는 경우 `CDocument` 매크로는을 어설션 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
