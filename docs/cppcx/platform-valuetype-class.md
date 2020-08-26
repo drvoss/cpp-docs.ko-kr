@@ -26,7 +26,7 @@ public ref class ValueType : Object
 
 ## <a name="public-methods"></a>public 메서드
 
-| Name | 설명 |
+| 이름 | Description |
 |--|--|
 | [ValueType:: ToString](#tostring) | 개체의 문자열 표현을 반환합니다. [Platform:: Object](../cppcx/platform-object-class.md)에서 상속 됩니다. |
 

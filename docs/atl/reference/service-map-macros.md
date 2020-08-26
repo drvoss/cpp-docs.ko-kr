@@ -18,7 +18,7 @@ ms.locfileid: "88835209"
 
 이러한 매크로는 서비스 맵과 항목을 정의 합니다.
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[BEGIN_SERVICE_MAP](#begin_service_map)|ATL 서비스 맵의 시작을 표시 합니다.|
 |[END_SERVICE_MAP](#end_service_map)|ATL 서비스 맵의 끝을 표시 합니다.|

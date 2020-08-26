@@ -63,7 +63,7 @@ OLE DB 템플릿 공급자 매크로는 다음 범주의 기능을 제공 합니
 
 ## <a name="property-set-map-macros"></a>속성 집합 맵 매크로
 
-| Name | 설명 |
+| 이름 | Description |
 |-|-|
 |[BEGIN_PROPERTY_SET](#begin_property_set)|속성 집합의 시작을 표시 합니다.|
 |[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|속성 집합의 시작을 표시 합니다.|
@@ -77,7 +77,7 @@ OLE DB 템플릿 공급자 매크로는 다음 범주의 기능을 제공 합니
 
 ## <a name="column-map-macros"></a>열 맵 매크로
 
-| Name | 설명 |
+| 이름 | Description |
 |-|-|
 |[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|공급자 열 맵 항목의 시작을 표시 합니다.|
 |[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|공급자 열 맵 항목의 끝을 표시 합니다.|
@@ -91,7 +91,7 @@ OLE DB 템플릿 공급자 매크로는 다음 범주의 기능을 제공 합니
 
 ## <a name="schema-rowset-macros"></a>스키마 행 집합 매크로
 
-| Name | 설명 |
+| 이름 | Description |
 |-|-|
 |[BEGIN_SCHEMA_MAP](#begin_schema_map)|스키마 맵의 시작을 표시 합니다.|
 |[END_SCHEMA_MAP](#end_schema_map)|스키마 맵의 끝을 표시 합니다.|

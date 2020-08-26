@@ -95,13 +95,13 @@ void swap (
 
 ### <a name="manipulators"></a>조작자
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[스왑을](../standard-library/sstream-functions.md#sstream_swap)|두 `sstream` 개체 간에 값을 교환합니다.|
 
 ### <a name="classes"></a>클래스
 
-|클래스|설명|
+|클래스|Description|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|배열 개체에 저장된 요소의 시퀀스에서 문자 특성이 `Tr` 클래스에 의해 결정되는 `Elem` 형식 요소의 전송을 제어하는 스트림 버퍼에 대해 설명합니다.|
 |[basic_istringstream](../standard-library/basic-istringstream-class.md)|[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem** **Tr** `Alloc` `Elem` 문자 특성이 클래스에 의해 결정 되 `Tr` 고 해당 요소가 클래스의 할당자에 의해 할당 되는 형식의 요소가 있는 클래스 basic_stringbuf Elem, Tr,>의 스트림 버퍼에서 요소 및 인코드된 개체의 추출을 제어 하는 개체에 대해 설명 합니다 `Alloc` .|

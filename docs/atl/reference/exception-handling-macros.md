@@ -20,7 +20,7 @@ ms.locfileid: "88833441"
 
 이러한 매크로는 예외 처리에 대 한 지원을 제공 합니다.
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[_ATLCATCH](#_atlcatch)|연결 된에서 발생 하는 오류를 처리 하는 문입니다 `_ATLTRY` .|
 |[_ATLCATCHALL](#_atlcatchall)|연결 된에서 발생 하는 오류를 처리 하는 문입니다 `_ATLTRY` .|

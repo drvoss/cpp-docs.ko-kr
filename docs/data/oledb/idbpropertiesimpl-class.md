@@ -52,7 +52,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ### <a name="interface-methods"></a>인터페이스 메서드
 
-| Name | 설명 |
+| 이름 | Description |
 |-|-|
 |[GetProperties](#getproperties)|데이터 원본 개체에 현재 설정 된 데이터 원본, 데이터 원본 정보 및 초기화 속성 그룹의 속성 값 또는 현재 열거자에 설정 된 초기화 속성 그룹의 속성 값을 반환 합니다.|
 |[GetPropertyInfo](#getpropertyinfo)|공급자가 지 원하는 모든 속성에 대 한 정보를 반환 합니다.|

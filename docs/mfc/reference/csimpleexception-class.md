@@ -31,13 +31,13 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 ### <a name="public-constructors"></a>Public 생성자
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[CSimpleException::CSimpleException](#csimpleexception)|생성자입니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
-|이름|설명|
+|이름|Description|
 |----------|-----------------|
 |[CSimpleException:: GetErrorMessage](#geterrormessage)|발생 한 오류에 대 한 텍스트를 제공 합니다.|
 
@@ -45,7 +45,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 `CSimpleException` 는 리소스에 중요 한 MFC 예외의 기본 클래스 이며 오류 메시지의 소유권 및 초기화를 처리 합니다. 다음 클래스는를 `CSimpleException` 기본 클래스로 사용 합니다.
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[CMemoryException 클래스](../../mfc/reference/cmemoryexception-class.md)|메모리 부족 예외|
 |[CNotSupportedException 클래스](../../mfc/reference/cnotsupportedexception-class.md)|지원 되지 않는 작업에 대 한 요청|

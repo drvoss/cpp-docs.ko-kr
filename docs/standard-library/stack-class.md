@@ -64,13 +64,13 @@ class stack
 
 ### <a name="constructors"></a>생성자
 
-|속성|설명|
+|속성|Description|
 |-|-|
 |[겹치기](#stack)|비어 있거나 기본 컨테이너 개체의 복사본인 `stack`을 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[container_type](#container_type)|`stack`에서 조정할 기본 컨테이너를 제공하는 형식입니다.|
 |[size_type](#size_type)|`stack`에서 요소 수를 표현할 수 있는 부호 없는 정수 형식입니다.|
@@ -78,7 +78,7 @@ class stack
 
 ### <a name="functions"></a>Functions
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[empty](#empty)|`stack`이 비어 있는지를 테스트합니다.|
 |[창을](#pop)|`stack`의 맨 위에 있는 요소를 제거합니다.|

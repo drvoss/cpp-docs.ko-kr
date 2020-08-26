@@ -44,19 +44,19 @@ class error_code;
 
 ### <a name="constructors"></a>생성자
 
-|속성|설명|
+|속성|Description|
 |-|-|
 |[error_code](#error_code)|`error_code` 형식의 개체를 생성합니다.|
 
 ### <a name="typedefs"></a>Typedefs
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[value_type](#value_type)|저장된 오류 코드 값을 나타내는 형식입니다.|
 
 ### <a name="functions"></a>Functions
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[assign](#assign)|오류 코드 값과 범주를 오류 코드에 할당합니다.|
 |[category](#category)|오류 범주를 반환합니다.|
@@ -66,7 +66,7 @@ class error_code;
 
 ### <a name="operators"></a>연산자
 
-|Name|설명|
+|이름|Description|
 |-|-|
 |[연산자 = =](#op_eq_eq)|`error_code` 개체가 같은지 테스트합니다.|
 |[연산자! =](#op_neq)|`error_code` 개체가 같지 않은지 테스트합니다.|
