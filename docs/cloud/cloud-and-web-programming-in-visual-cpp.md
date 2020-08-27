@@ -3,12 +3,12 @@ title: Visual C++의 클라우드 및 웹 프로그래밍
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274638"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898673"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++의 클라우드 및 웹 프로그래밍
 
@@ -30,7 +30,7 @@ C++에는 웹 및 클라우드에 연결하기 위한 다양한 옵션이 있습
 
 - [Microsoft Graph의 OneDrive 및 SharePoint](https://dev.onedrive.com/README.htm)
 
-  OneDrive API는 애플리케이션을 Office 365 및 SharePoint Server 2016의 파일 및 폴더에 연결하는 HTTP 서비스 세트를 제공합니다.
+  OneDrive API는 Microsoft 365 및 SharePoint Server 2016의 파일과 폴더에 응용 프로그램을 연결 하는 HTTP 서비스 집합을 제공 합니다.
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>Windows 및 플랫폼 간 네트워킹 API
 
@@ -51,13 +51,13 @@ C++에는 웹 및 클라우드에 연결하기 위한 다양한 옵션이 있습
 
 - [IXMLHTTPRequest2 인터페이스](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  HTTP를 통해 인터넷에 연결할 Windows Runtime 앱이나 Windows 데스크톱 앱에서 사용하고 GET, PUT 및 기타 HTTP 명령을 실행할 수 있는 네이티브 COM 인터페이스를 제공합니다. 자세한 내용은 [연습: 작업 및 XML HTTP 요청을 사용하여 연결](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)을 참조하세요.
+  HTTP를 통해 인터넷에 연결할 Windows Runtime 앱이나 Windows 데스크톱 앱에서 사용하고 GET, PUT 및 기타 HTTP 명령을 실행할 수 있는 네이티브 COM 인터페이스를 제공합니다. 자세한 내용은 [연습: 작업 및 XML HTTP 요청을 사용 하 여 연결](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)을 참조 하세요.
 
 - [Windows 인터넷(WinInet)](/windows/win32/WinInet/portal)
 
   인터넷에 연결할 Windows 데스크톱 앱에서 사용할 수 있는 Windows API입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Visual Studio의 C++](../overview/visual-cpp-in-visual-studio.md) <br/>
 [Microsoft Azure C 및 C++ 개발자 센터](https://azure.microsoft.com/develop/cpp/) <br/>

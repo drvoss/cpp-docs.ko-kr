@@ -1,23 +1,24 @@
 ---
 title: 컴파일러 오류 C2702
-ms.date: 11/04/2016
+description: Microsoft C/c + + 컴파일러 오류 C2702에 대해 설명 합니다.
+ms.date: 08/25/2020
 f1_keywords:
 - C2702
 helpviewer_keywords:
 - C2702
 ms.assetid: 6def15d4-9a8d-43e7-ae35-42d7cb57c27e
-ms.openlocfilehash: eb8a19bf5d29a2a0c69dc27e9b22f76df63ce8e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 83210f6ab261a5ae6dd7320182c3f4c3539ff4d1
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216078"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898424"
 ---
 # <a name="compiler-error-c2702"></a>컴파일러 오류 C2702
 
-종료 블록에 __except 표시 되지 않을 수 있습니다.
+> `__except` 종료 블록에 표시 되지 않을 수 있습니다.
 
-예외 처리기 ( `__try` / **`__except`** )는 블록 내에 중첩 될 수 없습니다 **`__finally`** .
+예외 처리기 ( **`__try`** / **`__except`** )는 블록 내에 중첩 될 수 없습니다 **`__finally`** .
 
 다음 샘플에서는 C2702를 생성 합니다.
 

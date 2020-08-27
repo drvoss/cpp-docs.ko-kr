@@ -1,23 +1,28 @@
 ---
 title: 컴파일러 오류 C2703
-ms.date: 11/04/2016
+description: Microsoft C/c + + 컴파일러 오류 C2703에 대해 설명 합니다.
+ms.date: 08/24/2020
 f1_keywords:
 - C2703
 helpviewer_keywords:
 - C2703
 ms.assetid: 384295c3-643d-47ae-a9a6-865b3036aa84
-ms.openlocfilehash: 62e03d1edc5806a9babc44eaf2dc388e3ed81de9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5b5ccad1cd15c1a107c81423e2372e14165776
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221109"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898601"
 ---
 # <a name="compiler-error-c2703"></a>컴파일러 오류 C2703
 
-__leave 문이 잘못 되었습니다.
+> 잘못 된 `__leave` 문
 
-* * `__leave** statement must be inside a ` __Try ' 블록입니다.
+## <a name="remarks"></a>설명
+
+**`__leave`** 문은 블록 내에 있어야 합니다 **`__try`** .
+
+## <a name="example"></a>예
 
 다음 샘플에서는 C2703를 생성 합니다.
 
@@ -32,3 +37,9 @@ int main() {
    __finally {}
 }
 ```
+
+## <a name="see-also"></a>참조
+
+[`__leave`키워드](../../cpp/try-except-statement.md#__leave)\
+[`try-except` 선언문](../../cpp/try-except-statement.md)\
+[`try-finally` statement](../../cpp/try-finally-statement.md)
