@@ -38,7 +38,7 @@ Visual Studio 2019에는 Microsoft C++ 환경에 대한 많은 업데이트와 �
 
 - 가독성 향상을 위해 C++ 표준 라이브러리 헤더에 Clang 형식을 적용했습니다.
 
-- 이제 Visual Studio가 C++에 대해 내 코드만을 지원하므로 표준 라이브러리에서 동일한 효과를 얻기 위해 `std::function` 및 `std::visit`의 사용자 지정 동작을 더 이상 제공할 필요가 없습니다. 해당 동작을 제거해도 대체로 사용자에게 보이는 효과는 없습니다. 단, 컴파일러가 \<type_traits> 또는 \<variant>의 줄 15732480 또는 16707566에 문제가 있음을 나타내는 진단을 더 이상 생성하지 않습니다.
+- 이제 Visual Studio가 C++에 대해 내 코드만을 지원하므로 표준 라이브러리에서 동일한 효과를 얻기 위해 `std::function` 및 `std::visit`의 사용자 지정 동작을 더 이상 제공할 필요가 없습니다. 해당 동작을 제거해도 대체로 사용자에게 보이는 효과는 없습니다. 단, 컴파일러가 \<type_traits> 또는 \<variant>의 15732480 라인 또는 16707566 라인에 문제가 있음을 나타내는 진단을 더 이상 생성하지 않습니다.
 
 ## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>컴파일러 및 표준 라이브러리의 성능/처리량 향상
 
